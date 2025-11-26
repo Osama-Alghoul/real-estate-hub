@@ -1,18 +1,12 @@
-"use client"; // تأكد من وجودها
+"use client"; 
 
 import React, { useState, useEffect } from "react";
-// ... (بقية الـ Imports)
-import FilterControl from "@/components/common/FilterControl"; // تأكد من المسار الصحيح
+import FilterControl from "@/components/common/FilterControl"; 
 import GridView from "@/components/common/GridView";
 import Pagination from "@/components/common/Pagination";
 import Banner from "@/components/layout/Banner";
-// الأيقونات لا تحتاج لاستيرادها هنا ما دامت مستخدمة في FilterControl
 
-// --- Property Data Simulation (Extended to fill the page) ---
-// ... (مصفوفة properties كما هي)
-// ملاحظة: أضفت حقل 'type' لتمكين الفلترة "For Buy", "For Sale", "For Rent"
 const properties = [
-  // ... (عقار 1 مع إضافة حقل type)
   {
     img: "/properties/P1.png",
     title: "92 ALLIUM PLACE, ORLANDO FL 32827",
@@ -22,7 +16,7 @@ const properties = [
     size: 2096,
     avatar: "/people/A1.png",
     name: "Jenny Wilson",
-    type: "sale", // مثال: إضافة نوع العقار
+    type: "sale", 
   },
   {
     img: "/properties/P1.png",
@@ -33,7 +27,7 @@ const properties = [
     size: 2096,
     avatar: "/people/jenny.png",
     name: "Jenny Wilson",
-    type: "sale", // مثال: إضافة نوع العقار
+    type: "sale", 
   },
   {
     img: "/properties/P1.png",
@@ -44,7 +38,7 @@ const properties = [
     size: 2096,
     avatar: "/people/jenny.png",
     name: "Jenny Wilson",
-    type: "sale", // مثال: إضافة نوع العقار
+    type: "sale", 
   },
   {
     img: "/properties/house1.jpg",
@@ -55,7 +49,7 @@ const properties = [
     size: 2096,
     avatar: "/people/jenny.png",
     name: "Jenny Wilson",
-    type: "sale", // مثال: إضافة نوع العقار
+    type: "sale", 
   },
   {
     img: "/properties/house1.jpg",
