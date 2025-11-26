@@ -2,6 +2,7 @@ import { Bath, CarFront, Fullscreen, Heart, Plus, Share2 } from "lucide-react";
 import Image from "next/image";
 import Avatar from "../ui/avatar";
 import { type CardProps } from "@/types/card.type";
+
 export default function Card({
   img,
   title,
@@ -13,43 +14,43 @@ export default function Card({
   name,
 }: CardProps) {
   return (
-    <div className="w-[424px] bg-[#FFFFFF] rounded-lg">
+    <div className="w-[370px] bg-white rounded-lg shadow-md">
       <Image
         src={img}
         alt={title}
-        className="w-full"
-        width={400}
-        height={400}
+        className="w-full h-[180px] object-cover rounded-t-lg"
+        width={300}
+        height={180}
       />
-      <div className="p-6 flex flex-col gap-4">
-        <div className="font-medium text-xl">{title}</div>
-        <div className="font-semibold text-xl text-primary-light">${price}</div>
-        <div className="flex items-center gap-6 font-medium text-gray-500">
-          <div className="flex gap-1.5">
-            <CarFront />
+      <div className="p-4 flex flex-col gap-2">
+        <div className="font-medium text-lg">{title}</div>
+        <div className="font-semibold text-lg text-primary-light">${price}</div>
+        <div className="flex items-center gap-4 text-gray-500 text-sm">
+          <div className="flex gap-1.5 items-center">
+            <CarFront size={16} />
             <span>{garag}</span>
           </div>
-          <div className="flex gap-1.5">
-            <Bath />
+          <div className="flex gap-1.5 items-center">
+            <Bath size={16} />
             <span>{bath}</span>
           </div>
-          <div className="flex gap-1.5">
-            <Fullscreen />
+          <div className="flex gap-1.5 items-center">
+            <Fullscreen size={16} />
             <span>{size}ft</span>
           </div>
         </div>
-        <hr className="text-[#E7E9EB]" />
+        <hr className="border-gray-200 my-2" />
         <div className="flex justify-between items-center">
-          <Avatar src={avatar} name={name} />
-          <div className="flex gap-3">
+          <Avatar src={avatar} name={name} size={30} />
+          <div className="flex gap-2">
             <div className="cursor-pointer bg-primary-extra-light text-primary-light p-1 rounded-sm">
-              <Share2 />
+              <Share2 size={16} />
             </div>
             <div className="cursor-pointer bg-primary-extra-light text-primary-light p-1 rounded-sm">
-              <Heart />
+              <Heart size={16} />
             </div>
             <div className="cursor-pointer bg-primary-extra-light text-primary-light p-1 rounded-sm">
-              <Plus />
+              <Plus size={16} />
             </div>
           </div>
         </div>
