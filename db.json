@@ -1,0 +1,112 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "img": "/properties/P1.png",
+      "title": "92 ALLIUM PLACE, ORLANDO FL 32827",
+      "price": 590693,
+      "garag": 4,
+      "bath": 2,
+      "size": 2096,
+      "avatar": "/people/A1.png",
+      "name": "Jenny Wilson",
+      "type": "sale"
+    },
+    {
+      "id": 2,
+      "img": "/properties/P1.png",
+      "title": "Luxury House, Orlando FL",
+      "price": 750000,
+      "garag": 3,
+      "bath": 2,
+      "size": 2500,
+      "avatar": "/people/A1.png",
+      "name": "John Doe",
+      "type": "rent"
+    },
+    {
+      "id": 3,
+      "img": "/properties/P1.png",
+      "title": "Modern Apartment, Miami FL",
+      "price": 1200000,
+      "garag": 2,
+      "bath": 3,
+      "size": 1800,
+      "avatar": "/people/A1.png",
+      "name": "Sarah Smith",
+      "type": "sale"
+    },
+    {
+      "id": 4,
+      "img": "/properties/P1.png",
+      "title": "Cozy Cottage, Austin TX",
+      "price": 450000,
+      "garag": 1,
+      "bath": 1,
+      "size": 1200,
+      "avatar": "/people/A1.png",
+      "name": "Mike Johnson",
+      "type": "rent"
+    },
+    {
+      "id": 5,
+      "img": "/properties/P1.png",
+      "title": "Spacious Villa, Los Angeles CA",
+      "price": 2500000,
+      "garag": 4,
+      "bath": 4,
+      "size": 3500,
+      "avatar": "/people/A1.png",
+      "name": "Emma Brown",
+      "type": "sale"
+    },
+    {
+      "id": 6,
+      "img": "/properties/P1.png",
+      "title": "Downtown Condo, New York NY",
+      "price": 1800000,
+      "garag": 2,
+      "bath": 2,
+      "size": 1500,
+      "avatar": "/people/A1.png",
+      "name": "Liam Davis",
+      "type": "rent"
+    },
+    {
+      "id": 7,
+      "img": "/properties/P1.png",
+      "title": "Beachfront Bungalow, Miami FL",
+      "price": 950000,
+      "garag": 2,
+      "bath": 2,
+      "size": 1600,
+      "avatar": "/people/A1.png",
+      "name": "Olivia Wilson",
+      "type": "sale"
+    },
+    {
+      "id": 8,
+      "img": "/properties/P1.png",
+      "title": "Suburban Home, Chicago IL",
+      "price": 600000,
+      "garag": 3,
+      "bath": 2,
+      "size": 2200,
+      "avatar": "/people/A1.png",
+      "name": "Noah Martinez",
+      "type": "rent"
+    },
+    {
+      "id": 9,
+      "img": "/properties/P1.png",
+      "title": "Mountain Cabin, Denver CO",
+      "price": 400000,
+      "garag": 1,
+      "bath": 1,
+      "size": 1400,
+      "avatar": "/people/A1.png",
+      "name": "Ava Garcia",
+      "type": "sale"
+    }
+  ]
+}
