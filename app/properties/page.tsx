@@ -16,6 +16,9 @@ export default function PropertiesPage() {
   const [view, setView] = useState<"grid" | "list">(initialView);
   const [filter, setFilter] = useState("all");
   const [sort, setSort] = useState("default");
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const itemsPerPage = 6;
 
   // Fetch API (client-side)
   const getProperties = async () => {
@@ -28,8 +31,8 @@ export default function PropertiesPage() {
     getProperties();
   }, []);
 
-  const displayedProperties = useMemo(()=>{
-    let result = [...properties]
+  const displayedProperties = useMemo(() => {
+    let result = [...properties];
 
     if (filter !== "all") {
       result = result.filter((prop) => prop.type === filter);
@@ -40,23 +43,41 @@ export default function PropertiesPage() {
     else if (sort === "newest") result.reverse();
 
     return result;
-  }, [properties, filter, sort])
+  }, [properties, filter, sort]);
+
+  const paginatedProperties = useMemo(() => {
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    return displayedProperties.slice(start, end);
+  }, [displayedProperties, currentPage]);
+
+  const totalPages = Math.ceil(displayedProperties.length / itemsPerPage);
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Banner title="Properties" breadcrumb="Home / Properties" />
 
       <main className="flex-grow max-w-[1500px] mx-auto px-4 py-5 w-full">
-        <FilterControl key={view} currentView={view} onViewChange={setView} onFilterChange={setFilter} onSortChange={setSort} />
+        <FilterControl
+          key={view}
+          currentView={view}
+          onViewChange={setView}
+          onFilterChange={setFilter}
+          onSortChange={setSort}
+        />
 
         {view === "grid" ? (
-          <GridView data={displayedProperties} />
+          <GridView data={paginatedProperties} />
         ) : (
-          <ListView data={displayedProperties} />
+          <ListView data={paginatedProperties} />
         )}
 
         <div className="mt-12 flex justify-center">
-          <Pagination totalPages={5} currentPage={1} />
+          <Pagination
+            totalPages={totalPages}
+            currentPage={currentPage}
+            onPageChange={setCurrentPage}
+          />
         </div>
       </main>
     </div>
