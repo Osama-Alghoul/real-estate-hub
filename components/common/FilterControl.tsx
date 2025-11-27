@@ -1,7 +1,8 @@
 'use client';
 
 import { List, LayoutGrid, ArrowDown } from "lucide-react";
-import React, { useState } from "react";
+import { useRouter, } from "next/navigation";
+import React, { useState, } from "react";
 
 const sortOptions = [
   { label: "Default Order", value: "default" },
@@ -17,58 +18,59 @@ const filterTabs = [
   { label: "For Rent", value: "rent" },
 ];
 
-export default function FilterControl({
-  onFilterChange = () => {},
-  onSortChange = () => {},
-  onViewChange = () => {},
+export default function FilterControl({ 
+  currentView, 
+  onViewChange,
+  onFilterChange,
+  onSortChange, 
 }) {
-  const [currentSort, setCurrentSort] = useState(sortOptions[0].value);
-  const [currentFilter, setCurrentFilter] = useState(filterTabs[0].value);
-  const [currentView, setCurrentView] = useState("grid");
+  const router = useRouter();
+
+  const [currentFilter, setCurrentFilter] = useState("all");
+  const [currentSort, setCurrentSort] = useState("default");
   const [isSortDropdownOpen, setIsSortDropdownOpen] = useState(false);
+
 
   const handleSortChange = (option) => {
     setCurrentSort(option.value);
-    onSortChange(option.value);
+    onSortChange?.(option.value);
     setIsSortDropdownOpen(false);
   };
 
   const handleFilterChange = (tab) => {
     setCurrentFilter(tab.value);
-    onFilterChange(tab.value);
+    onFilterChange?.(tab.value);
   };
 
   const handleViewChange = (view) => {
-    setCurrentView(view);
-    onViewChange(view);
+    onViewChange?.(view)
+    router.push(`/properties?view=${view}`);
   };
 
   const currentSortLabel = sortOptions.find(opt => opt.value === currentSort)?.label || sortOptions[0].label;
 
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b border-gray-200 mb-6">
-      
+
       <div className="flex items-center space-x-4 mb-4 md:mb-0">
 
         <div className="flex items-center border rounded-lg overflow-hidden shadow-sm">
           <button
             onClick={() => handleViewChange('list')}
-            className={`p-2 transition-colors ${
-              currentView === 'list' 
-                ? 'bg-indigo-600 text-white' 
+            className={`p-2 transition-colors ${currentView === 'list'
+                ? 'bg-indigo-600 text-white'
                 : 'text-gray-600 hover:bg-gray-100'
-            }`}
+              }`}
             aria-label="List View"
           >
             <List className="w-5 h-5" />
           </button>
           <button
             onClick={() => handleViewChange('grid')}
-            className={`p-2 transition-colors ${
-              currentView === 'grid' 
-                ? 'bg-indigo-600 text-white' 
+            className={`p-2 transition-colors ${currentView === 'grid'
+                ? 'bg-indigo-600 text-white'
                 : 'text-gray-600 hover:bg-gray-100'
-            }`}
+              }`}
             aria-label="Grid View"
           >
             <LayoutGrid className="w-5 h-5" />
@@ -91,11 +93,10 @@ export default function FilterControl({
                 <button
                   key={option.value}
                   onClick={() => handleSortChange(option)}
-                  className={`block w-full text-left px-4 py-2 text-sm transition-colors ${
-                    option.value === currentSort
+                  className={`block w-full text-left px-4 py-2 text-sm transition-colors ${option.value === currentSort
                       ? "bg-indigo-50 text-indigo-600 font-semibold"
                       : "text-gray-700 hover:bg-gray-100"
-                  }`}
+                    }`}
                 >
                   {option.label}
                 </button>
@@ -110,11 +111,10 @@ export default function FilterControl({
           <button
             key={tab.value}
             onClick={() => handleFilterChange(tab)}
-            className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${
-              tab.value === currentFilter
+            className={`px-4 py-2 text-sm font-medium rounded-full transition-all duration-200 ${tab.value === currentFilter
                 ? "bg-indigo-600 text-white shadow-md"
                 : "text-gray-700 hover:bg-gray-50"
-            }`}
+              }`}
           >
             {tab.label}
           </button>
