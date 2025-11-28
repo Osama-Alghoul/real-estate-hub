@@ -31,7 +31,7 @@ export default function Card({
         <div className={variant === "grid" ? "font-medium text-lg text-primary-light" : "font-medium text-lg text-primary-light order-2"}>{title}</div>
         <div className={variant === "grid" ? "hidden" : "font-normal text-sm text-gray-500 block order-3"}>{description}</div>
         <div className={variant === "grid" ? "font-bold text-xl text-primary-light" : "font-bold text-xl text-primary-light order-4"}>${price}</div>
-        <div className={variant === "grid" ? "flex items-center gap-4 text-gray-500 text-sm" : "flex items-center gap-6 text-gray-600 text-sm mt-2 hidden"}>
+        <div className={variant === "grid" ? "flex items-center gap-4 text-gray-500 text-sm" : "items-center gap-6 text-gray-600 text-sm mt-2 hidden"}>
           <div className="flex gap-1.5 items-center">
             <CarFront size={16} />
             <span>{garag}</span>
@@ -47,7 +47,7 @@ export default function Card({
         </div>
         {variant === "grid" && <hr className="border-gray-200 my-2" />}
         <div className={variant === "grid" ? "flex justify-between items-center" : "flex justify-between items-center mt-4 order-1"}>
-          <Avatar src={avatar} name={name} size={30} />
+          <Avatar src={avatar} name={name} />
           <div className="flex gap-2">
             <div className="cursor-pointer bg-primary-extra-light text-primary-light p-1 rounded-sm">
               <Share2 size={16} />

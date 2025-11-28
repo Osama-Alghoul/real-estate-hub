@@ -2,8 +2,7 @@
 
 import { List, LayoutGrid, ArrowDown } from "lucide-react";
 import { useRouter, } from "next/navigation";
-import React, { useState, } from "react";
-
+import { useState, } from "react";
 const sortOptions = [
   { label: "Default Order", value: "default" },
   { label: "Price: Low to High", value: "price-asc" },
