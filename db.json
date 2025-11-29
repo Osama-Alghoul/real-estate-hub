@@ -3,11 +3,17 @@
     {
       "id": 1,
       "img": "/properties/P1.png",
+      "images": ["/properties/P1.png", "/properties/P1.png", "/properties/P1.png"],
+      "video": "",
       "title": "92 ALLIUM PLACE, ORLANDO FL 32827",
       "price": 590693,
       "garag": 4,
       "bath": 2,
       "size": 2096,
+      "yearBuilt": 2022,
+      "location": "Prime Location",
+      "amenities": ["Wi-Fi", "Air Conditioning", "Swimming Pool", "Gym"],
+      "description": "A beautifully designed modern property offering exceptional value and luxurious living space in a desirable neighbourhood.",
       "avatar": "/people/A1.png",
       "name": "Jenny Wilson",
       "type": "sale"
@@ -15,11 +21,17 @@
     {
       "id": 2,
       "img": "/properties/P1.png",
+      "images": ["/properties/P1.png", "/properties/P1.png", "/properties/P1.png"],
+      "video": "",
       "title": "Luxury House, Orlando FL",
       "price": 750000,
       "garag": 3,
       "bath": 2,
       "size": 2500,
+      "yearBuilt": 2022,
+      "location": "Prime Location",
+      "amenities": ["Wi-Fi", "Air Conditioning", "Swimming Pool", "Gym"],
+      "description": "A beautifully designed modern property offering exceptional value and luxurious living space in a desirable neighbourhood.",
       "avatar": "/people/A1.png",
       "name": "John Doe",
       "type": "rent"
@@ -27,86 +39,62 @@
     {
       "id": 3,
       "img": "/properties/P1.png",
+      "images": ["/properties/P1.png", "/properties/P1.png", "/properties/P1.png"],
+      "video": "",
       "title": "Modern Apartment, Miami FL",
       "price": 1200000,
       "garag": 2,
       "bath": 3,
       "size": 1800,
+      "yearBuilt": 2022,
+      "location": "Prime Location",
+      "amenities": ["Wi-Fi", "Air Conditioning", "Swimming Pool", "Gym"],
+      "description": "A beautifully designed modern property offering exceptional value and luxurious living space in a desirable neighbourhood.",
       "avatar": "/people/A1.png",
       "name": "Sarah Smith",
       "type": "sale"
-    },
-    {
-      "id": 4,
-      "img": "/properties/P1.png",
-      "title": "Cozy Cottage, Austin TX",
-      "price": 450000,
-      "garag": 1,
-      "bath": 1,
-      "size": 1200,
-      "avatar": "/people/A1.png",
-      "name": "Mike Johnson",
-      "type": "rent"
-    },
-    {
-      "id": 5,
-      "img": "/properties/P1.png",
-      "title": "Spacious Villa, Los Angeles CA",
-      "price": 2500000,
-      "garag": 4,
-      "bath": 4,
-      "size": 3500,
-      "avatar": "/people/A1.png",
-      "name": "Emma Brown",
-      "type": "sale"
-    },
-    {
-      "id": 6,
-      "img": "/properties/P1.png",
-      "title": "Downtown Condo, New York NY",
-      "price": 1800000,
-      "garag": 2,
-      "bath": 2,
-      "size": 1500,
-      "avatar": "/people/A1.png",
-      "name": "Liam Davis",
-      "type": "rent"
-    },
-    {
-      "id": 7,
-      "img": "/properties/P1.png",
-      "title": "Beachfront Bungalow, Miami FL",
-      "price": 950000,
-      "garag": 2,
-      "bath": 2,
-      "size": 1600,
-      "avatar": "/people/A1.png",
-      "name": "Olivia Wilson",
-      "type": "sale"
-    },
-    {
-      "id": 8,
-      "img": "/properties/P1.png",
-      "title": "Suburban Home, Chicago IL",
-      "price": 600000,
-      "garag": 3,
-      "bath": 2,
-      "size": 2200,
-      "avatar": "/people/A1.png",
-      "name": "Noah Martinez",
-      "type": "rent"
-    },
-    {
-      "id": 9,
-      "img": "/properties/P1.png",
-      "title": "Mountain Cabin, Denver CO",
-      "price": 400000,
-      "garag": 1,
-      "bath": 1,
-      "size": 1400,
-      "avatar": "/people/A1.png",
-      "name": "Ava Garcia",
-      "type": "sale"
     }
+  ],
+  "about": {
+    "hero": {
+      "title": "About RealEstate Hub",
+      "subtitle": "RealEstate Hub is your trusted partner in finding the perfect property. We combine technology, market knowledge, and a dedicated team to deliver the best real estate experience.",
+      "backgroundImage": "/properties/P1.png"
+    },
+    "sections": [
+      {
+        "icon": "FaEye",
+        "title": "Our Vision",
+        "description": "To be the most trusted platform connecting people with their dream homes."
+      },
+      {
+        "icon": "FaBullseye",
+        "title": "Our Mission",
+        "description": "Deliver accurate listings, expert advice, and seamless property experiences."
+      },
+      {
+        "icon": "FaHandshake",
+        "title": "Our Values",
+        "description": "Integrity, innovation, and customer-first approach in everything we do."
+      }
+    ]
+  },
+  "team": [
+    { "name": "Alice", "position": "CEO", "image": "/people/A1.png" },
+    { "name": "Bob", "position": "CTO", "image": "/people/A1.png" },
+    { "name": "Charlie", "position": "Marketing Manager", "image": "/people/A1.png" },
+    { "name": "Dana", "position": "Sales Manager", "image": "/people/A1.png" }
+  ],
+  "statistics": [
+    { "number": "500+", "label": "Properties Listed" },
+    { "number": "300+", "label": "Happy Clients" },
+    { "number": "10+", "label": "Years of Experience" },
+    { "number": "50+", "label": "Awards Won" }
+  ],
+  "clients": [
+    { "logo": "/people/C1.png" },
+    { "logo": "/people/C1.png" },
+    { "logo": "/people/C1.png" },
+    { "logo": "/people/C1.png" }
   ]
 }
