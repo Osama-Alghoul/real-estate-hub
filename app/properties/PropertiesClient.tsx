@@ -1,14 +1,19 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
-import FilterControl from "@/components/common/FilterControl";
-import GridView from "@/components/common/GridView";
-import ListView from "@/components/common/ListView";
-import Pagination from "@/components/common/Pagination";
+import { useState, useMemo } from "react";
+import FilterControl from "@/components/properties/FilterControl";
+import GridView from "@/components/properties/GridView";
+import ListView from "@/components/properties/ListView";
+import Pagination from "@/components/properties/Pagination";
 import { useSearchParams } from "next/navigation";
+import { type PropertiesProps } from "@/types/properties";
 
-export default function PropertiesClient({ properties }) {
-    const searchParams = useSearchParams();
+export default function PropertiesClient({
+  properties,
+}: {
+  properties: PropertiesProps[];
+}) {
+  const searchParams = useSearchParams();
   const initialView = searchParams.get("view") === "list" ? "list" : "grid";
   const [view, setView] = useState<"grid" | "list">(initialView);
   const [filter, setFilter] = useState("all");
