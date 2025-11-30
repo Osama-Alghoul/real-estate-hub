@@ -1,6 +1,6 @@
 import Header from "@/components/layout/header";
 
-export default function SecondaryLayout({
+export default function PropertiesLayout({
   children,
 }: {
   children: React.ReactNode;
