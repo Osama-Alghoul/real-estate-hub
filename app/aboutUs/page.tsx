@@ -2,14 +2,14 @@
 
 import { AboutData, Client, Statistic, TeamMember } from "@/types/about.type";
 import Image from "next/image";
-import { FaEye, FaBullseye, FaHandshake, FaArrowRight } from "react-icons/fa"; 
+import { Eye, Target, Handshake, ArrowRight } from "lucide-react";
 // Import types from the dedicated file
 
 
 const iconMap: { [key: string]: JSX.Element } = {
-  FaEye: <FaEye className="text-blue-500" />,
-  FaBullseye: <FaBullseye className="text-blue-500" />,
-  FaHandshake: <FaHandshake className="text-blue-500" />,
+  FaEye: <Eye className="text-blue-500" />,
+  FaBullseye: <Target className="text-blue-500" />,
+  FaHandshake: <Handshake className="text-blue-500" />,
 };
 
 async function fetchData<T extends FetchedDataType>(endpoint: string): Promise<T> {
@@ -72,7 +72,7 @@ export default async function About() {
                 className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 transform hover:shadow-2xl hover:translate-y-[-4px] transition-all duration-300"
               >
                 <div className="text-5xl mb-4 p-3 bg-blue-100 rounded-full w-fit">
-                  {iconMap[section.icon] || <FaArrowRight className="text-blue-500" />}
+                  {iconMap[section.icon] || <ArrowRight className="text-blue-500" />}
                 </div>
                 <h3 className="text-xl font-extrabold text-gray-900 mb-3 uppercase tracking-wider">
                   {section.title}
