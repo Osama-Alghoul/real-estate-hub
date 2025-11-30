@@ -2,7 +2,11 @@ import Link from "next/link";
 
 export default function DesktopNav({ transparent }: { transparent?: boolean }) {
   return (
-    <ul className="text-sm gap-8 text-white md:flex hidden">
+    <ul
+      className={`text-sm gap-8 ${
+        transparent ? "text-white" : "text-primary"
+      } md:flex hidden`}
+    >
       <li>
         <Link
           href="/"
