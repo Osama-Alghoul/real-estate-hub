@@ -8,11 +8,7 @@ import DesktopNav from "./desktopNav";
 import { usePathname } from 'next/navigation';
 
 export default function Header() {
-  
-    // Get the current URL path
     const pathname = usePathname();
-  
-    // Determine if the current route is the root ('/')
     const isRootPath = pathname === '/';
   return (
     <header>
