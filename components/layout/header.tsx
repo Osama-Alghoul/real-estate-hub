@@ -1,19 +1,20 @@
+'use client'
+
 import { Facebook, MailOpen, Phone, Linkedin, Instagram } from "lucide-react";
 import Link from "next/link";
 import Logo from "../ui/logo";
 import { MobileNav } from "./mobileNav";
 import DesktopNav from "./desktopNav";
+import { usePathname } from 'next/navigation';
 
-export default function Header({
-  transparent = false,
-}: {
-  transparent?: boolean;
-}) {
+export default function Header() {
+    const pathname = usePathname();
+    const isRootPath = pathname === '/';
   return (
     <header>
       <nav
         className={`flex justify-between flex-wrap ${
-          transparent ? "" : "bg-primary"
+          isRootPath ? "" : "bg-primary"
         } text-white py-6 lg:px-24 md:px-10 px-4`}
       >
         <div className="flex gap-3 items-center pb-4 md:pb-0">
@@ -44,10 +45,10 @@ export default function Header({
       <hr className="text-white" />
       <nav className="flex justify-between items-center py-6 lg:px-24 md:px-10 px-4">
         <Link href="/">
-          <Logo transparent={transparent} />
+          <Logo transparent={isRootPath} />
         </Link>
-        <DesktopNav transparent={transparent} />
-        <MobileNav transparent={transparent} />
+        <DesktopNav transparent={isRootPath} />
+        <MobileNav transparent={isRootPath} />
       </nav>
     </header>
   );
