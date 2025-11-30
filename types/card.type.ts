@@ -7,4 +7,5 @@ export interface CardProps {
   size: number;
   avatar: string;
   name: string;
+  description?: string;
 }
