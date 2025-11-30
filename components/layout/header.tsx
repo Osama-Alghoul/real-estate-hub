@@ -1,18 +1,23 @@
-import {
-  Facebook,
-  MailOpen,
-  Phone,
-  Linkedin,
-  Instagram,
-  Home,
-} from "lucide-react";
+'use client'
+
+import { Facebook, MailOpen, Phone, Linkedin, Instagram } from "lucide-react";
 import Link from "next/link";
+import Logo from "../ui/logo";
+import { MobileNav } from "./mobileNav";
+import DesktopNav from "./desktopNav";
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
+    const pathname = usePathname();
+    const isRootPath = pathname === '/';
   return (
     <header>
-      <nav className="flex justify-between bg-primary text-white py-6 px-24">
-        <div className="flex gap-3 items-center">
+      <nav
+        className={`flex justify-between flex-wrap ${
+          isRootPath ? "" : "bg-primary"
+        } text-white py-6 lg:px-24 md:px-10 px-4`}
+      >
+        <div className="flex gap-3 items-center pb-4 md:pb-0">
           <MailOpen />
           <div className="text-sm">
             <span className="font-bold">Email us at :</span> example@mail.com
@@ -37,59 +42,13 @@ export default function Header() {
           </div>
         </div>
       </nav>
-      <nav className="flex justify-between items-center py-6 px-24">
+      <hr className="text-white" />
+      <nav className="flex justify-between items-center py-6 lg:px-24 md:px-10 px-4">
         <Link href="/">
-        <div className="text-primary-light flex gap-2 items-center">
-          
-            <Home className="size-11" />
-            <div>
-              <div className="text-2xl font-semibold">REIS</div>
-              <div className="font-medium text-sm">Real State</div>
-            </div>
-          
-        </div></Link>
-        <ul className="text-sm flex gap-8">
-          <li>
-            <Link href="/" className="hover:text-primary-light">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="/aboutUs" className="hover:text-primary-light ">
-              About us
-            </Link>
-          </li>
-          <li>
-            <Link href="/" className="hover:text-primary-light ">
-              Our Agents
-            </Link>
-          </li>
-          <li>
-            <Link href="/properties" className="hover:text-primary-light ">
-              Properties
-            </Link>
-          </li>
-          <li>
-            <Link href="/" className="hover:text-primary-light ">
-              Gallery
-            </Link>
-          </li>
-          <li>
-            <Link href="/" className="hover:text-primary-light ">
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link href="/" className="hover:text-primary-light ">
-              Contact us
-            </Link>
-          </li>
-          <li>
-            <Link href="/" className="hover:text-primary-light ">
-              Search
-            </Link>
-          </li>
-        </ul>
+          <Logo transparent={isRootPath} />
+        </Link>
+        <DesktopNav transparent={isRootPath} />
+        <MobileNav transparent={isRootPath} />
       </nav>
     </header>
   );
