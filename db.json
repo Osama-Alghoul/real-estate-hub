@@ -117,5 +117,115 @@
       "type": "sale",
       "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
     }
+  ],
+  "about": {
+    "hero": {
+      "backgroundImage": "/properties/P1.png",
+      "title": "Building Dreams, Creating Homes",
+      "subtitle": "We believe that finding the perfect property is more than just a transaction—it's about discovering a place where memories are made and futures are built."
+    },
+    "sections": [
+      {
+        "icon": "FaEye",
+        "title": "Our Vision",
+        "description": "To revolutionize the real estate industry by providing transparent, innovative, and customer-centric solutions that empower people to find their dream properties with confidence and ease."
+      },
+      {
+        "icon": "FaBullseye",
+        "title": "Our Mission",
+        "description": "We are committed to delivering exceptional real estate experiences through cutting-edge technology, expert guidance, and unwavering dedication to our clients' success in their property journey."
+      },
+      {
+        "icon": "FaHandshake",
+        "title": "Our Values",
+        "description": "Integrity, transparency, and excellence guide everything we do. We build lasting relationships based on trust, professionalism, and a genuine commitment to helping our clients achieve their real estate goals."
+      }
+    ]
+  },
+  "team": [
+    {
+      "name": "Sarah Johnson",
+      "position": "CEO & Founder",
+      "image": "/people/A1.png"
+    },
+    {
+      "name": "Michael Chen",
+      "position": "Head of Sales",
+      "image": "/people/A1.png"
+    },
+    {
+      "name": "Emily Rodriguez",
+      "position": "Marketing Director",
+      "image": "/people/A1.png"
+    },
+    {
+      "name": "David Thompson",
+      "position": "Senior Agent",
+      "image": "/people/A1.png"
+    },
+    {
+      "name": "Jessica Williams",
+      "position": "Property Manager",
+      "image": "/people/A1.png"
+    },
+    {
+      "name": "Robert Lee",
+      "position": "Investment Advisor",
+      "image": "/people/A1.png"
+    },
+    {
+      "name": "Amanda Garcia",
+      "position": "Client Relations",
+      "image": "/people/A1.png"
+    },
+    {
+      "name": "Christopher Brown",
+      "position": "Legal Consultant",
+      "image": "/people/A1.png"
+    }
+  ],
+  "statistics": [
+    {
+      "number": "5k+",
+      "label": "Properties Sold"
+    },
+    {
+      "number": "10k+",
+      "label": "Happy Clients"
+    },
+    {
+      "number": "15+",
+      "label": "Years Experience"
+    },
+    {
+      "number": "98%",
+      "label": "Client Satisfaction"
+    }
+  ],
+  "clients": [
+    {
+      "logo": "/people/A1.png",
+      "name": "Premium Estates"
+    },
+    {
+      "logo": "/people/A1.png",
+      "name": "Urban Living"
+    },
+    {
+      "logo": "/people/A1.png",
+      "name": "Luxury Homes"
+    },
+    {
+      "logo": "/people/A1.png",
+      "name": "Modern Properties"
+    },
+    {
+      "logo": "/people/A1.png",
+      "name": "Elite Realty"
+    },
+    {
+      "logo": "/people/A1.png",
+      "name": "Dream Homes"
+    }
   ]
 }
