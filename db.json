@@ -1,7 +1,7 @@
 {
   "properties": [
     {
-      "id": 1,
+      "id": "1",
       "img": "/properties/P1.png",
       "title": "92 ALLIUM PLACE, ORLANDO FL 32827",
       "price": 590693,
@@ -14,7 +14,7 @@
       "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
     },
     {
-      "id": 2,
+      "id": "2",
       "img": "/properties/P1.png",
       "title": "Luxury House, Orlando FL",
       "price": 750000,
@@ -27,7 +27,7 @@
       "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
     },
     {
-      "id": 3,
+      "id": "3",
       "img": "/properties/P1.png",
       "title": "Modern Apartment, Miami FL",
       "price": 1200000,
@@ -40,7 +40,7 @@
       "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
     },
     {
-      "id": 4,
+      "id": "4",
       "img": "/properties/P1.png",
       "title": "Cozy Cottage, Austin TX",
       "price": 450000,
@@ -53,7 +53,7 @@
       "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
     },
     {
-      "id": 5,
+      "id": "5",
       "img": "/properties/P1.png",
       "title": "Spacious Villa, Los Angeles CA",
       "price": 2500000,
@@ -66,7 +66,7 @@
       "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
     },
     {
-      "id": 6,
+      "id": "6",
       "img": "/properties/P1.png",
       "title": "Downtown Condo, New York NY",
       "price": 1800000,
@@ -79,7 +79,7 @@
       "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
     },
     {
-      "id": 7,
+      "id": "7",
       "img": "/properties/P1.png",
       "title": "Beachfront Bungalow, Miami FL",
       "price": 950000,
@@ -92,7 +92,7 @@
       "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
     },
     {
-      "id": 8,
+      "id": "8",
       "img": "/properties/P1.png",
       "title": "Suburban Home, Chicago IL",
       "price": 600000,
@@ -105,7 +105,7 @@
       "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
     },
     {
-      "id": 9,
+      "id": "9",
       "img": "/properties/P1.png",
       "title": "Mountain Cabin, Denver CO",
       "price": 400000,
@@ -116,6 +116,22 @@
       "name": "Ava Garcia",
       "type": "sale",
       "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
+    }
+  ],
+  "users": [
+    {
+      "id": "b459",
+      "name": "happy",
+      "email": "happy@gmail.com",
+      "password": "$2b$10$ueQPl7XrhyKO5mOfx.A2tu8HwVlzikvLzkZN83VQcXAoqhvn08CNC",
+      "role": "owner"
+    },
+    {
+      "id": "c778",
+      "name": "mai",
+      "email": "mai@gmail.com",
+      "password": "$2b$10$6HON3rDh.NZhVvW596S0qeYgHxyzl9jGhdTkA53R4wlE30aIbrPKm",
+      "role": "owner"
     }
   ]
 }
