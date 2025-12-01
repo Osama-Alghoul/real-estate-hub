@@ -19,7 +19,7 @@ export default function DesktopNav({ transparent }: { transparent?: boolean }) {
       </li>
       <li>
         <Link
-          href="/"
+          href="/aboutUs"
           className={`${
             transparent ? "hover:text-gray-300" : "hover:text-primary-light"
           }`}

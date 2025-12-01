@@ -3,119 +3,221 @@
     {
       "id": 1,
       "img": "/properties/P1.png",
+      "images": [
+        "/properties/P1.png",
+        "/properties/P1.png",
+        "/properties/P1.png"
+      ],
       "title": "92 ALLIUM PLACE, ORLANDO FL 32827",
       "price": 590693,
       "garag": 4,
       "bath": 2,
       "size": 2096,
+      "yearBuilt": 2015,
       "avatar": "/people/A1.png",
       "name": "Jenny Wilson",
       "type": "sale",
-      "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
+      "description": "Beautiful family home located in a quiet neighborhood...",
+      "amenities": [
+        "Swimming Pool",
+        "Central Heating",
+        "Smart Home",
+        "Solar Panels",
+        "Private Garden",
+        "Security System"
+      ],
+      "video": "/videos/property1.mp4"
     },
     {
       "id": 2,
       "img": "/properties/P1.png",
-      "title": "Luxury House, Orlando FL",
+      "images": [
+        "/properties/P1.png",
+        "/properties/P1.png",
+        "/properties/P1.png"
+      ],
+      "title": "Luxury Villa, Miami FL",
       "price": 750000,
       "garag": 3,
-      "bath": 2,
-      "size": 2500,
+      "bath": 3,
+      "size": 2800,
+      "yearBuilt": 2018,
       "avatar": "/people/A1.png",
       "name": "John Doe",
       "type": "rent",
-      "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
+      "description": "A modern luxury villa with an amazing ocean view...",
+      "amenities": [
+        "Ocean View",
+        "Jacuzzi",
+        "Gym Room",
+        "Home Theater",
+        "Fireplace",
+        "Smart Lock"
+      ],
+      "video": "/videos/property2.mp4"
     },
     {
       "id": 3,
       "img": "/properties/P1.png",
-      "title": "Modern Apartment, Miami FL",
-      "price": 1200000,
-      "garag": 2,
-      "bath": 3,
-      "size": 1800,
+      "images": [
+        "/properties/P1.png",
+        "/properties/P1.png",
+        "/properties/P1.png"
+      ],
+      "title": "Modern Apartment, New York",
+      "price": 420000,
+      "garag": 1,
+      "bath": 1,
+      "size": 1200,
+      "yearBuilt": 2020,
       "avatar": "/people/A1.png",
-      "name": "Sarah Smith",
+      "name": "Michael Brown",
       "type": "sale",
-      "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
+      "description": "A stylish modern apartment in the heart of the city...",
+      "amenities": [
+        "24/7 Security",
+        "Elevator",
+        "Balcony",
+        "Smart Home",
+        "Parking",
+        "High-Speed Internet"
+      ],
+      "video": "/videos/property3.mp4"
     },
     {
       "id": 4,
       "img": "/properties/P1.png",
-      "title": "Cozy Cottage, Austin TX",
-      "price": 450000,
-      "garag": 1,
-      "bath": 1,
-      "size": 1200,
+      "images": [
+        "/properties/P1.png",
+        "/properties/P1.png"
+      ],
+      "title": "Family House, Chicago IL",
+      "price": 350000,
+      "garag": 2,
+      "bath": 2,
+      "size": 1800,
+      "yearBuilt": 2010,
       "avatar": "/people/A1.png",
-      "name": "Mike Johnson",
+      "name": "Emily Davis",
       "type": "rent",
-      "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
+      "description": "A warm family house located near schools and markets...",
+      "amenities": [
+        "Playground",
+        "Garden",
+        "BBQ Area",
+        "Central Heating",
+        "Garage",
+        "Storage Room"
+      ],
+      "video": "/videos/property4.mp4"
     },
     {
       "id": 5,
       "img": "/properties/P1.png",
-      "title": "Spacious Villa, Los Angeles CA",
-      "price": 2500000,
-      "garag": 4,
-      "bath": 4,
-      "size": 3500,
+      "images": [
+        "/properties/P1.png",
+        "/properties/P1.png"
+      ],
+      "title": "Beachfront House, California",
+      "price": 1200000,
+      "garag": 2,
+      "bath": 3,
+      "size": 3200,
+      "yearBuilt": 2019,
       "avatar": "/people/A1.png",
-      "name": "Emma Brown",
+      "name": "Sarah Connor",
       "type": "sale",
-      "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
+      "description": "A stunning beachfront house with direct access to the sea...",
+      "amenities": [
+        "Beach Access",
+        "Outdoor Pool",
+        "Private Terrace",
+        "Smart Home",
+        "Garden",
+        "Fire Pit"
+      ],
+      "video": "/videos/property5.mp4"
     },
     {
       "id": 6,
       "img": "/properties/P1.png",
-      "title": "Downtown Condo, New York NY",
-      "price": 1800000,
+      "images": [
+        "/properties/P1.png",
+        "/properties/P1.png"
+      ],
+      "title": "Penthouse, Los Angeles",
+      "price": 980000,
       "garag": 2,
       "bath": 2,
-      "size": 1500,
+      "size": 2400,
+      "yearBuilt": 2021,
       "avatar": "/people/A1.png",
-      "name": "Liam Davis",
+      "name": "Robert Taylor",
       "type": "rent",
-      "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
+      "description": "Luxury penthouse with an incredible city view...",
+      "amenities": [
+        "Rooftop",
+        "Private Elevator",
+        "Smart Home",
+        "Fireplace",
+        "Gym",
+        "Security System"
+      ],
+      "video": "/videos/property6.mp4"
     },
     {
       "id": 7,
       "img": "/properties/P1.png",
-      "title": "Beachfront Bungalow, Miami FL",
-      "price": 950000,
+      "images": [
+        "/properties/P1.png",
+        "/properties/P1.png"
+      ],
+      "title": "Suburban Home, Texas",
+      "price": 270000,
       "garag": 2,
       "bath": 2,
       "size": 1600,
+      "yearBuilt": 2012,
       "avatar": "/people/A1.png",
-      "name": "Olivia Wilson",
+      "name": "Anna Lee",
       "type": "sale",
-      "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
+      "description": "A calm suburban home perfect for families...",
+      "amenities": [
+        "Large Yard",
+        "Storage Shed",
+        "Fireplace",
+        "Parking",
+        "Renovated Kitchen",
+        "Security Cameras"
+      ],
+      "video": "/videos/property7.mp4"
     },
     {
       "id": 8,
       "img": "/properties/P1.png",
-      "title": "Suburban Home, Chicago IL",
-      "price": 600000,
-      "garag": 3,
-      "bath": 2,
-      "size": 2200,
-      "avatar": "/people/A1.png",
-      "name": "Noah Martinez",
-      "type": "rent",
-      "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
-    },
-    {
-      "id": 9,
-      "img": "/properties/P1.png",
-      "title": "Mountain Cabin, Denver CO",
-      "price": 400000,
-      "garag": 1,
+      "images": [
+        "/properties/P1.png",
+        "/properties/P2.png"
+      ],
+      "title": "Modern Studio, Boston",
+      "price": 190000,
+      "garag": 0,
       "bath": 1,
-      "size": 1400,
+      "size": 700,
+      "yearBuilt": 2017,
       "avatar": "/people/A1.png",
-      "name": "Ava Garcia",
-      "type": "sale",
-      "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin sodales ultrices nulla blandit."
+      "name": "David Scott",
+      "type": "rent",
+      "description": "Cozy studio apartment perfect for singles...",
+      "amenities": [
+        "High-Speed Internet",
+        "Smart Home",
+        "Elevator",
+        "Security",
+        "Laundry Room",
+        "Parking Nearby"
+      ],
+      "video": "/videos/property8.mp4"
     }
   ],
   "about": {
