@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Header from "./layout/header";
+import Footer from "./layout/footer";
 
 export default function ClientLayoutWrapper({
   children,
@@ -16,7 +17,7 @@ export default function ClientLayoutWrapper({
     <>
       {!hide && <Header />}
       {children}
-      {/* {!hide && <Footer />} */}
+      {!hide && <Footer />}
     </>
   );
 }
