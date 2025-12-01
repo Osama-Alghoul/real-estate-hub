@@ -89,6 +89,16 @@ export default function Header() {
               Search
             </Link>
           </li>
+          <li>
+            <Link href="/login" className="hover:text-primary-light ">
+              Login
+            </Link>
+          </li>
+          <li>
+            <Link href="/register" className="hover:text-primary-light ">
+              Register
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
