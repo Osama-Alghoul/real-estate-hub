@@ -3,23 +3,26 @@ import Link from "next/link";
 export default function DesktopNav({ transparent }: { transparent?: boolean }) {
   return (
     <ul
-      className={`text-sm gap-8 ${transparent ? "text-white" : "text-primary"
-        } md:flex hidden`}
+      className={`text-sm gap-8 ${
+        transparent ? "text-white" : "text-primary"
+      } md:flex hidden`}
     >
       <li>
         <Link
           href="/"
-          className={`${transparent ? "hover:text-gray-300" : "hover:text-primary-light"
-            }`}
+          className={`${
+            transparent ? "hover:text-gray-300" : "hover:text-primary-light"
+          }`}
         >
           Home
         </Link>
       </li>
       <li>
         <Link
-          href="/"
-          className={`${transparent ? "hover:text-gray-300" : "hover:text-primary-light"
-            }`}
+          href="/about"
+          className={`${
+            transparent ? "hover:text-gray-300" : "hover:text-primary-light"
+          }`}
         >
           About us
         </Link>
@@ -27,8 +30,9 @@ export default function DesktopNav({ transparent }: { transparent?: boolean }) {
       <li>
         <Link
           href="/"
-          className={`${transparent ? "hover:text-gray-300" : "hover:text-primary-light"
-            }`}
+          className={`${
+            transparent ? "hover:text-gray-300" : "hover:text-primary-light"
+          }`}
         >
           Our Agents
         </Link>
@@ -36,8 +40,9 @@ export default function DesktopNav({ transparent }: { transparent?: boolean }) {
       <li>
         <Link
           href="/properties"
-          className={`${transparent ? "hover:text-gray-300" : "hover:text-primary-light"
-            }`}
+          className={`${
+            transparent ? "hover:text-gray-300" : "hover:text-primary-light"
+          }`}
         >
           Properties
         </Link>
@@ -45,8 +50,9 @@ export default function DesktopNav({ transparent }: { transparent?: boolean }) {
       <li>
         <Link
           href="/"
-          className={`${transparent ? "hover:text-gray-300" : "hover:text-primary-light"
-            }`}
+          className={`${
+            transparent ? "hover:text-gray-300" : "hover:text-primary-light"
+          }`}
         >
           Gallery
         </Link>
@@ -54,8 +60,9 @@ export default function DesktopNav({ transparent }: { transparent?: boolean }) {
       <li>
         <Link
           href="/"
-          className={`${transparent ? "hover:text-gray-300" : "hover:text-primary-light"
-            }`}
+          className={`${
+            transparent ? "hover:text-gray-300" : "hover:text-primary-light"
+          }`}
         >
           Blog
         </Link>
@@ -63,8 +70,9 @@ export default function DesktopNav({ transparent }: { transparent?: boolean }) {
       <li>
         <Link
           href="/"
-          className={`${transparent ? "hover:text-gray-300" : "hover:text-primary-light"
-            }`}
+          className={`${
+            transparent ? "hover:text-gray-300" : "hover:text-primary-light"
+          }`}
         >
           Contact us
         </Link>
@@ -72,8 +80,9 @@ export default function DesktopNav({ transparent }: { transparent?: boolean }) {
       <li>
         <Link
           href="/"
-          className={`${transparent ? "hover:text-gray-300" : "hover:text-primary-light"
-            }`}
+          className={`${
+            transparent ? "hover:text-gray-300" : "hover:text-primary-light"
+          }`}
         >
           Search
         </Link>
@@ -81,8 +90,9 @@ export default function DesktopNav({ transparent }: { transparent?: boolean }) {
       <li>
         <Link
           href="/login"
-          className={`${transparent ? "hover:text-gray-300" : "hover:text-primary-light"
-            }`}
+          className={`${
+            transparent ? "hover:text-gray-300" : "hover:text-primary-light"
+          }`}
         >
           Login
         </Link>
@@ -90,8 +100,9 @@ export default function DesktopNav({ transparent }: { transparent?: boolean }) {
       <li>
         <Link
           href="/register"
-          className={`${transparent ? "hover:text-gray-300" : "hover:text-primary-light"
-            }`}
+          className={`${
+            transparent ? "hover:text-gray-300" : "hover:text-primary-light"
+          }`}
         >
           Register
         </Link>
