@@ -1,4 +1,4 @@
-export interface CardProps {
+export type Property = {
   id: number;
   img: string;
   title: string;
@@ -8,5 +8,5 @@ export interface CardProps {
   size: number;
   avatar: string;
   name: string;
-  description?: string;
-}
+  type: "sale" | "rent";
+};
