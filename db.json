@@ -146,95 +146,120 @@
     {
       "name": "Sarah Johnson",
       "position": "CEO & Founder",
-      "image": "/people/A1.png"
+      "image": "/people/A1.png",
+      "id": "b549"
     },
     {
       "name": "Michael Chen",
       "position": "Head of Sales",
-      "image": "/people/A1.png"
+      "image": "/people/A1.png",
+      "id": "af56"
     },
     {
       "name": "Emily Rodriguez",
       "position": "Marketing Director",
-      "image": "/people/A1.png"
+      "image": "/people/A1.png",
+      "id": "dbc6"
     },
     {
       "name": "David Thompson",
       "position": "Senior Agent",
-      "image": "/people/A1.png"
+      "image": "/people/A1.png",
+      "id": "9dbf"
     },
     {
       "name": "Jessica Williams",
       "position": "Property Manager",
-      "image": "/people/A1.png"
+      "image": "/people/A1.png",
+      "id": "fa74"
     },
     {
       "name": "Robert Lee",
       "position": "Investment Advisor",
-      "image": "/people/A1.png"
+      "image": "/people/A1.png",
+      "id": "2b5e"
     },
     {
       "name": "Amanda Garcia",
       "position": "Client Relations",
-      "image": "/people/A1.png"
+      "image": "/people/A1.png",
+      "id": "1e04"
     },
     {
       "name": "Christopher Brown",
       "position": "Legal Consultant",
-      "image": "/people/A1.png"
+      "image": "/people/A1.png",
+      "id": "8328"
     }
   ],
   "statistics": [
     {
       "number": "5k+",
-      "label": "Properties Sold"
+      "label": "Properties Sold",
+      "id": "6dc6"
     },
     {
       "number": "10k+",
-      "label": "Happy Clients"
+      "label": "Happy Clients",
+      "id": "24a0"
     },
     {
       "number": "15+",
-      "label": "Years Experience"
+      "label": "Years Experience",
+      "id": "98e7"
     },
     {
       "number": "98%",
-      "label": "Client Satisfaction"
+      "label": "Client Satisfaction",
+      "id": "2689"
     }
   ],
   "clients": [
     {
       "logo": "/people/A1.png",
-      "name": "Premium Estates"
+      "name": "Premium Estates",
+      "id": "ca6e"
     },
     {
       "logo": "/people/A1.png",
-      "name": "Urban Living"
+      "name": "Urban Living",
+      "id": "a646"
     },
     {
       "logo": "/people/A1.png",
-      "name": "Luxury Homes"
+      "name": "Luxury Homes",
+      "id": "733b"
     },
     {
       "logo": "/people/A1.png",
-      "name": "Modern Properties"
+      "name": "Modern Properties",
+      "id": "5cd7"
     },
     {
       "logo": "/people/A1.png",
-      "name": "Elite Realty"
+      "name": "Elite Realty",
+      "id": "8c77"
     },
     {
       "logo": "/people/A1.png",
-      "name": "Dream Homes"
+      "name": "Dream Homes",
+      "id": "4c86"
     }
   ],
-   "users": [
+  "users": [
     {
       "id": "b459",
       "name": "happy",
       "email": "happy@gmail.com",
       "password": "$2b$10$ueQPl7XrhyKO5mOfx.A2tu8HwVlzikvLzkZN83VQcXAoqhvn08CNC",
       "role": "owner"
+    },
+    {
+      "id": "c95f",
+      "name": "Osama Alghoul",
+      "email": "user@example.com",
+      "password": "$2b$10$zNgNI6AVxDRw5uRf3mE0T.ono.Qjv.4QABRqcjtuPMsETWjwIk7mC",
+      "role": "buyer"
     }
   ]
 }

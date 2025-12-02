@@ -11,7 +11,7 @@ export default function ClientLayoutWrapper({
 }) {
   const pathname = usePathname();
 
-  const hide = pathname === "/login" || pathname === "/register";
+  const hide = pathname === "/login" || pathname === "/register" || pathname === "/";
 
   return (
     <>
