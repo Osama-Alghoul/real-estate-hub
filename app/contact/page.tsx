@@ -2,6 +2,8 @@ import { Mail, MapPin, Phone, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/header";
 import Link from "next/link";
+import { ContactForm } from "@/components/contact/contact-form";
+
 export const metadata = {
   title: "Contact Us - REIS Real Estate",
   description:
@@ -12,12 +14,12 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen">
       <Header />
+
       {/* Hero Section */}
       <section
         className="relative w-full py-24 md:py-32 bg-cover bg-center"
         style={{
-          backgroundImage:
-            "url(/banner/hero.png)",
+          backgroundImage: "url(/banner/hero.png)",
         }}
       >
         {/* Blue overlay */}
@@ -56,107 +58,7 @@ export default function ContactPage() {
                 as possible.
               </p>
 
-              <form className="flex flex-col gap-5">
-                {/* Full Name */}
-                <div className="flex flex-col gap-2">
-                  <label
-                    htmlFor="name"
-                    className="text-sm font-medium text-foreground"
-                  >
-                    Full Name <span className="text-destructive">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    placeholder="John Doe"
-                    className="px-4 py-2 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  />
-                </div>
-
-                {/* Email Address */}
-                <div className="flex flex-col gap-2">
-                  <label
-                    htmlFor="email"
-                    className="text-sm font-medium text-foreground"
-                  >
-                    Email Address <span className="text-destructive">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    placeholder="john@example.com"
-                    className="px-4 py-2 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  />
-                </div>
-
-                {/* Phone Number */}
-                <div className="flex flex-col gap-2">
-                  <label
-                    htmlFor="phone"
-                    className="text-sm font-medium text-foreground"
-                  >
-                    Phone Number{" "}
-                    <span className="text-muted-foreground text-xs">
-                      (Optional)
-                    </span>
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="+1 (555) 123-4567"
-                    className="px-4 py-2 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  />
-                </div>
-
-                {/* Subject */}
-                <div className="flex flex-col gap-2">
-                  <label
-                    htmlFor="subject"
-                    className="text-sm font-medium text-foreground"
-                  >
-                    Subject <span className="text-destructive">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    required
-                    placeholder="How can we help?"
-                    className="px-4 py-2 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
-                  />
-                </div>
-
-                {/* Message */}
-                <div className="flex flex-col gap-2">
-                  <label
-                    htmlFor="message"
-                    className="text-sm font-medium text-foreground"
-                  >
-                    Message <span className="text-destructive">*</span>
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={5}
-                    placeholder="Tell us more about your inquiry..."
-                    className="px-4 py-2 border border-border rounded-lg bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
-                  />
-                </div>
-
-                {/* Submit Button */}
-                <Button
-                  type="submit"
-                  className="w-full mt-4 h-11 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-                >
-                  Send Message
-                </Button>
-              </form>
+              <ContactForm />
             </div>
 
             {/* Right Column - Contact Information */}
@@ -273,7 +175,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map Section */}
+      {/* Map Section (placeholder) */}
       <section className="w-full py-16 md:py-24 px-4 bg-muted/50">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col gap-6">
