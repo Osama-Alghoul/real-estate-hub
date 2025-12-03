@@ -19,7 +19,7 @@ export default function DesktopNav({ transparent }: { transparent?: boolean }) {
       </li>
       <li>
         <Link
-          href="/"
+          href="/about"
           className={`${
             transparent ? "hover:text-gray-300" : "hover:text-primary-light"
           }`}
@@ -85,6 +85,26 @@ export default function DesktopNav({ transparent }: { transparent?: boolean }) {
           }`}
         >
           Search
+        </Link>
+      </li>
+      <li>
+        <Link
+          href="/login"
+          className={`${
+            transparent ? "hover:text-gray-300" : "hover:text-primary-light"
+          }`}
+        >
+          Login
+        </Link>
+      </li>
+      <li>
+        <Link
+          href="/register"
+          className={`${
+            transparent ? "hover:text-gray-300" : "hover:text-primary-light"
+          }`}
+        >
+          Register
         </Link>
       </li>
     </ul>
