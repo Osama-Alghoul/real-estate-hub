@@ -3,6 +3,7 @@
 import { AboutData, Client, FetchedDataType, Statistic, TeamMember } from "@/types/about.type";
 import Image from "next/image";
 import { Eye, Target, Handshake, ArrowRight } from "lucide-react";
+import Header from "@/components/layout/header";
 import { JSX } from "react";
 // Import types from the dedicated file
 
@@ -37,7 +38,10 @@ export default async function About() {
   ]);
 
   return (
+    
     <main className="min-h-screen bg-gray-50 antialiased">
+      <Header />
+      
       <header className="relative h-[400px] md:h-[500px] w-full">
         <Image
           src={about.hero.backgroundImage}
