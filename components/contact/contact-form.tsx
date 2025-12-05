@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { submitContact } from "@/app/services/contactService";
+import { SuccessToast } from "@/components/ui/toast";
 
 type ContactFormState = {
   name: string;
@@ -22,6 +24,7 @@ export function ContactForm() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [showSuccess, setShowSuccess] = useState(false);
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -36,10 +39,15 @@ export function ContactForm() {
     setStatus("idle");
 
     try {
-      // هنا لاحقاً تربطوها مع API / Email service
-      console.log("Contact form submitted:", form);
+      const result = await submitContact(form);
+
+      if (result.error) {
+        setStatus("error");
+        return;
+      }
 
       setStatus("success");
+      setShowSuccess(true);
       setForm({
         name: "",
         email: "",
@@ -166,6 +174,13 @@ export function ContactForm() {
       >
         {isSubmitting ? "Sending..." : "Send Message"}
       </Button>
+
+      {showSuccess && (
+        <SuccessToast
+          message="Thank you! Your message has been received. We'll get back to you soon."
+          onClose={() => setShowSuccess(false)}
+        />
+      )}
     </form>
   );
 }
