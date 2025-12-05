@@ -362,6 +362,67 @@
       "email": "user@example.com",
       "password": "$2b$10$zNgNI6AVxDRw5uRf3mE0T.ono.Qjv.4QABRqcjtuPMsETWjwIk7mC",
       "role": "buyer"
+    },
+    {
+      "id": "8aa4",
+      "name": "anan",
+      "email": "anan@gmail.com",
+      "password": "$2b$10$Y6BtZfFwn8PZQ4Noh9oCPOvf/POKv3tRCKtBoTiQ8FpP.nv9XRkLO",
+      "role": "admin"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "241c",
+      "propertyId": "5",
+      "visitType": "in-person",
+      "date": "2025-12-24",
+      "timeSlot": "11:00 - 11:30",
+      "message": "ddasd",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-05T08:21:49.921Z"
+    },
+    {
+      "id": "7374",
+      "propertyId": "5",
+      "visitType": "in-person",
+      "date": "2024-06-23",
+      "timeSlot": "16:00 - 16:30",
+      "message": "Omnis neque enim bla",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-05T08:25:30.533Z"
+    },
+    {
+      "id": "6016",
+      "propertyId": "3",
+      "visitType": "in-person",
+      "date": "2025-12-24",
+      "timeSlot": "12:00 - 12:30",
+      "message": "dada",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-05T08:32:21.037Z"
+    },
+    {
+      "id": "f798",
+      "propertyId": "3",
+      "visitType": "in-person",
+      "date": "1981-02-27",
+      "timeSlot": "15:00 - 15:30",
+      "message": "Non sit mollit dict",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-05T08:33:04.384Z"
     }
   ]
 }

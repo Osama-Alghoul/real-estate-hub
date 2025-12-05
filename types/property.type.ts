@@ -1,12 +1,17 @@
 export type Property = {
-  id: number;
+  id: string;
   img: string;
+  images?: string[];
   title: string;
   price: number;
   garag: number;
   bath: number;
   size: number;
+  yearBuilt?: number;
   avatar: string;
   name: string;
   type: "sale" | "rent";
+  description?: string;
+  amenities?: string[];
+  video?: string;
 };
