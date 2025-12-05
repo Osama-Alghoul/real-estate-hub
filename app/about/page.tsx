@@ -15,7 +15,7 @@ const iconMap: { [key: string]: JSX.Element } = {
 
 async function fetchData<T extends FetchedDataType>(endpoint: string): Promise<T> {
   
-  const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
   
   const res = await fetch(`${baseUrl}/${endpoint}`, { next: { revalidate: 0 } });
 
