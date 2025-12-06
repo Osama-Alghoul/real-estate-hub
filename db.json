@@ -350,20 +350,6 @@
   ],
   "users": [
     {
-      "id": "b459",
-      "name": "happy",
-      "email": "happy@gmail.com",
-      "password": "$2b$10$ueQPl7XrhyKO5mOfx.A2tu8HwVlzikvLzkZN83VQcXAoqhvn08CNC",
-      "role": "owner"
-    },
-    {
-      "id": "c95f",
-      "name": "Osama Alghoul",
-      "email": "user@example.com",
-      "password": "$2b$10$zNgNI6AVxDRw5uRf3mE0T.ono.Qjv.4QABRqcjtuPMsETWjwIk7mC",
-      "role": "buyer"
-    },
-    {
       "id": "ce6a",
       "name": "Mai ",
       "email": "mai@gmail.com",
@@ -383,6 +369,92 @@
       "email": "alaa@gmail.com",
       "password": "$2b$10$ShiTUzLBQQw4SPZBXx2zyOlAYZCo77U81Rdvb3.SQzz8TVVJQLHY.",
       "role": "buyer"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "8f0e",
+      "name": "Macy Lara",
+      "email": "sihux@mailinator.com",
+      "phone": "+1 (904) 304-6238",
+      "subject": "Commodo et modi reic",
+      "message": "Officia harum veniam",
+      "status": "new",
+      "createdAt": "2025-12-05T08:46:40.535Z"
+    },
+    {
+      "id": "822e",
+      "name": "Kylynn Rhodes",
+      "email": "mylororumu@mailinator.com",
+      "phone": "+1 (667) 836-6649",
+      "subject": "Laboriosam cillum m",
+      "message": "Cillum et voluptatum",
+      "status": "new",
+      "createdAt": "2025-12-05T08:46:51.046Z"
+    },
+    {
+      "id": "4ba7",
+      "name": "Emily Morrow",
+      "email": "zufymyvo@mailinator.com",
+      "phone": "+1 (509) 928-5782",
+      "subject": "Adipisci quo dolores",
+      "message": "Ex nisi ratione minu",
+      "status": "new",
+      "createdAt": "2025-12-05T08:48:32.795Z"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "241c",
+      "propertyId": "5",
+      "visitType": "in-person",
+      "date": "2025-12-24",
+      "timeSlot": "11:00 - 11:30",
+      "message": "ddasd",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-05T08:21:49.921Z"
+    },
+    {
+      "id": "7374",
+      "propertyId": "5",
+      "visitType": "in-person",
+      "date": "2024-06-23",
+      "timeSlot": "16:00 - 16:30",
+      "message": "Omnis neque enim bla",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-05T08:25:30.533Z"
+    },
+    {
+      "id": "6016",
+      "propertyId": "3",
+      "visitType": "in-person",
+      "date": "2025-12-24",
+      "timeSlot": "12:00 - 12:30",
+      "message": "dada",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-05T08:32:21.037Z"
+    },
+    {
+      "id": "f798",
+      "propertyId": "3",
+      "visitType": "in-person",
+      "date": "1981-02-27",
+      "timeSlot": "15:00 - 15:30",
+      "message": "Non sit mollit dict",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-05T08:33:04.384Z"
     }
   ]
 }

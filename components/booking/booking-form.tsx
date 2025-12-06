@@ -1,21 +1,25 @@
-"use client"
-import type React from "react"
+"use client";
+import type React from "react";
 
-import { useState } from "react"
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Checkbox } from "@/components/ui/checkbox"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Label } from "@/components/ui/label"
-import { Calendar, Clock } from "lucide-react"
+import { useState } from "react";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { Calendar, Clock } from "lucide-react";
+import { createBooking } from "@/app/services/bookingService";
+import { Property } from "@/types/property.type";
+import { SuccessToast } from "@/components/ui/toast";
 
 interface BookingFormProps {
-  selectedDate: string
-  setSelectedDate: (date: string) => void
-  selectedTime: string
-  setSelectedTime: (time: string) => void
-  visitType: string
-  setVisitType: (type: string) => void
+  property: Property;
+  selectedDate: string;
+  setSelectedDate: (date: string) => void;
+  selectedTime: string;
+  setSelectedTime: (time: string) => void;
+  visitType: string;
+  setVisitType: (type: string) => void;
 }
 
 const availableTimeSlots = [
@@ -27,11 +31,12 @@ const availableTimeSlots = [
   "15:00 - 15:30",
   "16:00 - 16:30",
   "17:00 - 17:30",
-]
+];
 
-const bookedSlots = ["10:00 - 10:30", "14:00 - 14:30"]
+const bookedSlots = ["10:00 - 10:30", "14:00 - 14:30"];
 
 export default function BookingForm({
+  property,
   selectedDate,
   setSelectedDate,
   selectedTime,
@@ -39,24 +44,69 @@ export default function BookingForm({
   visitType,
   setVisitType,
 }: BookingFormProps) {
-  const [wantCall, setWantCall] = useState(false)
-  const [payDeposit, setPayDeposit] = useState(false)
+  const [wantCall, setWantCall] = useState(false);
+  const [payDeposit, setPayDeposit] = useState(false);
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
   const [cardDetails, setCardDetails] = useState({
     name: "",
     cardNumber: "",
     expiry: "",
     cvv: "",
-  })
+  });
 
   const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSelectedDate(e.target.value)
-  }
+    setSelectedDate(e.target.value);
+  };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    const bookingData = {
+      propertyId: String(property.id),
+      visitType: visitType as "in-person" | "virtual" | "open-house",
+      date: selectedDate,
+      timeSlot: selectedTime,
+      message,
+      wantCall,
+      payDeposit,
+      payment: payDeposit
+        ? {
+            amount: 1000,
+            cardName: cardDetails.name,
+            cardNumberLast4: cardDetails.cardNumber.slice(-4),
+          }
+        : null,
+    };
+
+    const result = await createBooking(bookingData);
+    setLoading(false);
+
+    if (result.error) {
+      alert(result.error);
+      return;
+    }
+
+    // Show success toast
+    setShowSuccess(true);
+
+    // Reset form
+    setSelectedDate("");
+    setSelectedTime("");
+    setVisitType("in-person");
+    setMessage("");
+    setWantCall(false);
+    setPayDeposit(false);
+    setCardDetails({ name: "", cardNumber: "", expiry: "", cvv: "" });
+  };
   return (
     <Card className="p-8 shadow-md">
       <h2 className="text-2xl font-bold text-[#2C3E50] mb-8">Book a Visit</h2>
 
-      <form className="space-y-8">
+      <form className="space-y-8" onSubmit={handleSubmit}>
         {/* Step 1: Visit Type */}
         <div>
           <h3 className="font-semibold text-gray-800 mb-4">Visit Type</h3>
@@ -75,7 +125,10 @@ export default function BookingForm({
             </div>
             <div className="flex items-center space-x-3">
               <RadioGroupItem value="open-house" id="open-house" />
-              <Label htmlFor="open-house" className="cursor-pointer font-normal">
+              <Label
+                htmlFor="open-house"
+                className="cursor-pointer font-normal"
+              >
                 Open house
               </Label>
             </div>
@@ -98,7 +151,8 @@ export default function BookingForm({
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#5B72D9]"
           />
           <p className="text-xs text-gray-500 mt-2">
-            Only available dates are clickable. Greyed out dates are unavailable.
+            Only available dates are clickable. Greyed out dates are
+            unavailable.
           </p>
         </div>
 
@@ -114,8 +168,8 @@ export default function BookingForm({
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {availableTimeSlots.map((slot) => {
-                const isBooked = bookedSlots.includes(slot)
-                const isSelected = selectedTime === slot
+                const isBooked = bookedSlots.includes(slot);
+                const isSelected = selectedTime === slot;
                 return (
                   <button
                     key={slot}
@@ -126,13 +180,13 @@ export default function BookingForm({
                       isBooked
                         ? "bg-gray-100 text-gray-400 cursor-not-allowed"
                         : isSelected
-                          ? "bg-[#5B72D9] text-white"
-                          : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                        ? "bg-[#5B72D9] text-white"
+                        : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                     }`}
                   >
                     {slot}
                   </button>
-                )
+                );
               })}
             </div>
           </div>
@@ -143,14 +197,24 @@ export default function BookingForm({
 
         {/* Step 4: Additional Details */}
         <div>
-          <h3 className="font-semibold text-gray-800 mb-4">Additional Details</h3>
+          <h3 className="font-semibold text-gray-800 mb-4">
+            Additional Details
+          </h3>
           <textarea
             placeholder="Message to the owner / special requests..."
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#5B72D9] resize-none"
             rows={4}
           />
           <div className="flex items-center gap-3 mt-4">
-            <Checkbox id="call" checked={wantCall} onCheckedChange={(checked :boolean) => setWantCall(checked as boolean)} />
+            <Checkbox
+              id="call"
+              checked={wantCall}
+              onCheckedChange={(checked: boolean) =>
+                setWantCall(checked as boolean)
+              }
+            />
             <Label htmlFor="call" className="cursor-pointer font-normal">
               I want the agent to call me before the visit
             </Label>
@@ -166,7 +230,9 @@ export default function BookingForm({
             <Checkbox
               id="deposit"
               checked={payDeposit}
-              onCheckedChange={(checked:boolean) => setPayDeposit(checked as boolean)}
+              onCheckedChange={(checked: boolean) =>
+                setPayDeposit(checked as boolean)
+              }
             />
             <Label htmlFor="deposit" className="cursor-pointer font-normal">
               Pay a deposit now to confirm my booking (optional)
@@ -181,7 +247,9 @@ export default function BookingForm({
               </div>
 
               <div className="mb-4">
-                <p className="text-sm font-medium text-gray-800 mb-3">Payment Method</p>
+                <p className="text-sm font-medium text-gray-800 mb-3">
+                  Payment Method
+                </p>
                 <div className="flex gap-3">
                   <button
                     type="button"
@@ -200,22 +268,33 @@ export default function BookingForm({
 
               <div className="space-y-3">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Name
+                  </label>
                   <input
                     type="text"
                     value={cardDetails.name}
-                    onChange={(e) => setCardDetails({ ...cardDetails, name: e.target.value })}
+                    onChange={(e) =>
+                      setCardDetails({ ...cardDetails, name: e.target.value })
+                    }
                     placeholder="John Doe"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#5B72D9]"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Card Number</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Card Number
+                  </label>
                   <input
                     type="text"
                     value={cardDetails.cardNumber}
-                    onChange={(e) => setCardDetails({ ...cardDetails, cardNumber: e.target.value })}
+                    onChange={(e) =>
+                      setCardDetails({
+                        ...cardDetails,
+                        cardNumber: e.target.value,
+                      })
+                    }
                     placeholder="1234 5678 9012 3456"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#5B72D9]"
                   />
@@ -223,21 +302,32 @@ export default function BookingForm({
 
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Expiry Date</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Expiry Date
+                    </label>
                     <input
                       type="text"
                       value={cardDetails.expiry}
-                      onChange={(e) => setCardDetails({ ...cardDetails, expiry: e.target.value })}
+                      onChange={(e) =>
+                        setCardDetails({
+                          ...cardDetails,
+                          expiry: e.target.value,
+                        })
+                      }
                       placeholder="MM/YY"
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#5B72D9]"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">CVV</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      CVV
+                    </label>
                     <input
                       type="text"
                       value={cardDetails.cvv}
-                      onChange={(e) => setCardDetails({ ...cardDetails, cvv: e.target.value })}
+                      onChange={(e) =>
+                        setCardDetails({ ...cardDetails, cvv: e.target.value })
+                      }
                       placeholder="123"
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#5B72D9]"
                     />
@@ -253,8 +343,12 @@ export default function BookingForm({
 
         {/* Action Buttons */}
         <div className="flex gap-3 pt-4">
-          <Button className="flex-1 bg-[#5B72D9] hover:bg-[#4A5FB8] text-white py-3 rounded-lg font-semibold">
-            Request Visit
+          <Button
+            type="submit"
+            disabled={loading}
+            className="flex-1 bg-[#5B72D9] hover:bg-[#4A5FB8] text-white py-3 rounded-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {loading ? "Submitting..." : "Request Visit"}
           </Button>
           <Button
             variant="outline"
@@ -266,9 +360,17 @@ export default function BookingForm({
 
         {/* Note */}
         <p className="text-xs text-gray-500 text-center">
-          Your booking will be sent to the owner. You will receive a confirmation when the owner approves the visit.
+          Your booking will be sent to the owner. You will receive a
+          confirmation when the owner approves the visit.
         </p>
       </form>
+
+      {showSuccess && (
+        <SuccessToast
+          message="Booking request submitted successfully! You will receive a confirmation when the owner approves."
+          onClose={() => setShowSuccess(false)}
+        />
+      )}
     </Card>
-  )
+  );
 }

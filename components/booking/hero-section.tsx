@@ -6,7 +6,7 @@ export default function HeroSection() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            "url(/placeholder.svg?height=800&width=1600&query=modern living room interior with furniture)",
+            "url(/properties/P1.png)",
         }}
       />
 
