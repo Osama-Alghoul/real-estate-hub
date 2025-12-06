@@ -362,6 +362,27 @@
       "email": "user@example.com",
       "password": "$2b$10$zNgNI6AVxDRw5uRf3mE0T.ono.Qjv.4QABRqcjtuPMsETWjwIk7mC",
       "role": "buyer"
+    },
+    {
+      "id": "ce6a",
+      "name": "Mai ",
+      "email": "mai@gmail.com",
+      "password": "$2b$10$cpp9FYVj7wbS2ahwfowmUeZ3KiNYGrlhyPPRhoIW/3ahR3DlmQIZ6",
+      "role": "admin"
+    },
+    {
+      "id": "cb87",
+      "name": "fadi",
+      "email": "fadi@gmail.com",
+      "password": "$2b$10$QOXOrWuKlHFkqWDi4FtIZ.iPtJViFK6VoQcjPsOrev86ZrnJBK9Zm",
+      "role": "owner"
+    },
+    {
+      "id": "77a1",
+      "name": "alaa",
+      "email": "alaa@gmail.com",
+      "password": "$2b$10$ShiTUzLBQQw4SPZBXx2zyOlAYZCo77U81Rdvb3.SQzz8TVVJQLHY.",
+      "role": "buyer"
     }
   ]
 }

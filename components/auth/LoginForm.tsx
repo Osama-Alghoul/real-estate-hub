@@ -2,10 +2,11 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { login } from '../../app/services/authService';
 import type { LoginFormData } from '../../types/auth';
+import { useAuth } from '../../app/context/AuthContext';
 
 export default function LoginForm() {
+  const { login } = useAuth();
   const router = useRouter();
   const [form, setForm] = useState<LoginFormData>({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
@@ -20,10 +21,9 @@ export default function LoginForm() {
     setError("");
 
     try {
-      const res = await login(form);
+      const res = await login(form.email, form.password);
       setLoading(false);
       if (res.error) return setError(res.error);
-      router.push(`/dashboard/${res.user!.role}?name=${encodeURIComponent(res.user!.name)}`);
     } catch {
       setError("Network error");
       setLoading(false);

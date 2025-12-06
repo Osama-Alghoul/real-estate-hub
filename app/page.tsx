@@ -1,6 +1,6 @@
 "use client";
 
-import Hero from "@/components/main-page/hero";
+import HomeLandingPage from "../app/landing/page"
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -24,9 +24,5 @@ export default function Home() { // this is will be landing page, so must change
 
   if (userRole) return null; // redirecting user 
 
-  return (
-    <>
-      <Hero />
-    </>
-  );
+  return <HomeLandingPage />;
 }
