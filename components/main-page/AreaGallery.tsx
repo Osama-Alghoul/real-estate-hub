@@ -40,7 +40,7 @@ export default function AreaGallery() {
       </div>
 
       {/* GP4 - Featured Wide Tile (Spans 2 columns on 'lg' screens) */}
-      <div className="overflow-hidden rounded-lg shadow-lg md:col-span-2"> 
+      <div className="overflow-hidden rounded-lg shadow-lg md:col-span-2 h-full md:h-1/2"> 
         <Image
           src={"/gallery/GP4.jpg"}
           alt={""}
@@ -51,7 +51,7 @@ export default function AreaGallery() {
       </div>
 
       {/* GP5 - Standard Tile (This naturally flows into the remaining spot) */}
-      <div className="overflow-hidden rounded-lg shadow-lg">
+      <div className="overflow-hidden rounded-lg shadow-lg h-full md:h-1/2">
         <Image
           src={"/gallery/GP5.jpg"}
           alt={""}
