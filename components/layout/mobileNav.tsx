@@ -21,7 +21,9 @@ export function MobileNav({ transparent }: { transparent?: boolean }) {
         <DropdownMenuLabel>Pages</DropdownMenuLabel>
         <DropdownMenuGroup>
           <DropdownMenuItem>Home</DropdownMenuItem>
-          <DropdownMenuItem>About us</DropdownMenuItem>
+          <Link href="/about">
+            <DropdownMenuItem>About us</DropdownMenuItem>
+          </Link>
           <DropdownMenuItem>Our Agents</DropdownMenuItem>
           <Link href="/properties">
             <DropdownMenuItem>Properties</DropdownMenuItem>
