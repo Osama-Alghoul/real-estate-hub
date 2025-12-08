@@ -1,5 +1,3 @@
-"use client";
-
 import { Bath, CarFront, Fullscreen, Heart, Plus, Share2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

@@ -1,5 +1,6 @@
 "use client";
 
+import Cards from "@/components/main-page/cards";
 import Hero from "@/components/main-page/hero";
 import PlatformFeatures from "@/components/main-page/platformFeatures";
 import PropertiesAreaGallery from "@/components/main-page/PropertiesAreaGallery";
@@ -32,6 +33,7 @@ export default function Home() {
       <Hero />
       <PropertiesAreaGallery />
       <PlatformFeatures />
+      <Cards />
     </>
   );
 }
