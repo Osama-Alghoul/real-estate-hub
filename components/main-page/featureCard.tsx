@@ -9,7 +9,7 @@ export default function FeatureCard({
   path,
 }: FeatureCardProps) {
   return (
-    <div className="flex flex-col gap-6 hover:bg-white hover:shadow-lg p-6 rounded-2xl max-w-[300px]">
+    <div className="flex flex-col gap-6 hover:bg-white bg-white md:bg-transparent hover:shadow-lg p-6 rounded-2xl max-w-[300px]">
       <Image src={icon} alt={title} width={50} height={50} />
       <h3 className="text-2xl font-semibold">{title}</h3>
       <p className="text-gray-400">{subTitle}</p>
