@@ -185,3 +185,26 @@ export async function getBookingsByPropertyId(propertyId: string): Promise<{ boo
     return { error: 'Network error. Please try again.' };
   }
 }
+
+/**
+ * Get booked time slots for a specific property and date
+ */
+export async function getBookedSlots(propertyId: string, date: string): Promise<{ bookedSlots?: string[]; error?: string }> {
+  try {
+    const response = await fetch(`${API_BASE}/bookings?propertyId=${propertyId}&date=${date}`);
+
+    if (!response.ok) {
+      return { error: 'Failed to fetch booked slots' };
+    }
+
+    const bookings: Booking[] = await response.json();
+    const bookedSlots = bookings
+      .filter(booking => booking.status !== 'rejected') // Only consider non-rejected bookings
+      .map(booking => booking.timeSlot);
+    
+    return { bookedSlots };
+  } catch (error) {
+    console.error('Error fetching booked slots:', error);
+    return { error: 'Network error. Please try again.' };
+  }
+}
