@@ -1,11 +1,13 @@
 "use client";
 
 import Hero from "@/components/main-page/hero";
+import PlatformFeatures from "@/components/main-page/platformFeatures";
 import PropertiesAreaGallery from "@/components/main-page/PropertiesAreaGallery";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export default function Home() { // this is will be landing page, so must change Home -> LandingPage
+export default function Home() {
+  // this is will be landing page, so must change Home -> LandingPage
   const [userRole, setUserRole] = useState<string | null>(null);
   const router = useRouter();
 
@@ -23,12 +25,13 @@ export default function Home() { // this is will be landing page, so must change
       });
   }, []);
 
-  if (userRole) return null; // redirecting user 
+  if (userRole) return null; // redirecting user
 
   return (
     <>
       <Hero />
       <PropertiesAreaGallery />
+      <PlatformFeatures />
     </>
   );
 }
