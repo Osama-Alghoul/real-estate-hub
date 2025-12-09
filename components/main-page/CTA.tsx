@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SectionTitle from "../common/sectionTitle";
 import { Button } from "../ui/button";
 
@@ -12,7 +13,11 @@ export default function CTA() {
         description="Spend vacations in best hotels and resorts find the great place of your
         choice using different searching options."
       />
-      <Button variant={"secondary"} className="mb-14">Contact us</Button>
+      <Link href="/contact">
+        <Button variant={"secondary"} className="mb-14">
+          Contact us
+        </Button>
+      </Link>
     </section>
   );
 }
