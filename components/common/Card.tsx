@@ -25,7 +25,7 @@ export default function Card({
       <div
         className={
           variant === "grid"
-            ? "w-[370px] bg-white rounded-lg shadow-md"
+            ? "max-w-[370px] bg-white rounded-lg shadow-md"
             : `flex w-full bg-white rounded-xl shadow-md overflow-hidden h-[270px] ${listClasses}`
         }
       >
