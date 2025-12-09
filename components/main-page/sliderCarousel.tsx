@@ -1,4 +1,3 @@
-import { CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -6,8 +5,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Button } from "../ui/button";
-import { Expand, MapPin } from "lucide-react";
 import Slide from "./slide";
 
 export function CarouselSize() {
