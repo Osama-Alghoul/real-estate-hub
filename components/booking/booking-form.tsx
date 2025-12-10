@@ -1,14 +1,14 @@
 "use client";
 import type React from "react";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Calendar, Clock } from "lucide-react";
-import { createBooking } from "@/app/services/bookingService";
+import { createBooking, getBookedSlots } from "@/app/services/bookingService";
 import { Property } from "@/types/property.type";
 import { SuccessToast } from "@/components/ui/toast";
 
@@ -33,8 +33,6 @@ const availableTimeSlots = [
   "17:00 - 17:30",
 ];
 
-const bookedSlots = ["10:00 - 10:30", "14:00 - 14:30"];
-
 export default function BookingForm({
   property,
   selectedDate,
@@ -49,12 +47,33 @@ export default function BookingForm({
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [bookedSlots, setBookedSlots] = useState<string[]>([]);
+  const [loadingSlots, setLoadingSlots] = useState(false);
   const [cardDetails, setCardDetails] = useState({
     name: "",
     cardNumber: "",
     expiry: "",
     cvv: "",
   });
+
+  // Fetch booked slots when property or date changes
+  useEffect(() => {
+    const fetchBookedSlots = async () => {
+      if (!selectedDate || !property.id) return;
+
+      setLoadingSlots(true);
+      const result = await getBookedSlots(String(property.id), selectedDate);
+
+      if (result.bookedSlots) {
+        setBookedSlots(result.bookedSlots);
+      } else {
+        setBookedSlots([]);
+      }
+      setLoadingSlots(false);
+    };
+
+    fetchBookedSlots();
+  }, [property.id, selectedDate]);
 
   const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedDate(e.target.value);
@@ -166,29 +185,39 @@ export default function BookingForm({
               <Clock className="w-5 h-5 text-[#4DA6C7]" />
               Available Time Slots
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              {availableTimeSlots.map((slot) => {
-                const isBooked = bookedSlots.includes(slot);
-                const isSelected = selectedTime === slot;
-                return (
-                  <button
-                    key={slot}
-                    type="button"
-                    onClick={() => !isBooked && setSelectedTime(slot)}
-                    disabled={isBooked}
-                    className={`py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
-                      isBooked
-                        ? "bg-gray-100 text-gray-400 cursor-not-allowed"
-                        : isSelected
-                        ? "bg-[#5B72D9] text-white"
-                        : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                    }`}
-                  >
-                    {slot}
-                  </button>
-                );
-              })}
-            </div>
+
+            {loadingSlots ? (
+              <div className="flex items-center justify-center py-8 space-x-2 text-[#5B72D9]">
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-current"></div>
+                <span className="text-sm font-medium">
+                  Checking availability...
+                </span>
+              </div>
+            ) : (
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                {availableTimeSlots.map((slot) => {
+                  const isBooked = bookedSlots.includes(slot);
+                  const isSelected = selectedTime === slot;
+                  return (
+                    <button
+                      key={slot}
+                      type="button"
+                      onClick={() => !isBooked && setSelectedTime(slot)}
+                      disabled={isBooked}
+                      className={`py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
+                        isBooked
+                          ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                          : isSelected
+                          ? "bg-[#5B72D9] text-white"
+                          : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                      }`}
+                    >
+                      {slot}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
           </div>
         )}
 
