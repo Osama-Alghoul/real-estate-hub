@@ -1,12 +1,6 @@
 "use client";
 
-import Footer from "@/components/layout/footer";
-import Cards from "@/components/main-page/cards";
-import CTA from "@/components/main-page/CTA";
-import Hero from "@/components/main-page/hero";
-import PlatformFeatures from "@/components/main-page/platformFeatures";
-import PropertiesAreaGallery from "@/components/main-page/PropertiesAreaGallery";
-import Slider from "@/components/main-page/slider";
+import HomeLandingPage from "../app/landing/page"
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -30,16 +24,5 @@ export default function Home() {
   }, []);
 
   if (userRole) return null; // redirecting user
-
-  return (
-    <>
-      <Hero />
-      <PropertiesAreaGallery />
-      <PlatformFeatures />
-      <Cards />
-      <Slider />
-      <CTA />
-      <Footer />
-    </>
-  );
+  return <HomeLandingPage />;
 }

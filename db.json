@@ -350,25 +350,25 @@
   ],
   "users": [
     {
-      "id": "b459",
-      "name": "happy",
-      "email": "happy@gmail.com",
-      "password": "$2b$10$ueQPl7XrhyKO5mOfx.A2tu8HwVlzikvLzkZN83VQcXAoqhvn08CNC",
+      "id": "ce6a",
+      "name": "Mai ",
+      "email": "mai@gmail.com",
+      "password": "$2b$10$cpp9FYVj7wbS2ahwfowmUeZ3KiNYGrlhyPPRhoIW/3ahR3DlmQIZ6",
+      "role": "admin"
+    },
+    {
+      "id": "cb87",
+      "name": "fadi",
+      "email": "fadi@gmail.com",
+      "password": "$2b$10$QOXOrWuKlHFkqWDi4FtIZ.iPtJViFK6VoQcjPsOrev86ZrnJBK9Zm",
       "role": "owner"
     },
     {
-      "id": "c95f",
-      "name": "Osama Alghoul",
-      "email": "user@example.com",
-      "password": "$2b$10$zNgNI6AVxDRw5uRf3mE0T.ono.Qjv.4QABRqcjtuPMsETWjwIk7mC",
+      "id": "77a1",
+      "name": "alaa",
+      "email": "alaa@gmail.com",
+      "password": "$2b$10$ShiTUzLBQQw4SPZBXx2zyOlAYZCo77U81Rdvb3.SQzz8TVVJQLHY.",
       "role": "buyer"
-    },
-    {
-      "id": "8aa4",
-      "name": "anan",
-      "email": "anan@gmail.com",
-      "password": "$2b$10$Y6BtZfFwn8PZQ4Noh9oCPOvf/POKv3tRCKtBoTiQ8FpP.nv9XRkLO",
-      "role": "admin"
     }
   ],
   "contacts": [

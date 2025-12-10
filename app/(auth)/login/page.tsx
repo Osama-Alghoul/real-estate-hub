@@ -1,20 +1,18 @@
 'use client';
 
 import LoginForm from '../../../components/auth/LoginForm';
-import { isAuthenticated, getCurrentUser } from '../../services/authService';
+import { useAuth } from "../../context/AuthContext";
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 
 export default function LoginPage() {
+  const { user } = useAuth();
   const router = useRouter();
   useEffect(() => {
-    if (isAuthenticated()) {
-      const user = getCurrentUser();
-      if (user) router.replace(`/dashboard/${user.role}?name=${encodeURIComponent(user.name)}`);
+        if (user) {
+      router.replace(`/dashboard/${user.role}?name=${encodeURIComponent(user.name)}`);
     }
-  }, [router]);
+  }, [user, router]);
 
-  return (
-    <LoginForm />
-  );
+  return <LoginForm />;
 }
