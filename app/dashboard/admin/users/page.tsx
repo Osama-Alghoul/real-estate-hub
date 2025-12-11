@@ -5,6 +5,8 @@ import { User } from "@/types/auth";
 import DataTable, { Column } from "@/components/common/DataTable";
 import Pagination from "@/components/properties/Pagination";
 import { Pencil, Trash, Power } from "lucide-react";
+import ConfirmModal from "@/components/common/ConfirmModal";
+import UserFormModal from "@/components/admin/UserFormModal";
 
 export default function UsersPage() {
   const [users, setUsers] = useState<User[]>([]);
@@ -17,10 +19,18 @@ export default function UsersPage() {
 
   // Pagination
   const [page, setPage] = useState(1);
-  const pageSize = 5;
+  const pageSize = 7;
 
-  const API =
-    process.env.NEXT_PUBLIC_JSON_SERVER_URL || "http://localhost:3001";
+  // modal states
+  const [editUser, setEditUser] = useState<User | null>(null);
+  const [showCreate, setShowCreate] = useState(false);
+  const [confirm, setConfirm] = useState<{
+    open: boolean;
+    user?: User;
+    action?: "delete" | "toggle";
+  }>({ open: false });
+
+  const API_BASE = process.env.JSON_SERVER_URL || "http://localhost:3001";
 
   // Fetch Users
   useEffect(() => {
@@ -30,12 +40,12 @@ export default function UsersPage() {
   async function fetchUsers() {
     try {
       setIsLoading(true);
-      const res = await fetch(`${API}/users`);
+      const res = await fetch(`${API_BASE}/users`);
       const data: User[] = await res.json();
 
       const enriched = data.map((u) => ({
         ...u,
-        status: u.status ?? "active", // Default Status 
+        status: u.status ?? "active", // Default Status
         createdAt: u.createdAt ?? new Date().toISOString(),
       }));
 
@@ -54,7 +64,7 @@ export default function UsersPage() {
       list = list.filter(
         (u) =>
           u.name.toLowerCase().includes(s) ||
-          u.email.toLowerCase().includes(s)
+         u.email.toLowerCase().includes(s)
       );
     }
 
@@ -70,11 +80,15 @@ export default function UsersPage() {
   const paginated = useMemo(() => {
     const start = (page - 1) * pageSize;
     return filtered.slice(start, start + pageSize);
-  }, [filtered, page]);
+  }, [filtered, page, pageSize]);
 
-  // Table Columns 
+  // Table Columns
   const columns: Column<User>[] = [
-    { key: "name", label: "Name" },
+    {
+      key: "name",
+      label: "Name",
+      render: (r) => <div className="font-medium">{r.name}</div>,
+    },
     { key: "email", label: "Email" },
 
     {
@@ -104,33 +118,52 @@ export default function UsersPage() {
       label: "Created",
       render: (r) => new Date(r.createdAt).toLocaleDateString(),
     },
-
-    {
-      key: "actions",
-      label: "Actions",
-      render: (row) => (
-        <div className="flex items-center gap-2">
-          <button className="p-1 rounded hover:bg-gray-100" title="Edit User">
-            <Pencil size={16} />
-          </button>
-
-          <button
-            className="p-1 rounded hover:bg-gray-100"
-            title={row.status === "active" ? "Disable User" : "Enable User"}
-          >
-            <Power size={16} />
-          </button>
-
-          <button
-            className="p-1 rounded text-red-600 hover:bg-gray-100"
-            title="Delete User"
-          >
-            <Trash size={16} />
-          </button>
-        </div>
-      ),
-    },
   ];
+
+  const renderActions = (row: User) => (
+    <div className="flex items-center gap-2">
+      <button
+        onClick={() => setEditUser(row)}
+        title="Edit"
+        className="p-1 rounded hover:bg-gray-100"
+      >
+        <Pencil size={16} />
+      </button>
+      <button
+        onClick={() => setConfirm({ open: true, user: row, action: "toggle" })}
+        title={row.status === "active" ? "Disable" : "Enable"}
+        className="p-1 rounded hover:bg-gray-100"
+      >
+        <Power size={16} />
+      </button>
+      <button
+        onClick={() => setConfirm({ open: true, user: row, action: "delete" })}
+        title="Delete"
+        className="p-1 rounded hover:bg-gray-100 text-red-600"
+      >
+        <Trash size={16} />
+      </button>
+    </div>
+  );
+
+  // handlers for confirm actions (delete / toggle)
+  async function handleConfirm(action: "delete" | "toggle", user?: User) {
+    if (!user) return;
+    setConfirm({ open: false });
+
+    if (action === "delete") {
+      await fetch(`${API_BASE}/users/${user.id}`, { method: "DELETE" });
+    } else {
+      await fetch(`${API_BASE}/users/${user.id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          status: user.status === "active" ? "disabled" : "active",
+        }),
+      });
+    }
+    await fetchUsers();
+  }
 
   return (
     <div className="space-y-5">
@@ -141,7 +174,6 @@ export default function UsersPage() {
             value={search}
             onChange={(e) => {
               setSearch(e.target.value);
-              setPage(1);
             }}
             placeholder="Search name or email..."
             className="border p-2 rounded w-64"
@@ -151,7 +183,6 @@ export default function UsersPage() {
             value={roleFilter}
             onChange={(e) => {
               setRoleFilter(e.target.value as any);
-              setPage(1);
             }}
             className="border p-2 rounded"
           >
@@ -165,7 +196,6 @@ export default function UsersPage() {
             value={statusFilter}
             onChange={(e) => {
               setStatusFilter(e.target.value as any);
-              setPage(1);
             }}
             className="border p-2 rounded"
           >
@@ -175,25 +205,67 @@ export default function UsersPage() {
           </select>
         </div>
 
-        <button className="bg-primary-light text-white px-4 py-2 rounded">
-          Add User
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setShowCreate(true)}
+            className="bg-indigo-600 text-white px-4 py-2 rounded"
+          >
+            Add User
+          </button>
+        </div>
       </div>
-
       {/* Data Table */}
       <DataTable
         data={paginated}
         columns={columns}
         isLoading={isLoading}
         emptyMessage="No users found"
+        renderActions={renderActions}
       />
-
       {/* Pagination */}
       {totalPages > 1 && (
         <Pagination
           totalPages={totalPages}
           currentPage={page}
           onPageChange={setPage}
+        />
+      )}
+      {/* Modals (implement these components separately) */}
+      {showCreate && (
+        <UserFormModal
+          open={showCreate}
+          onClose={() => {
+            setShowCreate(false);
+          }}
+          onSuccess={() => {
+            setShowCreate(false);
+            fetchUsers();
+          }}
+        />
+      )}
+
+      {editUser && (
+        <UserFormModal
+          open={Boolean(editUser)}
+          user={editUser}
+          onClose={() => setEditUser(null)}
+          onSuccess={() => {
+            setEditUser(null);
+            fetchUsers();
+          }}
+        />
+      )}
+
+      {confirm.open && (
+        <ConfirmModal
+          title={confirm.action === "delete" ? "Delete user" : "Toggle status"}
+          description={
+            confirm.action === "delete"
+              ? `Delete ${confirm.user?.name}?`
+              : `Change status for ${confirm.user?.name}?`
+          }
+          onCancel={() => setConfirm({ open: false })}
+          onConfirm={() => handleConfirm(confirm.action as any, confirm.user)}
         />
       )}
     </div>
