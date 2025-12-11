@@ -354,7 +354,8 @@
       "name": "Mai ",
       "email": "mai@gmail.com",
       "password": "$2b$10$cpp9FYVj7wbS2ahwfowmUeZ3KiNYGrlhyPPRhoIW/3ahR3DlmQIZ6",
-      "role": "admin"
+      "role": "admin",
+      "status": "disabled"
     },
     {
       "id": "cb87",
@@ -369,6 +370,27 @@
       "email": "alaa@gmail.com",
       "password": "$2b$10$ShiTUzLBQQw4SPZBXx2zyOlAYZCo77U81Rdvb3.SQzz8TVVJQLHY.",
       "role": "buyer"
+    },
+    {
+      "id": "882a",
+      "name": "anan jamal",
+      "email": "anan@gmail.com",
+      "password": "$2b$10$ShpBXjhjzjI8.QnX5Yi/FOi6fdFrZ4js71gn/BJAKtiUWgJyZQ/vu",
+      "role": "buyer"
+    },
+    {
+      "id": "2af7",
+      "name": "osama alghol",
+      "email": "osama@gmail.com",
+      "password": "$2b$10$.NlpLEafPdKTH.0BWI4Fl.rMvN5MMATNUCxl.8gdYp.Fhwfa0M/my",
+      "role": "owner"
+    },
+    {
+      "id": "aa3e",
+      "name": "reem",
+      "email": "reem@gmail.com",
+      "password": "$2b$10$uTqPZa/Dlz/Y99ntvTK82u/qKbtnhyPsb5G/Q7QMUE/nbhi.cQ3/e",
+      "role": "admin"
     }
   ],
   "contacts": [
