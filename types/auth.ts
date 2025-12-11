@@ -1,4 +1,5 @@
 export type Role = 'admin' | 'buyer' | 'owner';
+export type Status = 'active' | 'disabled';
 
 export interface User {
   id: number;
@@ -6,6 +7,8 @@ export interface User {
   email: string;
   password: string;
   role: Role;
+  status: Status;
+  createdAt: string;
 }
 
 export interface RegisterFormData {
