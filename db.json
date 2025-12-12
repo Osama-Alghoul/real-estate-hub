@@ -10,12 +10,12 @@
       ],
       "title": "92 ALLIUM PLACE, ORLANDO FL 32827",
       "price": 590693,
-      "garag": 4,
-      "bath": 2,
+      "garag": 10,
+      "bath": 4,
       "size": 2096,
       "yearBuilt": 2015,
-      "avatar": "/people/A1.png",
-      "name": "Jenny Wilson",
+      "avatar": "/uploads/1765540022694.png",
+      "name": "fadi",
       "type": "sale",
       "description": "Beautiful family home located in a quiet neighborhood...",
       "amenities": [
@@ -26,7 +26,11 @@
         "Private Garden",
         "Security System"
       ],
-      "video": "/videos/property1.mp4"
+      "video": "/videos/property1.mp4",
+      "location": "",
+      "status": "available",
+      "bedrooms": 0,
+      "ownerId": "cb87"
     },
     {
       "id": "2",
@@ -42,8 +46,8 @@
       "bath": 3,
       "size": 2800,
       "yearBuilt": 2018,
-      "avatar": "/people/A1.png",
-      "name": "John Doe",
+      "avatar": "/uploads/1765540498155.png",
+      "name": "osama alghol",
       "type": "rent",
       "description": "A modern luxury villa with an amazing ocean view...",
       "amenities": [
@@ -54,7 +58,11 @@
         "Fireplace",
         "Smart Lock"
       ],
-      "video": "/videos/property2.mp4"
+      "video": "/videos/property2.mp4",
+      "status": "available",
+      "location": "",
+      "bedrooms": 0,
+      "ownerId": "2af7"
     },
     {
       "id": "3",
@@ -70,8 +78,8 @@
       "bath": 1,
       "size": 1200,
       "yearBuilt": 2020,
-      "avatar": "/people/A1.png",
-      "name": "Michael Brown",
+      "avatar": "/uploads/1765540509351.png",
+      "name": "fadi",
       "type": "sale",
       "description": "A stylish modern apartment in the heart of the city...",
       "amenities": [
@@ -82,7 +90,11 @@
         "Parking",
         "High-Speed Internet"
       ],
-      "video": "/videos/property3.mp4"
+      "video": "/videos/property3.mp4",
+      "status": "available",
+      "location": "",
+      "bedrooms": 0,
+      "ownerId": "cb87"
     },
     {
       "id": "4",
@@ -97,8 +109,8 @@
       "bath": 2,
       "size": 1800,
       "yearBuilt": 2010,
-      "avatar": "/people/A1.png",
-      "name": "Emily Davis",
+      "avatar": "/uploads/1765540498155.png",
+      "name": "osama alghol",
       "type": "rent",
       "description": "A warm family house located near schools and markets...",
       "amenities": [
@@ -109,7 +121,11 @@
         "Garage",
         "Storage Room"
       ],
-      "video": "/videos/property4.mp4"
+      "video": "/videos/property4.mp4",
+      "status": "available",
+      "location": "",
+      "bedrooms": 0,
+      "ownerId": "2af7"
     },
     {
       "id": "5",
@@ -124,8 +140,8 @@
       "bath": 3,
       "size": 3200,
       "yearBuilt": 2019,
-      "avatar": "/people/A1.png",
-      "name": "Sarah Connor",
+      "avatar": "/uploads/1765541253458.png",
+      "name": "Orli Stokes",
       "type": "sale",
       "description": "A stunning beachfront house with direct access to the sea...",
       "amenities": [
@@ -136,7 +152,8 @@
         "Garden",
         "Fire Pit"
       ],
-      "video": "/videos/property5.mp4"
+      "video": "/videos/property5.mp4",
+      "status": "available"
     },
     {
       "id": "6",
@@ -151,8 +168,8 @@
       "bath": 2,
       "size": 2400,
       "yearBuilt": 2021,
-      "avatar": "/people/A1.png",
-      "name": "Robert Taylor",
+      "avatar": "/uploads/1765541253458.png",
+      "name": "Orli Stokes",
       "type": "rent",
       "description": "Luxury penthouse with an incredible city view...",
       "amenities": [
@@ -163,7 +180,8 @@
         "Gym",
         "Security System"
       ],
-      "video": "/videos/property6.mp4"
+      "video": "/videos/property6.mp4",
+      "status": "available"
     },
     {
       "id": "7",
@@ -178,8 +196,8 @@
       "bath": 2,
       "size": 1600,
       "yearBuilt": 2012,
-      "avatar": "/people/A1.png",
-      "name": "Anna Lee",
+      "avatar": "/uploads/1765540509351.png",
+      "name": "sameh2",
       "type": "sale",
       "description": "A calm suburban home perfect for families...",
       "amenities": [
@@ -190,7 +208,11 @@
         "Renovated Kitchen",
         "Security Cameras"
       ],
-      "video": "/videos/property7.mp4"
+      "video": "/videos/property7.mp4",
+      "status": "available",
+      "location": "",
+      "bedrooms": 0,
+      "ownerId": "726a"
     },
     {
       "id": "8",
@@ -205,8 +227,8 @@
       "bath": 1,
       "size": 700,
       "yearBuilt": 2017,
-      "avatar": "/people/A1.png",
-      "name": "David Scott",
+      "avatar": "/uploads/1765540498155.png",
+      "name": "osama alghol",
       "type": "rent",
       "description": "Cozy studio apartment perfect for singles...",
       "amenities": [
@@ -217,7 +239,11 @@
         "Laundry Room",
         "Parking Nearby"
       ],
-      "video": "/videos/property8.mp4"
+      "video": "/videos/property8.mp4",
+      "status": "available",
+      "location": "",
+      "bedrooms": 0,
+      "ownerId": "2af7"
     }
   ],
   "about": {
@@ -358,39 +384,46 @@
       "status": "disabled"
     },
     {
-      "id": "cb87",
-      "name": "fadi",
-      "email": "fadi@gmail.com",
-      "password": "$2b$10$QOXOrWuKlHFkqWDi4FtIZ.iPtJViFK6VoQcjPsOrev86ZrnJBK9Zm",
-      "role": "owner"
-    },
-    {
       "id": "77a1",
       "name": "alaa",
       "email": "alaa@gmail.com",
       "password": "$2b$10$ShiTUzLBQQw4SPZBXx2zyOlAYZCo77U81Rdvb3.SQzz8TVVJQLHY.",
-      "role": "buyer"
+      "role": "buyer",
+      "status": "active"
     },
     {
       "id": "882a",
       "name": "anan jamal",
       "email": "anan@gmail.com",
       "password": "$2b$10$ShpBXjhjzjI8.QnX5Yi/FOi6fdFrZ4js71gn/BJAKtiUWgJyZQ/vu",
-      "role": "buyer"
+      "role": "buyer",
+      "status": "active"
     },
     {
       "id": "2af7",
       "name": "osama alghol",
       "email": "osama@gmail.com",
       "password": "$2b$10$.NlpLEafPdKTH.0BWI4Fl.rMvN5MMATNUCxl.8gdYp.Fhwfa0M/my",
-      "role": "owner"
+      "role": "owner",
+      "status": "active",
+      "avatar": "/uploads/1765540498155.png"
     },
     {
       "id": "aa3e",
       "name": "reem",
       "email": "reem@gmail.com",
       "password": "$2b$10$uTqPZa/Dlz/Y99ntvTK82u/qKbtnhyPsb5G/Q7QMUE/nbhi.cQ3/e",
-      "role": "admin"
+      "role": "admin",
+      "status": "active"
+    },
+    {
+      "id": "0f1e",
+      "name": "anan2",
+      "email": "anan2@gmail.com",
+      "password": "$2b$10$w5x28MjNJV0JgFiXlJoH0OM6KdhChskTeZUl31W3Rlf3T/L5XQFpS",
+      "role": "admin",
+      "status": "active",
+      "avatar": "/uploads/1765540435384.png"
     }
   ],
   "contacts": [
