@@ -14,4 +14,9 @@ export type Property = {
   description?: string;
   amenities?: string[];
   video?: string;
+  status?: 'available' | 'pending' | 'sold';
+  createdAt?: string;
+  location?: string;
+  bedrooms?: number;
+  ownerId?: string;
 };

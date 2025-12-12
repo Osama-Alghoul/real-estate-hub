@@ -1,20 +1,35 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState, ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  ReactNode,
+} from "react";
 import { useRouter } from "next/navigation";
-import { getCurrentUser, isAuthenticated, logout as authLogout } from "../services/authService";
+import {
+  getCurrentUser,
+  isAuthenticated,
+  logout as authLogout,
+} from "../services/authService";
 import { User } from "@/types/auth";
 import { login as loginService } from "../services/authService";
 
 interface AuthContextProps {
   user: User | null;
   loading: boolean;
+  login: (
+    email: string,
+    password: string
+  ) => Promise<{ user?: User; error?: string }>;
   logout: () => void;
 }
 
 const AuthContext = createContext<AuthContextProps>({
   user: null,
   loading: true,
+  login: async () => ({ error: "Not implemented" }),
   logout: () => {},
 });
 
@@ -33,7 +48,9 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const res = await loginService({ email, password });
     if (res.user) {
       setUser(res.user);
-      router.replace(`/dashboard/${res.user.role}?name=${encodeURIComponent(res.user.name)}`);
+      router.replace(
+        `/dashboard/${res.user.role}?name=${encodeURIComponent(res.user.name)}`
+      );
     }
     return res;
   };
@@ -49,6 +66,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       {children}
     </AuthContext.Provider>
   );
-}
+};
 
 export const useAuth = () => useContext(AuthContext);

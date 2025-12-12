@@ -9,6 +9,7 @@ export interface User {
   role: Role;
   status: Status;
   createdAt: string;
+  avatar?: string;
 }
 
 export interface RegisterFormData {
