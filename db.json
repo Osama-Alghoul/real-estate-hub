@@ -141,7 +141,7 @@
       "size": 3200,
       "yearBuilt": 2019,
       "avatar": "/uploads/1765541253458.png",
-      "name": "Orli Stokes",
+      "name": "omar",
       "type": "sale",
       "description": "A stunning beachfront house with direct access to the sea...",
       "amenities": [
@@ -153,7 +153,7 @@
         "Fire Pit"
       ],
       "video": "/videos/property5.mp4",
-      "status": "available"
+      "status": "pending"
     },
     {
       "id": "6",
@@ -169,7 +169,7 @@
       "size": 2400,
       "yearBuilt": 2021,
       "avatar": "/uploads/1765541253458.png",
-      "name": "Orli Stokes",
+      "name": "omar",
       "type": "rent",
       "description": "Luxury penthouse with an incredible city view...",
       "amenities": [
@@ -244,6 +244,58 @@
       "location": "",
       "bedrooms": 0,
       "ownerId": "2af7"
+    },
+    {
+      "id": "6931",
+      "title": "Molestiae mollitia r",
+      "description": "Magnam eos culpa min",
+      "price": 180,
+      "location": "Asperiores rerum sin",
+      "type": "sale",
+      "status": "sold",
+      "bedrooms": 46,
+      "bath": 11,
+      "size": 46,
+      "garag": 96,
+      "img": "",
+      "images": [],
+      "amenities": [
+        "Swimming Pool",
+        "Smart Home",
+        "Solar Panels",
+        "Private Garden"
+      ],
+      "ownerId": "39cc",
+      "name": "omar",
+      "avatar": "/people/A1.png",
+      "yearBuilt": 1996,
+      "createdAt": "2025-12-13T09:57:47.788Z"
+    },
+    {
+      "id": "1112",
+      "title": "Sit esse et dolorum",
+      "description": "Maiores numquam dese",
+      "price": 774,
+      "location": "Doloremque ullam eu ",
+      "type": "sale",
+      "status": "available",
+      "bedrooms": 73,
+      "bath": 46,
+      "size": 60,
+      "garag": 58,
+      "img": "",
+      "images": [],
+      "amenities": [
+        "Swimming Pool",
+        "Solar Panels",
+        "Private Garden",
+        "Security System"
+      ],
+      "ownerId": "2af7",
+      "name": "osama alghol",
+      "avatar": "/uploads/1765540498155.png",
+      "yearBuilt": 1999,
+      "createdAt": "2025-12-13T09:57:55.780Z"
     }
   ],
   "about": {
@@ -424,6 +476,15 @@
       "role": "admin",
       "status": "active",
       "avatar": "/uploads/1765540435384.png"
+    },
+    {
+      "id": "39cc",
+      "name": "omar",
+      "email": "omar@gmail.com",
+      "password": "$2b$10$HunX/lG4phNX4sZOrrM/n.hcGQyVoFvUwYp.DwU.c2JH8mSaKBJSK",
+      "role": "owner",
+      "status": "disabled",
+      "avatar": ""
     }
   ],
   "contacts": [

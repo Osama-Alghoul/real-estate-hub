@@ -27,7 +27,7 @@ export default function AdminPropertiesPage() {
   const [typeFilter, setTypeFilter] = useState("all");
   const [statusFilter, setStatusFilter] = useState("all");
   const [page, setPage] = useState(1);
-  const limit = 10;
+  const limit = 5;
 
   const [editingProperty, setEditingProperty] = useState<Property | null>(null);
   const [deletingProperty, setDeletingProperty] = useState<Property | null>(
@@ -55,6 +55,10 @@ export default function AdminPropertiesPage() {
       setLoading(false);
     }
   };
+  useEffect(() => {
+  // إعادة الصفحة إلى 1 عند تغيير البحث أو الفلترة
+  setPage(1);
+}, [search, typeFilter, statusFilter]);
 
   useEffect(() => {
     loadProperties();
