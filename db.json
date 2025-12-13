@@ -369,6 +369,13 @@
       "email": "alaa@gmail.com",
       "password": "$2b$10$ShiTUzLBQQw4SPZBXx2zyOlAYZCo77U81Rdvb3.SQzz8TVVJQLHY.",
       "role": "buyer"
+    },
+    {
+      "id": "4082",
+      "name": "Osama Alghoul",
+      "email": "owner@example.com",
+      "password": "$2b$10$S6v8mzKhqIW9RIQv/YXrfuxBLUFDZUsRa5sg5WGQ43kTetbU/vpU6",
+      "role": "owner"
     }
   ],
   "contacts": [
