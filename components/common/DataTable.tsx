@@ -24,6 +24,7 @@ export default function DataTable<T extends { id: string | number }>({
   columns,
   isLoading = false,
   emptyMessage = "No data found",
+  renderActions,
 }: DataTableProps<T>) {
   return (
     <div className="bg-white rounded-xl shadow border border-gray-200 overflow-hidden">
@@ -38,24 +39,26 @@ export default function DataTable<T extends { id: string | number }>({
                   className={`px-4 py-3 font-medium whitespace-nowrap ${
                     col.className ?? ""
                   }`}
+                  style={col.width ? { width: col.width } : undefined}
                 >
                   {col.label}
                 </th>
               ))}
+              {renderActions && <th className="px-4 py-3 font-medium whitespace-nowrap">Actions</th>}
             </tr>
           </thead>
 
           <tbody>
             {isLoading ? (
               <tr>
-                <td colSpan={columns.length} className="py-8">
+                <td colSpan={columns.length + (renderActions ? 1 : 0)} className="text-center py-8 text-gray-500">
                   <Loading />
                 </td>
               </tr>
             ) : data.length === 0 ? (
               <tr>
                 <td
-                  colSpan={columns.length}
+                  colSpan={columns.length + + (renderActions ? 1 : 0)}
                   className="text-center py-8 text-gray-500"
                 >
                   {emptyMessage}
@@ -77,6 +80,7 @@ export default function DataTable<T extends { id: string | number }>({
                         : String(row[col.key] ?? "")}
                     </td>
                   ))}
+                  {renderActions && <td className="px-4 py-3 align-middle">{renderActions(row)}</td>}
                 </tr>
               ))
             )}
