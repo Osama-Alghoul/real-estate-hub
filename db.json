@@ -461,7 +461,27 @@
       "name": "Osama Alghoul",
       "email": "owner@example.com",
       "password": "$2b$10$S6v8mzKhqIW9RIQv/YXrfuxBLUFDZUsRa5sg5WGQ43kTetbU/vpU6",
-      "role": "owner"
+      "role": "owner",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
     },
     {
       "id": "1529",
