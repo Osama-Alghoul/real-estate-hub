@@ -141,7 +141,7 @@
       "size": 3200,
       "yearBuilt": 2019,
       "avatar": "/uploads/1765541253458.png",
-      "name": "omar",
+      "name": "anan",
       "type": "sale",
       "description": "A stunning beachfront house with direct access to the sea...",
       "amenities": [
@@ -169,7 +169,7 @@
       "size": 2400,
       "yearBuilt": 2021,
       "avatar": "/uploads/1765578286362.png",
-      "name": "Mai Alhajeen",
+      "name": "anan",
       "type": "rent",
       "description": "Luxury penthouse with an incredible city view...",
       "amenities": [
@@ -470,6 +470,39 @@
       "email": "final@gmail.com",
       "password": "$2b$10$k6SAhqbfmVhq68xDOPNQ/OoI/ipJ7iV.6x8vs4iVqqHRg5y1e2IQS",
       "role": "buyer"
+    },
+    {
+      "id": "1529",
+      "name": "anan",
+      "email": "anan2@gmail.com",
+      "password": "$2b$10$TkHcnIbU/caMf8NroRapNeb3z701krVBDNbuQQvwYCtqRD4dZRUFa",
+      "role": "owner",
+      "status": "active",
+      "avatar": ""
+    },
+    {
+      "id": "545e",
+      "name": "anan",
+      "email": "anan3@gmail.com",
+      "password": "$2b$10$1L8Vkwiu1GbYygqee3TbZ.9nFZj9SaXQqbjLVoOMRzaqM8fRW1zEG",
+      "role": "admin",
+      "status": "active",
+      "avatar": ""
+    },
+    {
+      "id": "b268",
+      "name": "omar",
+      "email": "omar@gmail.com",
+      "password": "$2b$10$5qJdQu7QYllnhzyNRTrDA.JuiIPvCyixy.j/7rqg5bQ1amqr65qpa",
+      "role": "owner"
+    },
+    {
+      "id": "2d7e",
+      "name": "jamal",
+      "email": "jamal@gmail.com",
+      "password": "$2b$10$2D7wEER8uAQvUv5OXQAF8.QVrQ7Uyl5Y9LiQEFG.PbzhqhssiEa0C",
+      "role": "owner",
+      "status": "active"
     }
   ],
   "contacts": [
