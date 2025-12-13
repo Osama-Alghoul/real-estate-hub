@@ -424,15 +424,6 @@
       "role": "admin",
       "status": "active",
       "avatar": "/uploads/1765540435384.png"
-    },
-    {
-      "id": "39cc",
-      "name": "omar",
-      "email": "omar@gmail.com",
-      "password": "$2b$10$HunX/lG4phNX4sZOrrM/n.hcGQyVoFvUwYp.DwU.c2JH8mSaKBJSK",
-      "role": "owner",
-      "status": "disabled",
-      "avatar": ""
     }
   ],
   "contacts": [
