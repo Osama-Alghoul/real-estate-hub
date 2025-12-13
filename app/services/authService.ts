@@ -20,7 +20,7 @@ export async function register(form: RegisterFormData): Promise<{ user?: User; e
   const createRes = await fetch(`${API_BASE}/users`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ ...form, password: hashed }),
+    body: JSON.stringify({ ...form, password: hashed , status: 'active' }),
   });
 
   if (!createRes.ok) return { error: 'Failed to create user' };

@@ -1,6 +1,6 @@
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-// import Header from "@/components/layout/header";
+import Header from "@/components/layout/header";
 import Link from "next/link";
 import { ContactForm } from "@/components/contact/contact-form";
 
@@ -13,7 +13,7 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <main className="min-h-screen">
-      {/* <Header /> */}
+      <Header />
 
       {/* Hero Section */}
       <section

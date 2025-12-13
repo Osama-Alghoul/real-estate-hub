@@ -10,12 +10,12 @@
       ],
       "title": "92 ALLIUM PLACE, ORLANDO FL 32827",
       "price": 590693,
-      "garag": 4,
-      "bath": 2,
+      "garag": 10,
+      "bath": 4,
       "size": 2096,
       "yearBuilt": 2015,
-      "avatar": "/people/A1.png",
-      "name": "Jenny Wilson",
+      "avatar": "/uploads/1765540022694.png",
+      "name": "fadi",
       "type": "sale",
       "description": "Beautiful family home located in a quiet neighborhood...",
       "amenities": [
@@ -26,7 +26,11 @@
         "Private Garden",
         "Security System"
       ],
-      "video": "/videos/property1.mp4"
+      "video": "/videos/property1.mp4",
+      "location": "",
+      "status": "available",
+      "bedrooms": 0,
+      "ownerId": "cb87"
     },
     {
       "id": "2",
@@ -42,8 +46,8 @@
       "bath": 3,
       "size": 2800,
       "yearBuilt": 2018,
-      "avatar": "/people/A1.png",
-      "name": "John Doe",
+      "avatar": "/uploads/1765540498155.png",
+      "name": "osama alghol",
       "type": "rent",
       "description": "A modern luxury villa with an amazing ocean view...",
       "amenities": [
@@ -54,7 +58,11 @@
         "Fireplace",
         "Smart Lock"
       ],
-      "video": "/videos/property2.mp4"
+      "video": "/videos/property2.mp4",
+      "status": "available",
+      "location": "",
+      "bedrooms": 0,
+      "ownerId": "2af7"
     },
     {
       "id": "3",
@@ -70,8 +78,8 @@
       "bath": 1,
       "size": 1200,
       "yearBuilt": 2020,
-      "avatar": "/people/A1.png",
-      "name": "Michael Brown",
+      "avatar": "/uploads/1765540509351.png",
+      "name": "fadi",
       "type": "sale",
       "description": "A stylish modern apartment in the heart of the city...",
       "amenities": [
@@ -82,23 +90,24 @@
         "Parking",
         "High-Speed Internet"
       ],
-      "video": "/videos/property3.mp4"
+      "video": "/videos/property3.mp4",
+      "status": "available",
+      "location": "",
+      "bedrooms": 0,
+      "ownerId": "cb87"
     },
     {
       "id": "4",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P1.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P1.png"],
       "title": "Family House, Chicago IL",
       "price": 350000,
       "garag": 2,
       "bath": 2,
       "size": 1800,
       "yearBuilt": 2010,
-      "avatar": "/people/A1.png",
-      "name": "Emily Davis",
+      "avatar": "/uploads/1765540498155.png",
+      "name": "osama alghol",
       "type": "rent",
       "description": "A warm family house located near schools and markets...",
       "amenities": [
@@ -109,23 +118,24 @@
         "Garage",
         "Storage Room"
       ],
-      "video": "/videos/property4.mp4"
+      "video": "/videos/property4.mp4",
+      "status": "available",
+      "location": "",
+      "bedrooms": 0,
+      "ownerId": "2af7"
     },
     {
       "id": "5",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P1.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P1.png"],
       "title": "Beachfront House, California",
       "price": 1200000,
       "garag": 2,
       "bath": 3,
       "size": 3200,
       "yearBuilt": 2019,
-      "avatar": "/people/A1.png",
-      "name": "Sarah Connor",
+      "avatar": "/uploads/1765541253458.png",
+      "name": "anan",
       "type": "sale",
       "description": "A stunning beachfront house with direct access to the sea...",
       "amenities": [
@@ -136,23 +146,21 @@
         "Garden",
         "Fire Pit"
       ],
-      "video": "/videos/property5.mp4"
+      "video": "/videos/property5.mp4",
+      "status": "pending"
     },
     {
       "id": "6",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P1.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P1.png"],
       "title": "Penthouse, Los Angeles",
       "price": 980000,
       "garag": 2,
       "bath": 2,
       "size": 2400,
       "yearBuilt": 2021,
-      "avatar": "/people/A1.png",
-      "name": "Robert Taylor",
+      "avatar": "/uploads/1765578286362.png",
+      "name": "anan",
       "type": "rent",
       "description": "Luxury penthouse with an incredible city view...",
       "amenities": [
@@ -163,23 +171,21 @@
         "Gym",
         "Security System"
       ],
-      "video": "/videos/property6.mp4"
+      "video": "/videos/property6.mp4",
+      "status": "available"
     },
     {
       "id": "7",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P1.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P1.png"],
       "title": "Suburban Home, Texas",
       "price": 270000,
       "garag": 2,
       "bath": 2,
       "size": 1600,
       "yearBuilt": 2012,
-      "avatar": "/people/A1.png",
-      "name": "Anna Lee",
+      "avatar": "/uploads/1765540509351.png",
+      "name": "sameh2",
       "type": "sale",
       "description": "A calm suburban home perfect for families...",
       "amenities": [
@@ -190,23 +196,24 @@
         "Renovated Kitchen",
         "Security Cameras"
       ],
-      "video": "/videos/property7.mp4"
+      "video": "/videos/property7.mp4",
+      "status": "available",
+      "location": "",
+      "bedrooms": 0,
+      "ownerId": "726a"
     },
     {
       "id": "8",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P2.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P2.png"],
       "title": "Modern Studio, Boston",
       "price": 190000,
       "garag": 0,
       "bath": 1,
       "size": 700,
       "yearBuilt": 2017,
-      "avatar": "/people/A1.png",
-      "name": "David Scott",
+      "avatar": "/uploads/1765540498155.png",
+      "name": "osama alghol",
       "type": "rent",
       "description": "Cozy studio apartment perfect for singles...",
       "amenities": [
@@ -217,7 +224,11 @@
         "Laundry Room",
         "Parking Nearby"
       ],
-      "video": "/videos/property8.mp4"
+      "video": "/videos/property8.mp4",
+      "status": "available",
+      "location": "",
+      "bedrooms": 0,
+      "ownerId": "2af7"
     }
   ],
   "about": {
@@ -351,23 +362,98 @@
   "users": [
     {
       "id": "ce6a",
-      "name": "Mai ",
-      "email": "mai@gmail.com",
+      "name": "Mai Alhajeen",
+      "email": "mai2001@gmail.com",
       "password": "$2b$10$cpp9FYVj7wbS2ahwfowmUeZ3KiNYGrlhyPPRhoIW/3ahR3DlmQIZ6",
-      "role": "admin"
-    },
-    {
-      "id": "cb87",
-      "name": "fadi",
-      "email": "fadi@gmail.com",
-      "password": "$2b$10$QOXOrWuKlHFkqWDi4FtIZ.iPtJViFK6VoQcjPsOrev86ZrnJBK9Zm",
-      "role": "owner"
+      "role": "admin",
+      "status": "active",
+      "avatar": "/uploads/1765578286362.png"
     },
     {
       "id": "77a1",
       "name": "alaa",
       "email": "alaa@gmail.com",
       "password": "$2b$10$ShiTUzLBQQw4SPZBXx2zyOlAYZCo77U81Rdvb3.SQzz8TVVJQLHY.",
+      "role": "buyer",
+      "status": "active"
+    },
+    {
+      "id": "882a",
+      "name": "anan test",
+      "email": "anan@gmail.com",
+      "password": "$2b$10$ShpBXjhjzjI8.QnX5Yi/FOi6fdFrZ4js71gn/BJAKtiUWgJyZQ/vu",
+      "role": "buyer",
+      "status": "active"
+    },
+    {
+      "id": "aa3e",
+      "name": "reem",
+      "email": "reem@gmail.com",
+      "password": "$2b$10$uTqPZa/Dlz/Y99ntvTK82u/qKbtnhyPsb5G/Q7QMUE/nbhi.cQ3/e",
+      "role": "admin"
+    },
+    {
+      "id": "97c1",
+      "name": "mona",
+      "email": "mona@gmail.com",
+      "password": "$2b$10$24AlFwi.C0nGs1Ll2kJwvuKxR5X3avYU8M7DjPc6QnWwLpfyPBRxS",
+      "role": "owner"
+    },
+    {
+      "id": "fd68",
+      "name": "aya",
+      "email": "aya@gmail.com",
+      "password": "$2b$10$bRE3BNOoyJC9IOIyn0j0uueq6uJg1nY5mUoTsYooQhkeXwzWHvFJ.",
+      "role": "buyer",
+      "status": "disabled"
+    },
+    {
+      "id": "e49d",
+      "name": "asma ahmad",
+      "email": "asma@gmail.com",
+      "role": "admin",
+      "status": "active",
+      "password": "password123",
+      "createdAt": "2025-12-11T19:30:54.051Z"
+    },
+    {
+      "id": "7261",
+      "name": "happy",
+      "email": "happy@gmail.com",
+      "role": "buyer",
+      "status": "active",
+      "password": "fadi@123",
+      "createdAt": "2025-12-11T20:50:24.156Z"
+    },
+    {
+      "id": "1a10",
+      "name": "test name",
+      "email": "test@gmail.com",
+      "role": "buyer",
+      "status": "disabled",
+      "password": "test@123",
+      "createdAt": "2025-12-11T20:53:32.800Z"
+    },
+    {
+      "id": "fd8e",
+      "name": "ann said",
+      "email": "ann@gmail.com",
+      "password": "$2b$10$AYLqVg2ub.7W8VKoVmz1s.Hzfgy1YGcz7gAuTP0GJzGzJVgZCv232",
+      "role": "buyer"
+    },
+    {
+      "id": "aa48",
+      "name": "Osama Ghol",
+      "email": "osama@gmail.com",
+      "password": "$2b$10$DPjQlLg8.qDdRt0vwS1G3.Vy4gDhqI.3lO/2WbFwNTyuBPQNsO5Sy",
+      "role": "owner",
+      "status": "disabled"
+    },
+    {
+      "id": "5ee3",
+      "name": "final@gmail.com",
+      "email": "final@gmail.com",
+      "password": "$2b$10$k6SAhqbfmVhq68xDOPNQ/OoI/ipJ7iV.6x8vs4iVqqHRg5y1e2IQS",
       "role": "buyer"
     },
     {
@@ -376,6 +462,39 @@
       "email": "owner@example.com",
       "password": "$2b$10$S6v8mzKhqIW9RIQv/YXrfuxBLUFDZUsRa5sg5WGQ43kTetbU/vpU6",
       "role": "owner"
+    },
+    {
+      "id": "1529",
+      "name": "anan",
+      "email": "anan2@gmail.com",
+      "password": "$2b$10$TkHcnIbU/caMf8NroRapNeb3z701krVBDNbuQQvwYCtqRD4dZRUFa",
+      "role": "owner",
+      "status": "active",
+      "avatar": ""
+    },
+    {
+      "id": "545e",
+      "name": "anan",
+      "email": "anan3@gmail.com",
+      "password": "$2b$10$1L8Vkwiu1GbYygqee3TbZ.9nFZj9SaXQqbjLVoOMRzaqM8fRW1zEG",
+      "role": "admin",
+      "status": "active",
+      "avatar": ""
+    },
+    {
+      "id": "b268",
+      "name": "omar",
+      "email": "omar@gmail.com",
+      "password": "$2b$10$5qJdQu7QYllnhzyNRTrDA.JuiIPvCyixy.j/7rqg5bQ1amqr65qpa",
+      "role": "owner"
+    },
+    {
+      "id": "2d7e",
+      "name": "jamal",
+      "email": "jamal@gmail.com",
+      "password": "$2b$10$2D7wEER8uAQvUv5OXQAF8.QVrQ7Uyl5Y9LiQEFG.PbzhqhssiEa0C",
+      "role": "owner",
+      "status": "active"
     }
   ],
   "contacts": [
