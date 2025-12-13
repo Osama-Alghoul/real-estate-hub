@@ -19,7 +19,8 @@ export default function UsersPage() {
   const [roleFilter, setRoleFilter] = useState("all");
   const [statusFilter, setStatusFilter] = useState("all");
   const [page, setPage] = useState(1);
-  const limit = 10;
+  
+  const limit = 5;
 
   const [editingUser, setEditingUser] = useState<User | null>(null);
   const [deletingUser, setDeletingUser] = useState<User | null>(null);
@@ -51,6 +52,7 @@ export default function UsersPage() {
     setSearch(e.target.value);
     setPage(1);
   };
+  
 
   const columns: Column<User>[] = [
     { key: "id", label: "ID" },
@@ -89,14 +91,8 @@ export default function UsersPage() {
         </span>
       ),
     },
-    // {
-    //   key: "createdAt",
-    //   label: "Created At",
-    //   render: (row) =>
-    //     row.createdAt ? new Date(row.createdAt).toLocaleDateString() : "-",
-    // },
     {
-      key: "id",
+      key: "actions",
       label: "Actions",
       render: (row) => (
         <div className="flex gap-2">
