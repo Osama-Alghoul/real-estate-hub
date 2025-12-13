@@ -87,7 +87,7 @@ export default function UsersPage() {
               : "bg-red-100 text-red-800"
           }`}
         >
-          {row.status || "Active"}
+          {row.status || "disabled"}
         </span>
       ),
     },
