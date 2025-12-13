@@ -168,8 +168,8 @@
       "bath": 2,
       "size": 2400,
       "yearBuilt": 2021,
-      "avatar": "/uploads/1765541253458.png",
-      "name": "omar",
+      "avatar": "/uploads/1765578286362.png",
+      "name": "Mai Alhajeen",
       "type": "rent",
       "description": "Luxury penthouse with an incredible city view...",
       "amenities": [
@@ -377,11 +377,12 @@
   "users": [
     {
       "id": "ce6a",
-      "name": "Mai ",
-      "email": "mai@gmail.com",
+      "name": "Mai Alhajeen",
+      "email": "mai2001@gmail.com",
       "password": "$2b$10$cpp9FYVj7wbS2ahwfowmUeZ3KiNYGrlhyPPRhoIW/3ahR3DlmQIZ6",
       "role": "admin",
-      "status": "disabled"
+      "status": "active",
+      "avatar": "/uploads/1765578286362.png"
     },
     {
       "id": "77a1",
@@ -393,37 +394,82 @@
     },
     {
       "id": "882a",
-      "name": "anan jamal",
+      "name": "anan test",
       "email": "anan@gmail.com",
       "password": "$2b$10$ShpBXjhjzjI8.QnX5Yi/FOi6fdFrZ4js71gn/BJAKtiUWgJyZQ/vu",
       "role": "buyer",
       "status": "active"
     },
     {
-      "id": "2af7",
-      "name": "osama alghol",
-      "email": "osama@gmail.com",
-      "password": "$2b$10$.NlpLEafPdKTH.0BWI4Fl.rMvN5MMATNUCxl.8gdYp.Fhwfa0M/my",
-      "role": "owner",
-      "status": "active",
-      "avatar": "/uploads/1765540498155.png"
-    },
-    {
       "id": "aa3e",
       "name": "reem",
       "email": "reem@gmail.com",
       "password": "$2b$10$uTqPZa/Dlz/Y99ntvTK82u/qKbtnhyPsb5G/Q7QMUE/nbhi.cQ3/e",
-      "role": "admin",
-      "status": "active"
+      "role": "admin"
     },
     {
-      "id": "0f1e",
-      "name": "anan2",
-      "email": "anan2@gmail.com",
-      "password": "$2b$10$w5x28MjNJV0JgFiXlJoH0OM6KdhChskTeZUl31W3Rlf3T/L5XQFpS",
+      "id": "97c1",
+      "name": "mona",
+      "email": "mona@gmail.com",
+      "password": "$2b$10$24AlFwi.C0nGs1Ll2kJwvuKxR5X3avYU8M7DjPc6QnWwLpfyPBRxS",
+      "role": "owner"
+    },
+    {
+      "id": "fd68",
+      "name": "aya",
+      "email": "aya@gmail.com",
+      "password": "$2b$10$bRE3BNOoyJC9IOIyn0j0uueq6uJg1nY5mUoTsYooQhkeXwzWHvFJ.",
+      "role": "buyer",
+      "status": "disabled"
+    },
+    {
+      "id": "e49d",
+      "name": "asma ahmad",
+      "email": "asma@gmail.com",
       "role": "admin",
       "status": "active",
-      "avatar": "/uploads/1765540435384.png"
+      "password": "password123",
+      "createdAt": "2025-12-11T19:30:54.051Z"
+    },
+    {
+      "id": "7261",
+      "name": "happy",
+      "email": "happy@gmail.com",
+      "role": "buyer",
+      "status": "active",
+      "password": "fadi@123",
+      "createdAt": "2025-12-11T20:50:24.156Z"
+    },
+    {
+      "id": "1a10",
+      "name": "test name",
+      "email": "test@gmail.com",
+      "role": "buyer",
+      "status": "disabled",
+      "password": "test@123",
+      "createdAt": "2025-12-11T20:53:32.800Z"
+    },
+    {
+      "id": "fd8e",
+      "name": "ann said",
+      "email": "ann@gmail.com",
+      "password": "$2b$10$AYLqVg2ub.7W8VKoVmz1s.Hzfgy1YGcz7gAuTP0GJzGzJVgZCv232",
+      "role": "buyer"
+    },
+    {
+      "id": "aa48",
+      "name": "Osama Ghol",
+      "email": "osama@gmail.com",
+      "password": "$2b$10$DPjQlLg8.qDdRt0vwS1G3.Vy4gDhqI.3lO/2WbFwNTyuBPQNsO5Sy",
+      "role": "owner",
+      "status": "disabled"
+    },
+    {
+      "id": "5ee3",
+      "name": "final@gmail.com",
+      "email": "final@gmail.com",
+      "password": "$2b$10$k6SAhqbfmVhq68xDOPNQ/OoI/ipJ7iV.6x8vs4iVqqHRg5y1e2IQS",
+      "role": "buyer"
     }
   ],
   "contacts": [
