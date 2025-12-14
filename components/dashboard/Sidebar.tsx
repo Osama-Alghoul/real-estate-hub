@@ -79,8 +79,8 @@ export default function Sidebar({ role, onLogout }: Props) {
         icon: <Plus size={20} />,
       },
       {
-        name: "Massages",
-        href: "/dashboard/owner/massages",
+        name: "Messages",
+        href: "/dashboard/owner/messages",
         icon: <MessagesSquare size={20} />,
       },
     ],
@@ -142,7 +142,9 @@ export default function Sidebar({ role, onLogout }: Props) {
             <Link
               key={item.href}
               href={item.href}
-              className={`flex items-center gap-3 p-2 rounded-md transition ${isActive ? "bg-gray-200 font-semibold" : "hover:bg-gray-100"}`}
+              className={`flex items-center gap-3 p-2 rounded-md transition ${
+                isActive ? "bg-gray-200 font-semibold" : "hover:bg-gray-100"
+              }`}
             >
               {item.icon}
 
