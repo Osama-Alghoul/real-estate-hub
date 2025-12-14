@@ -8,14 +8,13 @@ import {
   Building,
   ChartAreaIcon,
   Plus,
-  FileText,
   LogOut,
   ChevronLeft,
   ChevronRight,
   Settings,
   MessagesSquare,
-  Bookmark,
   User,
+  Heart,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 
@@ -91,11 +90,11 @@ export default function Sidebar({ role, onLogout }: Props) {
         icon: <LayoutDashboard size={20} />,
       },
       {
-        name: "Save Properties",
-        href: "/dashboard/buyer/save-properties",
-        icon: <Bookmark size={20} />,
+        name: "Favorites",
+        href: "/dashboard/buyer/favorites",
+        icon: <Heart size={20} />,
       },
-      { name: "Explore", href: "/properties", icon: <FileText size={20} /> },
+      { name: "Explore", href: "/dashboard/buyer/properties", icon: <Building size={20} /> },
       {
         name: "My Requests",
         href: "/dashboard/buyer/requests",
