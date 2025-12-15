@@ -1,7 +1,7 @@
-import React from 'react'
+"use client";
 
-export const BuyerFavoritesPage = () => {
-  return (
-    <div>BuyerFavoritesPage</div>
-  )
+import BuyerFavoritesClient from "./BuyerFavoritesClient";
+
+export default function BuyerFavoritesPage() {
+  return <BuyerFavoritesClient />;
 }

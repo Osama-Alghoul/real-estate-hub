@@ -1,8 +1,18 @@
+"use client";
+
 import { Bath, CarFront, Fullscreen, Heart, Plus, Share2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Avatar from "../ui/avatar";
-import { type CardProps } from "@/types/card.type";
+import { CardProps } from "@/types/card.type";
+import { getCurrentUser } from "@/app/services/authService";
+import {
+  isFavorited,
+  addFavorite,
+  removeFavorite,
+} from "@/app/services/favoriteService";
+import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 export default function Card({
   id,
@@ -17,9 +27,45 @@ export default function Card({
   description,
   variant = "grid",
   index,
+  type,
 }: CardProps & { variant?: "grid" | "list"; index?: number }) {
   const isEven = index !== undefined && index % 2 === 1;
   const listClasses = isEven ? "flex-row-reverse" : "flex-row";
+  const [favorite, setFavorite] = useState<any>(null);
+  const user = getCurrentUser();
+
+  useEffect(() => {
+    if (!user) return;
+    isFavorited(user.id, id).then(setFavorite);
+  }, [id, user]);
+
+  const toggleFavorite = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (!user) {
+      toast.error("Please Login First!");
+      return;
+    }
+
+    if (favorite) {
+      await removeFavorite(favorite.id);
+      setFavorite(null);
+      toast.error(`Removed From Favorites`);
+    } else {
+      const newFav = await addFavorite({
+        userId: user.id,
+        propertyId: id,
+        title,
+        image: img,
+        price,
+        owner: name,
+        type,
+        status: "available",
+      });
+      setFavorite(newFav);
+      toast.success("Added to favorites");
+    }
+  };
+
   return (
     <Link href={`/properties/${id}`} className="block">
       <div
@@ -107,8 +153,9 @@ export default function Card({
               <div className="cursor-pointer bg-primary-extra-light text-primary-light p-1 rounded-sm">
                 <Share2 size={16} />
               </div>
-              <div className="cursor-pointer bg-primary-extra-light text-primary-light p-1 rounded-sm">
-                <Heart size={16} />
+              <div onClick={toggleFavorite} className={`cursor-pointer bg-primary-extra-light p-1 rounded-sm ${
+                favorite ? "text-red-500" : "text-primary-light"}`}>
+                <Heart size={16} fill={favorite ? "currentColor" : "none"} />
               </div>
               <div className="cursor-pointer bg-primary-extra-light text-primary-light p-1 rounded-sm">
                 <Plus size={16} />
