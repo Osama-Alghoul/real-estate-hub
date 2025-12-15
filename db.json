@@ -99,10 +99,7 @@
     {
       "id": "4",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P1.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P1.png"],
       "title": "Family House, Chicago IL",
       "price": 350000,
       "garag": 2,
@@ -130,10 +127,7 @@
     {
       "id": "5",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P1.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P1.png"],
       "title": "Beachfront House, California",
       "price": 1200000,
       "garag": 2,
@@ -158,10 +152,7 @@
     {
       "id": "6",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P1.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P1.png"],
       "title": "Penthouse, Los Angeles",
       "price": 980000,
       "garag": 2,
@@ -186,10 +177,7 @@
     {
       "id": "7",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P1.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P1.png"],
       "title": "Suburban Home, Texas",
       "price": 270000,
       "garag": 2,
@@ -217,10 +205,7 @@
     {
       "id": "8",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P2.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P2.png"],
       "title": "Modern Studio, Boston",
       "price": 190000,
       "garag": 0,
@@ -470,6 +455,33 @@
       "email": "final@gmail.com",
       "password": "$2b$10$k6SAhqbfmVhq68xDOPNQ/OoI/ipJ7iV.6x8vs4iVqqHRg5y1e2IQS",
       "role": "buyer"
+    },
+    {
+      "id": "4082",
+      "name": "Osama Alghoul",
+      "email": "owner@example.com",
+      "password": "$2b$10$S6v8mzKhqIW9RIQv/YXrfuxBLUFDZUsRa5sg5WGQ43kTetbU/vpU6",
+      "role": "owner",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
     },
     {
       "id": "1529",
