@@ -628,5 +628,30 @@
       "status": "pending",
       "createdAt": "2025-12-08T12:03:10.596Z"
     }
+  ],
+  "favorites": [
+    {
+      "id": 1,
+      "userId": "ce6a",
+      "propertyId": "1",
+      "title": "Modern Apartment",
+      "image": "/images/p1.jpg",
+      "price": 120000,
+      "type": "sale",
+      "owner": "John Doe",
+      "ownerAvatar": "/images/john.jpg",
+      "status": "available"
+    },
+    {
+      "id": "b841",
+      "userId": "77a1",
+      "propertyId": "6",
+      "title": "Penthouse, Los Angeles",
+      "image": "/properties/P1.png",
+      "price": 980000,
+      "owner": "anan",
+      "type": "rent",
+      "status": "available"
+    }
   ]
 }
