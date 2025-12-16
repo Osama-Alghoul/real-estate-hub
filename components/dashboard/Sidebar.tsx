@@ -1,28 +1,27 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   LayoutDashboard,
   Users,
   Building,
   ChartAreaIcon,
   Plus,
-  FileText,
   LogOut,
   ChevronLeft,
   ChevronRight,
   Settings,
   MessagesSquare,
-  Bookmark,
   User,
+  Heart,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 interface NavItem {
   name: string;
   href: string;
-  icon: JSX.Element;
+  icon: React.ReactNode;
 }
 
 interface Props {
@@ -52,9 +51,9 @@ export default function Sidebar({ role, onLogout }: Props) {
         icon: <Building size={20} />,
       },
       {
-        name: "Reports",
-        href: "/dashboard/admin/reports",
-        icon: <ChartAreaIcon size={20} />,
+        name: "Contacts",
+        href: "/dashboard/admin/contacts",
+        icon: <MessagesSquare size={20} />,
       },
       {
         name: "Settings",
@@ -83,6 +82,11 @@ export default function Sidebar({ role, onLogout }: Props) {
         href: "/dashboard/owner/messages",
         icon: <MessagesSquare size={20} />,
       },
+      {
+        name: "Settings",
+        href: "/dashboard/owner/settings",
+        icon: <Settings size={20} />,
+      },
     ],
     buyer: [
       {
@@ -91,11 +95,11 @@ export default function Sidebar({ role, onLogout }: Props) {
         icon: <LayoutDashboard size={20} />,
       },
       {
-        name: "Save Properties",
-        href: "/dashboard/buyer/save-properties",
-        icon: <Bookmark size={20} />,
+        name: "Favorites",
+        href: "/dashboard/buyer/favorites",
+        icon: <Heart size={20} />,
       },
-      { name: "Explore", href: "/properties", icon: <FileText size={20} /> },
+      { name: "Explore", href: "/dashboard/buyer/properties", icon: <Building size={20} /> },
       {
         name: "My Requests",
         href: "/dashboard/buyer/requests",
@@ -105,6 +109,11 @@ export default function Sidebar({ role, onLogout }: Props) {
         name: "Profile",
         href: "/dashboard/buyer/profile",
         icon: <User size={20} />,
+      },
+      {
+        name: "Settings",
+        href: "/dashboard/buyer/settings",
+        icon: <Settings size={20} />,
       },
     ],
   };

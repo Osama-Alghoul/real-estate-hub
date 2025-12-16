@@ -10,6 +10,7 @@ import DeleteUserModal from "@/components/users/DeleteUserModal";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Edit, Trash2 } from "lucide-react";
+import Pagination from "@/components/properties/Pagination";
 
 export default function UsersPage() {
   const [users, setUsers] = useState<User[]>([]);
@@ -19,7 +20,7 @@ export default function UsersPage() {
   const [roleFilter, setRoleFilter] = useState("all");
   const [statusFilter, setStatusFilter] = useState("all");
   const [page, setPage] = useState(1);
-  
+
   const limit = 5;
 
   const [editingUser, setEditingUser] = useState<User | null>(null);
@@ -52,7 +53,6 @@ export default function UsersPage() {
     setSearch(e.target.value);
     setPage(1);
   };
-  
 
   const columns: Column<User>[] = [
     { key: "id", label: "ID" },
@@ -89,28 +89,6 @@ export default function UsersPage() {
         >
           {row.status || "disabled"}
         </span>
-      ),
-    },
-    {
-      key: "actions",
-      label: "Actions",
-      render: (row) => (
-        <div className="flex gap-2">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setEditingUser(row)}
-          >
-            <Edit className="w-4 h-4 text-blue-600" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setDeletingUser(row)}
-          >
-            <Trash2 className="w-4 h-4 text-red-600" />
-          </Button>
-        </div>
       ),
     },
   ];
@@ -150,25 +128,39 @@ export default function UsersPage() {
         </select>
       </div>
 
-      <DataTable data={users} columns={columns} isLoading={loading} />
+      <DataTable
+        data={users}
+        columns={columns}
+        isLoading={loading}
+        renderActions={(row) => (
+          <div className="flex gap-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setEditingUser(row)}
+            >
+              <Edit className="w-4 h-4 text-blue-600" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setDeletingUser(row)}
+            >
+              <Trash2 className="w-4 h-4 text-red-600" />
+            </Button>
+          </div>
+        )}
+      />
 
       {/* Pagination Controls */}
-      <div className="flex justify-between items-center mt-4">
-        <Button
-          variant="outline"
-          disabled={page === 1}
-          onClick={() => setPage((p) => p - 1)}
-        >
-          Previous
-        </Button>
-        <span>Page {page}</span>
-        <Button
-          variant="outline"
-          disabled={users.length < limit}
-          onClick={() => setPage((p) => p + 1)}
-        >
-          Next
-        </Button>
+      <div className="flex justify-center mt-4">
+        {total > limit && (
+          <Pagination
+            totalPages={Math.ceil(total / limit)}
+            currentPage={page}
+            onPageChange={setPage}
+          />
+        )}
       </div>
 
       <EditUserModal

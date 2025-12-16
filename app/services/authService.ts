@@ -1,11 +1,11 @@
-import { RegisterFormData, LoginFormData, User } from "../../types/auth";
-import bcrypt from "bcryptjs";
-import { setCookie, getCookie, deleteCookie } from "../utils/cookie";
+import { RegisterFormData, LoginFormData, User } from '../../types/auth';
+import bcrypt from 'bcryptjs';
+import { setCookie, getCookie, deleteCookie } from '../utils/cookie';
 
-const API_BASE = process.env.JSON_SERVER_URL || "http://localhost:3001";
+const API_BASE = process.env.JSON_SERVER_URL || 'http://localhost:3001';
 
 function createFakeToken(payload: {
-  id: number;
+  id: string;
   email: string;
   role: string;
   name: string;
@@ -21,7 +21,7 @@ function createFakeToken(payload: {
     engagement: { views: number; favorites: number; shares: number };
     messages: { total: number; unread: number; requests: number };
     pageHealth: number;
-  }; 
+  };
 }) {
   return btoa(JSON.stringify(payload));
 }
@@ -41,9 +41,9 @@ export async function register(
   const hashed = await bcrypt.hash(form.password, 10);
 
   const createRes = await fetch(`${API_BASE}/users`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ ...form, password: hashed, status: "active" }),
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ...form, password: hashed ,status:"active"}),
   });
 
   if (!createRes.ok) return { error: "Failed to create user" };
@@ -142,16 +142,11 @@ export function logout() {
   localStorage.removeItem("authUser");
 }
 
-export function getCurrentUser(): {
-  id: number;
-  name: string;
-  email: string;
-  role: string;
-} | null {
-  const v = localStorage.getItem("authUser");
+export function getCurrentUser(): User | null {
+  const v = localStorage.getItem('authUser');
   if (!v) return null;
   try {
-    return JSON.parse(v);
+    return JSON.parse(v) as User;
   } catch {
     return null;
   }
@@ -171,5 +166,67 @@ export function isAuthenticated(): boolean {
     return decoded.email === user.email;
   } catch {
     return false;
+  }
+}
+
+export async function updateUser(id: string, data: Partial<User>): Promise<{ user?: User; error?: string }> {
+  try {
+    // If password is provided, hash it
+    let updateData = { ...data };
+    if (updateData.password) {
+      updateData.password = await bcrypt.hash(updateData.password, 10);
+    }
+
+    const res = await fetch(`${API_BASE}/users/${id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(updateData),
+    });
+
+    if (!res.ok) {
+      console.error('Update failed:', res.status, res.statusText);
+      const text = await res.text();
+      console.error('Response body:', text);
+      return { error: `Failed to update user: ${res.status} ${res.statusText}` };
+    }
+
+    const updatedUser: User = await res.json();
+
+    // Update local storage if it's the current user
+    const currentUser = getCurrentUser();
+    if (currentUser && currentUser.id === updatedUser.id) {
+      const exp = Math.floor(Date.now() / 1000) + 60 * 60;
+      const token = createFakeToken({ 
+        id: updatedUser.id, 
+        email: updatedUser.email, 
+        role: updatedUser.role, 
+        name: updatedUser.name, 
+        exp,
+        stats: {
+          totalProperties: 0,
+          propertiesByType: {
+            residential: 0,
+            commercial: 0,
+            industrial: 0,
+            retail: 0,
+          },
+          engagement: { views: 0, favorites: 0, shares: 0 },
+          messages: { total: 0, unread: 0, requests: 0 },
+          pageHealth: 0,
+        },
+      });
+      
+      setCookie('authToken', token, 1);
+      localStorage.setItem('authUser', JSON.stringify({ 
+        id: updatedUser.id, 
+        name: updatedUser.name, 
+        email: updatedUser.email, 
+        role: updatedUser.role 
+      }));
+    }
+
+    return { user: updatedUser };
+  } catch (error) {
+    return { error: 'Network error' };
   }
 }

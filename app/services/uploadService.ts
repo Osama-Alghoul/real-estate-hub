@@ -19,3 +19,22 @@ export async function uploadImage(file: File): Promise<string> {
     throw error;
   }
 }
+
+export async function deleteImage(url: string): Promise<void> {
+  try {
+    const response = await fetch('/api/upload', {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ url }),
+    });
+
+    if (!response.ok) {
+      throw new Error('Delete failed');
+    }
+  } catch (error) {
+    console.error('Error deleting file:', error);
+    // We don't throw here to avoid blocking the user flow if delete fails (e.g. file already gone)
+  }
+}

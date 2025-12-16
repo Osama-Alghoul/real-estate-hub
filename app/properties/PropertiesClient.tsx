@@ -54,9 +54,9 @@ export default function PropertiesClient({
       />
 
       {view === "grid" ? (
-        <GridView data={paginatedProperties} />
+        <GridView data={paginatedProperties} mode="public" />
       ) : (
-        <ListView data={paginatedProperties} />
+        <ListView data={paginatedProperties} mode="public" />
       )}
 
       <div className="mt-12 flex justify-center">

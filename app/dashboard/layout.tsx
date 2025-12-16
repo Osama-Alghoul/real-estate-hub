@@ -20,7 +20,7 @@ export default function DashboardLayout({ children }: Props) {
     }
   }, [user, loading, router]);
 
-  if (loading || !user) return <p className="p-6">Loading dashboard...</p>;
+  if (loading || !user) return;
 
   return (
     <div className="flex h-screen bg-gray-50">
