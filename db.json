@@ -99,10 +99,7 @@
     {
       "id": "4",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P1.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P1.png"],
       "title": "Family House, Chicago IL",
       "price": 350000,
       "garag": 2,
@@ -130,10 +127,7 @@
     {
       "id": "5",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P1.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P1.png"],
       "title": "Beachfront House, California",
       "price": 1200000,
       "garag": 2,
@@ -158,10 +152,7 @@
     {
       "id": "6",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P1.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P1.png"],
       "title": "Penthouse, Los Angeles",
       "price": 980000,
       "garag": 2,
@@ -186,10 +177,7 @@
     {
       "id": "7",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P1.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P1.png"],
       "title": "Suburban Home, Texas",
       "price": 270000,
       "garag": 2,
@@ -217,10 +205,7 @@
     {
       "id": "8",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P2.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P2.png"],
       "title": "Modern Studio, Boston",
       "price": 190000,
       "garag": 0,
@@ -474,13 +459,64 @@
       "role": "buyer"
     },
     {
-      "id": "bec2",
-      "name": "anoon jamal abu tawhanhe",
-      "email": "anan1@gmail.com",
-      "password": "$2b$10$s9nXzNL23UKoKHUCz3/NZ.JMakSA7qcwTQNdNi6TW6aJ4mvkuQNxe",
+      "id": "4082",
+      "name": "Osama Alghoul",
+      "email": "owner@example.com",
+      "password": "$2b$10$S6v8mzKhqIW9RIQv/YXrfuxBLUFDZUsRa5sg5WGQ43kTetbU/vpU6",
+      "role": "owner",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
+    },
+    {
+      "id": "1529",
+      "name": "anan",
+      "email": "anan2@gmail.com",
+      "password": "$2b$10$TkHcnIbU/caMf8NroRapNeb3z701krVBDNbuQQvwYCtqRD4dZRUFa",
+      "role": "owner",
+      "status": "active",
+      "avatar": ""
+    },
+    {
+      "id": "545e",
+      "name": "anan",
+      "email": "anan3@gmail.com",
+      "password": "$2b$10$1L8Vkwiu1GbYygqee3TbZ.9nFZj9SaXQqbjLVoOMRzaqM8fRW1zEG",
       "role": "admin",
       "status": "active",
-      "avatar": "/uploads/1765879714057.png"
+      "avatar": ""
+    },
+    {
+      "id": "b268",
+      "name": "omar",
+      "email": "omar@gmail.com",
+      "password": "$2b$10$5qJdQu7QYllnhzyNRTrDA.JuiIPvCyixy.j/7rqg5bQ1amqr65qpa",
+      "role": "owner"
+    },
+    {
+      "id": "2d7e",
+      "name": "jamal",
+      "email": "jamal@gmail.com",
+      "password": "$2b$10$2D7wEER8uAQvUv5OXQAF8.QVrQ7Uyl5Y9LiQEFG.PbzhqhssiEa0C",
+      "role": "owner",
+      "status": "active"
     }
   ],
   "contacts": [
@@ -583,6 +619,31 @@
       "payment": null,
       "status": "pending",
       "createdAt": "2025-12-08T12:03:10.596Z"
+    }
+  ],
+  "favorites": [
+    {
+      "id": 1,
+      "userId": "ce6a",
+      "propertyId": "1",
+      "title": "Modern Apartment",
+      "image": "/images/p1.jpg",
+      "price": 120000,
+      "type": "sale",
+      "owner": "John Doe",
+      "ownerAvatar": "/images/john.jpg",
+      "status": "available"
+    },
+    {
+      "id": "b841",
+      "userId": "77a1",
+      "propertyId": "6",
+      "title": "Penthouse, Los Angeles",
+      "image": "/properties/P1.png",
+      "price": 980000,
+      "owner": "anan",
+      "type": "rent",
+      "status": "available"
     }
   ]
 }
