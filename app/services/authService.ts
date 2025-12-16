@@ -4,7 +4,25 @@ import { setCookie, getCookie, deleteCookie } from '../utils/cookie';
 
 const API_BASE = process.env.JSON_SERVER_URL || 'http://localhost:3001';
 
-function createFakeToken(payload: { id: string; email: string; role: string; name: string; exp: number }) {
+function createFakeToken(payload: {
+  id: string;
+  email: string;
+  role: string;
+  name: string;
+  exp: number;
+  stats: {
+    totalProperties: number;
+    propertiesByType: {
+      residential: number;
+      commercial: number;
+      industrial: number;
+      retail: number;
+    };
+    engagement: { views: number; favorites: number; shares: number };
+    messages: { total: number; unread: number; requests: number };
+    pageHealth: number;
+  };
+}) {
   return btoa(JSON.stringify(payload));
 }
 
@@ -27,7 +45,25 @@ export async function register(form: RegisterFormData): Promise<{ user?: User; e
 
   const user: User = await createRes.json();
   const exp = Math.floor(Date.now() / 1000) + 60 * 60;
-  const token = createFakeToken({ id: user.id, email: user.email, role: user.role, name: user.name, exp });
+  const token = createFakeToken({
+    id: user.id,
+    email: user.email,
+    role: user.role,
+    name: user.name,
+    exp,
+    stats: {
+      totalProperties: 0,
+      propertiesByType: {
+        residential: 0,
+        commercial: 0,
+        industrial: 0,
+        retail: 0,
+      },
+      engagement: { views: 0, favorites: 0, shares: 0 },
+      messages: { total: 0, unread: 0, requests: 0 },
+      pageHealth: 0,
+    },
+  });
 
   setCookie('authToken', token, 1);
   localStorage.setItem('authUser', JSON.stringify({ id: user.id, name: user.name, email: user.email, role: user.role }));
@@ -49,7 +85,25 @@ export async function login(form: LoginFormData): Promise<{ user?: User; error?:
   if (!isValid) return { error: 'Invalid credentials' };
 
   const exp = Math.floor(Date.now() / 1000) + 60 * 60;
-  const token = createFakeToken({ id: user.id, email: user.email, role: user.role, name: user.name, exp });
+  const token = createFakeToken({
+    id: user.id,
+    email: user.email,
+    role: user.role,
+    name: user.name,
+    exp,
+    stats: {
+      totalProperties: 0,
+      propertiesByType: {
+        residential: 0,
+        commercial: 0,
+        industrial: 0,
+        retail: 0,
+      },
+      engagement: { views: 0, favorites: 0, shares: 0 },
+      messages: { total: 0, unread: 0, requests: 0 },
+      pageHealth: 0,
+    },
+  });
 
   setCookie('authToken', token, 1);
   localStorage.setItem('authUser', JSON.stringify({ id: user.id, name: user.name, email: user.email, role: user.role }));
@@ -121,7 +175,19 @@ export async function updateUser(id: string, data: Partial<User>): Promise<{ use
         email: updatedUser.email, 
         role: updatedUser.role, 
         name: updatedUser.name, 
-        exp 
+        exp,
+        stats: {
+          totalProperties: 0,
+          propertiesByType: {
+            residential: 0,
+            commercial: 0,
+            industrial: 0,
+            retail: 0,
+          },
+          engagement: { views: 0, favorites: 0, shares: 0 },
+          messages: { total: 0, unread: 0, requests: 0 },
+          pageHealth: 0,
+        },
       });
       
       setCookie('authToken', token, 1);
