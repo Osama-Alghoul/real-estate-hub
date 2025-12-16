@@ -2,7 +2,7 @@ export type Role = 'admin' | 'buyer' | 'owner';
 export type Status = 'active' | 'disabled';
 
 export interface User {
-  id: number;
+  id: string;
   name: string;
   email: string;
   password: string;
