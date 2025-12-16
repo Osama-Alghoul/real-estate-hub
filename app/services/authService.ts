@@ -26,12 +26,17 @@ function createFakeToken(payload: {
   return btoa(JSON.stringify(payload));
 }
 
-export async function register(form: RegisterFormData): Promise<{ user?: User; error?: string }> {
-  if (!form.name || !form.email || !form.password) return { error: 'All fields are required' };
+export async function register(
+  form: RegisterFormData
+): Promise<{ user?: User; error?: string }> {
+  if (!form.name || !form.email || !form.password)
+    return { error: "All fields are required" };
 
-  const res = await fetch(`${API_BASE}/users?email=${encodeURIComponent(form.email)}`);
+  const res = await fetch(
+    `${API_BASE}/users?email=${encodeURIComponent(form.email)}`
+  );
   const existing = await res.json();
-  if (existing.length > 0) return { error: 'User already exists' };
+  if (existing.length > 0) return { error: "User already exists" };
 
   const hashed = await bcrypt.hash(form.password, 10);
 
@@ -41,7 +46,7 @@ export async function register(form: RegisterFormData): Promise<{ user?: User; e
     body: JSON.stringify({ ...form, password: hashed ,status:"active"}),
   });
 
-  if (!createRes.ok) return { error: 'Failed to create user' };
+  if (!createRes.ok) return { error: "Failed to create user" };
 
   const user: User = await createRes.json();
   const exp = Math.floor(Date.now() / 1000) + 60 * 60;
@@ -65,24 +70,37 @@ export async function register(form: RegisterFormData): Promise<{ user?: User; e
     },
   });
 
-  setCookie('authToken', token, 1);
-  localStorage.setItem('authUser', JSON.stringify({ id: user.id, name: user.name, email: user.email, role: user.role }));
+  setCookie("authToken", token, 1);
+  localStorage.setItem(
+    "authUser",
+    JSON.stringify({
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      role: user.role,
+    })
+  );
 
   return { user };
 }
 
-export async function login(form: LoginFormData): Promise<{ user?: User; error?: string }> {
-  if (!form.email || !form.password) return { error: 'All fields are required' };
+export async function login(
+  form: LoginFormData
+): Promise<{ user?: User; error?: string }> {
+  if (!form.email || !form.password)
+    return { error: "All fields are required" };
 
-  const res = await fetch(`${API_BASE}/users?email=${encodeURIComponent(form.email)}`);
-  if (!res.ok) return { error: 'Network error' };
+  const res = await fetch(
+    `${API_BASE}/users?email=${encodeURIComponent(form.email)}`
+  );
+  if (!res.ok) return { error: "Network error" };
 
   const users: User[] = await res.json();
   const user = users[0];
-  if (!user) return { error: 'Invalid credentials' };
+  if (!user) return { error: "Invalid credentials" };
 
   const isValid = await bcrypt.compare(form.password, user.password);
-  if (!isValid) return { error: 'Invalid credentials' };
+  if (!isValid) return { error: "Invalid credentials" };
 
   const exp = Math.floor(Date.now() / 1000) + 60 * 60;
   const token = createFakeToken({
@@ -105,15 +123,23 @@ export async function login(form: LoginFormData): Promise<{ user?: User; error?:
     },
   });
 
-  setCookie('authToken', token, 1);
-  localStorage.setItem('authUser', JSON.stringify({ id: user.id, name: user.name, email: user.email, role: user.role }));
+  setCookie("authToken", token, 1);
+  localStorage.setItem(
+    "authUser",
+    JSON.stringify({
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      role: user.role,
+    })
+  );
 
   return { user };
 }
 
 export function logout() {
-  deleteCookie('authToken');
-  localStorage.removeItem('authUser');
+  deleteCookie("authToken");
+  localStorage.removeItem("authUser");
 }
 
 export function getCurrentUser(): User | null {
@@ -127,7 +153,7 @@ export function getCurrentUser(): User | null {
 }
 
 export function isAuthenticated(): boolean {
-  const token = getCookie('authToken');
+  const token = getCookie("authToken");
   const user = getCurrentUser();
   if (!token || !user) return false;
 
