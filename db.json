@@ -99,7 +99,10 @@
     {
       "id": "4",
       "img": "/properties/P1.png",
-      "images": ["/properties/P1.png", "/properties/P1.png"],
+      "images": [
+        "/properties/P1.png",
+        "/properties/P1.png"
+      ],
       "title": "Family House, Chicago IL",
       "price": 350000,
       "garag": 2,
@@ -127,7 +130,10 @@
     {
       "id": "5",
       "img": "/properties/P1.png",
-      "images": ["/properties/P1.png", "/properties/P1.png"],
+      "images": [
+        "/properties/P1.png",
+        "/properties/P1.png"
+      ],
       "title": "Beachfront House, California",
       "price": 1200000,
       "garag": 2,
@@ -152,7 +158,10 @@
     {
       "id": "6",
       "img": "/properties/P1.png",
-      "images": ["/properties/P1.png", "/properties/P1.png"],
+      "images": [
+        "/properties/P1.png",
+        "/properties/P1.png"
+      ],
       "title": "Penthouse, Los Angeles",
       "price": 980000,
       "garag": 2,
@@ -177,7 +186,10 @@
     {
       "id": "7",
       "img": "/properties/P1.png",
-      "images": ["/properties/P1.png", "/properties/P1.png"],
+      "images": [
+        "/properties/P1.png",
+        "/properties/P1.png"
+      ],
       "title": "Suburban Home, Texas",
       "price": 270000,
       "garag": 2,
@@ -205,7 +217,10 @@
     {
       "id": "8",
       "img": "/properties/P1.png",
-      "images": ["/properties/P1.png", "/properties/P2.png"],
+      "images": [
+        "/properties/P1.png",
+        "/properties/P2.png"
+      ],
       "title": "Modern Studio, Boston",
       "price": 190000,
       "garag": 0,
@@ -587,7 +602,7 @@
       "visitType": "in-person",
       "date": "1981-02-27",
       "timeSlot": "15:00 - 15:30",
-      "message": "Non sit mollit dict",
+      "message": "Non sit mollait dict",
       "wantCall": true,
       "payDeposit": false,
       "payment": null,
