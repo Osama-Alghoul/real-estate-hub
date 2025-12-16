@@ -29,42 +29,12 @@ export default function DesktopNav({ transparent }: { transparent?: boolean }) {
       </li>
       <li>
         <Link
-          href="/"
-          className={`${
-            transparent ? "hover:text-gray-300" : "hover:text-primary-light"
-          }`}
-        >
-          Our Agents
-        </Link>
-      </li>
-      <li>
-        <Link
           href="/properties"
           className={`${
             transparent ? "hover:text-gray-300" : "hover:text-primary-light"
           }`}
         >
           Properties
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="/"
-          className={`${
-            transparent ? "hover:text-gray-300" : "hover:text-primary-light"
-          }`}
-        >
-          Gallery
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="/"
-          className={`${
-            transparent ? "hover:text-gray-300" : "hover:text-primary-light"
-          }`}
-        >
-          Blog
         </Link>
       </li>
       <li>
