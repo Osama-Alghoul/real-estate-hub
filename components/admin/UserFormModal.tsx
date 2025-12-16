@@ -26,8 +26,8 @@ export default function UserFormModal({
   const [form, setForm] = useState({
     name: "",
     email: "",
-    role: ("buyer" as User["role"]) || "buyer",
-    status: ("active" as User["status"]) || "active",
+    role: user?.role || "buyer",
+    status: user?.status || "active",
     password: "",
   });
 
@@ -96,19 +96,18 @@ export default function UserFormModal({
         if (!res.ok) throw new Error("Failed to update user");
         const updated: User = await res.json();
         onSuccess?.(updated);
-
       } else {
         // POST create
-      const { user: created, error } = await register({
-        name: form.name,
-        email: form.email,
-        password: form.password, // will be encrypted within AuthService
-        role: form.role,
-      });
+        const { user: created, error } = await register({
+          name: form.name,
+          email: form.email,
+          password: form.password, // will be encrypted within AuthService
+          role: form.role,
+        });
 
-      if (error) throw new Error(error);
-      if (created) onSuccess?.(created);
-    }
+        if (error) throw new Error(error);
+        if (created) onSuccess?.(created);
+      }
 
       onClose();
     } catch (err: any) {

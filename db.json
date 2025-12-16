@@ -141,7 +141,7 @@
       "size": 3200,
       "yearBuilt": 2019,
       "avatar": "/uploads/1765541253458.png",
-      "name": "omar",
+      "name": "ananananan",
       "type": "sale",
       "description": "A stunning beachfront house with direct access to the sea...",
       "amenities": [
@@ -169,7 +169,7 @@
       "size": 2400,
       "yearBuilt": 2021,
       "avatar": "/uploads/1765578286362.png",
-      "name": "Mai Alhajeen",
+      "name": "ananananan",
       "type": "rent",
       "description": "Luxury penthouse with an incredible city view...",
       "amenities": [
@@ -412,7 +412,9 @@
       "name": "mona",
       "email": "mona@gmail.com",
       "password": "$2b$10$24AlFwi.C0nGs1Ll2kJwvuKxR5X3avYU8M7DjPc6QnWwLpfyPBRxS",
-      "role": "owner"
+      "role": "owner",
+      "status": "active",
+      "avatar": ""
     },
     {
       "id": "fd68",
@@ -424,7 +426,7 @@
     },
     {
       "id": "e49d",
-      "name": "asma ahmad",
+      "name": "Asma Ahmad Updated",
       "email": "asma@gmail.com",
       "role": "admin",
       "status": "active",
@@ -470,6 +472,15 @@
       "email": "final@gmail.com",
       "password": "$2b$10$k6SAhqbfmVhq68xDOPNQ/OoI/ipJ7iV.6x8vs4iVqqHRg5y1e2IQS",
       "role": "buyer"
+    },
+    {
+      "id": "bec2",
+      "name": "anoon jamal abu tawhanhe",
+      "email": "anan1@gmail.com",
+      "password": "$2b$10$s9nXzNL23UKoKHUCz3/NZ.JMakSA7qcwTQNdNi6TW6aJ4mvkuQNxe",
+      "role": "admin",
+      "status": "active",
+      "avatar": "/uploads/1765879714057.png"
     }
   ],
   "contacts": [
@@ -480,18 +491,8 @@
       "phone": "+1 (904) 304-6238",
       "subject": "Commodo et modi reic",
       "message": "Officia harum veniam",
-      "status": "new",
+      "status": "read",
       "createdAt": "2025-12-05T08:46:40.535Z"
-    },
-    {
-      "id": "822e",
-      "name": "Kylynn Rhodes",
-      "email": "mylororumu@mailinator.com",
-      "phone": "+1 (667) 836-6649",
-      "subject": "Laboriosam cillum m",
-      "message": "Cillum et voluptatum",
-      "status": "new",
-      "createdAt": "2025-12-05T08:46:51.046Z"
     },
     {
       "id": "4ba7",
@@ -500,7 +501,7 @@
       "phone": "+1 (509) 928-5782",
       "subject": "Adipisci quo dolores",
       "message": "Ex nisi ratione minu",
-      "status": "new",
+      "status": "read",
       "createdAt": "2025-12-05T08:48:32.795Z"
     }
   ],

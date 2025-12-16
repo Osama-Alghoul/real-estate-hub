@@ -4,7 +4,7 @@ import { setCookie, getCookie, deleteCookie } from '../utils/cookie';
 
 const API_BASE = process.env.JSON_SERVER_URL || 'http://localhost:3001';
 
-function createFakeToken(payload: { id: number; email: string; role: string; name: string; exp: number }) {
+function createFakeToken(payload: { id: string; email: string; role: string; name: string; exp: number }) {
   return btoa(JSON.stringify(payload));
 }
 
@@ -20,7 +20,7 @@ export async function register(form: RegisterFormData): Promise<{ user?: User; e
   const createRes = await fetch(`${API_BASE}/users`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ ...form, password: hashed }),
+    body: JSON.stringify({ ...form, password: hashed ,status:"active"}),
   });
 
   if (!createRes.ok) return { error: 'Failed to create user' };
@@ -62,11 +62,11 @@ export function logout() {
   localStorage.removeItem('authUser');
 }
 
-export function getCurrentUser(): { id: number; name: string; email: string; role: string } | null {
+export function getCurrentUser(): User | null {
   const v = localStorage.getItem('authUser');
   if (!v) return null;
   try {
-    return JSON.parse(v);
+    return JSON.parse(v) as User;
   } catch {
     return null;
   }
@@ -86,5 +86,55 @@ export function isAuthenticated(): boolean {
     return decoded.email === user.email;
   } catch {
     return false;
+  }
+}
+
+export async function updateUser(id: string, data: Partial<User>): Promise<{ user?: User; error?: string }> {
+  try {
+    // If password is provided, hash it
+    let updateData = { ...data };
+    if (updateData.password) {
+      updateData.password = await bcrypt.hash(updateData.password, 10);
+    }
+
+    const res = await fetch(`${API_BASE}/users/${id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(updateData),
+    });
+
+    if (!res.ok) {
+      console.error('Update failed:', res.status, res.statusText);
+      const text = await res.text();
+      console.error('Response body:', text);
+      return { error: `Failed to update user: ${res.status} ${res.statusText}` };
+    }
+
+    const updatedUser: User = await res.json();
+
+    // Update local storage if it's the current user
+    const currentUser = getCurrentUser();
+    if (currentUser && currentUser.id === updatedUser.id) {
+      const exp = Math.floor(Date.now() / 1000) + 60 * 60;
+      const token = createFakeToken({ 
+        id: updatedUser.id, 
+        email: updatedUser.email, 
+        role: updatedUser.role, 
+        name: updatedUser.name, 
+        exp 
+      });
+      
+      setCookie('authToken', token, 1);
+      localStorage.setItem('authUser', JSON.stringify({ 
+        id: updatedUser.id, 
+        name: updatedUser.name, 
+        email: updatedUser.email, 
+        role: updatedUser.role 
+      }));
+    }
+
+    return { user: updatedUser };
+  } catch (error) {
+    return { error: 'Network error' };
   }
 }

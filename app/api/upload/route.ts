@@ -48,3 +48,35 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+
+export async function DELETE(request: NextRequest) {
+  try {
+    const { url } = await request.json();
+
+    if (!url) {
+      return NextResponse.json(
+        { error: 'No URL provided' },
+        { status: 400 }
+      );
+    }
+
+    // Extract filename from URL
+    // URL format: /uploads/filename.ext
+    const fileName = path.basename(url);
+    const filePath = path.join(process.cwd(), 'public', 'uploads', fileName);
+
+    // Check if file exists
+    if (existsSync(filePath)) {
+      await import('fs/promises').then(fs => fs.unlink(filePath));
+      return NextResponse.json({ message: 'File deleted successfully' }, { status: 200 });
+    } else {
+      return NextResponse.json({ error: 'File not found' }, { status: 404 });
+    }
+  } catch (error) {
+    console.error('Error deleting file:', error);
+    return NextResponse.json(
+      { error: 'Failed to delete file' },
+      { status: 500 }
+    );
+  }
+}

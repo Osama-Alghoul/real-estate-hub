@@ -92,8 +92,10 @@ export default function AdminLandingPage() {
         };
 
         // Calculate Property Status Distribution
+        // Calculate Property Status Distribution
         const propertyStatusCounts = properties.reduce((acc, curr) => {
-          acc[curr.status] = (acc[curr.status] || 0) + 1;
+          const status = curr.status || "unknown";
+          acc[status] = (acc[status] || 0) + 1;
           return acc;
         }, {} as Record<string, number>);
 
