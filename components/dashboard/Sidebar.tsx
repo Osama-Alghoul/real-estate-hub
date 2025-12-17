@@ -60,6 +60,11 @@ export default function Sidebar({ role, onLogout }: Props) {
         href: "/dashboard/admin/settings",
         icon: <Settings size={20} />,
       },
+      {
+        name: "Profile",
+        href: "/dashboard/admin/profile",
+        icon: <User size={20} />,
+      },
     ],
     owner: [
       {
@@ -81,6 +86,11 @@ export default function Sidebar({ role, onLogout }: Props) {
         name: "Massages",
         href: "/dashboard/owner/massages",
         icon: <MessagesSquare size={20} />,
+      },
+      {
+        name: "Profile",
+        href: "/dashboard/buyer/profile",
+        icon: <User size={20} />,
       },
     ],
     buyer: [

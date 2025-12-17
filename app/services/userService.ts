@@ -25,6 +25,7 @@ export async function fetchUsers(params?: {
 
   let data: User[] = await res.json();
 
+  // client-side filtering
   if (params?.q) {
     const q = params.q.toLowerCase();
     data = data.filter((u) => u.name.toLowerCase().includes(q));
@@ -38,6 +39,21 @@ export async function fetchUsers(params?: {
   }
 
   return { data, total };
+}
+
+export async function createUser(user: Omit<User, 'id'>): Promise<User> {
+  const res = await fetch(`${API_BASE}/users`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      ...user,
+      createdAt: new Date().toISOString(),
+      status: user.status || 'active'
+    }),
+  });
+  
+  if (!res.ok) throw new Error('Failed to create user');
+  return res.json();
 }
 
 export async function updateUser(
@@ -83,6 +99,14 @@ export async function updateUser(
   }
 
   return updatedUser;
+}
+
+export async function deleteUser(id: number): Promise<void> {
+  const res = await fetch(`${API_BASE}/users/${id}`, {
+    method: 'DELETE',
+  });
+  
+  if (!res.ok) throw new Error('Failed to delete user');
 }
 
 export async function changePassword(
