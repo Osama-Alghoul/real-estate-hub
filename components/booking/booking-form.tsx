@@ -11,6 +11,8 @@ import { Calendar, Clock } from "lucide-react";
 import { createBooking, getBookedSlots } from "@/app/services/bookingService";
 import { Property } from "@/types/property.type";
 import { SuccessToast } from "@/components/ui/toast";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/app/context/AuthContext";
 
 interface BookingFormProps {
   property: Property;
@@ -42,6 +44,8 @@ export default function BookingForm({
   visitType,
   setVisitType,
 }: BookingFormProps) {
+  const { user } = useAuth();
+  const router = useRouter();
   const [wantCall, setWantCall] = useState(false);
   const [payDeposit, setPayDeposit] = useState(false);
   const [message, setMessage] = useState("");
@@ -82,10 +86,18 @@ export default function BookingForm({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    if (!user) {
+      router.push("/login");
+      return;
+    }
+
     setLoading(true);
 
     const bookingData = {
       propertyId: String(property.id),
+      userId: user.id,
+      userName: user.name,
+      userEmail: user.email,
       visitType: visitType as "in-person" | "virtual" | "open-house",
       date: selectedDate,
       timeSlot: selectedTime,
