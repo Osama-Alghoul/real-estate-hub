@@ -15,7 +15,21 @@ import {
   Save,
   Loader2,
   Camera,
+  X,
+  Check,
+  ZoomIn,
 } from "lucide-react";
+import Cropper from "react-easy-crop";
+import getCroppedImg from "@/lib/canvasUtils";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import { Slider } from "@/components/ui/slider";
 
 export default function SettingsForm() {
   const [user, setUser] = useState<User | null>(null);
@@ -32,6 +46,13 @@ export default function SettingsForm() {
     confirmPassword: "",
     avatar: "",
   });
+
+  // Access the crop state
+  const [crop, setCrop] = useState({ x: 0, y: 0 });
+  const [zoom, setZoom] = useState(1);
+  const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
+  const [imageSrc, setImageSrc] = useState<string | null>(null);
+  const [isCropDialogOpen, setIsCropDialogOpen] = useState(false);
 
   useEffect(() => {
     const currentUser = getCurrentUser();
@@ -84,7 +105,32 @@ export default function SettingsForm() {
     const file = e.target.files?.[0];
     if (!file) return;
 
+    // Read the file and set as image source for cropping
+    const reader = new FileReader();
+    reader.addEventListener("load", () => {
+      setImageSrc(reader.result?.toString() || "");
+      setIsCropDialogOpen(true);
+    });
+    reader.readAsDataURL(file);
+    e.target.value = ""; // Reset input so same file can be selected again
+  };
+
+  const onCropComplete = (croppedArea: any, croppedAreaPixels: any) => {
+    setCroppedAreaPixels(croppedAreaPixels);
+  };
+
+  const handleCropSave = async () => {
+    if (!imageSrc || !croppedAreaPixels) return;
+
     try {
+      const croppedImage = await getCroppedImg(imageSrc, croppedAreaPixels);
+      if (!croppedImage) return;
+
+      // Create a file from the blob
+      const file = new File([croppedImage], "avatar.jpg", {
+        type: "image/jpeg",
+      });
+
       // If there's an existing avatar that is a local upload, delete it first
       if (formData.avatar && formData.avatar.startsWith("/uploads/")) {
         await deleteImage(formData.avatar);
@@ -92,11 +138,18 @@ export default function SettingsForm() {
 
       const url = await uploadImage(file);
       setFormData((prev) => ({ ...prev, avatar: url }));
+      setIsCropDialogOpen(false);
+      setImageSrc(null);
     } catch (error) {
-      console.error("Upload error:", error);
-      setErrorMessage("Failed to upload image");
+      console.error("Upload/Crop error:", error);
+      setErrorMessage("Failed to process image");
       setShowErrorToast(true);
     }
+  };
+
+  const cancelCrop = () => {
+    setIsCropDialogOpen(false);
+    setImageSrc(null);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -275,6 +328,53 @@ export default function SettingsForm() {
           onClose={() => setShowErrorToast(false)}
         />
       )}
+
+      {/* Crop Dialog */}
+      <Dialog open={isCropDialogOpen} onOpenChange={setIsCropDialogOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Crop Image</DialogTitle>
+            <DialogDescription>
+              Drag to position and pinch/scroll to zoom.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="relative w-full h-80 bg-black rounded-md overflow-hidden">
+            {imageSrc && (
+              <Cropper
+                image={imageSrc}
+                crop={crop}
+                zoom={zoom}
+                aspect={1}
+                onCropChange={setCrop}
+                onCropComplete={onCropComplete}
+                onZoomChange={setZoom}
+              />
+            )}
+          </div>
+          <div className="py-2 flex items-center gap-4">
+            <ZoomIn className="h-4 w-4 text-gray-500" />
+            <Slider
+              value={[zoom]}
+              min={1}
+              max={3}
+              step={0.1}
+              onValueChange={(value: number[]) => setZoom(value[0])}
+              className="flex-1"
+            />
+          </div>
+          <DialogFooter className="sm:justify-between">
+            <Button variant="secondary" onClick={cancelCrop}>
+              <X className="mr-2 h-4 w-4" /> Cancel
+            </Button>
+            <Button
+              onClick={handleCropSave}
+              className="bg-blue-600 hover:bg-blue-700"
+            >
+              <Check className="mr-2 h-4 w-4" /> Save Avatar
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
