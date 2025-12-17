@@ -28,7 +28,7 @@ export default function Card({
   variant = "grid",
   index,
   type,
-}: CardProps & { variant?: "grid" | "list"; index?: number }) {
+}: CardProps & { variant?: "grid" | "list"; index?: number; type: "sale" | "rent" }) {
   const isEven = index !== undefined && index % 2 === 1;
   const listClasses = isEven ? "flex-row-reverse" : "flex-row";
   const [favorite, setFavorite] = useState<any>(null);

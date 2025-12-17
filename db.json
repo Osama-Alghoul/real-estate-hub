@@ -244,6 +244,38 @@
       "location": "",
       "bedrooms": 0,
       "ownerId": "2af7"
+    },
+    {
+      "id": "54b8",
+      "title": "Modern Villa in downtown",
+      "description": "Pretty good, nice view",
+      "price": 50000,
+      "type": "sale",
+      "status": "available",
+      "location": "Main st, New York, NY",
+      "bedrooms": 4,
+      "bath": 2,
+      "garag": 2,
+      "size": 200,
+      "yearBuilt": 2020,
+      "amenities": [
+        "Heating",
+        "Swimming Pool",
+        "Smart Home",
+        "Garage",
+        "Garden",
+        "Internet",
+        "Balcony",
+        "Air Conditioning"
+      ],
+      "images": [
+        "/uploads/1765955795174.jpg"
+      ],
+      "img": "/uploads/1765955795174.jpg",
+      "ownerId": "4082",
+      "avatar": "/user.png",
+      "name": "Osama Alghoul",
+      "createdAt": "2025-12-17T07:16:37.798Z"
     }
   ],
   "about": {
@@ -414,7 +446,27 @@
       "password": "$2b$10$24AlFwi.C0nGs1Ll2kJwvuKxR5X3avYU8M7DjPc6QnWwLpfyPBRxS",
       "role": "owner",
       "status": "active",
-      "avatar": ""
+      "avatar": "",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
     },
     {
       "id": "fd68",
@@ -464,7 +516,28 @@
       "email": "osama@gmail.com",
       "password": "$2b$10$DPjQlLg8.qDdRt0vwS1G3.Vy4gDhqI.3lO/2WbFwNTyuBPQNsO5Sy",
       "role": "owner",
-      "status": "disabled"
+      "status": "disabled",
+      "avatar": "",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
     },
     {
       "id": "5ee3",
@@ -498,7 +571,8 @@
           "requests": 8
         },
         "pageHealth": 85
-      }
+      },
+      "avatar": "/uploads/1765957567216.jpg"
     },
     {
       "id": "1529",
@@ -507,7 +581,27 @@
       "password": "$2b$10$TkHcnIbU/caMf8NroRapNeb3z701krVBDNbuQQvwYCtqRD4dZRUFa",
       "role": "owner",
       "status": "active",
-      "avatar": ""
+      "avatar": "",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
     },
     {
       "id": "545e",
@@ -516,14 +610,54 @@
       "password": "$2b$10$1L8Vkwiu1GbYygqee3TbZ.9nFZj9SaXQqbjLVoOMRzaqM8fRW1zEG",
       "role": "admin",
       "status": "active",
-      "avatar": ""
+      "avatar": "",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
     },
     {
       "id": "b268",
       "name": "omar",
       "email": "omar@gmail.com",
       "password": "$2b$10$5qJdQu7QYllnhzyNRTrDA.JuiIPvCyixy.j/7rqg5bQ1amqr65qpa",
-      "role": "owner"
+      "role": "owner",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
     },
     {
       "id": "2d7e",
@@ -531,6 +665,43 @@
       "email": "jamal@gmail.com",
       "password": "$2b$10$2D7wEER8uAQvUv5OXQAF8.QVrQ7Uyl5Y9LiQEFG.PbzhqhssiEa0C",
       "role": "owner",
+      "status": "active",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
+    },
+    {
+      "id": "4012",
+      "name": "Osama Alghoul",
+      "email": "admin@reis.com",
+      "password": "$2b$10$sUz6zCiao5xxuFsG6y4bH.ILRPPFczb7t7DSiCIEk3x6q4RH7vKIy",
+      "role": "admin",
+      "status": "active",
+      "avatar": "/uploads/1765954562820.jpg"
+    },
+    {
+      "id": "6fff",
+      "name": "Osama Alghoul",
+      "email": "byuer@example.com",
+      "password": "$2b$10$OEwCgO0N.KOzulV2uGjYjuD2rN0QbWNbVAL5AzLPoUaH36iLUopUa",
+      "role": "buyer",
       "status": "active"
     }
   ],
@@ -554,6 +725,16 @@
       "message": "Ex nisi ratione minu",
       "status": "read",
       "createdAt": "2025-12-05T08:48:32.795Z"
+    },
+    {
+      "id": "8f9e",
+      "name": "Osama Alghoul",
+      "email": "osama@gmail.com",
+      "phone": "+970595925353",
+      "subject": "poasjdou",
+      "message": "suushdoahsfoia",
+      "status": "new",
+      "createdAt": "2025-12-16T16:56:42.961Z"
     }
   ],
   "bookings": [
@@ -626,6 +807,23 @@
       "payment": null,
       "status": "pending",
       "createdAt": "2025-12-16T12:32:50.319Z"
+    },
+    {
+      "id": "c1a8",
+      "propertyId": "54b8",
+      "userId": "6fff",
+      "userName": "Osama Alghoul",
+      "userEmail": "byuer@example.com",
+      "visitType": "in-person",
+      "date": "2025-12-18",
+      "timeSlot": "09:00 - 09:30",
+      "message": "hello",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "approved",
+      "createdAt": "2025-12-17T07:34:28.537Z",
+      "updatedAt": "2025-12-17T07:36:12.613Z"
     }
   ],
   "favorites": [
