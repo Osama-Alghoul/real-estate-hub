@@ -140,8 +140,8 @@
       "bath": 3,
       "size": 3200,
       "yearBuilt": 2019,
-      "avatar": "/uploads/1765541253458.png",
-      "name": "ananananan",
+      "avatar": "/uploads/1765956069714.png",
+      "name": "anan",
       "type": "sale",
       "description": "A stunning beachfront house with direct access to the sea...",
       "amenities": [
@@ -153,7 +153,10 @@
         "Fire Pit"
       ],
       "video": "/videos/property5.mp4",
-      "status": "pending"
+      "status": "pending",
+      "location": "",
+      "bedrooms": 0,
+      "ownerId": "4fe8"
     },
     {
       "id": "6",
@@ -168,8 +171,8 @@
       "bath": 2,
       "size": 2400,
       "yearBuilt": 2021,
-      "avatar": "/uploads/1765578286362.png",
-      "name": "ananananan",
+      "avatar": "/uploads/1765956069714.png",
+      "name": "jamal",
       "type": "rent",
       "description": "Luxury penthouse with an incredible city view...",
       "amenities": [
@@ -246,36 +249,30 @@
       "ownerId": "2af7"
     },
     {
-      "id": "54b8",
-      "title": "Modern Villa in downtown",
-      "description": "Pretty good, nice view",
-      "price": 50000,
+      "id": "cab5",
+      "title": "jamal",
+      "description": "sdasad",
+      "price": 16,
+      "location": "asdasd",
       "type": "sale",
       "status": "available",
-      "location": "Main st, New York, NY",
-      "bedrooms": 4,
-      "bath": 2,
-      "garag": 2,
-      "size": 200,
-      "yearBuilt": 2020,
+      "bedrooms": 2,
+      "bath": 1,
+      "size": 4,
+      "garag": 1,
+      "img": "/uploads/1765956127620.png",
+      "images": [],
       "amenities": [
-        "Heating",
         "Swimming Pool",
         "Smart Home",
-        "Garage",
-        "Garden",
-        "Internet",
-        "Balcony",
-        "Air Conditioning"
+        "Central Heating",
+        "Solar Panels"
       ],
-      "images": [
-        "/uploads/1765955795174.jpg"
-      ],
-      "img": "/uploads/1765955795174.jpg",
-      "ownerId": "4082",
-      "avatar": "/user.png",
-      "name": "Osama Alghoul",
-      "createdAt": "2025-12-17T07:16:37.798Z"
+      "ownerId": "2d7e",
+      "name": "jamal",
+      "avatar": "/uploads/1765956069714.png",
+      "yearBuilt": 2015,
+      "createdAt": "2025-12-17T07:22:08.596Z"
     }
   ],
   "about": {
@@ -666,41 +663,21 @@
       "password": "$2b$10$2D7wEER8uAQvUv5OXQAF8.QVrQ7Uyl5Y9LiQEFG.PbzhqhssiEa0C",
       "role": "owner",
       "status": "active",
-      "stats": {
-        "totalProperties": 24,
-        "propertiesByType": {
-          "residential": 12,
-          "commercial": 7,
-          "industrial": 3,
-          "retail": 2
-        },
-        "engagement": {
-          "views": 1847,
-          "favorites": 234,
-          "shares": 89
-        },
-        "messages": {
-          "total": 47,
-          "unread": 12,
-          "requests": 8
-        },
-        "pageHealth": 85
-      }
+      "avatar": "/uploads/1765956069714.png"
     },
     {
-      "id": "4012",
-      "name": "Osama Alghoul",
-      "email": "admin@reis.com",
-      "password": "$2b$10$sUz6zCiao5xxuFsG6y4bH.ILRPPFczb7t7DSiCIEk3x6q4RH7vKIy",
-      "role": "admin",
-      "status": "active",
-      "avatar": "/uploads/1765954562820.jpg"
+      "id": "4fe8",
+      "name": "anan",
+      "email": "ananowner@gmail.com",
+      "password": "$2b$10$YYde3d6OzrmwIvruyDqh4Os2lJ5mcho0iR7tXmN2D7jSP/c33yqku",
+      "role": "owner",
+      "status": "active"
     },
     {
-      "id": "6fff",
-      "name": "Osama Alghoul",
-      "email": "byuer@example.com",
-      "password": "$2b$10$OEwCgO0N.KOzulV2uGjYjuD2rN0QbWNbVAL5AzLPoUaH36iLUopUa",
+      "id": "ae5b",
+      "name": "seham",
+      "email": "seham@gmail.com",
+      "password": "$2b$10$tC.bX2tUwUnymcgSnQ2D3.gnd8KSqMeJa77X/uY95krd9XAfZMr4G",
       "role": "buyer",
       "status": "active"
     }
@@ -809,21 +786,20 @@
       "createdAt": "2025-12-16T12:32:50.319Z"
     },
     {
-      "id": "c1a8",
-      "propertyId": "54b8",
-      "userId": "6fff",
-      "userName": "Osama Alghoul",
-      "userEmail": "byuer@example.com",
+      "id": "f02d",
+      "propertyId": "2",
+      "userId": "ae5b",
+      "userName": "seham",
+      "userEmail": "seham@gmail.com",
       "visitType": "in-person",
-      "date": "2025-12-18",
-      "timeSlot": "09:00 - 09:30",
-      "message": "hello",
+      "date": "2025-01-01",
+      "timeSlot": "14:00 - 14:30",
+      "message": "Laborum Laborum asp",
       "wantCall": true,
       "payDeposit": false,
       "payment": null,
-      "status": "approved",
-      "createdAt": "2025-12-17T07:34:28.537Z",
-      "updatedAt": "2025-12-17T07:36:12.613Z"
+      "status": "pending",
+      "createdAt": "2025-12-17T07:41:41.206Z"
     }
   ],
   "favorites": [

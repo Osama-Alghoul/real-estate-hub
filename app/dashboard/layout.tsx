@@ -16,7 +16,7 @@ export default function DashboardLayout({ children }: Props) {
 
   useEffect(() => {
     if (!loading && !user) {
-      router.replace("/login");
+      router.replace("/");
     }
   }, [user, loading, router]);
 

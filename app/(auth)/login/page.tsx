@@ -2,17 +2,25 @@
 
 import LoginForm from '../../../components/auth/LoginForm';
 import { useAuth } from "../../context/AuthContext";
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
 
 export default function LoginPage() {
   const { user } = useAuth();
   const router = useRouter();
+  const searchParams = useSearchParams();
+
   useEffect(() => {
-        if (user) {
-      router.replace(`/dashboard/${user.role}?name=${encodeURIComponent(user.name)}`);
+    if (user) {
+      const redirect = searchParams.get("redirect");
+
+      if (redirect) {
+        router.replace(redirect);
+      } else {
+        router.replace("/");
+      }
     }
-  }, [user, router]);
+  }, [user, router, searchParams]);
 
   return <LoginForm />;
 }
