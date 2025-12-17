@@ -79,13 +79,8 @@ export default function Sidebar({ role, onLogout }: Props) {
         icon: <Building size={20} />,
       },
       {
-        name: "Add Property",
-        href: "/dashboard/owner/new",
-        icon: <Plus size={20} />,
-      },
-      {
-        name: "Massages",
-        href: "/dashboard/owner/massages",
+        name: "Messages",
+        href: "/dashboard/owner/messages",
         icon: <MessagesSquare size={20} />,
       },
       {

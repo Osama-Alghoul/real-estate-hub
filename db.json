@@ -443,7 +443,27 @@
       "password": "$2b$10$24AlFwi.C0nGs1Ll2kJwvuKxR5X3avYU8M7DjPc6QnWwLpfyPBRxS",
       "role": "owner",
       "status": "active",
-      "avatar": ""
+      "avatar": "",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
     },
     {
       "id": "fd68",
@@ -493,7 +513,28 @@
       "email": "osama@gmail.com",
       "password": "$2b$10$DPjQlLg8.qDdRt0vwS1G3.Vy4gDhqI.3lO/2WbFwNTyuBPQNsO5Sy",
       "role": "owner",
-      "status": "disabled"
+      "status": "disabled",
+      "avatar": "",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
     },
     {
       "id": "5ee3",
@@ -527,7 +568,8 @@
           "requests": 8
         },
         "pageHealth": 85
-      }
+      },
+      "avatar": "/uploads/1765957567216.jpg"
     },
     {
       "id": "1529",
@@ -536,7 +578,27 @@
       "password": "$2b$10$TkHcnIbU/caMf8NroRapNeb3z701krVBDNbuQQvwYCtqRD4dZRUFa",
       "role": "owner",
       "status": "active",
-      "avatar": ""
+      "avatar": "",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
     },
     {
       "id": "545e",
@@ -545,14 +607,54 @@
       "password": "$2b$10$1L8Vkwiu1GbYygqee3TbZ.9nFZj9SaXQqbjLVoOMRzaqM8fRW1zEG",
       "role": "admin",
       "status": "active",
-      "avatar": ""
+      "avatar": "",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
     },
     {
       "id": "b268",
       "name": "omar",
       "email": "omar@gmail.com",
       "password": "$2b$10$5qJdQu7QYllnhzyNRTrDA.JuiIPvCyixy.j/7rqg5bQ1amqr65qpa",
-      "role": "owner"
+      "role": "owner",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
     },
     {
       "id": "2d7e",
@@ -600,6 +702,16 @@
       "message": "Ex nisi ratione minu",
       "status": "read",
       "createdAt": "2025-12-05T08:48:32.795Z"
+    },
+    {
+      "id": "8f9e",
+      "name": "Osama Alghoul",
+      "email": "osama@gmail.com",
+      "phone": "+970595925353",
+      "subject": "poasjdou",
+      "message": "suushdoahsfoia",
+      "status": "new",
+      "createdAt": "2025-12-16T16:56:42.961Z"
     }
   ],
   "bookings": [
