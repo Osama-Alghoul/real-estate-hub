@@ -100,11 +100,6 @@ export default function Sidebar({ role, onLogout }: Props) {
         icon: <Heart size={20} />,
       },
       {
-        name: "Explore",
-        href: "/dashboard/buyer/properties",
-        icon: <Building size={20} />,
-      },
-      {
         name: "My Requests",
         href: "/dashboard/buyer/requests",
         icon: <MessagesSquare size={20} />,
