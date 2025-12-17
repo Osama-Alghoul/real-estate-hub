@@ -6,12 +6,9 @@ import {
   LayoutDashboard,
   Users,
   Building,
-  ChartAreaIcon,
-  Plus,
   LogOut,
   ChevronLeft,
   ChevronRight,
-  Settings,
   MessagesSquare,
   User,
   Heart,
@@ -61,11 +58,7 @@ export default function Sidebar({ role, onLogout }: Props) {
         href: "/dashboard/admin/bookings",
         icon: <Calendar size={20} />,
       },
-      {
-        name: "Settings",
-        href: "/dashboard/admin/settings",
-        icon: <Settings size={20} />,
-      },
+
       {
         name: "Profile",
         href: "/dashboard/admin/profile",
@@ -88,11 +81,7 @@ export default function Sidebar({ role, onLogout }: Props) {
         href: "/dashboard/owner/messages",
         icon: <MessagesSquare size={20} />,
       },
-      {
-        name: "Settings",
-        href: "/dashboard/owner/settings",
-        icon: <Settings size={20} />,
-      },
+
       {
         name: "Profile",
         href: "/dashboard/buyer/profile",
@@ -120,11 +109,7 @@ export default function Sidebar({ role, onLogout }: Props) {
         href: "/dashboard/buyer/requests",
         icon: <MessagesSquare size={20} />,
       },
-      {
-        name: "Settings",
-        href: "/dashboard/buyer/settings",
-        icon: <Settings size={20} />,
-      },
+
       {
         name: "Profile",
         href: "/dashboard/buyer/profile",
