@@ -66,6 +66,11 @@ export default function Sidebar({ role, onLogout }: Props) {
         href: "/dashboard/admin/settings",
         icon: <Settings size={20} />,
       },
+      {
+        name: "Profile",
+        href: "/dashboard/admin/profile",
+        icon: <User size={20} />,
+      },
     ],
     owner: [
       {
@@ -87,6 +92,11 @@ export default function Sidebar({ role, onLogout }: Props) {
         name: "Settings",
         href: "/dashboard/owner/settings",
         icon: <Settings size={20} />,
+      },
+      {
+        name: "Profile",
+        href: "/dashboard/buyer/profile",
+        icon: <User size={20} />,
       },
     ],
     buyer: [
@@ -111,14 +121,14 @@ export default function Sidebar({ role, onLogout }: Props) {
         icon: <MessagesSquare size={20} />,
       },
       {
-        name: "Profile",
-        href: "/dashboard/buyer/profile",
-        icon: <User size={20} />,
-      },
-      {
         name: "Settings",
         href: "/dashboard/buyer/settings",
         icon: <Settings size={20} />,
+      },
+      {
+        name: "Profile",
+        href: "/dashboard/buyer/profile",
+        icon: <User size={20} />,
       },
     ],
   };

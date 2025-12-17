@@ -140,8 +140,8 @@
       "bath": 3,
       "size": 3200,
       "yearBuilt": 2019,
-      "avatar": "/uploads/1765956069714.png",
-      "name": "anan",
+      "avatar": "/uploads/1765920503774.png",
+      "name": "alaa eliwa",
       "type": "sale",
       "description": "A stunning beachfront house with direct access to the sea...",
       "amenities": [
@@ -154,6 +154,7 @@
       ],
       "video": "/videos/property5.mp4",
       "status": "pending",
+      "owner": "Anan Jamal"
       "location": "",
       "bedrooms": 0,
       "ownerId": "4fe8"
@@ -171,8 +172,8 @@
       "bath": 2,
       "size": 2400,
       "yearBuilt": 2021,
-      "avatar": "/uploads/1765956069714.png",
-      "name": "jamal",
+      "avatar": "/uploads/1765920503774.png",
+      "name": "alaa eliwa",
       "type": "rent",
       "description": "Luxury penthouse with an incredible city view...",
       "amenities": [
@@ -184,7 +185,8 @@
         "Security System"
       ],
       "video": "/videos/property6.mp4",
-      "status": "available"
+      "status": "available",
+      "owner": "Anan Jamal"
     },
     {
       "id": "7",
@@ -415,17 +417,18 @@
     },
     {
       "id": "77a1",
-      "name": "alaa",
+      "name": "alaa eliwa",
       "email": "alaa@gmail.com",
-      "password": "$2b$10$ShiTUzLBQQw4SPZBXx2zyOlAYZCo77U81Rdvb3.SQzz8TVVJQLHY.",
+      "password": "alaa@789",
       "role": "buyer",
-      "status": "active"
+      "status": "active",
+      "avatar": "/uploads/1765920503774.png"
     },
     {
       "id": "882a",
-      "name": "anan test",
+      "name": "Anan Jamal",
       "email": "anan@gmail.com",
-      "password": "$2b$10$ShpBXjhjzjI8.QnX5Yi/FOi6fdFrZ4js71gn/BJAKtiUWgJyZQ/vu",
+      "password": "$2b$10$d4eEiTRrKIwE/CNI/AvVqOy0qU9p70VMyL.UXG7PlrtkF/k5jtTBq",
       "role": "buyer",
       "status": "active"
     },
@@ -824,6 +827,17 @@
       "price": 980000,
       "owner": "anan",
       "type": "rent",
+      "status": "available"
+    },
+    {
+      "id": "fbb9",
+      "userId": "77a1",
+      "propertyId": "1",
+      "title": "92 ALLIUM PLACE, ORLANDO FL 32827",
+      "image": "/properties/P1.png",
+      "price": 590693,
+      "owner": "fadi",
+      "type": "sale",
       "status": "available"
     }
   ]
