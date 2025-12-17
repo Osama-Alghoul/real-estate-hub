@@ -446,27 +446,7 @@
       "password": "$2b$10$24AlFwi.C0nGs1Ll2kJwvuKxR5X3avYU8M7DjPc6QnWwLpfyPBRxS",
       "role": "owner",
       "status": "active",
-      "avatar": "",
-      "stats": {
-        "totalProperties": 24,
-        "propertiesByType": {
-          "residential": 12,
-          "commercial": 7,
-          "industrial": 3,
-          "retail": 2
-        },
-        "engagement": {
-          "views": 1847,
-          "favorites": 234,
-          "shares": 89
-        },
-        "messages": {
-          "total": 47,
-          "unread": 12,
-          "requests": 8
-        },
-        "pageHealth": 85
-      }
+      "avatar": ""
     },
     {
       "id": "fd68",
@@ -516,28 +496,7 @@
       "email": "osama@gmail.com",
       "password": "$2b$10$DPjQlLg8.qDdRt0vwS1G3.Vy4gDhqI.3lO/2WbFwNTyuBPQNsO5Sy",
       "role": "owner",
-      "status": "disabled",
-      "avatar": "",
-      "stats": {
-        "totalProperties": 24,
-        "propertiesByType": {
-          "residential": 12,
-          "commercial": 7,
-          "industrial": 3,
-          "retail": 2
-        },
-        "engagement": {
-          "views": 1847,
-          "favorites": 234,
-          "shares": 89
-        },
-        "messages": {
-          "total": 47,
-          "unread": 12,
-          "requests": 8
-        },
-        "pageHealth": 85
-      }
+      "status": "disabled"
     },
     {
       "id": "5ee3",
@@ -571,8 +530,7 @@
           "requests": 8
         },
         "pageHealth": 85
-      },
-      "avatar": "/uploads/1765957567216.jpg"
+      }
     },
     {
       "id": "1529",
@@ -581,27 +539,7 @@
       "password": "$2b$10$TkHcnIbU/caMf8NroRapNeb3z701krVBDNbuQQvwYCtqRD4dZRUFa",
       "role": "owner",
       "status": "active",
-      "avatar": "",
-      "stats": {
-        "totalProperties": 24,
-        "propertiesByType": {
-          "residential": 12,
-          "commercial": 7,
-          "industrial": 3,
-          "retail": 2
-        },
-        "engagement": {
-          "views": 1847,
-          "favorites": 234,
-          "shares": 89
-        },
-        "messages": {
-          "total": 47,
-          "unread": 12,
-          "requests": 8
-        },
-        "pageHealth": 85
-      }
+      "avatar": ""
     },
     {
       "id": "545e",
@@ -610,54 +548,14 @@
       "password": "$2b$10$1L8Vkwiu1GbYygqee3TbZ.9nFZj9SaXQqbjLVoOMRzaqM8fRW1zEG",
       "role": "admin",
       "status": "active",
-      "avatar": "",
-      "stats": {
-        "totalProperties": 24,
-        "propertiesByType": {
-          "residential": 12,
-          "commercial": 7,
-          "industrial": 3,
-          "retail": 2
-        },
-        "engagement": {
-          "views": 1847,
-          "favorites": 234,
-          "shares": 89
-        },
-        "messages": {
-          "total": 47,
-          "unread": 12,
-          "requests": 8
-        },
-        "pageHealth": 85
-      }
+      "avatar": "/uploads/1765964550281.jpg"
     },
     {
       "id": "b268",
       "name": "omar",
       "email": "omar@gmail.com",
       "password": "$2b$10$5qJdQu7QYllnhzyNRTrDA.JuiIPvCyixy.j/7rqg5bQ1amqr65qpa",
-      "role": "owner",
-      "stats": {
-        "totalProperties": 24,
-        "propertiesByType": {
-          "residential": 12,
-          "commercial": 7,
-          "industrial": 3,
-          "retail": 2
-        },
-        "engagement": {
-          "views": 1847,
-          "favorites": 234,
-          "shares": 89
-        },
-        "messages": {
-          "total": 47,
-          "unread": 12,
-          "requests": 8
-        },
-        "pageHealth": 85
-      }
+      "role": "owner"
     },
     {
       "id": "2d7e",
@@ -682,7 +580,8 @@
       "email": "seham@gmail.com",
       "password": "$2b$10$tC.bX2tUwUnymcgSnQ2D3.gnd8KSqMeJa77X/uY95krd9XAfZMr4G",
       "role": "buyer",
-      "status": "active"
+      "status": "active",
+      "avatar": "/uploads/1765962838407.jpg"
     }
   ],
   "contacts": [
@@ -695,26 +594,6 @@
       "message": "Officia harum veniam",
       "status": "read",
       "createdAt": "2025-12-05T08:46:40.535Z"
-    },
-    {
-      "id": "4ba7",
-      "name": "Emily Morrow",
-      "email": "zufymyvo@mailinator.com",
-      "phone": "+1 (509) 928-5782",
-      "subject": "Adipisci quo dolores",
-      "message": "Ex nisi ratione minu",
-      "status": "read",
-      "createdAt": "2025-12-05T08:48:32.795Z"
-    },
-    {
-      "id": "8f9e",
-      "name": "Osama Alghoul",
-      "email": "osama@gmail.com",
-      "phone": "+970595925353",
-      "subject": "poasjdou",
-      "message": "suushdoahsfoia",
-      "status": "new",
-      "createdAt": "2025-12-16T16:56:42.961Z"
     }
   ],
   "bookings": [
@@ -742,8 +621,9 @@
       "wantCall": true,
       "payDeposit": false,
       "payment": null,
-      "status": "pending",
-      "createdAt": "2025-12-05T08:32:21.037Z"
+      "status": "approved",
+      "createdAt": "2025-12-05T08:32:21.037Z",
+      "updatedAt": "2025-12-17T09:46:39.128Z"
     },
     {
       "id": "f798",
@@ -755,8 +635,9 @@
       "wantCall": true,
       "payDeposit": false,
       "payment": null,
-      "status": "pending",
-      "createdAt": "2025-12-05T08:33:04.384Z"
+      "status": "approved",
+      "createdAt": "2025-12-05T08:33:04.384Z",
+      "updatedAt": "2025-12-17T09:50:46.088Z"
     },
     {
       "id": "d5f5",
@@ -785,8 +666,9 @@
       "wantCall": false,
       "payDeposit": false,
       "payment": null,
-      "status": "pending",
-      "createdAt": "2025-12-16T12:32:50.319Z"
+      "status": "rejected",
+      "createdAt": "2025-12-16T12:32:50.319Z",
+      "updatedAt": "2025-12-17T09:50:51.753Z"
     },
     {
       "id": "f02d",
@@ -801,8 +683,25 @@
       "wantCall": true,
       "payDeposit": false,
       "payment": null,
+      "status": "approved",
+      "createdAt": "2025-12-17T07:41:41.206Z",
+      "updatedAt": "2025-12-17T10:07:16.804Z"
+    },
+    {
+      "id": "04ce",
+      "propertyId": "2",
+      "userId": "545e",
+      "userName": "anan",
+      "userEmail": "anan3@gmail.com",
+      "visitType": "in-person",
+      "date": "2013-05-25",
+      "timeSlot": "09:00 - 09:30",
+      "message": "Rerum corrupti exer",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
       "status": "pending",
-      "createdAt": "2025-12-17T07:41:41.206Z"
+      "createdAt": "2025-12-17T09:37:38.212Z"
     }
   ],
   "favorites": [
@@ -839,6 +738,38 @@
       "owner": "fadi",
       "type": "sale",
       "status": "available"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "4844",
+      "userId": "2af7",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "anan wants to visit \"Luxury Villa, Miami FL\"",
+      "link": "/dashboard/owner/messages",
+      "read": true,
+      "createdAt": "2025-12-17T09:37:38.259Z"
+    },
+    {
+      "id": "8b08",
+      "userId": "b268",
+      "type": "booking",
+      "title": "Booking Rejected",
+      "message": "Your booking for 1972-06-22 was not approved",
+      "link": "/dashboard/buyer",
+      "read": true,
+      "createdAt": "2025-12-17T09:50:51.772Z"
+    },
+    {
+      "id": "9aa6",
+      "userId": "ae5b",
+      "type": "booking",
+      "title": "Booking Approved",
+      "message": "Your booking for 2025-01-01 has been approved",
+      "link": "/dashboard/buyer",
+      "read": true,
+      "createdAt": "2025-12-17T10:07:16.832Z"
     }
   ]
 }

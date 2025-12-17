@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { submitContact } from "@/app/services/contactService";
+import { createNotification } from "@/app/services/notificationService";
 import { SuccessToast } from "@/components/ui/toast";
 
 type ContactFormState = {
@@ -48,6 +49,16 @@ export function ContactForm() {
 
       setStatus("success");
       setShowSuccess(true);
+
+      // Create notification for admins
+      await createNotification({
+        userId: "all",
+        type: "contact",
+        title: "New Contact Message",
+        message: `${form.name}: ${form.subject}`,
+        link: "/dashboard/admin/contacts",
+      });
+
       setForm({
         name: "",
         email: "",

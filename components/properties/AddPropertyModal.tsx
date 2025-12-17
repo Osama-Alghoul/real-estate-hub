@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import PropertyForm from "./PropertyForm";
 import { createProperty } from "@/app/services/propertyService";
+import { createNotification } from "@/app/services/notificationService";
 import { Property } from "@/types/property.type";
 import { useRouter } from "next/navigation";
 import { SuccessToast } from "@/components/ui/toast";
@@ -30,6 +31,16 @@ export default function AddPropertyModal({ onSuccess }: AddPropertyModalProps) {
     setLoading(true);
     try {
       await createProperty(data);
+
+      // Notify about new property
+      await createNotification({
+        userId: "all",
+        type: "property",
+        title: "New Property Added",
+        message: `Property "${data.title}" has been listed`,
+        link: "/dashboard/admin/properties",
+      });
+
       setOpen(false);
       setShowToast(true);
       router.refresh();
