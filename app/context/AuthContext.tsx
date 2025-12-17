@@ -24,14 +24,10 @@ interface AuthContextProps {
     password: string
   ) => Promise<{ user?: User; error?: string }>;
   logout: () => void;
+  updateUser: (data: Partial<User>) => void;
 }
 
-const AuthContext = createContext<AuthContextProps>({
-  user: null,
-  loading: true,
-  login: async () => ({ error: "Not implemented" }),
-  logout: () => {},
-});
+const AuthContext = createContext<AuthContextProps>({} as AuthContextProps);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
@@ -40,7 +36,9 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     const currentUser = getCurrentUser();
-    if (currentUser && isAuthenticated()) setUser(currentUser);
+    if (currentUser && isAuthenticated()) {
+      setUser(currentUser as User);
+    }
     setLoading(false);
   }, []);
 
@@ -48,9 +46,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const res = await loginService({ email, password });
     if (res.user) {
       setUser(res.user);
-      router.replace(
-        `/dashboard/${res.user.role}?name=${encodeURIComponent(res.user.name)}`
-      );
+      router.replace(`/dashboard/${res.user.role}`);
     }
     return res;
   };
@@ -61,8 +57,30 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     router.push("/login");
   };
 
+  const updateUser = (data: Partial<User>) => {
+    setUser((prev) => {
+      if (!prev) return prev;
+      const updated = { ...prev, ...data };
+
+      localStorage.setItem(
+        "authUser",
+        JSON.stringify({
+          id: updated.id,
+          name: updated.name,
+          email: updated.email,
+          role: updated.role,
+          avatar: updated.avatar,
+        })
+      );
+
+      return updated;
+    });
+  };
+
   return (
-    <AuthContext.Provider value={{ user, loading, login, logout }}>
+    <AuthContext.Provider
+      value={{ user, loading, login, logout, updateUser }}
+    >
       {children}
     </AuthContext.Provider>
   );
