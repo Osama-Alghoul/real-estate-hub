@@ -558,19 +558,6 @@
   ],
   "bookings": [
     {
-      "id": "241c",
-      "propertyId": "5",
-      "visitType": "in-person",
-      "date": "2025-12-24",
-      "timeSlot": "11:00 - 11:30",
-      "message": "ddasd",
-      "wantCall": true,
-      "payDeposit": false,
-      "payment": null,
-      "status": "pending",
-      "createdAt": "2025-12-05T08:21:49.921Z"
-    },
-    {
       "id": "7374",
       "propertyId": "5",
       "visitType": "in-person",
@@ -580,8 +567,9 @@
       "wantCall": true,
       "payDeposit": false,
       "payment": null,
-      "status": "pending",
-      "createdAt": "2025-12-05T08:25:30.533Z"
+      "status": "approved",
+      "createdAt": "2025-12-05T08:25:30.533Z",
+      "updatedAt": "2025-12-17T06:49:06.132Z"
     },
     {
       "id": "6016",
@@ -619,26 +607,30 @@
       "wantCall": true,
       "payDeposit": false,
       "payment": null,
-      "status": "pending",
-      "createdAt": "2025-12-08T12:00:42.293Z"
+      "status": "approved",
+      "createdAt": "2025-12-08T12:00:42.293Z",
+      "updatedAt": "2025-12-16T12:09:39.629Z"
     },
     {
-      "id": "d14e",
-      "propertyId": "5",
+      "id": "6355",
+      "propertyId": "1",
+      "userId": "b268",
+      "userName": "omar",
+      "userEmail": "omar@gmail.com",
       "visitType": "in-person",
-      "date": "2025-12-23",
-      "timeSlot": "09:00 - 09:30",
-      "message": "",
+      "date": "1972-06-22",
+      "timeSlot": "10:00 - 10:30",
+      "message": "Mollitia et sint con",
       "wantCall": false,
       "payDeposit": false,
       "payment": null,
       "status": "pending",
-      "createdAt": "2025-12-08T12:03:10.596Z"
+      "createdAt": "2025-12-16T12:32:50.319Z"
     }
   ],
   "favorites": [
     {
-      "id": 1,
+      "id": "1",
       "userId": "ce6a",
       "propertyId": "1",
       "title": "Modern Apartment",
