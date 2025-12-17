@@ -653,6 +653,15 @@
         },
         "pageHealth": 85
       }
+    },
+    {
+      "id": "4012",
+      "name": "Osama Alghoul",
+      "email": "admin@reis.com",
+      "password": "$2b$10$sUz6zCiao5xxuFsG6y4bH.ILRPPFczb7t7DSiCIEk3x6q4RH7vKIy",
+      "role": "admin",
+      "status": "active",
+      "avatar": "/uploads/1765954562820.jpg"
     }
   ],
   "contacts": [
