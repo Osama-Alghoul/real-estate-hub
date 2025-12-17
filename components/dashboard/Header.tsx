@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import Image from "next/image";
+
 import Link from "next/link";
 import {
   Bell,
@@ -298,12 +298,10 @@ export default function Header({ name, role, avatar, onLogout }: Props) {
           >
             <div className="relative">
               {avatar ? (
-                <Image
+                <img
                   src={avatar}
                   alt={name}
-                  width={40}
-                  height={40}
-                  className="rounded-full object-cover border-2 border-white shadow"
+                  className="w-10 h-10 rounded-full object-cover border-2 border-white shadow"
                 />
               ) : (
                 <div
@@ -338,12 +336,10 @@ export default function Header({ name, role, avatar, onLogout }: Props) {
               >
                 <div className="flex items-center gap-3">
                   {avatar ? (
-                    <Image
+                    <img
                       src={avatar}
                       alt={name}
-                      width={48}
-                      height={48}
-                      className="rounded-full object-cover border-2 border-white/30"
+                      className="w-12 h-12 rounded-full object-cover border-2 border-white/30"
                     />
                   ) : (
                     <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center font-bold text-white text-lg">
@@ -365,14 +361,7 @@ export default function Header({ name, role, avatar, onLogout }: Props) {
                   <User size={16} className="text-gray-400" />
                   View Profile
                 </Link>
-                <Link
-                  href={`/dashboard/${role}/settings`}
-                  onClick={() => setShowProfile(false)}
-                  className="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg transition"
-                >
-                  <Settings size={16} className="text-gray-400" />
-                  Settings
-                </Link>
+
                 <div className="border-t border-gray-100 my-2" />
                 <button
                   onClick={onLogout}

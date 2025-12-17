@@ -154,7 +154,7 @@
       ],
       "video": "/videos/property5.mp4",
       "status": "pending",
-      "owner": "Anan Jamal"
+      "owner": "Anan Jamal",
       "location": "",
       "bedrooms": 0,
       "ownerId": "4fe8"
@@ -172,7 +172,7 @@
       "bath": 2,
       "size": 2400,
       "yearBuilt": 2021,
-      "avatar": "/uploads/1765920503774.png",
+      "avatar": "/uploads/1765969956434.png",
       "name": "alaa eliwa",
       "type": "rent",
       "description": "Luxury penthouse with an incredible city view...",
@@ -186,7 +186,7 @@
       ],
       "video": "/videos/property6.mp4",
       "status": "available",
-      "owner": "Anan Jamal"
+      "owner": "anan"
     },
     {
       "id": "7",
@@ -543,12 +543,12 @@
     },
     {
       "id": "545e",
-      "name": "anan",
+      "name": "anan jamal abu tawahne",
       "email": "anan3@gmail.com",
-      "password": "$2b$10$1L8Vkwiu1GbYygqee3TbZ.9nFZj9SaXQqbjLVoOMRzaqM8fRW1zEG",
+      "password": "$2b$10$40syZKZN4.BYtvJbG.8s0eJzCwNzcVGrg8jf/27Nr9QEi/6NJ/Qsy",
       "role": "admin",
       "status": "active",
-      "avatar": "/uploads/1765964550281.jpg"
+      "avatar": "/uploads/1765972595457.jpg"
     },
     {
       "id": "b268",
@@ -576,8 +576,8 @@
     },
     {
       "id": "ae5b",
-      "name": "seham",
-      "email": "seham@gmail.com",
+      "name": "anan",
+      "email": "anan5@gmail.com",
       "password": "$2b$10$tC.bX2tUwUnymcgSnQ2D3.gnd8KSqMeJa77X/uY95krd9XAfZMr4G",
       "role": "buyer",
       "status": "active",

@@ -57,7 +57,7 @@ export async function createUser(user: Omit<User, 'id'>): Promise<User> {
 }
 
 export async function updateUser(
-  id: number,
+  id: string,
   user: Partial<User>
 ): Promise<User> {
   const res = await fetch(`${API_BASE}/users/${id}`, {
@@ -101,7 +101,7 @@ export async function updateUser(
   return updatedUser;
 }
 
-export async function deleteUser(id: number): Promise<void> {
+export async function deleteUser(id: string): Promise<void> {
   const res = await fetch(`${API_BASE}/users/${id}`, {
     method: 'DELETE',
   });
@@ -110,7 +110,7 @@ export async function deleteUser(id: number): Promise<void> {
 }
 
 export async function changePassword(
-  userId: number,
+  userId: string,
   currentPassword: string,
   newPassword: string
 ): Promise<void> {
@@ -132,15 +132,7 @@ export async function changePassword(
     throw new Error("New password must be different from the old password");
   }
 
-  /* Password strength check */
-  const strongPasswordRegex =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?#&]).{8,}$/;
 
-  if (!strongPasswordRegex.test(newPassword)) {
-    throw new Error(
-      "Password must be at least 8 characters and include uppercase, lowercase, number, and special character"
-    );
-  }
 
   /* Hash new password */
   const hashedPassword = await bcrypt.hash(newPassword, 10);
