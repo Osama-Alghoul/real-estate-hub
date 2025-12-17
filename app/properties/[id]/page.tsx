@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Property } from "@/types/property.type";
+import BookViewingButton from "@/components/booking/BookViewingButton";
 
 interface PropertyPageProps {
   params: Promise<{ id: string }>;
@@ -311,12 +312,14 @@ export default async function PropertyDetails({ params }: PropertyPageProps) {
                   </button>
                 </div>
 
-                <Link
+                {/* <Link
                   href={`/booking?propertyId=${propertyData.id}`}
                   className="block w-full bg-white text-blue-600 px-6 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 transform text-center"
                 >
                   Book a Viewing
-                </Link>
+                </Link> */}
+                <BookViewingButton propertyId={propertyData.id} />
+
               </div>
 
               <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100">

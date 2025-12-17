@@ -3,6 +3,8 @@ import BookingContent from "@/components/booking/booking-content";
 import BookingInfoStrip from "@/components/booking/booking-info-strip";
 import { Property } from "@/types/property.type";
 import { redirect } from "next/navigation";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 
 interface BookingPageProps {
   searchParams: Promise<{ propertyId?: string }>;
@@ -38,9 +40,12 @@ export default async function BookingPage({ searchParams }: BookingPageProps) {
 
   return (
     <div className="min-h-screen bg-background">
+      <Header />
+
       <HeroSection />
       <BookingContent property={property} />
       <BookingInfoStrip />
+      <Footer />
     </div>
   );
 }
