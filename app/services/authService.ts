@@ -78,6 +78,7 @@ export async function register(
       name: user.name,
       email: user.email,
       role: user.role,
+      avatar: user.avatar,
     })
   );
 
@@ -131,6 +132,7 @@ export async function login(
       name: user.name,
       email: user.email,
       role: user.role,
+      avatar: user.avatar,
     })
   );
 
@@ -222,7 +224,8 @@ export async function updateUser(id: string, data: Partial<User>): Promise<{ use
         id: updatedUser.id, 
         name: updatedUser.name, 
         email: updatedUser.email, 
-        role: updatedUser.role 
+        role: updatedUser.role,
+        avatar: updatedUser.avatar,
       }));
     }
 

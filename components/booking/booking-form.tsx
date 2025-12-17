@@ -9,6 +9,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Calendar, Clock } from "lucide-react";
 import { createBooking, getBookedSlots } from "@/app/services/bookingService";
+import { createNotification } from "@/app/services/notificationService";
 import { Property } from "@/types/property.type";
 import { SuccessToast } from "@/components/ui/toast";
 import { useRouter } from "next/navigation";
@@ -120,6 +121,15 @@ export default function BookingForm({
       alert(result.error);
       return;
     }
+
+    // Create notification for property owner
+    await createNotification({
+      userId: property.ownerId || "all",
+      type: "booking",
+      title: "New Booking Request",
+      message: `${user.name} wants to visit "${property.title}"`,
+      link: "/dashboard/owner/messages",
+    });
 
     // Show success toast
     setShowSuccess(true);
