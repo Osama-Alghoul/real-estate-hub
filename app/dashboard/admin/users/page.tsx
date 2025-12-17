@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Edit, Trash2 } from "lucide-react";
 import Pagination from "@/components/properties/Pagination";
+import Image from "next/image";
 
 export default function UsersPage() {
   const [users, setUsers] = useState<User[]>([]);
@@ -61,9 +62,11 @@ export default function UsersPage() {
       label: "Image",
       render: (row) => (
         <div className="flex items-center justify-center">
-          <img
-            src={row.avatar}
+          <Image
+            src={row.avatar || "/user.png"}
             alt={row.name}
+            width={80}
+            height={80}
             className="w-20 h-20 object-cover rounded-full border-2 border-gray-200 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-200"
           />
         </div>
