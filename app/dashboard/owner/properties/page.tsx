@@ -84,7 +84,7 @@ export default function OwnerPropertiesPage() {
           <h1 className="text-3xl font-bold tracking-tight">My Properties</h1>
           <p className="text-muted-foreground">Manage your property listings</p>
         </div>
-        <Link href="/dashboard/owner/new">
+        <Link href="/dashboard/owner/properties/new">
           <Button>
             <Plus className="mr-2 h-4 w-4" /> Add New Property
           </Button>
@@ -112,7 +112,7 @@ export default function OwnerPropertiesPage() {
                   listing to get started.
                 </p>
               </div>
-              <Link href="/dashboard/owner/new">
+              <Link href="/dashboard/owner/properties/new">
                 <Button variant="outline">Create Listing</Button>
               </Link>
             </div>

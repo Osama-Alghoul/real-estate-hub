@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { useAuth } from "../../../context/AuthContext";
-import { createProperty } from "../../../services/propertyService";
-import { uploadImage } from "../../../services/uploadService";
+import { useAuth } from "../../../../context/AuthContext";
+import { createProperty } from "../../../../services/propertyService";
+import { uploadImage } from "../../../../services/uploadService";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";

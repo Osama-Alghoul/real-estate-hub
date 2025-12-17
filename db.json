@@ -244,6 +244,38 @@
       "location": "",
       "bedrooms": 0,
       "ownerId": "2af7"
+    },
+    {
+      "id": "54b8",
+      "title": "Modern Villa in downtown",
+      "description": "Pretty good, nice view",
+      "price": 50000,
+      "type": "sale",
+      "status": "available",
+      "location": "Main st, New York, NY",
+      "bedrooms": 4,
+      "bath": 2,
+      "garag": 2,
+      "size": 200,
+      "yearBuilt": 2020,
+      "amenities": [
+        "Heating",
+        "Swimming Pool",
+        "Smart Home",
+        "Garage",
+        "Garden",
+        "Internet",
+        "Balcony",
+        "Air Conditioning"
+      ],
+      "images": [
+        "/uploads/1765955795174.jpg"
+      ],
+      "img": "/uploads/1765955795174.jpg",
+      "ownerId": "4082",
+      "avatar": "/user.png",
+      "name": "Osama Alghoul",
+      "createdAt": "2025-12-17T07:16:37.798Z"
     }
   ],
   "about": {
@@ -539,7 +571,8 @@
           "requests": 8
         },
         "pageHealth": 85
-      }
+      },
+      "avatar": "/uploads/1765956190208.jpg"
     },
     {
       "id": "1529",
@@ -662,6 +695,14 @@
       "role": "admin",
       "status": "active",
       "avatar": "/uploads/1765954562820.jpg"
+    },
+    {
+      "id": "6fff",
+      "name": "Osama Alghoul",
+      "email": "byuer@example.com",
+      "password": "$2b$10$OEwCgO0N.KOzulV2uGjYjuD2rN0QbWNbVAL5AzLPoUaH36iLUopUa",
+      "role": "buyer",
+      "status": "active"
     }
   ],
   "contacts": [
@@ -766,6 +807,23 @@
       "payment": null,
       "status": "pending",
       "createdAt": "2025-12-16T12:32:50.319Z"
+    },
+    {
+      "id": "c1a8",
+      "propertyId": "54b8",
+      "userId": "6fff",
+      "userName": "Osama Alghoul",
+      "userEmail": "byuer@example.com",
+      "visitType": "in-person",
+      "date": "2025-12-18",
+      "timeSlot": "09:00 - 09:30",
+      "message": "hello",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "approved",
+      "createdAt": "2025-12-17T07:34:28.537Z",
+      "updatedAt": "2025-12-17T07:36:12.613Z"
     }
   ],
   "favorites": [
