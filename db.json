@@ -415,7 +415,9 @@
       "name": "mona",
       "email": "mona@gmail.com",
       "password": "$2b$10$24AlFwi.C0nGs1Ll2kJwvuKxR5X3avYU8M7DjPc6QnWwLpfyPBRxS",
-      "role": "owner"
+      "role": "owner",
+      "status": "active",
+      "avatar": ""
     },
     {
       "id": "fd68",
@@ -427,7 +429,7 @@
     },
     {
       "id": "e49d",
-      "name": "asma ahmad",
+      "name": "Asma Ahmad Updated",
       "email": "asma@gmail.com",
       "role": "admin",
       "status": "active",
@@ -543,18 +545,8 @@
       "phone": "+1 (904) 304-6238",
       "subject": "Commodo et modi reic",
       "message": "Officia harum veniam",
-      "status": "new",
+      "status": "read",
       "createdAt": "2025-12-05T08:46:40.535Z"
-    },
-    {
-      "id": "822e",
-      "name": "Kylynn Rhodes",
-      "email": "mylororumu@mailinator.com",
-      "phone": "+1 (667) 836-6649",
-      "subject": "Laboriosam cillum m",
-      "message": "Cillum et voluptatum",
-      "status": "new",
-      "createdAt": "2025-12-05T08:46:51.046Z"
     },
     {
       "id": "4ba7",
@@ -563,7 +555,7 @@
       "phone": "+1 (509) 928-5782",
       "subject": "Adipisci quo dolores",
       "message": "Ex nisi ratione minu",
-      "status": "new",
+      "status": "read",
       "createdAt": "2025-12-05T08:48:32.795Z"
     }
   ],
@@ -613,7 +605,7 @@
       "visitType": "in-person",
       "date": "1981-02-27",
       "timeSlot": "15:00 - 15:30",
-      "message": "Non sit mollit dict",
+      "message": "Non sit mollait dict",
       "wantCall": true,
       "payDeposit": false,
       "payment": null,

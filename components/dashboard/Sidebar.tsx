@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   LayoutDashboard,
   Users,
@@ -21,7 +21,7 @@ import { usePathname } from "next/navigation";
 interface NavItem {
   name: string;
   href: string;
-  icon: JSX.Element;
+  icon: React.ReactNode;
 }
 
 interface Props {
@@ -51,9 +51,9 @@ export default function Sidebar({ role, onLogout }: Props) {
         icon: <Building size={20} />,
       },
       {
-        name: "Reports",
-        href: "/dashboard/admin/reports",
-        icon: <ChartAreaIcon size={20} />,
+        name: "Contacts",
+        href: "/dashboard/admin/contacts",
+        icon: <MessagesSquare size={20} />,
       },
       {
         name: "Settings",
@@ -88,6 +88,11 @@ export default function Sidebar({ role, onLogout }: Props) {
         icon: <MessagesSquare size={20} />,
       },
       {
+        name: "Settings",
+        href: "/dashboard/owner/settings",
+        icon: <Settings size={20} />,
+      },
+      {
         name: "Profile",
         href: "/dashboard/buyer/profile",
         icon: <User size={20} />,
@@ -109,6 +114,11 @@ export default function Sidebar({ role, onLogout }: Props) {
         name: "My Requests",
         href: "/dashboard/buyer/requests",
         icon: <MessagesSquare size={20} />,
+      },
+      {
+        name: "Settings",
+        href: "/dashboard/buyer/settings",
+        icon: <Settings size={20} />,
       },
       {
         name: "Profile",
@@ -151,7 +161,9 @@ export default function Sidebar({ role, onLogout }: Props) {
             <Link
               key={item.href}
               href={item.href}
-              className={`flex items-center gap-3 p-2 rounded-md transition ${isActive ? "bg-gray-200 font-semibold" : "hover:bg-gray-100"}`}
+              className={`flex items-center gap-3 p-2 rounded-md transition ${
+                isActive ? "bg-gray-200 font-semibold" : "hover:bg-gray-100"
+              }`}
             >
               {item.icon}
 

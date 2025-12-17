@@ -18,6 +18,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Edit, Trash2, Eye } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Pagination from "@/components/properties/Pagination";
 
 export default function AdminPropertiesPage() {
   const [properties, setProperties] = useState<Property[]>([]);
@@ -56,9 +57,9 @@ export default function AdminPropertiesPage() {
     }
   };
   useEffect(() => {
-  // إعادة الصفحة إلى 1 عند تغيير البحث أو الفلترة
-  setPage(1);
-}, [search, typeFilter, statusFilter]);
+    // إعادة الصفحة إلى 1 عند تغيير البحث أو الفلترة
+    setPage(1);
+  }, [search, typeFilter, statusFilter]);
 
   useEffect(() => {
     loadProperties();
@@ -140,6 +141,14 @@ export default function AdminPropertiesPage() {
     },
   ];
 
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-full">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+      </div>
+    );
+  }
+
   return (
     <div className="p-6 space-y-6">
       <div className="flex justify-between items-center">
@@ -180,22 +189,14 @@ export default function AdminPropertiesPage() {
       <DataTable data={properties} columns={columns} isLoading={loading} />
 
       {/* Pagination Controls */}
-      <div className="flex justify-between items-center mt-4">
-        <Button
-          variant="outline"
-          disabled={page === 1}
-          onClick={() => setPage((p) => p - 1)}
-        >
-          Previous
-        </Button>
-        <span>Page {page}</span>
-        <Button
-          variant="outline"
-          disabled={properties.length < limit}
-          onClick={() => setPage((p) => p + 1)}
-        >
-          Next
-        </Button>
+      <div className="flex justify-center mt-4">
+        {total > limit && (
+          <Pagination
+            totalPages={Math.ceil(total / limit)}
+            currentPage={page}
+            onPageChange={setPage}
+          />
+        )}
       </div>
 
       <EditPropertyModal
