@@ -14,6 +14,8 @@ export interface BookingData {
   } | null;
   propertyId?: string;
   userId?: string;
+  userName?: string;
+  userEmail?: string;
 }
 
 export interface Booking extends BookingData {
