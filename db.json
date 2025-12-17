@@ -582,6 +582,15 @@
       "role": "buyer",
       "status": "active",
       "avatar": "/uploads/1765962838407.jpg"
+    },
+    {
+      "id": "0280",
+      "name": "mera",
+      "email": "mera@gmail.com",
+      "password": "$2b$10$GSwkku7jvUUvPEnTK05mI.Q9QBQ214vD2D9Wq6IVF.O7E4kKL4Xma",
+      "role": "buyer",
+      "status": "active",
+      "avatar": "/uploads/1766000835902.jpg"
     }
   ],
   "contacts": [
@@ -731,6 +740,28 @@
     {
       "id": "fbb9",
       "userId": "77a1",
+      "propertyId": "1",
+      "title": "92 ALLIUM PLACE, ORLANDO FL 32827",
+      "image": "/properties/P1.png",
+      "price": 590693,
+      "owner": "fadi",
+      "type": "sale",
+      "status": "available"
+    },
+    {
+      "id": "a411",
+      "userId": "0280",
+      "propertyId": "2",
+      "title": "Luxury Villa, Miami FL",
+      "image": "/properties/P1.png",
+      "price": 750000,
+      "owner": "osama alghol",
+      "type": "rent",
+      "status": "available"
+    },
+    {
+      "id": "fb53",
+      "userId": "0280",
       "propertyId": "1",
       "title": "92 ALLIUM PLACE, ORLANDO FL 32827",
       "image": "/properties/P1.png",
