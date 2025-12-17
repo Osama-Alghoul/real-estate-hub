@@ -54,7 +54,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const logout = () => {
     authLogout();
     setUser(null);
-    router.push("/login");
+    router.replace("/"); 
   };
 
   const updateUser = (data: Partial<User>) => {

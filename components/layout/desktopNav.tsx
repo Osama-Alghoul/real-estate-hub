@@ -1,6 +1,10 @@
+import { useAuth } from "@/app/context/AuthContext";
 import Link from "next/link";
 
 export default function DesktopNav({ transparent }: { transparent?: boolean }) {
+  const { user, loading } = useAuth();
+
+  if (loading) return null; 
   return (
     <ul
       className={`text-sm gap-8 ${
@@ -29,42 +33,12 @@ export default function DesktopNav({ transparent }: { transparent?: boolean }) {
       </li>
       <li>
         <Link
-          href="/"
-          className={`${
-            transparent ? "hover:text-gray-300" : "hover:text-primary-light"
-          }`}
-        >
-          Our Agents
-        </Link>
-      </li>
-      <li>
-        <Link
           href="/properties"
           className={`${
             transparent ? "hover:text-gray-300" : "hover:text-primary-light"
           }`}
         >
           Properties
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="/"
-          className={`${
-            transparent ? "hover:text-gray-300" : "hover:text-primary-light"
-          }`}
-        >
-          Gallery
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="/"
-          className={`${
-            transparent ? "hover:text-gray-300" : "hover:text-primary-light"
-          }`}
-        >
-          Blog
         </Link>
       </li>
       <li>
@@ -87,7 +61,7 @@ export default function DesktopNav({ transparent }: { transparent?: boolean }) {
           Search
         </Link>
       </li>
-      <li>
+      {/* <li>
         <Link
           href="/login"
           className={`${
@@ -106,7 +80,26 @@ export default function DesktopNav({ transparent }: { transparent?: boolean }) {
         >
           Register
         </Link>
-      </li>
+      </li> */}
+      {!user && (
+        <>
+          <li>
+            <Link href="/login">Login</Link>
+          </li>
+          <li>
+            <Link href="/register">Register</Link>
+          </li>
+        </>
+      )}
+
+      {/* مسجل دخول */}
+      {user && (
+        <li>
+          <Link href={`/dashboard/${user.role}`}>
+            Dashboard
+          </Link>
+        </li>
+      )}
     </ul>
   );
 }

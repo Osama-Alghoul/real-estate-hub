@@ -24,14 +24,18 @@ export function MobileNav({ transparent }: { transparent?: boolean }) {
           <Link href="/about">
             <DropdownMenuItem>About us</DropdownMenuItem>
           </Link>
-          <DropdownMenuItem>Our Agents</DropdownMenuItem>
           <Link href="/properties">
             <DropdownMenuItem>Properties</DropdownMenuItem>
           </Link>
-          <DropdownMenuItem>Gallery</DropdownMenuItem>
-          <DropdownMenuItem>Blog</DropdownMenuItem>
-          <DropdownMenuItem>Contact us</DropdownMenuItem>
-          <DropdownMenuItem>Search</DropdownMenuItem>
+          <Link href="/contact">
+            <DropdownMenuItem>Contact us</DropdownMenuItem>
+          </Link>
+          <Link href="/login">
+            <DropdownMenuItem>Login</DropdownMenuItem>
+          </Link>
+          <Link href="/register">
+            <DropdownMenuItem>Register</DropdownMenuItem>
+          </Link>
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>

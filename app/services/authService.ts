@@ -140,6 +140,7 @@ export async function login(
 export function logout() {
   deleteCookie("authToken");
   localStorage.removeItem("authUser");
+  
 }
 
 export function getCurrentUser(): User | null {

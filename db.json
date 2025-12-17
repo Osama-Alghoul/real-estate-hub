@@ -155,6 +155,9 @@
       "video": "/videos/property5.mp4",
       "status": "pending",
       "owner": "Anan Jamal"
+      "location": "",
+      "bedrooms": 0,
+      "ownerId": "4fe8"
     },
     {
       "id": "6",
@@ -246,6 +249,32 @@
       "location": "",
       "bedrooms": 0,
       "ownerId": "2af7"
+    },
+    {
+      "id": "cab5",
+      "title": "jamal",
+      "description": "sdasad",
+      "price": 16,
+      "location": "asdasd",
+      "type": "sale",
+      "status": "available",
+      "bedrooms": 2,
+      "bath": 1,
+      "size": 4,
+      "garag": 1,
+      "img": "/uploads/1765956127620.png",
+      "images": [],
+      "amenities": [
+        "Swimming Pool",
+        "Smart Home",
+        "Central Heating",
+        "Solar Panels"
+      ],
+      "ownerId": "2d7e",
+      "name": "jamal",
+      "avatar": "/uploads/1765956069714.png",
+      "yearBuilt": 2015,
+      "createdAt": "2025-12-17T07:22:08.596Z"
     }
   ],
   "about": {
@@ -417,7 +446,27 @@
       "password": "$2b$10$24AlFwi.C0nGs1Ll2kJwvuKxR5X3avYU8M7DjPc6QnWwLpfyPBRxS",
       "role": "owner",
       "status": "active",
-      "avatar": ""
+      "avatar": "",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
     },
     {
       "id": "fd68",
@@ -467,7 +516,28 @@
       "email": "osama@gmail.com",
       "password": "$2b$10$DPjQlLg8.qDdRt0vwS1G3.Vy4gDhqI.3lO/2WbFwNTyuBPQNsO5Sy",
       "role": "owner",
-      "status": "disabled"
+      "status": "disabled",
+      "avatar": "",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
     },
     {
       "id": "5ee3",
@@ -501,7 +571,8 @@
           "requests": 8
         },
         "pageHealth": 85
-      }
+      },
+      "avatar": "/uploads/1765957567216.jpg"
     },
     {
       "id": "1529",
@@ -510,7 +581,27 @@
       "password": "$2b$10$TkHcnIbU/caMf8NroRapNeb3z701krVBDNbuQQvwYCtqRD4dZRUFa",
       "role": "owner",
       "status": "active",
-      "avatar": ""
+      "avatar": "",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
     },
     {
       "id": "545e",
@@ -519,14 +610,54 @@
       "password": "$2b$10$1L8Vkwiu1GbYygqee3TbZ.9nFZj9SaXQqbjLVoOMRzaqM8fRW1zEG",
       "role": "admin",
       "status": "active",
-      "avatar": ""
+      "avatar": "",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
     },
     {
       "id": "b268",
       "name": "omar",
       "email": "omar@gmail.com",
       "password": "$2b$10$5qJdQu7QYllnhzyNRTrDA.JuiIPvCyixy.j/7rqg5bQ1amqr65qpa",
-      "role": "owner"
+      "role": "owner",
+      "stats": {
+        "totalProperties": 24,
+        "propertiesByType": {
+          "residential": 12,
+          "commercial": 7,
+          "industrial": 3,
+          "retail": 2
+        },
+        "engagement": {
+          "views": 1847,
+          "favorites": 234,
+          "shares": 89
+        },
+        "messages": {
+          "total": 47,
+          "unread": 12,
+          "requests": 8
+        },
+        "pageHealth": 85
+      }
     },
     {
       "id": "2d7e",
@@ -534,6 +665,23 @@
       "email": "jamal@gmail.com",
       "password": "$2b$10$2D7wEER8uAQvUv5OXQAF8.QVrQ7Uyl5Y9LiQEFG.PbzhqhssiEa0C",
       "role": "owner",
+      "status": "active",
+      "avatar": "/uploads/1765956069714.png"
+    },
+    {
+      "id": "4fe8",
+      "name": "anan",
+      "email": "ananowner@gmail.com",
+      "password": "$2b$10$YYde3d6OzrmwIvruyDqh4Os2lJ5mcho0iR7tXmN2D7jSP/c33yqku",
+      "role": "owner",
+      "status": "active"
+    },
+    {
+      "id": "ae5b",
+      "name": "seham",
+      "email": "seham@gmail.com",
+      "password": "$2b$10$tC.bX2tUwUnymcgSnQ2D3.gnd8KSqMeJa77X/uY95krd9XAfZMr4G",
+      "role": "buyer",
       "status": "active"
     }
   ],
@@ -557,22 +705,19 @@
       "message": "Ex nisi ratione minu",
       "status": "read",
       "createdAt": "2025-12-05T08:48:32.795Z"
+    },
+    {
+      "id": "8f9e",
+      "name": "Osama Alghoul",
+      "email": "osama@gmail.com",
+      "phone": "+970595925353",
+      "subject": "poasjdou",
+      "message": "suushdoahsfoia",
+      "status": "new",
+      "createdAt": "2025-12-16T16:56:42.961Z"
     }
   ],
   "bookings": [
-    {
-      "id": "241c",
-      "propertyId": "5",
-      "visitType": "in-person",
-      "date": "2025-12-24",
-      "timeSlot": "11:00 - 11:30",
-      "message": "ddasd",
-      "wantCall": true,
-      "payDeposit": false,
-      "payment": null,
-      "status": "pending",
-      "createdAt": "2025-12-05T08:21:49.921Z"
-    },
     {
       "id": "7374",
       "propertyId": "5",
@@ -583,8 +728,9 @@
       "wantCall": true,
       "payDeposit": false,
       "payment": null,
-      "status": "pending",
-      "createdAt": "2025-12-05T08:25:30.533Z"
+      "status": "approved",
+      "createdAt": "2025-12-05T08:25:30.533Z",
+      "updatedAt": "2025-12-17T06:49:06.132Z"
     },
     {
       "id": "6016",
@@ -622,21 +768,41 @@
       "wantCall": true,
       "payDeposit": false,
       "payment": null,
-      "status": "pending",
-      "createdAt": "2025-12-08T12:00:42.293Z"
+      "status": "approved",
+      "createdAt": "2025-12-08T12:00:42.293Z",
+      "updatedAt": "2025-12-16T12:09:39.629Z"
     },
     {
-      "id": "d14e",
-      "propertyId": "5",
+      "id": "6355",
+      "propertyId": "1",
+      "userId": "b268",
+      "userName": "omar",
+      "userEmail": "omar@gmail.com",
       "visitType": "in-person",
-      "date": "2025-12-23",
-      "timeSlot": "09:00 - 09:30",
-      "message": "",
+      "date": "1972-06-22",
+      "timeSlot": "10:00 - 10:30",
+      "message": "Mollitia et sint con",
       "wantCall": false,
       "payDeposit": false,
       "payment": null,
       "status": "pending",
-      "createdAt": "2025-12-08T12:03:10.596Z"
+      "createdAt": "2025-12-16T12:32:50.319Z"
+    },
+    {
+      "id": "f02d",
+      "propertyId": "2",
+      "userId": "ae5b",
+      "userName": "seham",
+      "userEmail": "seham@gmail.com",
+      "visitType": "in-person",
+      "date": "2025-01-01",
+      "timeSlot": "14:00 - 14:30",
+      "message": "Laborum Laborum asp",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-17T07:41:41.206Z"
     }
   ],
   "favorites": [

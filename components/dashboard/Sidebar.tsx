@@ -15,6 +15,7 @@ import {
   MessagesSquare,
   User,
   Heart,
+  Calendar,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 
@@ -56,6 +57,11 @@ export default function Sidebar({ role, onLogout }: Props) {
         icon: <MessagesSquare size={20} />,
       },
       {
+        name: "Bookings",
+        href: "/dashboard/admin/bookings",
+        icon: <Calendar size={20} />,
+      },
+      {
         name: "Settings",
         href: "/dashboard/admin/settings",
         icon: <Settings size={20} />,
@@ -78,13 +84,8 @@ export default function Sidebar({ role, onLogout }: Props) {
         icon: <Building size={20} />,
       },
       {
-        name: "Add Property",
-        href: "/dashboard/owner/new",
-        icon: <Plus size={20} />,
-      },
-      {
-        name: "Massages",
-        href: "/dashboard/owner/massages",
+        name: "Messages",
+        href: "/dashboard/owner/messages",
         icon: <MessagesSquare size={20} />,
       },
       {
@@ -109,7 +110,11 @@ export default function Sidebar({ role, onLogout }: Props) {
         href: "/dashboard/buyer/favorites",
         icon: <Heart size={20} />,
       },
-      { name: "Explore", href: "/dashboard/buyer/properties", icon: <Building size={20} /> },
+      {
+        name: "Explore",
+        href: "/dashboard/buyer/properties",
+        icon: <Building size={20} />,
+      },
       {
         name: "My Requests",
         href: "/dashboard/buyer/requests",
