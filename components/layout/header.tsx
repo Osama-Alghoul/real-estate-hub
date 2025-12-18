@@ -1,15 +1,15 @@
-'use client'
+"use client";
 
 import { Facebook, MailOpen, Phone, Linkedin, Instagram } from "lucide-react";
 import Link from "next/link";
 import Logo from "../ui/logo";
 import { MobileNav } from "./mobileNav";
 import DesktopNav from "./desktopNav";
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
 
 export default function Header() {
-    const pathname = usePathname();
-    const isRootPath = pathname === '/';
+  const pathname = usePathname();
+  const isRootPath = pathname === "/";
   return (
     <header>
       <nav
