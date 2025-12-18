@@ -186,7 +186,7 @@
       ],
       "video": "/videos/property6.mp4",
       "status": "available",
-      "owner": "anan"
+      "owner": "Admin"
     },
     {
       "id": "7",
@@ -430,8 +430,8 @@
   ],
   "users": [
     {
-      "id": "1",
-      "name": "admin",
+      "id": "admin-1",
+      "name": "Admin",
       "email": "admin@gmail.com",
       "password": "$2b$10$2yAG2JaJFWlkKti.wuY4fecAn0J9mudFpPNDWRzSY6VkiHHNNhgZS",
       "role": "admin",
@@ -597,6 +597,14 @@
       "password": "$2b$10$lkiFWl7ZOWdvsKVi6T9BUOYMXEznBgyZb0v7u5vwjlnOoBX3.x3Ri",
       "role": "owner",
       "status": "active"
+    },
+    {
+      "id": "e573",
+      "name": "Buyer",
+      "email": "buyer@gmail.com",
+      "password": "$2b$10$pI.q7Fdx0/UswAnVSGCje.3Af/AmaUmHSxaMZjyUnJYCPKHNodx2m",
+      "role": "buyer",
+      "status": "active"
     }
   ],
   "contacts": [
@@ -613,62 +621,6 @@
   ],
   "bookings": [
     {
-      "id": "7374",
-      "propertyId": "5",
-      "visitType": "in-person",
-      "date": "2024-06-23",
-      "timeSlot": "16:00 - 16:30",
-      "message": "Omnis neque enim bla",
-      "wantCall": true,
-      "payDeposit": false,
-      "payment": null,
-      "status": "approved",
-      "createdAt": "2025-12-05T08:25:30.533Z",
-      "updatedAt": "2025-12-17T06:49:06.132Z"
-    },
-    {
-      "id": "6016",
-      "propertyId": "3",
-      "visitType": "in-person",
-      "date": "2025-12-24",
-      "timeSlot": "12:00 - 12:30",
-      "message": "dada",
-      "wantCall": true,
-      "payDeposit": false,
-      "payment": null,
-      "status": "approved",
-      "createdAt": "2025-12-05T08:32:21.037Z",
-      "updatedAt": "2025-12-17T09:46:39.128Z"
-    },
-    {
-      "id": "f798",
-      "propertyId": "3",
-      "visitType": "in-person",
-      "date": "1981-02-27",
-      "timeSlot": "15:00 - 15:30",
-      "message": "Non sit mollait dict",
-      "wantCall": true,
-      "payDeposit": false,
-      "payment": null,
-      "status": "approved",
-      "createdAt": "2025-12-05T08:33:04.384Z",
-      "updatedAt": "2025-12-17T09:50:46.088Z"
-    },
-    {
-      "id": "d5f5",
-      "propertyId": "5",
-      "visitType": "in-person",
-      "date": "2025-12-24",
-      "timeSlot": "10:00 - 10:30",
-      "message": "bkbmbmb",
-      "wantCall": true,
-      "payDeposit": false,
-      "payment": null,
-      "status": "approved",
-      "createdAt": "2025-12-08T12:00:42.293Z",
-      "updatedAt": "2025-12-16T12:09:39.629Z"
-    },
-    {
       "id": "6355",
       "propertyId": "1",
       "userId": "b268",
@@ -684,23 +636,6 @@
       "status": "rejected",
       "createdAt": "2025-12-16T12:32:50.319Z",
       "updatedAt": "2025-12-17T09:50:51.753Z"
-    },
-    {
-      "id": "f02d",
-      "propertyId": "2",
-      "userId": "ae5b",
-      "userName": "seham",
-      "userEmail": "seham@gmail.com",
-      "visitType": "in-person",
-      "date": "2025-01-01",
-      "timeSlot": "14:00 - 14:30",
-      "message": "Laborum Laborum asp",
-      "wantCall": true,
-      "payDeposit": false,
-      "payment": null,
-      "status": "approved",
-      "createdAt": "2025-12-17T07:41:41.206Z",
-      "updatedAt": "2025-12-17T10:07:16.804Z"
     },
     {
       "id": "4539",
@@ -749,6 +684,38 @@
       "payment": null,
       "status": "pending",
       "createdAt": "2025-12-18T00:56:27.585Z"
+    },
+    {
+      "id": "51fa",
+      "propertyId": "1",
+      "userId": "e573",
+      "userName": "Buyer",
+      "userEmail": "buyer@gmail.com",
+      "visitType": "virtual",
+      "date": "2025-12-16",
+      "timeSlot": "15:00 - 15:30",
+      "message": "dasdad",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-18T21:37:21.615Z"
+    },
+    {
+      "id": "5c99",
+      "propertyId": "6",
+      "userId": "e573",
+      "userName": "Buyer",
+      "userEmail": "buyer@gmail.com",
+      "visitType": "virtual",
+      "date": "2025-11-30",
+      "timeSlot": "10:00 - 10:30",
+      "message": "jhsdbasjnd",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-18T21:37:51.802Z"
     }
   ],
   "favorites": [
@@ -933,6 +900,36 @@
       "link": "/dashboard/admin/properties",
       "read": false,
       "createdAt": "2025-12-18T10:48:44.987Z"
+    },
+    {
+      "id": "a0ad",
+      "userId": "2af7",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "mera wants to visit \"Luxury Villa, Miami FL\"",
+      "link": "/dashboard/owner/messages",
+      "read": false,
+      "createdAt": "2025-12-18T21:31:14.388Z"
+    },
+    {
+      "id": "fb0b",
+      "userId": "cb87",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "Buyer wants to visit \"92 ALLIUM PLACE, ORLANDO FL 32827\"",
+      "link": "/dashboard/owner/messages",
+      "read": false,
+      "createdAt": "2025-12-18T21:37:21.639Z"
+    },
+    {
+      "id": "14b3",
+      "userId": "all",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "Buyer wants to visit \"Penthouse, Los Angeles\"",
+      "link": "/dashboard/owner/messages",
+      "read": false,
+      "createdAt": "2025-12-18T21:37:51.839Z"
     }
   ]
 }
