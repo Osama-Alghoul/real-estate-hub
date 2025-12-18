@@ -7,11 +7,12 @@ import ListView from "@/components/properties/ListView";
 import Pagination from "@/components/properties/Pagination";
 import { useSearchParams } from "next/navigation";
 import { type PropertiesProps } from "@/types/properties";
+import { Property } from "@/types/property.type";
 
 export default function PropertiesClient({
   properties,
 }: {
-  properties: PropertiesProps[];
+  properties: Property[];
 }) {
   const searchParams = useSearchParams();
   const initialView = searchParams.get("view") === "list" ? "list" : "grid";
@@ -54,9 +55,9 @@ export default function PropertiesClient({
       />
 
       {view === "grid" ? (
-        <GridView data={paginatedProperties} mode="public" />
+        <GridView data={paginatedProperties} />
       ) : (
-        <ListView data={paginatedProperties} mode="public" />
+        <ListView data={paginatedProperties} />
       )}
 
       <div className="mt-12 flex justify-center">

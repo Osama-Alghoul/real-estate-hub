@@ -6,6 +6,7 @@ import {
   Heart,
   Plus,
 } from "lucide-react";
+import { JSX } from "react";
 
 interface Props {
   name: string;

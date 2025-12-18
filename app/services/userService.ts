@@ -95,7 +95,7 @@ export async function createUser(user: Omit<User, 'id'>): Promise<User> {
   return res.json();
 }
 
-export async function updateUser(id: number, user: Partial<User>): Promise<User> {
+export async function updateUser(id: string, user: Partial<User>): Promise<User> {
   const res = await fetch(`${API_BASE}/users/${id}`, {
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
@@ -136,7 +136,7 @@ export async function updateUser(id: number, user: Partial<User>): Promise<User>
   return updatedUser;
 }
 
-export async function deleteUser(id: number): Promise<void> {
+export async function deleteUser(id: string): Promise<void> {
   const res = await fetch(`${API_BASE}/users/${id}`, {
     method: 'DELETE',
   });

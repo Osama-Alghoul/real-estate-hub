@@ -1,8 +1,8 @@
+import { type Property } from "@/types/property.type";
 import Card from "../common/Card";
-import { type CardProps } from "@/types/card.type";
 
 interface GridViewProps {
-  data: CardProps[];
+  data: Property[];
 }
 
 export default function GridView({ data }: GridViewProps) {

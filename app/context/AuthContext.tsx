@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
-  useEffect(() => {
+  useEffect( () => {
     const currentUser = getCurrentUser();
     if (currentUser && isAuthenticated()) setUser(currentUser);
     setLoading(false);

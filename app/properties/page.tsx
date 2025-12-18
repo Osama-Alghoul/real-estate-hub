@@ -17,7 +17,7 @@ export default async function PropertiesPage() {
       <Banner title="Properties" breadcrumb="Home / Properties" />
       <main className="grow max-w-[1500px] mx-auto px-4 py-5 w-full">
         {/* <PropertiesClient properties={data} /> */}
-        <PropertiesExplorer properties={data} mode="public" />
+        <PropertiesExplorer properties={data} />
       </main>
       <Footer />
     </div>

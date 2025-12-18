@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const BuyerProfilePage = () => {
+export default function BuyerProfilePage () {
   return (
     <div>page</div>
   )

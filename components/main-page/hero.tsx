@@ -6,7 +6,7 @@ export default function Hero() {
       style={{ backgroundImage: "url('/banner/hero.png')" }}
       className="bg-cover"
     >
-      <Header transparent />
+      <Header />
       <div className="flex flex-col items-center text-white md:py-[150px] py-20 px-4 text-center gap-4">
         <h1 className="font-semibold lg:text-[52px] md:text-5xl text-4xl">
           Find Your Dream Home

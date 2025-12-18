@@ -10,7 +10,7 @@ export default async function BuyerPropertiesPage() {
         Explore Properties
       </h1>
 
-      <PropertiesExplorer properties={data} mode="buyer" />
+      <PropertiesExplorer properties={data} />
     </div>
   );
 }

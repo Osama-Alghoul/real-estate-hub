@@ -46,9 +46,9 @@ export default function PropertiesExplorer({ properties }: Props) {
                 onSortChange={setSort}
             />
             {view === "grid" ? (
-                <GridView data={paginatedProperties} mode="buyer" />
+                <GridView data={paginatedProperties} />
             ) : (
-                <ListView data={paginatedProperties} mode="buyer" />
+                <ListView data={paginatedProperties} />
             )}
             <div className="mt-12 flex justify-center">
                 <Pagination

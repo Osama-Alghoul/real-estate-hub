@@ -1,11 +1,11 @@
 'use client';
 
-import { CardProps } from "@/types/card.type";
 import GridView from "../properties/GridView";
 import { useEffect, useState } from "react";
+import { Property } from "@/types/property.type";
 
 export default function CardsGrid() {
-    const [data, setData] = useState<CardProps[]>([]);
+    const [data, setData] = useState<Property[]>([]);
     useEffect(() => {
       fetch("http://localhost:3001/properties?_limit=6", { cache: "no-store" })
         .then((res) => res.json())
