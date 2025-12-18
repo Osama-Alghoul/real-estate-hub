@@ -161,7 +161,7 @@ export default function BuyerLandingPage() {
                 {/* LEFT */}
                 <div className="space-y-1">
                   <p className="text-sm font-medium text-gray-800">
-                    {propertyMap[b.propertyId] || "Property"}
+                    {propertyMap[b.propertyId ?? ""] || "Property"}
                   </p>
 
                   <div className="flex items-center gap-2 text-xs text-gray-500">
