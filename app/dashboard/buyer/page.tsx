@@ -173,14 +173,15 @@ export default function BuyerLandingPage() {
 
                 <span
                   className={`text-xs px-3 py-1 rounded-full capitalize
-              ${b.status === "pending"
-                      ? "bg-yellow-100 text-yellow-700"
-                      : b.status === "approved"
-                        ? "bg-green-100 text-green-700"
-                        : b.status === "rejected"
-                          ? "bg-red-100 text-red-700"
-                          : "bg-gray-100 text-gray-600"
-                    }
+              ${
+                b.status === "pending"
+                  ? "bg-yellow-100 text-yellow-700"
+                  : b.status === "approved"
+                  ? "bg-green-100 text-green-700"
+                  : b.status === "rejected"
+                  ? "bg-red-100 text-red-700"
+                  : "bg-gray-100 text-gray-600"
+              }
             `}
                 >
                   {b.status}
