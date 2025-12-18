@@ -28,11 +28,17 @@ import {
   AlertCircle,
 } from "lucide-react";
 
+import EditPropertyModal from "@/components/properties/EditPropertyModal";
+
 export default function OwnerPropertiesPage() {
   const { user } = useAuth();
   const [properties, setProperties] = useState<Property[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [selectedProperty, setSelectedProperty] = useState<Property | null>(
+    null
+  );
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
 
   useEffect(() => {
     if (user?.id) {
@@ -72,6 +78,11 @@ export default function OwnerPropertiesPage() {
         alert("Failed to delete property. Please try again.");
       }
     }
+  };
+
+  const handleEdit = (property: Property) => {
+    setSelectedProperty(property);
+    setIsEditModalOpen(true);
   };
 
   if (loading)
@@ -189,7 +200,11 @@ export default function OwnerPropertiesPage() {
                 </div>
 
                 <div className="flex gap-2 mt-auto">
-                  <Button variant="outline" className="flex-1" disabled>
+                  <Button
+                    variant="outline"
+                    className="flex-1"
+                    onClick={() => handleEdit(property)}
+                  >
                     <Pencil className="h-4 w-4 mr-2" /> Edit
                   </Button>
                   <Button
@@ -205,6 +220,13 @@ export default function OwnerPropertiesPage() {
           ))}
         </div>
       )}
+
+      <EditPropertyModal
+        property={selectedProperty}
+        open={isEditModalOpen}
+        onOpenChange={setIsEditModalOpen}
+        onSuccess={loadProperties}
+      />
     </div>
   );
 }
