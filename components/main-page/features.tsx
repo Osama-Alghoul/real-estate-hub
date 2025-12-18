@@ -7,25 +7,25 @@ export default function Features() {
         icon="/home/home.svg"
         title="Sell your home"
         subTitle="We do a free evaluation to be sure you want to start selling."
-        path="/"
+        path="/properties?type=sale"
       />
       <FeatureCard
         icon="/home/homekey.svg"
         title="Rent your home"
         subTitle="We do a free evaluation to be sure you want to start selling."
-        path="/"
+        path="/properties?type=rent"
       />
       <FeatureCard
         icon="/home/homecase.svg"
         title="Buy a home"
         subTitle="We do a free evaluation to be sure you want to start selling."
-        path="/"
+        path="/properties"
       />
       <FeatureCard
         icon="/home/homesearch.svg"
         title="Free marketing"
         subTitle="We do a free evaluation to be sure you want to start selling."
-        path="/"
+        path="/contact"
       />
     </div>
   );

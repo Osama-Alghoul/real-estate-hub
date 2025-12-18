@@ -26,10 +26,11 @@ export default function TileContent({
           <div className="text-sm">{listings} listings</div>
         </div>
         <Button
+          asChild
           variant={"outline"}
           className="self-center opacity-100 md:opacity-0 group-hover:opacity-100 transition duration-500"
         >
-          View Details
+          <span>View Details</span>
         </Button>
         <MapPin className="self-end" size={20} />
       </div>

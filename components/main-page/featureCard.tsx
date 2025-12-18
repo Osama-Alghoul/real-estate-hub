@@ -9,13 +9,16 @@ export default function FeatureCard({
   path,
 }: FeatureCardProps) {
   return (
-    <div className="flex flex-col gap-6 hover:bg-white bg-white md:bg-transparent hover:shadow-lg p-6 rounded-2xl max-w-[300px]">
+    <Link
+      href={path}
+      className="flex flex-col gap-6 hover:bg-white bg-white md:bg-transparent hover:shadow-lg p-6 rounded-2xl max-w-[300px] transition-all group"
+    >
       <Image src={icon} alt={title} width={50} height={50} />
       <h3 className="text-2xl font-semibold">{title}</h3>
       <p className="text-gray-400">{subTitle}</p>
-      <Link href={path} className="text-primary">
+      <div className="text-primary font-medium group-hover:underline">
         Read more
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 }
