@@ -141,7 +141,7 @@
       "size": 3200,
       "yearBuilt": 2019,
       "avatar": "/uploads/1765920503774.png",
-      "name": "alaa eliwa",
+      "name": "anan",
       "type": "sale",
       "description": "A stunning beachfront house with direct access to the sea...",
       "amenities": [
@@ -153,7 +153,7 @@
         "Fire Pit"
       ],
       "video": "/videos/property5.mp4",
-      "status": "pending",
+      "status": "sold",
       "owner": "Anan Jamal",
       "location": "",
       "bedrooms": 0,
@@ -275,6 +275,29 @@
       "avatar": "/uploads/1765956069714.png",
       "yearBuilt": 2015,
       "createdAt": "2025-12-17T07:22:08.596Z"
+    },
+    {
+      "id": "3751",
+      "title": "Nesciunt odio dolor",
+      "description": "Do dolor ad laboris ",
+      "price": 538,
+      "type": "sale",
+      "status": "sold",
+      "location": "Mollitia beatae dolo",
+      "bedrooms": 26,
+      "bath": 49,
+      "garag": 6,
+      "size": 23,
+      "yearBuilt": 2000,
+      "amenities": [],
+      "images": [
+        "/uploads/1766054922504.png"
+      ],
+      "img": "/uploads/1766054922504.png",
+      "ownerId": "4fe8",
+      "avatar": "",
+      "name": "anan",
+      "createdAt": "2025-12-18T10:48:44.918Z"
     }
   ],
   "about": {
@@ -831,6 +854,28 @@
       "owner": "osama alghol",
       "type": "rent",
       "status": "available"
+    },
+    {
+      "id": "2288",
+      "userId": "ae5b",
+      "propertyId": "2",
+      "title": "Luxury Villa, Miami FL",
+      "image": "/properties/P1.png",
+      "price": 750000,
+      "owner": "osama alghol",
+      "type": "rent",
+      "status": "available"
+    },
+    {
+      "id": "ea9c",
+      "userId": "ae5b",
+      "propertyId": "1",
+      "title": "92 ALLIUM PLACE, ORLANDO FL 32827",
+      "image": "/properties/P1.png",
+      "price": 590693,
+      "owner": "fadi",
+      "type": "sale",
+      "status": "available"
     }
   ],
   "notifications": [
@@ -881,7 +926,7 @@
       "title": "New Booking Request",
       "message": "mera wants to visit \"Modern Apartment, New York\"",
       "link": "/dashboard/owner/messages",
-      "read": false,
+      "read": true,
       "createdAt": "2025-12-18T00:54:24.227Z"
     },
     {
@@ -891,7 +936,7 @@
       "title": "New Booking Request",
       "message": "mera wants to visit \"92 ALLIUM PLACE, ORLANDO FL 32827\"",
       "link": "/dashboard/owner/messages",
-      "read": false,
+      "read": true,
       "createdAt": "2025-12-18T00:55:18.957Z"
     },
     {
@@ -901,8 +946,18 @@
       "title": "New Booking Request",
       "message": "mera wants to visit \"92 ALLIUM PLACE, ORLANDO FL 32827\"",
       "link": "/dashboard/owner/messages",
-      "read": false,
+      "read": true,
       "createdAt": "2025-12-18T00:56:27.622Z"
+    },
+    {
+      "id": "cf2d",
+      "userId": "all",
+      "type": "property",
+      "title": "New Property Listed",
+      "message": "anan listed \"Nesciunt odio dolor\"",
+      "link": "/dashboard/admin/properties",
+      "read": false,
+      "createdAt": "2025-12-18T10:48:44.987Z"
     }
   ]
 }

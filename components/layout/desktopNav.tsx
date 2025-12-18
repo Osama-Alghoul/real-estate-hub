@@ -51,16 +51,16 @@ export default function DesktopNav({ transparent }: { transparent?: boolean }) {
           Contact us
         </Link>
       </li>
-      <li>
+      {/* <li>
         <Link
-          href="/"
+          href="/search"
           className={`${
             transparent ? "hover:text-gray-300" : "hover:text-primary-light"
           }`}
         >
           Search
         </Link>
-      </li>
+      </li> */}
       {/* <li>
         <Link
           href="/login"

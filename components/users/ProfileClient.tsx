@@ -54,7 +54,7 @@ export default function ProfileClient() {
         name,
         email,
         ...(password ? { password } : {}),
-        avatar: avatarUrl,
+        avatar: avatarUrl || "/user.png",
       });
 
       toast.success("Profile updated successfully");
