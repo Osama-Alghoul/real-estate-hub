@@ -591,6 +591,14 @@
       "role": "buyer",
       "status": "active",
       "avatar": "/uploads/1766000835902.jpg"
+    },
+    {
+      "id": "cb6c",
+      "name": "Fadi hajien",
+      "email": "fadi@gmail.com",
+      "password": "$2b$10$lkiFWl7ZOWdvsKVi6T9BUOYMXEznBgyZb0v7u5vwjlnOoBX3.x3Ri",
+      "role": "owner",
+      "status": "active"
     }
   ],
   "contacts": [
@@ -697,20 +705,52 @@
       "updatedAt": "2025-12-17T10:07:16.804Z"
     },
     {
-      "id": "04ce",
-      "propertyId": "2",
-      "userId": "545e",
-      "userName": "anan",
-      "userEmail": "anan3@gmail.com",
-      "visitType": "in-person",
-      "date": "2013-05-25",
-      "timeSlot": "09:00 - 09:30",
-      "message": "Rerum corrupti exer",
+      "id": "4539",
+      "propertyId": "3",
+      "userId": "0280",
+      "userName": "mera",
+      "userEmail": "mera@gmail.com",
+      "visitType": "virtual",
+      "date": "2025-01-01",
+      "timeSlot": "10:00 - 10:30",
+      "message": "test",
       "wantCall": true,
       "payDeposit": false,
       "payment": null,
       "status": "pending",
-      "createdAt": "2025-12-17T09:37:38.212Z"
+      "createdAt": "2025-12-18T00:54:24.117Z"
+    },
+    {
+      "id": "9c4b",
+      "propertyId": "1",
+      "userId": "0280",
+      "userName": "mera",
+      "userEmail": "mera@gmail.com",
+      "visitType": "in-person",
+      "date": "2025-02-02",
+      "timeSlot": "16:00 - 16:30",
+      "message": "test",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-18T00:55:18.922Z"
+    },
+    {
+      "id": "eb51",
+      "propertyId": "1",
+      "userId": "0280",
+      "userName": "mera",
+      "userEmail": "mera@gmail.com",
+      "visitType": "open-house",
+      "date": "2024-03-03",
+      "timeSlot": "14:00 - 14:30",
+      "message": "test",
+      "wantCall": false,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-18T00:56:27.585Z"
     }
   ],
   "favorites": [
@@ -769,6 +809,28 @@
       "owner": "fadi",
       "type": "sale",
       "status": "available"
+    },
+    {
+      "id": "3305",
+      "userId": "fd8e",
+      "propertyId": "4",
+      "title": "Family House, Chicago IL",
+      "image": "/properties/P1.png",
+      "price": 350000,
+      "owner": "osama alghol",
+      "type": "rent",
+      "status": "available"
+    },
+    {
+      "id": "7792",
+      "userId": "fd8e",
+      "propertyId": "2",
+      "title": "Luxury Villa, Miami FL",
+      "image": "/properties/P1.png",
+      "price": 750000,
+      "owner": "osama alghol",
+      "type": "rent",
+      "status": "available"
     }
   ],
   "notifications": [
@@ -801,6 +863,46 @@
       "link": "/dashboard/buyer",
       "read": true,
       "createdAt": "2025-12-17T10:07:16.832Z"
+    },
+    {
+      "id": "a6d2",
+      "userId": "545e",
+      "type": "booking",
+      "title": "Booking Approved",
+      "message": "Your booking for 2013-05-25 has been approved",
+      "link": "/dashboard/buyer",
+      "read": true,
+      "createdAt": "2025-12-17T23:48:40.738Z"
+    },
+    {
+      "id": "bd84",
+      "userId": "cb87",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "mera wants to visit \"Modern Apartment, New York\"",
+      "link": "/dashboard/owner/messages",
+      "read": false,
+      "createdAt": "2025-12-18T00:54:24.227Z"
+    },
+    {
+      "id": "7bbd",
+      "userId": "cb87",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "mera wants to visit \"92 ALLIUM PLACE, ORLANDO FL 32827\"",
+      "link": "/dashboard/owner/messages",
+      "read": false,
+      "createdAt": "2025-12-18T00:55:18.957Z"
+    },
+    {
+      "id": "d6dc",
+      "userId": "cb87",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "mera wants to visit \"92 ALLIUM PLACE, ORLANDO FL 32827\"",
+      "link": "/dashboard/owner/messages",
+      "read": false,
+      "createdAt": "2025-12-18T00:56:27.622Z"
     }
   ]
 }
