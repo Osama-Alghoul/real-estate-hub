@@ -128,38 +128,6 @@
       "ownerId": "2af7"
     },
     {
-      "id": "5",
-      "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P1.png"
-      ],
-      "title": "Beachfront House, California",
-      "price": 1200000,
-      "garag": 2,
-      "bath": 3,
-      "size": 3200,
-      "yearBuilt": 2019,
-      "avatar": "/uploads/1765920503774.png",
-      "name": "anan",
-      "type": "sale",
-      "description": "A stunning beachfront house with direct access to the sea...",
-      "amenities": [
-        "Beach Access",
-        "Outdoor Pool",
-        "Private Terrace",
-        "Smart Home",
-        "Garden",
-        "Fire Pit"
-      ],
-      "video": "/videos/property5.mp4",
-      "status": "sold",
-      "owner": "Anan Jamal",
-      "location": "",
-      "bedrooms": 0,
-      "ownerId": "4fe8"
-    },
-    {
       "id": "6",
       "img": "/properties/P1.png",
       "images": [
@@ -588,7 +556,7 @@
       "password": "$2b$10$GSwkku7jvUUvPEnTK05mI.Q9QBQ214vD2D9Wq6IVF.O7E4kKL4Xma",
       "role": "buyer",
       "status": "active",
-      "avatar": "/uploads/1766000835902.jpg"
+      "avatar": "/uploads/1766097064136.jpg"
     },
     {
       "id": "cb6c",
@@ -617,6 +585,16 @@
       "message": "Officia harum veniam",
       "status": "read",
       "createdAt": "2025-12-05T08:46:40.535Z"
+    },
+    {
+      "id": "fac1",
+      "name": "fghj",
+      "email": "osama@gmail.com",
+      "phone": "",
+      "subject": "trdyuhjkl",
+      "message": "tfygijokl.,m bcftyuihojlk",
+      "status": "new",
+      "createdAt": "2025-12-18T22:27:58.219Z"
     }
   ],
   "bookings": [
@@ -716,6 +694,38 @@
       "payment": null,
       "status": "pending",
       "createdAt": "2025-12-18T21:37:51.802Z"
+    },
+    {
+      "id": "e220",
+      "propertyId": "2",
+      "userId": "0280",
+      "userName": "mera",
+      "userEmail": "mera@gmail.com",
+      "visitType": "virtual",
+      "date": "2025-12-02",
+      "timeSlot": "10:00 - 10:30",
+      "message": "fjsdnfl",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-18T22:03:29.577Z"
+    },
+    {
+      "id": "8b72",
+      "propertyId": "2",
+      "userId": "0280",
+      "userName": "mera",
+      "userEmail": "mera@gmail.com",
+      "visitType": "in-person",
+      "date": "2001-01-01",
+      "timeSlot": "11:00 - 11:30",
+      "message": "fgfchvjkln,mbcvfglk",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-18T22:27:23.142Z"
     }
   ],
   "favorites": [
@@ -751,17 +761,6 @@
       "price": 590693,
       "owner": "fadi",
       "type": "sale",
-      "status": "available"
-    },
-    {
-      "id": "a411",
-      "userId": "0280",
-      "propertyId": "2",
-      "title": "Luxury Villa, Miami FL",
-      "image": "/properties/P1.png",
-      "price": 750000,
-      "owner": "osama alghol",
-      "type": "rent",
       "status": "available"
     },
     {
@@ -930,6 +929,36 @@
       "link": "/dashboard/owner/messages",
       "read": false,
       "createdAt": "2025-12-18T21:37:51.839Z"
+    },
+    {
+      "id": "28c8",
+      "userId": "2af7",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "mera wants to visit \"Luxury Villa, Miami FL\"",
+      "link": "/dashboard/owner/messages",
+      "read": false,
+      "createdAt": "2025-12-18T22:03:29.617Z"
+    },
+    {
+      "id": "3af4",
+      "userId": "2af7",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "mera wants to visit \"Luxury Villa, Miami FL\"",
+      "link": "/dashboard/owner/messages",
+      "read": false,
+      "createdAt": "2025-12-18T22:27:23.198Z"
+    },
+    {
+      "id": "4cdd",
+      "userId": "all",
+      "type": "contact",
+      "title": "New Contact Message",
+      "message": "fghj: trdyuhjkl",
+      "link": "/dashboard/admin/contacts",
+      "read": false,
+      "createdAt": "2025-12-18T22:27:58.241Z"
     }
   ]
 }

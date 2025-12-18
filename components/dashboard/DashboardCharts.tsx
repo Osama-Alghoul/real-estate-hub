@@ -18,7 +18,7 @@ import {
 } from "recharts";
 
 interface ChartProps {
-  data: any[]; // Relaxed type to accommodate different data structures
+  data: any[]; 
 }
 
 const months = [
@@ -38,7 +38,6 @@ const months = [
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#8884d8"];
 
 export const PropertiesChart = ({ data }: ChartProps) => {
-  // Fallback data if empty
   const chartData =
     data && data.length > 0 && data.some((v) => typeof v === "number" && v > 0)
       ? data
@@ -97,7 +96,6 @@ export const PropertiesChart = ({ data }: ChartProps) => {
 };
 
 export const UsersGrowthChart = ({ data }: ChartProps) => {
-  // Fallback data if empty
   const chartData =
     data && data.length > 0 && data.some((v) => typeof v === "number" && v > 0)
       ? data

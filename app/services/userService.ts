@@ -25,7 +25,6 @@ export async function fetchUsers(params?: {
 
   let data: User[] = await res.json();
 
-  // client-side filtering
   if (params?.q) {
     const q = params.q.toLowerCase();
     data = data.filter((u) => u.name.toLowerCase().includes(q));

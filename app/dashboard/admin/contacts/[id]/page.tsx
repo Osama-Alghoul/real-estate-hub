@@ -40,7 +40,6 @@ export default function ContactDetailsPage() {
         const response = await axios.get(`http://localhost:3001/contacts/${id}`);
         setContact(response.data);
 
-        // Mark as read if it's new
         if (response.data.status === "new") {
           await axios.patch(`http://localhost:3001/contacts/${id}`, {
             status: "read",
@@ -116,7 +115,6 @@ export default function ContactDetailsPage() {
               <div className="flex items-center gap-4 text-sm text-gray-500">
                 <span className="flex items-center">
                   <Calendar size={14} className="mr-1.5" />
-                  {/* i want date in details  */}
                   {new Date(contact.createdAt).toDateString()}
                 </span>
                 <span className="flex items-center">

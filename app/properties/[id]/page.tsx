@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Property } from "@/types/property";
 import BookViewingButton from "@/components/booking/BookViewingButton";
 import Header from "@/components/layout/Header";
@@ -39,7 +38,6 @@ const PropertyFeatureCard = ({
   </div>
 );
 
-// ... (SVG Icon Components: AreaIcon, BathIcon, GarageIcon, CalendarIcon, PhoneIcon, EmailIcon remain the same)
 const AreaIcon = () => (
   <svg
     className="w-6 h-6"
@@ -53,7 +51,7 @@ const AreaIcon = () => (
       strokeLinejoin="round"
       strokeWidth={2}
       d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
-    />{" "}
+    />
   </svg>
 );
 const BathIcon = () => (
@@ -63,13 +61,12 @@ const BathIcon = () => (
     stroke="currentColor"
     viewBox="0 0 24 24"
   >
-    {" "}
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
       d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"
-    />{" "}
+    />
   </svg>
 );
 const GarageIcon = () => (
@@ -79,13 +76,12 @@ const GarageIcon = () => (
     stroke="currentColor"
     viewBox="0 0 24 24"
   >
-    {" "}
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
       d="M19 9l-7 7-7-7"
-    />{" "}
+    />
   </svg>
 );
 const CalendarIcon = () => (
@@ -95,13 +91,12 @@ const CalendarIcon = () => (
     stroke="currentColor"
     viewBox="0 0 24 24"
   >
-    {" "}
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
       d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-    />{" "}
+    />
   </svg>
 );
 const PhoneIcon = () => (
@@ -111,13 +106,12 @@ const PhoneIcon = () => (
     stroke="currentColor"
     viewBox="0 0 24 24"
   >
-    {" "}
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-    />{" "}
+    />
   </svg>
 );
 const EmailIcon = () => (
@@ -127,13 +121,12 @@ const EmailIcon = () => (
     stroke="currentColor"
     viewBox="0 0 24 24"
   >
-    {" "}
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-    />{" "}
+    />
   </svg>
 );
 

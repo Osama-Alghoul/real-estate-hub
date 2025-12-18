@@ -17,7 +17,6 @@ import {
 } from "@/components/ui/Select";
 import { Button } from "@/components/ui/Button";
 import { Edit, Trash2, Eye } from "lucide-react";
-import { useRouter, useSearchParams } from "next/navigation";
 import Pagination from "@/components/properties/Pagination";
 
 export default function AdminPropertiesPage() {
@@ -34,9 +33,6 @@ export default function AdminPropertiesPage() {
   const [deletingProperty, setDeletingProperty] = useState<Property | null>(
     null
   );
-
-  const router = useRouter();
-  const searchParams = useSearchParams();
 
   const loadProperties = async () => {
     setLoading(true);

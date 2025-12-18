@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { register } from "../../app/services/authService";
-import type { RegisterFormData, RegisterableRole } from "../../types/auth";
+import type { RegisterFormData } from "../../types/auth";
 
 export default function RegisterForm() {
   const router = useRouter();
