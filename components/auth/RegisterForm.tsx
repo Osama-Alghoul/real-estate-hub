@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { register } from "../../app/services/authService";
-import type { RegisterFormData } from "../../types/auth";
+import type { RegisterFormData, RegisterableRole } from "../../types/auth";
 
 export default function RegisterForm() {
   const router = useRouter();
@@ -11,7 +11,7 @@ export default function RegisterForm() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -20,6 +20,12 @@ export default function RegisterForm() {
     setError("");
 
     try {
+      if (form.role === "admin") {
+        setError("Cannot register as admin");
+        setLoading(false);
+        return;
+      }
+
       const res = await register(form);
       setLoading(false);
       if (res.error) return setError(res.error);
@@ -48,10 +54,9 @@ export default function RegisterForm() {
       <div>
         <label className="text-sm font-medium text-[#363A3D]">Role</label>
         <select name="role" value={form.role} onChange={handleChange} className="mt-1 w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-[#4A60A1]/50 focus:border-[#4A60A1] outline-none transition">
-        <option value="buyer">Buyer</option>
-        <option value="owner">Owner</option>
-        <option value="admin">Admin</option>
-      </select>
+          <option value="buyer">Buyer</option>
+          <option value="owner">Owner</option>
+        </select>
       </div>
       {error && <p className="text-red-600 text-sm">{error}</p>}
       <button type="submit" disabled={loading} className="w-full bg-[#4A60A1] text-white py-3 rounded-lg font-medium hover:bg-[#4A60A1]/90 transition">

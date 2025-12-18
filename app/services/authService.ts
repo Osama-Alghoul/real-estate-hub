@@ -29,6 +29,10 @@ function createFakeToken(payload: {
 export async function register(
   form: RegisterFormData
 ): Promise<{ user?: User; error?: string }> {
+  if (form.role === "admin") {
+    return { error: "Cannot register as admin" };
+  }
+
   if (!form.name || !form.email || !form.password)
     return { error: "All fields are required" };
 
@@ -43,7 +47,7 @@ export async function register(
   const createRes = await fetch(`${API_BASE}/users`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ ...form, password: hashed ,status:"active"}),
+    body: JSON.stringify({ ...form, password: hashed, status: "active" }),
   });
 
   if (!createRes.ok) return { error: "Failed to create user" };
@@ -142,7 +146,7 @@ export async function login(
 export function logout() {
   deleteCookie("authToken");
   localStorage.removeItem("authUser");
-  
+
 }
 
 export function getCurrentUser(): User | null {
@@ -199,11 +203,11 @@ export async function updateUser(id: string, data: Partial<User>): Promise<{ use
     const currentUser = getCurrentUser();
     if (currentUser && currentUser.id === updatedUser.id) {
       const exp = Math.floor(Date.now() / 1000) + 60 * 60;
-      const token = createFakeToken({ 
-        id: updatedUser.id, 
-        email: updatedUser.email, 
-        role: updatedUser.role, 
-        name: updatedUser.name, 
+      const token = createFakeToken({
+        id: updatedUser.id,
+        email: updatedUser.email,
+        role: updatedUser.role,
+        name: updatedUser.name,
         exp,
         stats: {
           totalProperties: 0,
@@ -218,12 +222,12 @@ export async function updateUser(id: string, data: Partial<User>): Promise<{ use
           pageHealth: 0,
         },
       });
-      
+
       setCookie('authToken', token, 1);
-      localStorage.setItem('authUser', JSON.stringify({ 
-        id: updatedUser.id, 
-        name: updatedUser.name, 
-        email: updatedUser.email, 
+      localStorage.setItem('authUser', JSON.stringify({
+        id: updatedUser.id,
+        name: updatedUser.name,
+        email: updatedUser.email,
         role: updatedUser.role,
         avatar: updatedUser.avatar,
       }));

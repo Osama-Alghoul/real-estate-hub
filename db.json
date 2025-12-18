@@ -430,10 +430,10 @@
   ],
   "users": [
     {
-      "id": "ce6a",
-      "name": "Mai Alhajeen",
-      "email": "mai2001@gmail.com",
-      "password": "$2b$10$cpp9FYVj7wbS2ahwfowmUeZ3KiNYGrlhyPPRhoIW/3ahR3DlmQIZ6",
+      "id": "1",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "$2b$10$2yAG2JaJFWlkKti.wuY4fecAn0J9mudFpPNDWRzSY6VkiHHNNhgZS",
       "role": "admin",
       "status": "active",
       "avatar": "/uploads/1765578286362.png"
@@ -456,13 +456,6 @@
       "status": "active"
     },
     {
-      "id": "aa3e",
-      "name": "reem",
-      "email": "reem@gmail.com",
-      "password": "$2b$10$uTqPZa/Dlz/Y99ntvTK82u/qKbtnhyPsb5G/Q7QMUE/nbhi.cQ3/e",
-      "role": "admin"
-    },
-    {
       "id": "97c1",
       "name": "mona",
       "email": "mona@gmail.com",
@@ -478,15 +471,6 @@
       "password": "$2b$10$bRE3BNOoyJC9IOIyn0j0uueq6uJg1nY5mUoTsYooQhkeXwzWHvFJ.",
       "role": "buyer",
       "status": "disabled"
-    },
-    {
-      "id": "e49d",
-      "name": "Asma Ahmad Updated",
-      "email": "asma@gmail.com",
-      "role": "admin",
-      "status": "active",
-      "password": "password123",
-      "createdAt": "2025-12-11T19:30:54.051Z"
     },
     {
       "id": "7261",
@@ -563,15 +547,6 @@
       "role": "owner",
       "status": "active",
       "avatar": ""
-    },
-    {
-      "id": "545e",
-      "name": "anan jamal abu tawahne",
-      "email": "anan3@gmail.com",
-      "password": "$2b$10$40syZKZN4.BYtvJbG.8s0eJzCwNzcVGrg8jf/27Nr9QEi/6NJ/Qsy",
-      "role": "admin",
-      "status": "active",
-      "avatar": "/uploads/1765972595457.jpg"
     },
     {
       "id": "b268",
