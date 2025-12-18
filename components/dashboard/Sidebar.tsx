@@ -6,12 +6,9 @@ import {
   LayoutDashboard,
   Users,
   Building,
-  ChartAreaIcon,
-  Plus,
   LogOut,
   ChevronLeft,
   ChevronRight,
-  Settings,
   MessagesSquare,
   User,
   Heart,
@@ -61,10 +58,11 @@ export default function Sidebar({ role, onLogout }: Props) {
         href: "/dashboard/admin/bookings",
         icon: <Calendar size={20} />,
       },
+
       {
-        name: "Settings",
-        href: "/dashboard/admin/settings",
-        icon: <Settings size={20} />,
+        name: "Profile",
+        href: "/dashboard/admin/profile",
+        icon: <User size={20} />,
       },
     ],
     owner: [
@@ -83,10 +81,11 @@ export default function Sidebar({ role, onLogout }: Props) {
         href: "/dashboard/owner/messages",
         icon: <MessagesSquare size={20} />,
       },
+
       {
-        name: "Settings",
-        href: "/dashboard/owner/settings",
-        icon: <Settings size={20} />,
+        name: "Profile",
+        href: "/dashboard/buyer/profile",
+        icon: <User size={20} />,
       },
     ],
     buyer: [
@@ -101,24 +100,15 @@ export default function Sidebar({ role, onLogout }: Props) {
         icon: <Heart size={20} />,
       },
       {
-        name: "Explore",
-        href: "/dashboard/buyer/properties",
-        icon: <Building size={20} />,
-      },
-      {
         name: "My Requests",
         href: "/dashboard/buyer/requests",
         icon: <MessagesSquare size={20} />,
       },
+
       {
         name: "Profile",
         href: "/dashboard/buyer/profile",
         icon: <User size={20} />,
-      },
-      {
-        name: "Settings",
-        href: "/dashboard/buyer/settings",
-        icon: <Settings size={20} />,
       },
     ],
   };

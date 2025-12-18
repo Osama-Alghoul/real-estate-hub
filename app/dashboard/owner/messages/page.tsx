@@ -7,6 +7,7 @@ import {
   updateBookingStatus,
   Booking,
 } from "../../../services/bookingService";
+import { createNotification } from "../../../services/notificationService";
 import { fetchProperties } from "../../../services/propertyService";
 import { Property } from "@/types/property.type";
 import { Card, CardContent } from "@/components/ui/card";
@@ -93,10 +94,24 @@ export default function MessagesPage() {
       setProcessingId(id);
       await updateBookingStatus(id, newStatus);
 
+      // Find the booking to get user info for notification
+      const booking = bookings.find((b) => b.id === id);
+      if (booking && booking.userId) {
+        await createNotification({
+          userId: booking.userId,
+          type: "booking",
+          title:
+            newStatus === "approved" ? "Booking Approved" : "Booking Rejected",
+          message:
+            newStatus === "approved"
+              ? `Your booking for "${booking.property?.title}" has been approved`
+              : `Your booking for "${booking.property?.title}" was not approved`,
+          link: "/dashboard/buyer",
+        });
+      }
+
       setBookings((prev) =>
-        prev.map((booking) =>
-          booking.id === id ? { ...booking, status: newStatus } : booking
-        )
+        prev.map((b) => (b.id === id ? { ...b, status: newStatus } : b))
       );
     } catch (err) {
       console.error("Failed to update status", err);

@@ -16,7 +16,7 @@ export default function DashboardLayout({ children }: Props) {
 
   useEffect(() => {
     if (!loading && !user) {
-      router.replace("/login");
+      router.replace("/");
     }
   }, [user, loading, router]);
 
@@ -26,7 +26,12 @@ export default function DashboardLayout({ children }: Props) {
     <div className="flex h-screen bg-gray-50">
       <Sidebar role={user.role} onLogout={logout} />
       <div className="flex-1 flex flex-col">
-        <Header name={user.name} role={user.role} />
+        <Header
+          name={user.name}
+          role={user.role}
+          avatar={user.avatar}
+          onLogout={logout}
+        />
         <main className="p-6 flex-1 overflow-auto">{children}</main>
       </div>
     </div>

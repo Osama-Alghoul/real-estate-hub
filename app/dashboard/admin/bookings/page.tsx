@@ -7,10 +7,12 @@ import {
   updateBookingStatus,
   deleteBooking,
 } from "@/app/services/bookingService";
+import { createNotification } from "@/app/services/notificationService";
 import DataTable, { Column } from "@/components/common/DataTable";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, XCircle, Trash2, Calendar } from "lucide-react";
 import { SuccessToast, ErrorToast } from "@/components/ui/toast";
+import Pagination from "@/components/properties/Pagination";
 
 export default function BookingsPage() {
   const [bookings, setBookings] = useState<Booking[]>([]);
@@ -19,6 +21,10 @@ export default function BookingsPage() {
     type: "success" | "error";
     message: string;
   } | null>(null);
+
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5;
 
   const loadBookings = async () => {
     setLoading(true);
@@ -39,8 +45,24 @@ export default function BookingsPage() {
     id: string,
     status: "approved" | "rejected"
   ) => {
+    const bookingToUpdate = bookings.find((b) => b.id === id);
     const { booking, error } = await updateBookingStatus(id, status);
     if (booking) {
+      // Send notification to the buyer
+      if (bookingToUpdate?.userId) {
+        await createNotification({
+          userId: bookingToUpdate.userId,
+          type: "booking",
+          title:
+            status === "approved" ? "Booking Approved" : "Booking Rejected",
+          message:
+            status === "approved"
+              ? `Your booking for ${bookingToUpdate.date} has been approved`
+              : `Your booking for ${bookingToUpdate.date} was not approved`,
+          link: "/dashboard/buyer",
+        });
+      }
+
       setBookings((prev) =>
         prev.map((b) => (b.id === id ? { ...b, status } : b))
       );
@@ -61,6 +83,13 @@ export default function BookingsPage() {
       setToast({ type: "error", message: error || "Failed to delete booking" });
     }
   };
+
+  // Pagination logic
+  const totalPages = Math.ceil(bookings.length / itemsPerPage);
+  const currentBookings = bookings.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
 
   const columns: Column<Booking>[] = [
     { key: "id", label: "ID" },
@@ -126,7 +155,7 @@ export default function BookingsPage() {
       </div>
 
       <DataTable
-        data={bookings}
+        data={currentBookings}
         columns={columns}
         isLoading={loading}
         emptyMessage="No bookings found"
@@ -163,6 +192,16 @@ export default function BookingsPage() {
           </div>
         )}
       />
+
+      {totalPages > 1 && (
+        <div className="flex justify-center mt-6">
+          <Pagination
+            totalPages={totalPages}
+            currentPage={currentPage}
+            onPageChange={setCurrentPage}
+          />
+        </div>
+      )}
 
       {toast &&
         (toast.type === "success" ? (

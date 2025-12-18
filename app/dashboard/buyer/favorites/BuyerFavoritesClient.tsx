@@ -9,6 +9,7 @@ import Image from "next/image";
 import toast from "react-hot-toast";
 import { Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Pagination from "@/components/properties/Pagination";
 
 export default function BuyerFavoritesClient() {
   const [data, setData] = useState<Favorite[]>([]);
@@ -175,26 +176,14 @@ export default function BuyerFavoritesClient() {
         )}
       />
       {/* Pagination Controls */}
-      <div className="flex justify-between items-center mt-4">
-        <Button
-          variant="outline"
-          disabled={page === 1}
-          onClick={() => setPage((p) => p - 1)}
-        >
-          Previous
-        </Button>
-
-        <span className="text-sm font-medium">
-          Page {page} of {totalPages || 1}
-        </span>
-
-        <Button
-          variant="outline"
-          disabled={page === totalPages || totalPages === 0}
-          onClick={() => setPage((p) => p + 1)}
-        >
-          Next
-        </Button>
+      <div className="flex justify-center mt-4">
+        {filteredData.length > limit && (
+          <Pagination
+            totalPages={totalPages}
+            currentPage={page}
+            onPageChange={setPage}
+          />
+        )}
       </div>
     </div>
   );

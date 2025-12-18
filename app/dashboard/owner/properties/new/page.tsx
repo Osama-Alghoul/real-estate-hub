@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "../../../../context/AuthContext";
 import { createProperty } from "../../../../services/propertyService";
+import { createNotification } from "../../../../services/notificationService";
 import { uploadImage } from "../../../../services/uploadService";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -150,6 +151,16 @@ export default function NewPropertyPage() {
       };
 
       await createProperty(propertyData);
+
+      // Notify admins about new property
+      await createNotification({
+        userId: "all",
+        type: "property",
+        title: "New Property Listed",
+        message: `${user.name} listed "${formData.title}"`,
+        link: "/dashboard/admin/properties",
+      });
+
       router.push("/dashboard/owner/properties");
     } catch (err: any) {
       console.error("Submission failed", err);

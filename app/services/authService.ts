@@ -78,6 +78,7 @@ export async function register(
       name: user.name,
       email: user.email,
       role: user.role,
+      avatar: user.avatar,
     })
   );
 
@@ -131,6 +132,7 @@ export async function login(
       name: user.name,
       email: user.email,
       role: user.role,
+      avatar: user.avatar,
     })
   );
 
@@ -140,6 +142,7 @@ export async function login(
 export function logout() {
   deleteCookie("authToken");
   localStorage.removeItem("authUser");
+  
 }
 
 export function getCurrentUser(): User | null {
@@ -221,7 +224,8 @@ export async function updateUser(id: string, data: Partial<User>): Promise<{ use
         id: updatedUser.id, 
         name: updatedUser.name, 
         email: updatedUser.email, 
-        role: updatedUser.role 
+        role: updatedUser.role,
+        avatar: updatedUser.avatar,
       }));
     }
 

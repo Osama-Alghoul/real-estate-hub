@@ -140,8 +140,8 @@
       "bath": 3,
       "size": 3200,
       "yearBuilt": 2019,
-      "avatar": "/uploads/1765541253458.png",
-      "name": "ananananan",
+      "avatar": "/uploads/1765920503774.png",
+      "name": "alaa eliwa",
       "type": "sale",
       "description": "A stunning beachfront house with direct access to the sea...",
       "amenities": [
@@ -153,7 +153,11 @@
         "Fire Pit"
       ],
       "video": "/videos/property5.mp4",
-      "status": "pending"
+      "status": "pending",
+      "owner": "Anan Jamal",
+      "location": "",
+      "bedrooms": 0,
+      "ownerId": "4fe8"
     },
     {
       "id": "6",
@@ -168,8 +172,8 @@
       "bath": 2,
       "size": 2400,
       "yearBuilt": 2021,
-      "avatar": "/uploads/1765578286362.png",
-      "name": "ananananan",
+      "avatar": "/uploads/1765969956434.png",
+      "name": "alaa eliwa",
       "type": "rent",
       "description": "Luxury penthouse with an incredible city view...",
       "amenities": [
@@ -181,7 +185,8 @@
         "Security System"
       ],
       "video": "/videos/property6.mp4",
-      "status": "available"
+      "status": "available",
+      "owner": "anan"
     },
     {
       "id": "7",
@@ -246,36 +251,30 @@
       "ownerId": "2af7"
     },
     {
-      "id": "54b8",
-      "title": "Modern Villa in downtown",
-      "description": "Pretty good, nice view",
-      "price": 50000,
+      "id": "cab5",
+      "title": "jamal",
+      "description": "sdasad",
+      "price": 16,
+      "location": "asdasd",
       "type": "sale",
       "status": "available",
-      "location": "Main st, New York, NY",
-      "bedrooms": 4,
-      "bath": 2,
-      "garag": 2,
-      "size": 200,
-      "yearBuilt": 2020,
+      "bedrooms": 2,
+      "bath": 1,
+      "size": 4,
+      "garag": 1,
+      "img": "/uploads/1765956127620.png",
+      "images": [],
       "amenities": [
-        "Heating",
         "Swimming Pool",
         "Smart Home",
-        "Garage",
-        "Garden",
-        "Internet",
-        "Balcony",
-        "Air Conditioning"
+        "Central Heating",
+        "Solar Panels"
       ],
-      "images": [
-        "/uploads/1765955795174.jpg"
-      ],
-      "img": "/uploads/1765955795174.jpg",
-      "ownerId": "4082",
-      "avatar": "/user.png",
-      "name": "Osama Alghoul",
-      "createdAt": "2025-12-17T07:16:37.798Z"
+      "ownerId": "2d7e",
+      "name": "jamal",
+      "avatar": "/uploads/1765956069714.png",
+      "yearBuilt": 2015,
+      "createdAt": "2025-12-17T07:22:08.596Z"
     }
   ],
   "about": {
@@ -418,17 +417,18 @@
     },
     {
       "id": "77a1",
-      "name": "alaa",
+      "name": "alaa eliwa",
       "email": "alaa@gmail.com",
-      "password": "$2b$10$ShiTUzLBQQw4SPZBXx2zyOlAYZCo77U81Rdvb3.SQzz8TVVJQLHY.",
+      "password": "alaa@789",
       "role": "buyer",
-      "status": "active"
+      "status": "active",
+      "avatar": "/uploads/1765920503774.png"
     },
     {
       "id": "882a",
-      "name": "anan test",
+      "name": "Anan Jamal",
       "email": "anan@gmail.com",
-      "password": "$2b$10$ShpBXjhjzjI8.QnX5Yi/FOi6fdFrZ4js71gn/BJAKtiUWgJyZQ/vu",
+      "password": "$2b$10$d4eEiTRrKIwE/CNI/AvVqOy0qU9p70VMyL.UXG7PlrtkF/k5jtTBq",
       "role": "buyer",
       "status": "active"
     },
@@ -446,27 +446,7 @@
       "password": "$2b$10$24AlFwi.C0nGs1Ll2kJwvuKxR5X3avYU8M7DjPc6QnWwLpfyPBRxS",
       "role": "owner",
       "status": "active",
-      "avatar": "",
-      "stats": {
-        "totalProperties": 24,
-        "propertiesByType": {
-          "residential": 12,
-          "commercial": 7,
-          "industrial": 3,
-          "retail": 2
-        },
-        "engagement": {
-          "views": 1847,
-          "favorites": 234,
-          "shares": 89
-        },
-        "messages": {
-          "total": 47,
-          "unread": 12,
-          "requests": 8
-        },
-        "pageHealth": 85
-      }
+      "avatar": ""
     },
     {
       "id": "fd68",
@@ -516,28 +496,7 @@
       "email": "osama@gmail.com",
       "password": "$2b$10$DPjQlLg8.qDdRt0vwS1G3.Vy4gDhqI.3lO/2WbFwNTyuBPQNsO5Sy",
       "role": "owner",
-      "status": "disabled",
-      "avatar": "",
-      "stats": {
-        "totalProperties": 24,
-        "propertiesByType": {
-          "residential": 12,
-          "commercial": 7,
-          "industrial": 3,
-          "retail": 2
-        },
-        "engagement": {
-          "views": 1847,
-          "favorites": 234,
-          "shares": 89
-        },
-        "messages": {
-          "total": 47,
-          "unread": 12,
-          "requests": 8
-        },
-        "pageHealth": 85
-      }
+      "status": "disabled"
     },
     {
       "id": "5ee3",
@@ -571,8 +530,7 @@
           "requests": 8
         },
         "pageHealth": 85
-      },
-      "avatar": "/uploads/1765957567216.jpg"
+      }
     },
     {
       "id": "1529",
@@ -581,83 +539,23 @@
       "password": "$2b$10$TkHcnIbU/caMf8NroRapNeb3z701krVBDNbuQQvwYCtqRD4dZRUFa",
       "role": "owner",
       "status": "active",
-      "avatar": "",
-      "stats": {
-        "totalProperties": 24,
-        "propertiesByType": {
-          "residential": 12,
-          "commercial": 7,
-          "industrial": 3,
-          "retail": 2
-        },
-        "engagement": {
-          "views": 1847,
-          "favorites": 234,
-          "shares": 89
-        },
-        "messages": {
-          "total": 47,
-          "unread": 12,
-          "requests": 8
-        },
-        "pageHealth": 85
-      }
+      "avatar": ""
     },
     {
       "id": "545e",
-      "name": "anan",
+      "name": "anan jamal abu tawahne",
       "email": "anan3@gmail.com",
-      "password": "$2b$10$1L8Vkwiu1GbYygqee3TbZ.9nFZj9SaXQqbjLVoOMRzaqM8fRW1zEG",
+      "password": "$2b$10$40syZKZN4.BYtvJbG.8s0eJzCwNzcVGrg8jf/27Nr9QEi/6NJ/Qsy",
       "role": "admin",
       "status": "active",
-      "avatar": "",
-      "stats": {
-        "totalProperties": 24,
-        "propertiesByType": {
-          "residential": 12,
-          "commercial": 7,
-          "industrial": 3,
-          "retail": 2
-        },
-        "engagement": {
-          "views": 1847,
-          "favorites": 234,
-          "shares": 89
-        },
-        "messages": {
-          "total": 47,
-          "unread": 12,
-          "requests": 8
-        },
-        "pageHealth": 85
-      }
+      "avatar": "/uploads/1765972595457.jpg"
     },
     {
       "id": "b268",
       "name": "omar",
       "email": "omar@gmail.com",
       "password": "$2b$10$5qJdQu7QYllnhzyNRTrDA.JuiIPvCyixy.j/7rqg5bQ1amqr65qpa",
-      "role": "owner",
-      "stats": {
-        "totalProperties": 24,
-        "propertiesByType": {
-          "residential": 12,
-          "commercial": 7,
-          "industrial": 3,
-          "retail": 2
-        },
-        "engagement": {
-          "views": 1847,
-          "favorites": 234,
-          "shares": 89
-        },
-        "messages": {
-          "total": 47,
-          "unread": 12,
-          "requests": 8
-        },
-        "pageHealth": 85
-      }
+      "role": "owner"
     },
     {
       "id": "2d7e",
@@ -666,42 +564,40 @@
       "password": "$2b$10$2D7wEER8uAQvUv5OXQAF8.QVrQ7Uyl5Y9LiQEFG.PbzhqhssiEa0C",
       "role": "owner",
       "status": "active",
-      "stats": {
-        "totalProperties": 24,
-        "propertiesByType": {
-          "residential": 12,
-          "commercial": 7,
-          "industrial": 3,
-          "retail": 2
-        },
-        "engagement": {
-          "views": 1847,
-          "favorites": 234,
-          "shares": 89
-        },
-        "messages": {
-          "total": 47,
-          "unread": 12,
-          "requests": 8
-        },
-        "pageHealth": 85
-      }
+      "avatar": "/uploads/1765956069714.png"
     },
     {
-      "id": "4012",
-      "name": "Osama Alghoul",
-      "email": "admin@reis.com",
-      "password": "$2b$10$sUz6zCiao5xxuFsG6y4bH.ILRPPFczb7t7DSiCIEk3x6q4RH7vKIy",
-      "role": "admin",
-      "status": "active",
-      "avatar": "/uploads/1765954562820.jpg"
+      "id": "4fe8",
+      "name": "anan",
+      "email": "ananowner@gmail.com",
+      "password": "$2b$10$YYde3d6OzrmwIvruyDqh4Os2lJ5mcho0iR7tXmN2D7jSP/c33yqku",
+      "role": "owner",
+      "status": "active"
     },
     {
-      "id": "6fff",
-      "name": "Osama Alghoul",
-      "email": "byuer@example.com",
-      "password": "$2b$10$OEwCgO0N.KOzulV2uGjYjuD2rN0QbWNbVAL5AzLPoUaH36iLUopUa",
+      "id": "ae5b",
+      "name": "anan",
+      "email": "anan5@gmail.com",
+      "password": "$2b$10$tC.bX2tUwUnymcgSnQ2D3.gnd8KSqMeJa77X/uY95krd9XAfZMr4G",
       "role": "buyer",
+      "status": "active",
+      "avatar": "/uploads/1765962838407.jpg"
+    },
+    {
+      "id": "0280",
+      "name": "mera",
+      "email": "mera@gmail.com",
+      "password": "$2b$10$GSwkku7jvUUvPEnTK05mI.Q9QBQ214vD2D9Wq6IVF.O7E4kKL4Xma",
+      "role": "buyer",
+      "status": "active",
+      "avatar": "/uploads/1766000835902.jpg"
+    },
+    {
+      "id": "cb6c",
+      "name": "Fadi hajien",
+      "email": "fadi@gmail.com",
+      "password": "$2b$10$lkiFWl7ZOWdvsKVi6T9BUOYMXEznBgyZb0v7u5vwjlnOoBX3.x3Ri",
+      "role": "owner",
       "status": "active"
     }
   ],
@@ -715,26 +611,6 @@
       "message": "Officia harum veniam",
       "status": "read",
       "createdAt": "2025-12-05T08:46:40.535Z"
-    },
-    {
-      "id": "4ba7",
-      "name": "Emily Morrow",
-      "email": "zufymyvo@mailinator.com",
-      "phone": "+1 (509) 928-5782",
-      "subject": "Adipisci quo dolores",
-      "message": "Ex nisi ratione minu",
-      "status": "read",
-      "createdAt": "2025-12-05T08:48:32.795Z"
-    },
-    {
-      "id": "8f9e",
-      "name": "Osama Alghoul",
-      "email": "osama@gmail.com",
-      "phone": "+970595925353",
-      "subject": "poasjdou",
-      "message": "suushdoahsfoia",
-      "status": "new",
-      "createdAt": "2025-12-16T16:56:42.961Z"
     }
   ],
   "bookings": [
@@ -762,8 +638,9 @@
       "wantCall": true,
       "payDeposit": false,
       "payment": null,
-      "status": "pending",
-      "createdAt": "2025-12-05T08:32:21.037Z"
+      "status": "approved",
+      "createdAt": "2025-12-05T08:32:21.037Z",
+      "updatedAt": "2025-12-17T09:46:39.128Z"
     },
     {
       "id": "f798",
@@ -775,8 +652,9 @@
       "wantCall": true,
       "payDeposit": false,
       "payment": null,
-      "status": "pending",
-      "createdAt": "2025-12-05T08:33:04.384Z"
+      "status": "approved",
+      "createdAt": "2025-12-05T08:33:04.384Z",
+      "updatedAt": "2025-12-17T09:50:46.088Z"
     },
     {
       "id": "d5f5",
@@ -805,25 +683,74 @@
       "wantCall": false,
       "payDeposit": false,
       "payment": null,
-      "status": "pending",
-      "createdAt": "2025-12-16T12:32:50.319Z"
+      "status": "rejected",
+      "createdAt": "2025-12-16T12:32:50.319Z",
+      "updatedAt": "2025-12-17T09:50:51.753Z"
     },
     {
-      "id": "c1a8",
-      "propertyId": "54b8",
-      "userId": "6fff",
-      "userName": "Osama Alghoul",
-      "userEmail": "byuer@example.com",
+      "id": "f02d",
+      "propertyId": "2",
+      "userId": "ae5b",
+      "userName": "seham",
+      "userEmail": "seham@gmail.com",
       "visitType": "in-person",
-      "date": "2025-12-18",
-      "timeSlot": "09:00 - 09:30",
-      "message": "hello",
+      "date": "2025-01-01",
+      "timeSlot": "14:00 - 14:30",
+      "message": "Laborum Laborum asp",
       "wantCall": true,
       "payDeposit": false,
       "payment": null,
       "status": "approved",
-      "createdAt": "2025-12-17T07:34:28.537Z",
-      "updatedAt": "2025-12-17T07:36:12.613Z"
+      "createdAt": "2025-12-17T07:41:41.206Z",
+      "updatedAt": "2025-12-17T10:07:16.804Z"
+    },
+    {
+      "id": "4539",
+      "propertyId": "3",
+      "userId": "0280",
+      "userName": "mera",
+      "userEmail": "mera@gmail.com",
+      "visitType": "virtual",
+      "date": "2025-01-01",
+      "timeSlot": "10:00 - 10:30",
+      "message": "test",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-18T00:54:24.117Z"
+    },
+    {
+      "id": "9c4b",
+      "propertyId": "1",
+      "userId": "0280",
+      "userName": "mera",
+      "userEmail": "mera@gmail.com",
+      "visitType": "in-person",
+      "date": "2025-02-02",
+      "timeSlot": "16:00 - 16:30",
+      "message": "test",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-18T00:55:18.922Z"
+    },
+    {
+      "id": "eb51",
+      "propertyId": "1",
+      "userId": "0280",
+      "userName": "mera",
+      "userEmail": "mera@gmail.com",
+      "visitType": "open-house",
+      "date": "2024-03-03",
+      "timeSlot": "14:00 - 14:30",
+      "message": "test",
+      "wantCall": false,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-18T00:56:27.585Z"
     }
   ],
   "favorites": [
@@ -849,6 +776,133 @@
       "owner": "anan",
       "type": "rent",
       "status": "available"
+    },
+    {
+      "id": "fbb9",
+      "userId": "77a1",
+      "propertyId": "1",
+      "title": "92 ALLIUM PLACE, ORLANDO FL 32827",
+      "image": "/properties/P1.png",
+      "price": 590693,
+      "owner": "fadi",
+      "type": "sale",
+      "status": "available"
+    },
+    {
+      "id": "a411",
+      "userId": "0280",
+      "propertyId": "2",
+      "title": "Luxury Villa, Miami FL",
+      "image": "/properties/P1.png",
+      "price": 750000,
+      "owner": "osama alghol",
+      "type": "rent",
+      "status": "available"
+    },
+    {
+      "id": "fb53",
+      "userId": "0280",
+      "propertyId": "1",
+      "title": "92 ALLIUM PLACE, ORLANDO FL 32827",
+      "image": "/properties/P1.png",
+      "price": 590693,
+      "owner": "fadi",
+      "type": "sale",
+      "status": "available"
+    },
+    {
+      "id": "3305",
+      "userId": "fd8e",
+      "propertyId": "4",
+      "title": "Family House, Chicago IL",
+      "image": "/properties/P1.png",
+      "price": 350000,
+      "owner": "osama alghol",
+      "type": "rent",
+      "status": "available"
+    },
+    {
+      "id": "7792",
+      "userId": "fd8e",
+      "propertyId": "2",
+      "title": "Luxury Villa, Miami FL",
+      "image": "/properties/P1.png",
+      "price": 750000,
+      "owner": "osama alghol",
+      "type": "rent",
+      "status": "available"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "4844",
+      "userId": "2af7",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "anan wants to visit \"Luxury Villa, Miami FL\"",
+      "link": "/dashboard/owner/messages",
+      "read": true,
+      "createdAt": "2025-12-17T09:37:38.259Z"
+    },
+    {
+      "id": "8b08",
+      "userId": "b268",
+      "type": "booking",
+      "title": "Booking Rejected",
+      "message": "Your booking for 1972-06-22 was not approved",
+      "link": "/dashboard/buyer",
+      "read": true,
+      "createdAt": "2025-12-17T09:50:51.772Z"
+    },
+    {
+      "id": "9aa6",
+      "userId": "ae5b",
+      "type": "booking",
+      "title": "Booking Approved",
+      "message": "Your booking for 2025-01-01 has been approved",
+      "link": "/dashboard/buyer",
+      "read": true,
+      "createdAt": "2025-12-17T10:07:16.832Z"
+    },
+    {
+      "id": "a6d2",
+      "userId": "545e",
+      "type": "booking",
+      "title": "Booking Approved",
+      "message": "Your booking for 2013-05-25 has been approved",
+      "link": "/dashboard/buyer",
+      "read": true,
+      "createdAt": "2025-12-17T23:48:40.738Z"
+    },
+    {
+      "id": "bd84",
+      "userId": "cb87",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "mera wants to visit \"Modern Apartment, New York\"",
+      "link": "/dashboard/owner/messages",
+      "read": false,
+      "createdAt": "2025-12-18T00:54:24.227Z"
+    },
+    {
+      "id": "7bbd",
+      "userId": "cb87",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "mera wants to visit \"92 ALLIUM PLACE, ORLANDO FL 32827\"",
+      "link": "/dashboard/owner/messages",
+      "read": false,
+      "createdAt": "2025-12-18T00:55:18.957Z"
+    },
+    {
+      "id": "d6dc",
+      "userId": "cb87",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "mera wants to visit \"92 ALLIUM PLACE, ORLANDO FL 32827\"",
+      "link": "/dashboard/owner/messages",
+      "read": false,
+      "createdAt": "2025-12-18T00:56:27.622Z"
     }
   ]
 }
