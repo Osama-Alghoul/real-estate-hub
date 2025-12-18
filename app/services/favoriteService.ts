@@ -1,6 +1,6 @@
 const API = "http://localhost:3001/favorites";
 
-export async function getFavorites(userId: number) {
+export async function getFavorites(userId: string) {
   const res = await fetch(`${API}?userId=${userId}`);
   return res.json();
 }
@@ -14,11 +14,11 @@ export async function addFavorite(data: any) {
   return res.json();
 }
 
-export async function removeFavorite(id: number) {
+export async function removeFavorite(id: string) {
   await fetch(`${API}/${id}`, { method: "DELETE" });
 }
 
-export async function isFavorited(userId: number, propertyId: string) {
+export async function isFavorited(userId: string, propertyId: string) {
   const res = await fetch(
     `${API}?userId=${userId}&propertyId=${propertyId}`
   );

@@ -36,7 +36,7 @@ export default function BuyerFavoritesClient() {
   }, []);
 
   const handleRemove = async (id: number) => {
-    await removeFavorite(id);
+    await removeFavorite(id.toString());
     setData((prev) => prev.filter((f) => f.id !== id));
     toast.error("Removed from favorites");
   };

@@ -51,7 +51,7 @@ export default async function About() {
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/30 flex items-center justify-center">
+          <div className="absolute inset-0 bg-linear-to-t from-black/60 to-black/30 flex items-center justify-center">
             <h1 className="text-5xl md:text-7xl text-white font-extrabold tracking-tight text-center max-w-4xl px-4 animate-fadeIn">
               {about.hero.title}
             </h1>
@@ -74,7 +74,7 @@ export default async function About() {
               {about.sections.map((section, i) => (
                 <article
                   key={i}
-                  className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 transform hover:shadow-2xl hover:translate-y-[-4px] transition-all duration-300"
+                  className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 transform hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
                 >
                   <div className="text-5xl mb-4 p-3 bg-blue-100 rounded-full w-fit">
                     {iconMap[section.icon] || <ArrowRight className="text-blue-500" />}

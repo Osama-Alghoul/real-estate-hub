@@ -1,5 +1,5 @@
 import { type CardProps } from "./card.type";
 export interface PropertiesProps extends CardProps {
-  id: number;
+  id: string;
   type: string;
 }
