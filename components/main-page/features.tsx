@@ -1,4 +1,4 @@
-import FeatureCard from "./featureCard";
+import FeatureCard from "./FeatureCard";
 
 export default function Features() {
   return (

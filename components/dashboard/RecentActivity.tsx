@@ -1,6 +1,6 @@
 import React from "react";
 import { User } from "../../types/auth";
-import { Property } from "../../types/property.type";
+import { Property } from "../../types/property";
 import { UserPlus, Home } from "lucide-react";
 
 interface RecentActivityProps {

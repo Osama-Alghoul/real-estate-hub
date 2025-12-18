@@ -1,11 +1,11 @@
 // About.tsx
 
-import { AboutData, Client, FetchedDataType, Statistic, TeamMember } from "@/types/about.type";
+import { AboutData, Client, FetchedDataType, Statistic, TeamMember } from "@/types/about";
 import Image from "next/image";
 import { Eye, Target, Handshake, ArrowRight } from "lucide-react";
 import { JSX } from "react";
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 // Import types from the dedicated file
 
 

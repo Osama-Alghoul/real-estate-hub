@@ -7,14 +7,14 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
+} from "@/components/ui/Dialog";
+import { Button } from "@/components/ui/Button";
 import { Plus } from "lucide-react";
 import UserForm from "./UserForm";
 import { createUser } from "@/app/services/userService";
 import { User } from "@/types/auth";
 import { useRouter } from "next/navigation";
-import { SuccessToast } from "@/components/ui/toast";
+import { SuccessToast } from "@/components/ui/Toast";
 
 interface AddUserModalProps {
   onSuccess?: () => void;

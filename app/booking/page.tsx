@@ -1,10 +1,10 @@
-import HeroSection from "@/components/booking/hero-section";
-import BookingContent from "@/components/booking/booking-content";
-import BookingInfoStrip from "@/components/booking/booking-info-strip";
-import { Property } from "@/types/property.type";
+import HeroSection from "@/components/booking/HeroSection";
+import BookingContent from "@/components/booking/BookingContent";
+import BookingInfoStrip from "@/components/booking/BookingInfoStrip";
+import { Property } from "@/types/property";
 import { redirect } from "next/navigation";
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 interface BookingPageProps {
   searchParams: Promise<{ propertyId?: string }>;

@@ -3,8 +3,8 @@
 import { Bath, CarFront, Fullscreen, Heart, Plus, Share2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Avatar from "../ui/avatar";
-import { CardProps } from "@/types/card.type";
+import Avatar from "../ui/Avatar";
+import { CardProps } from "@/types/card";
 import { getCurrentUser } from "@/app/services/authService";
 import {
   isFavorited,

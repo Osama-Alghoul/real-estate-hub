@@ -2,16 +2,16 @@
 import type React from "react";
 
 import { useState, useEffect } from "react";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
+import { Card } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Checkbox } from "@/components/ui/Checkbox";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/RadioGroup";
+import { Label } from "@/components/ui/Label";
 import { Calendar, Clock } from "lucide-react";
 import { createBooking, getBookedSlots } from "@/app/services/bookingService";
 import { createNotification } from "@/app/services/notificationService";
-import { Property } from "@/types/property.type";
-import { SuccessToast } from "@/components/ui/toast";
+import { Property } from "@/types/property";
+import { SuccessToast } from "@/components/ui/Toast";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/app/context/AuthContext";
 

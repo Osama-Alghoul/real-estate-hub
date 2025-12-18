@@ -1,4 +1,4 @@
-import SectionTitle from "../common/sectionTitle";
+import SectionTitle from "../common/SectionTitle";
 import AreaGallery from "./AreaGallery";
 
 export default function PropertiesAreaGallery() {

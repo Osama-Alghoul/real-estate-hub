@@ -7,7 +7,7 @@ import ListView from "@/components/properties/ListView";
 import Pagination from "@/components/properties/Pagination";
 import { useSearchParams } from "next/navigation";
 import { type PropertiesProps } from "@/types/properties";
-import { Property } from "@/types/property.type";
+import { Property } from "@/types/property";
 
 export default function PropertiesClient({
   properties,

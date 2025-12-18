@@ -1,4 +1,4 @@
-# BMS![](https://i.imgur.com/Logo Real-Estat.png): Real Estate Hub
+# <img src="public\Logo Real-Estat.png" style="height: 50px; width: 50px; margin-bottom: 20px;"> Real Estate Hub
 <br />
 
 ## **Live Website**  <img src="https://i.imgur.com/QsX6030.png" style="height: 50px; width: 50px; margin-bottom: 20px;">
@@ -141,11 +141,10 @@ Run the Next.js frontend:
 ### Test Accounts (Optional) :bust_in_silhouette: 
 
 You can use these mock credentials to test user Admin :arrow_down:
-``` 
-:email: Email: `admin` 
+:email: `Email: admin`
 
-:lock: Password: `admin@123`
-```
+:lock: `Password: admin@123`
+
 
 ### Environment Variables :lock:
 

@@ -12,7 +12,7 @@ import {
   ZoomOut,
   Check,
 } from "lucide-react";
-import { SuccessToast, ErrorToast } from "@/components/ui/toast";
+import { SuccessToast, ErrorToast } from "@/components/ui/Toast";
 import Cropper from "react-easy-crop";
 import getCroppedImg from "@/app/utils/cropImage";
 import {
@@ -21,9 +21,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogFooter,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Slider } from "@/components/ui/slider";
+} from "@/components/ui/Dialog";
+import { Button } from "@/components/ui/Button";
+import { Slider } from "@/components/ui/Slider";
 
 export default function ProfileAvatarCard() {
   const { user, updateUser: updateAuthUser } = useAuth();

@@ -14,7 +14,7 @@ import {
   Clock,
   MessageSquare,
 } from "lucide-react";
-import { SuccessToast } from "@/components/ui/toast";
+import { SuccessToast } from "@/components/ui/Toast";
 
 interface Contact {
   id: string;

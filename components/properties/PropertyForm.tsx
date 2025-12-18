@@ -5,14 +5,12 @@ import { fetchUsers } from "@/app/services/userService";
 import { User } from "@/types/auth";
 
 import { useState, useEffect } from "react";
-import { Plus, X } from "lucide-react";
-import { Property } from "@/types/property.type";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { X } from "lucide-react";
+import { Property } from "@/types/property";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
+import { Label } from "@/components/ui/Label";
 
-// If UI components don't exist, I'll fallback to standard HTML elements or create them.
-// Checking components/ui first would be ideal, but I'll assume standard shadcn/ui structure for now and fix if needed.
 
 interface PropertyFormProps {
   initialData?: Partial<Property>;
@@ -75,7 +73,7 @@ export default function PropertyForm({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Basic validation
+
     if (
       !formData.title ||
       !formData.price ||

@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import PropertySummary from "./property-summary";
-import BookingForm from "./booking-form";
-import { Property } from "@/types/property.type";
+import PropertySummary from "./PropertySummary";
+import BookingForm from "./BookingForm";
+import { Property } from "@/types/property";
 
 interface BookingContentProps {
   property: Property;

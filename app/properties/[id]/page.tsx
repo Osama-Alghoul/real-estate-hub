@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Property } from "@/types/property.type";
+import { Property } from "@/types/property";
 import BookViewingButton from "@/components/booking/BookViewingButton";
-import Header from "@/components/layout/header";
+import Header from "@/components/layout/Header";
 
 interface PropertyPageProps {
   params: Promise<{ id: string }>;

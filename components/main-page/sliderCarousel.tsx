@@ -4,8 +4,8 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import Slide from "./slide";
+} from "@/components/ui/Carousel";
+import Slide from "./Slide";
 
 export function CarouselSize() {
   return (

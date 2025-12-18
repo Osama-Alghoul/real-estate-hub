@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import SectionTitle from "../common/sectionTitle";
-import { Button } from "../ui/button";
-import CardsGrid from "./cardsGrid";
+import SectionTitle from "../common/SectionTitle";
+import { Button } from "../ui/Button";
+import CardsGrid from "./CardsGrid";
 
 export default function Cards() {
   return (

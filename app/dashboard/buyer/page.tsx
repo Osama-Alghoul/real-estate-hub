@@ -7,9 +7,9 @@ import { fetchProperties } from "@/app/services/propertyService";
 import { getBookingsByUserId } from "@/app/services/bookingService";
 import { getFavorites } from "@/app/services/favoriteService";
 import Card from "@/components/common/Card";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Heart, CalendarClock, Search } from "lucide-react";
-import { Property } from "@/types/property.type";
+import { Property } from "@/types/property";
 import { Booking } from "@/app/services/bookingService";
 
 export default function BuyerLandingPage() {

@@ -7,15 +7,15 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
+} from "@/components/ui/Dialog";
+import { Button } from "@/components/ui/Button";
 import { Plus } from "lucide-react";
 import PropertyForm from "./PropertyForm";
 import { createProperty } from "@/app/services/propertyService";
 import { createNotification } from "@/app/services/notificationService";
-import { Property } from "@/types/property.type";
+import { Property } from "@/types/property";
 import { useRouter } from "next/navigation";
-import { SuccessToast } from "@/components/ui/toast";
+import { SuccessToast } from "@/components/ui/Toast";
 
 interface AddPropertyModalProps {
   onSuccess?: () => void;

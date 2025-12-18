@@ -1,4 +1,4 @@
-import { Property } from "@/types/property.type";
+import { Property } from "@/types/property";
 
 const API_BASE = process.env.JSON_SERVER_URL || "http://localhost:3001";
 

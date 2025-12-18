@@ -1,21 +1,21 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Property } from "@/types/property.type";
+import { Property } from "@/types/property";
 import { fetchProperties } from "@/app/services/propertyService";
 import DataTable, { Column } from "@/components/common/DataTable";
 import AddPropertyModal from "@/components/properties/AddPropertyModal";
 import EditPropertyModal from "@/components/properties/EditPropertyModal";
 import DeletePropertyModal from "@/components/properties/DeletePropertyModal";
-import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/Input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Button } from "@/components/ui/button";
+} from "@/components/ui/Select";
+import { Button } from "@/components/ui/Button";
 import { Edit, Trash2, Eye } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Pagination from "@/components/properties/Pagination";

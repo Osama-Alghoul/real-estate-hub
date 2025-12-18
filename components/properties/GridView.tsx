@@ -1,4 +1,4 @@
-import { type Property } from "@/types/property.type";
+import { type Property } from "@/types/property";
 import Card from "../common/Card";
 
 interface GridViewProps {

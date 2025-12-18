@@ -4,11 +4,11 @@ import { useEffect, useMemo, useState } from "react";
 import { getCurrentUser } from "@/app/services/authService";
 import { getFavorites, removeFavorite } from "@/app/services/favoriteService";
 import DataTable, { Column } from "@/components/common/DataTable";
-import { Favorite } from "@/types/favorite.type";
+import { Favorite } from "@/types/favorite";
 import Image from "next/image";
 import toast from "react-hot-toast";
 import { Trash2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import Pagination from "@/components/properties/Pagination";
 
 export default function BuyerFavoritesClient() {

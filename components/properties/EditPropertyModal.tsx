@@ -6,12 +6,12 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
+} from "@/components/ui/Dialog";
 import PropertyForm from "./PropertyForm";
 import { updateProperty } from "@/app/services/propertyService";
-import { Property } from "@/types/property.type";
+import { Property } from "@/types/property";
 import { useRouter } from "next/navigation";
-import { SuccessToast } from "@/components/ui/toast";
+import { SuccessToast } from "@/components/ui/Toast";
 
 interface EditPropertyModalProps {
   property: Property | null;

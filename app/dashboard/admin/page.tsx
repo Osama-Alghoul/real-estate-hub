@@ -15,7 +15,7 @@ import RecentBookings, {
 } from "../../../components/dashboard/RecentBookings";
 import { Users, Home, Key, Clock } from "lucide-react";
 import { User } from "../../../types/auth";
-import { Property } from "../../../types/property.type";
+import { Property } from "../../../types/property";
 import { useAuth } from "@/app/context/AuthContext";
 
 export default function AdminLandingPage() {
