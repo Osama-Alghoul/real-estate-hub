@@ -20,12 +20,6 @@ export default function RegisterForm() {
     setError("");
 
     try {
-      if (form.role === "admin") {
-        setError("Cannot register as admin");
-        setLoading(false);
-        return;
-      }
-
       const res = await register(form);
       setLoading(false);
       if (res.error) return setError(res.error);

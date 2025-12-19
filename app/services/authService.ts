@@ -29,9 +29,6 @@ function createFakeToken(payload: {
 export async function register(
   form: RegisterFormData
 ): Promise<{ user?: User; error?: string }> {
-  if (form.role === "admin") {
-    return { error: "Cannot register as admin" };
-  }
 
   if (!form.name || !form.email || !form.password)
     return { error: "All fields are required" };
@@ -179,7 +176,7 @@ export function isAuthenticated(): boolean {
 export async function updateUser(id: string, data: Partial<User>): Promise<{ user?: User; error?: string }> {
   try {
     // If password is provided, hash it
-    let updateData = { ...data };
+    const updateData = { ...data };
     if (updateData.password) {
       updateData.password = await bcrypt.hash(updateData.password, 10);
     }
