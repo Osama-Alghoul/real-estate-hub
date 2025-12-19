@@ -1,4 +1,4 @@
-# BMS![](https://i.imgur.com/Logo Real-Estat.png): Real Estate Hub
+# Real Estate Hub
 <br />
 
 ## **Live Website**  <img src="https://i.imgur.com/QsX6030.png" style="height: 50px; width: 50px; margin-bottom: 20px;">
