@@ -35,6 +35,5 @@ export async function deleteImage(url: string): Promise<void> {
     }
   } catch (error) {
     console.error('Error deleting file:', error);
-    // We don't throw here to avoid blocking the user flow if delete fails (e.g. file already gone)
   }
 }

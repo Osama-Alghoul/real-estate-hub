@@ -8,7 +8,7 @@ import {
     updateBookingStatus,
 } from "@/app/services/bookingService";
 import { fetchProperties } from "@/app/services/propertyService";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import {
     Calendar,
     Clock,
@@ -19,7 +19,7 @@ import {
     ArrowLeft,
 } from "lucide-react";
 import Link from "next/link";
-import { SuccessToast, ErrorToast } from "@/components/ui/toast";
+import { SuccessToast, ErrorToast } from "@/components/ui/Toast";
 
 export default function RequestDetailsPage() {
     const { id } = useParams();

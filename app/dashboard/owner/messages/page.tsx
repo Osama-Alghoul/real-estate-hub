@@ -9,9 +9,9 @@ import {
 } from "../../../services/bookingService";
 import { createNotification } from "../../../services/notificationService";
 import { fetchProperties } from "../../../services/propertyService";
-import { Property } from "@/types/property.type";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Property } from "@/types/property";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
 import {
   Loader2,
   Calendar,

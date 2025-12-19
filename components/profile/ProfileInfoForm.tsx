@@ -6,15 +6,15 @@ import { toast } from "react-hot-toast";
 import { updateUser } from "@/app/services/userService";
 import { useAuth } from "@/app/context/AuthContext";
 import { z } from "zod";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/Input";
+import { Button } from "@/components/ui/Button";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
   CardDescription,
-} from "@/components/ui/card";
+} from "@/components/ui/Card";
 import { User, Mail, Save, Loader2 } from "lucide-react";
 
 const profileSchema = z.object({

@@ -1,10 +1,10 @@
 "use client";
 
-import { Bath, CarFront, Fullscreen, Heart, Plus, Share2 } from "lucide-react";
+import { Bath, CarFront, Fullscreen, Heart, } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import Avatar from "../ui/avatar";
-import { CardProps } from "@/types/card.type";
+import Avatar from "../ui/Avatar";
+import { CardProps } from "@/types/card";
 import { getCurrentUser } from "@/app/services/authService";
 import {
   isFavorited,
@@ -174,19 +174,9 @@ export default function Card({
           >
             <Avatar src={avatar} name={name} />
             <div className="flex gap-2">
-              <div 
-                onClick={handleShare}
-                className="cursor-pointer bg-primary-extra-light text-primary-light p-1 rounded-sm hover:bg-primary-light hover:text-white transition-colors"
-                title="Share"
-              >
-                <Share2 size={16} />
-              </div>
               <div onClick={toggleFavorite} className={`cursor-pointer bg-primary-extra-light p-1 rounded-sm ${
                 favorite ? "text-red-500" : "text-primary-light"}`}>
                 <Heart size={16} fill={favorite ? "currentColor" : "none"} />
-              </div>
-              <div className="cursor-pointer bg-primary-extra-light text-primary-light p-1 rounded-sm">
-                <Plus size={16} />
               </div>
             </div>
           </div>

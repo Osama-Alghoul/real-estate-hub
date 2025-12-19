@@ -6,8 +6,8 @@ import { updateUser } from "@/app/services/userService";
 import { uploadImage } from "@/app/services/uploadService";
 import { User } from "@/types/auth";
 import toast from "react-hot-toast";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/Input";
+import { Button } from "@/components/ui/Button";
 
 export default function ProfileClient() {
   const [user, setUser] = useState<User | null>(null);
@@ -45,7 +45,6 @@ export default function ProfileClient() {
     try {
       let avatarUrl = avatarPreview;
 
-      // upload new image if selected
       if (avatar) {
         avatarUrl = await uploadImage(avatar);
       }

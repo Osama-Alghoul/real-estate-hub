@@ -8,12 +8,12 @@ import {
   DialogTitle,
   DialogDescription,
   DialogFooter,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
+} from "@/components/ui/Dialog";
+import { Button } from "@/components/ui/Button";
 import { deleteProperty } from "@/app/services/propertyService";
-import { Property } from "@/types/property.type";
+import { Property } from "@/types/property";
 import { useRouter } from "next/navigation";
-import { SuccessToast } from "@/components/ui/toast";
+import { SuccessToast } from "@/components/ui/Toast";
 
 interface DeletePropertyModalProps {
   property: Property | null;

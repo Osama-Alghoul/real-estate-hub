@@ -1,13 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import type { LoginFormData } from '../../types/auth';
 import { useAuth } from '../../app/context/AuthContext';
 
 export default function LoginForm() {
   const { login } = useAuth();
-  const router = useRouter();
   const [form, setForm] = useState<LoginFormData>({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");

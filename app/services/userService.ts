@@ -1,5 +1,5 @@
 import { User } from "@/types/auth";
-import { Property } from "@/types/property.type";
+import { Property } from "@/types/property";
 import bcrypt from "bcryptjs";
 
 const API_BASE = process.env.JSON_SERVER_URL || "http://localhost:3001";
@@ -25,7 +25,6 @@ export async function fetchUsers(params?: {
 
   let data: User[] = await res.json();
 
-  // client-side filtering
   if (params?.q) {
     const q = params.q.toLowerCase();
     data = data.filter((u) => u.name.toLowerCase().includes(q));

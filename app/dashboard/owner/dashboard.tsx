@@ -4,8 +4,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
+} from "@/components/ui/Card";
+import { Progress } from "@/components/ui/Progress";
 import { Building2, Eye, MessageSquare, TrendingUp } from "lucide-react";
 import { Home, Building, Warehouse, Store } from "lucide-react";
 import { useEffect, useState } from "react";

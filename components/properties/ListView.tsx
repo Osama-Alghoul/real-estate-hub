@@ -1,5 +1,5 @@
 import Card from "../common/Card";
-import { type CardProps } from "@/types/card.type";
+import { type CardProps } from "@/types/card";
 
 interface ListViewProps {
   data: CardProps[];

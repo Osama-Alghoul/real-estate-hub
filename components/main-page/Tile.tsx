@@ -1,4 +1,4 @@
-import { Button } from "../ui/button";
+import { Button } from "../ui/Button";
 import { MapPin } from "lucide-react";
 
 export default function TileContent({

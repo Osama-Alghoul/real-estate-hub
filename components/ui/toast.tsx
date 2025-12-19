@@ -12,13 +12,11 @@ export function SuccessToast({ message, onClose }: ToastProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Trigger animation after mount
     const animationTimer = setTimeout(() => setIsVisible(true), 10);
 
-    // Auto close after 5 seconds
     const closeTimer = setTimeout(() => {
       setIsVisible(false);
-      setTimeout(onClose, 300); // Wait for animation to complete
+      setTimeout(onClose, 300); 
     }, 5000);
 
     return () => {

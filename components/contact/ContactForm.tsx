@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { submitContact } from "@/app/services/contactService";
 import { createNotification } from "@/app/services/notificationService";
-import { SuccessToast } from "@/components/ui/toast";
+import { SuccessToast } from "@/components/ui/Toast";
 
 type ContactFormState = {
   name: string;

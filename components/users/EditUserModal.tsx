@@ -6,12 +6,12 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
+} from "@/components/ui/Dialog";
 import UserForm from "./UserForm";
 import { updateUser } from "@/app/services/userService";
 import { User } from "@/types/auth";
 import { useRouter } from "next/navigation";
-import { SuccessToast } from "@/components/ui/toast";
+import { SuccessToast } from "@/components/ui/Toast";
 
 interface EditUserModalProps {
   user: User | null;

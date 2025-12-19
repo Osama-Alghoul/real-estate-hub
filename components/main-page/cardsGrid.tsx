@@ -2,7 +2,7 @@
 
 import GridView from "../properties/GridView";
 import { useEffect, useState } from "react";
-import { Property } from "@/types/property.type";
+import { Property } from "@/types/property";
 
 export default function CardsGrid() {
     const [data, setData] = useState<Property[]>([]);

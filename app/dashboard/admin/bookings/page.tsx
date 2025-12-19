@@ -9,9 +9,9 @@ import {
 } from "@/app/services/bookingService";
 import { createNotification } from "@/app/services/notificationService";
 import DataTable, { Column } from "@/components/common/DataTable";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { CheckCircle, XCircle, Trash2, Calendar } from "lucide-react";
-import { SuccessToast, ErrorToast } from "@/components/ui/toast";
+import { SuccessToast, ErrorToast } from "@/components/ui/Toast";
 import Pagination from "@/components/properties/Pagination";
 
 export default function BookingsPage() {

@@ -11,9 +11,6 @@ export interface Notification {
   link?: string; // Optional link to navigate to
 }
 
-/**
- * Create a new notification
- */
 export async function createNotification(
   notification: Omit<Notification, "id" | "createdAt" | "read">
 ): Promise<Notification | null> {
@@ -40,9 +37,6 @@ export async function createNotification(
   }
 }
 
-/**
- * Get notifications for a user (or all broadcast notifications)
- */
 export async function getNotifications(userId?: string): Promise<Notification[]> {
   try {
     const res = await fetch(
@@ -65,9 +59,6 @@ export async function getNotifications(userId?: string): Promise<Notification[]>
   }
 }
 
-/**
- * Mark a notification as read
- */
 export async function markAsRead(notificationId: string): Promise<boolean> {
   try {
     const res = await fetch(`${API_BASE}/notifications/${notificationId}`, {
@@ -83,9 +74,6 @@ export async function markAsRead(notificationId: string): Promise<boolean> {
   }
 }
 
-/**
- * Mark all notifications as read for a user
- */
 export async function markAllAsRead(userId?: string): Promise<boolean> {
   try {
     const notifications = await getNotifications(userId);
@@ -108,11 +96,6 @@ export async function markAllAsRead(userId?: string): Promise<boolean> {
   }
 }
 
-// ============== Notification Helpers ==============
-
-/**
- * Notify when a new booking is created
- */
 export async function notifyNewBooking(
   propertyTitle: string,
   ownerId: string,
@@ -127,9 +110,7 @@ export async function notifyNewBooking(
   });
 }
 
-/**
- * Notify when booking status changes
- */
+
 export async function notifyBookingStatus(
   status: "approved" | "rejected",
   propertyTitle: string,
@@ -147,9 +128,7 @@ export async function notifyBookingStatus(
   });
 }
 
-/**
- * Notify when a new property is created
- */
+
 export async function notifyNewProperty(propertyTitle: string, ownerName: string) {
   return createNotification({
     userId: "all",
@@ -160,12 +139,9 @@ export async function notifyNewProperty(propertyTitle: string, ownerName: string
   });
 }
 
-/**
- * Notify when a new contact message is received
- */
 export async function notifyNewContact(senderName: string, subject: string) {
   return createNotification({
-    userId: "all", // For admins
+    userId: "all", // For admin
     type: "contact",
     title: "New Contact Message",
     message: `${senderName}: ${subject}`,
@@ -173,12 +149,9 @@ export async function notifyNewContact(senderName: string, subject: string) {
   });
 }
 
-/**
- * Notify when a new user registers
- */
 export async function notifyNewUser(userName: string, role: string) {
   return createNotification({
-    userId: "all", // For admins
+    userId: "all", // For admin
     type: "user",
     title: "New User Registered",
     message: `${userName} joined as ${role}`,

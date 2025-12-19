@@ -2,9 +2,9 @@
 
 import { Facebook, MailOpen, Phone, Linkedin, Instagram } from "lucide-react";
 import Link from "next/link";
-import Logo from "../ui/logo";
-import { MobileNav } from "./mobileNav";
-import DesktopNav from "./desktopNav";
+import Logo from "../ui/Logo";
+import { MobileNav } from "./MobileNav";
+import DesktopNav from "./DesktopNav";
 import { usePathname } from "next/navigation";
 
 export default function Header() {

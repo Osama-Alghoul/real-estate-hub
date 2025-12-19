@@ -14,9 +14,6 @@ export interface Contact extends ContactFormData {
   status: 'new' | 'read' | 'responded';
 }
 
-/**
- * Submit a contact form
- */
 export async function submitContact(data: ContactFormData): Promise<{ contact?: Contact; error?: string }> {
   // Validate required fields
   if (!data.name || !data.email || !data.subject || !data.message) {
@@ -56,9 +53,6 @@ export async function submitContact(data: ContactFormData): Promise<{ contact?: 
   }
 }
 
-/**
- * Get all contacts
- */
 export async function getContacts(): Promise<{ contacts?: Contact[]; error?: string }> {
   try {
     const response = await fetch(`${API_BASE}/contacts`);
@@ -75,9 +69,6 @@ export async function getContacts(): Promise<{ contacts?: Contact[]; error?: str
   }
 }
 
-/**
- * Get a single contact by ID
- */
 export async function getContactById(id: string): Promise<{ contact?: Contact; error?: string }> {
   try {
     const response = await fetch(`${API_BASE}/contacts/${id}`);
@@ -94,9 +85,6 @@ export async function getContactById(id: string): Promise<{ contact?: Contact; e
   }
 }
 
-/**
- * Update contact status
- */
 export async function updateContactStatus(
   id: string,
   status: 'new' | 'read' | 'responded'
@@ -122,9 +110,6 @@ export async function updateContactStatus(
   }
 }
 
-/**
- * Delete a contact
- */
 export async function deleteContact(id: string): Promise<{ success?: boolean; error?: string }> {
   try {
     const response = await fetch(`${API_BASE}/contacts/${id}`, {

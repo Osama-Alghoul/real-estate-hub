@@ -8,15 +8,15 @@ import {
   fetchProperties,
   deleteProperty,
 } from "../../../services/propertyService";
-import { Property } from "@/types/property.type";
-import { Button } from "@/components/ui/button";
+import { Property } from "@/types/property";
+import { Button } from "@/components/ui/Button";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
   CardDescription,
-} from "@/components/ui/card";
+} from "@/components/ui/Card";
 import {
   Plus,
   Trash2,

@@ -5,7 +5,7 @@ import axios from "axios";
 import Link from "next/link";
 import { Eye, Trash2, Mail, Calendar, MessageSquare } from "lucide-react";
 import Pagination from "@/components/properties/Pagination";
-import { SuccessToast } from "@/components/ui/toast";
+import { SuccessToast } from "@/components/ui/Toast";
 
 interface Contact {
   id: string;

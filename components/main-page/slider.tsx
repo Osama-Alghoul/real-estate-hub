@@ -1,5 +1,5 @@
-import SectionTitle from "../common/sectionTitle";
-import { CarouselSize } from "./sliderCarousel";
+import SectionTitle from "../common/SectionTitle";
+import { CarouselSize } from "./SliderCarousel";
 
 export default function Slider() {
   return (
