@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/Button";
 import { deleteProperty } from "@/app/services/propertyService";
 import { Property } from "@/types/property";
 import { useRouter } from "next/navigation";
-import { SuccessToast } from "@/components/ui/Toast";
+import { SuccessToast, ErrorToast } from "@/components/ui/Toast";
 
 interface DeletePropertyModalProps {
   property: Property | null;
@@ -30,6 +30,7 @@ export default function DeletePropertyModal({
 }: DeletePropertyModalProps) {
   const [loading, setLoading] = useState(false);
   const [showToast, setShowToast] = useState(false);
+  const [showErrorToast, setShowErrorToast] = useState(false);
   const router = useRouter();
 
   const handleDelete = async () => {
@@ -43,7 +44,7 @@ export default function DeletePropertyModal({
       if (onSuccess) onSuccess();
     } catch (error) {
       console.error("Failed to delete property:", error);
-      alert("Failed to delete property");
+      setShowErrorToast(true);
     } finally {
       setLoading(false);
     }
@@ -52,7 +53,7 @@ export default function DeletePropertyModal({
   return (
     <>
       <Dialog open={open} onOpenChange={onOpenChange}>
-        <DialogContent>
+        <DialogContent onInteractOutside={(e) => e.preventDefault()}>
           <DialogHeader>
             <DialogTitle>Delete Property</DialogTitle>
             <DialogDescription>
@@ -83,6 +84,13 @@ export default function DeletePropertyModal({
         <SuccessToast
           message="Property deleted successfully!"
           onClose={() => setShowToast(false)}
+        />
+      )}
+
+      {showErrorToast && (
+        <ErrorToast
+          message="Failed to delete property"
+          onClose={() => setShowErrorToast(false)}
         />
       )}
     </>
