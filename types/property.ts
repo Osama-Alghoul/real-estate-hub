@@ -19,4 +19,6 @@ export type Property = {
   location?: string;
   bedrooms?: number;
   ownerId?: string;
+  latitude?: number;
+  longitude?: number;
 };

@@ -62,6 +62,8 @@ export default function NewPropertyPage() {
     garag: "",
     size: "",
     yearBuilt: "",
+    latitude: "",
+    longitude: "",
   });
 
   const [amenities, setAmenities] = useState<string[]>([]);
@@ -141,6 +143,8 @@ export default function NewPropertyPage() {
         garag: Number(formData.garag) || 0,
         size: Number(formData.size) || 0,
         yearBuilt: Number(formData.yearBuilt) || new Date().getFullYear(),
+        latitude: formData.latitude ? Number(formData.latitude) : undefined,
+        longitude: formData.longitude ? Number(formData.longitude) : undefined,
         amenities: amenities,
         images: images,
         img: images[0] || "/placeholder.png", // Main image
@@ -281,6 +285,43 @@ export default function NewPropertyPage() {
                   onChange={handleInputChange}
                   required
                 />
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid gap-2">
+                  <Label htmlFor="latitude">Latitude (Coordinates)</Label>
+                  <Input
+                    id="latitude"
+                    name="latitude"
+                    type="number"
+                    step="any"
+                    placeholder="e.g., 28.5383"
+                    value={formData.latitude}
+                    onChange={handleInputChange}
+                    min="-90"
+                    max="90"
+                  />
+                  <p className="text-xs text-muted-foreground">
+                    Enter latitude (-90 to 90)
+                  </p>
+                </div>
+                <div className="grid gap-2">
+                  <Label htmlFor="longitude">Longitude (Coordinates)</Label>
+                  <Input
+                    id="longitude"
+                    name="longitude"
+                    type="number"
+                    step="any"
+                    placeholder="e.g., -81.3792"
+                    value={formData.longitude}
+                    onChange={handleInputChange}
+                    min="-180"
+                    max="180"
+                  />
+                  <p className="text-xs text-muted-foreground">
+                    Enter longitude (-180 to 180)
+                  </p>
+                </div>
               </div>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
