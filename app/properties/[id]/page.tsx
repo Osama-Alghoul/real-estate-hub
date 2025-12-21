@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Property } from "@/types/property";
 import BookViewingButton from "@/components/booking/BookViewingButton";
 import Header from "@/components/layout/Header";
@@ -129,6 +130,27 @@ const EmailIcon = () => (
     />
   </svg>
 );
+const LocationIcon = () => (
+  <svg
+    className="w-5 h-5"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+    />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+    />
+  </svg>
+);
 
 export default async function PropertyDetails({ params }: PropertyPageProps) {
   const { id } = await params;
@@ -246,12 +268,15 @@ export default async function PropertyDetails({ params }: PropertyPageProps) {
                   </div>
                 </div>
                 <div className="space-y-3 mb-6">
-                  <button className="w-full bg-white/10 hover:bg-white/20 px-4 py-3 rounded-xl flex items-center justify-center gap-2 border border-white/20">
+                  {/* <button className="w-full bg-white/10 hover:bg-white/20 px-4 py-3 rounded-xl flex items-center justify-center gap-2 border border-white/20">
                     <PhoneIcon /> Call Agent
-                  </button>
-                  <button className="w-full bg-white/10 hover:bg-white/20 px-4 py-3 rounded-xl flex items-center justify-center gap-2 border border-white/20">
+                  </button> */}
+                  <Link
+                    href="/contact"
+                    className="w-full bg-white/10 hover:bg-white/20 px-4 py-3 rounded-xl flex items-center justify-center gap-2 border border-white/20 transition-all"
+                  >
                     <EmailIcon /> Send Email
-                  </button>
+                  </Link>
                 </div>
                 <BookViewingButton propertyId={propertyData.id} />
               </div>
@@ -270,6 +295,24 @@ export default async function PropertyDetails({ params }: PropertyPageProps) {
                       {propertyData.type}
                     </span>
                   </div>
+                  {propertyData.latitude && propertyData.longitude && (
+                    <>
+                      <div className="border-t border-gray-200 my-3"></div>
+                      <a
+                        href={`https://www.google.com/maps?q=${propertyData.latitude},${propertyData.longitude}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl font-semibold"
+                      >
+                        <LocationIcon />
+                        View on Google Maps
+                      </a>
+                      {/* <p className="text-xs text-gray-500 text-center">
+                        {propertyData.latitude.toFixed(4)}°,{" "}
+                        {propertyData.longitude.toFixed(4)}°
+                      </p> */}
+                    </>
+                  )}
                 </div>
               </div>
             </div>

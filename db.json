@@ -265,7 +265,37 @@
       "ownerId": "4fe8",
       "avatar": "",
       "name": "anan",
-      "createdAt": "2025-12-18T10:48:44.918Z"
+      "createdAt": "2025-12-18T10:48:44.918Z",
+      "latitude": 34.3365529,
+      "longitude": 31.420694
+    },
+    {
+      "id": "62ea",
+      "title": "لbla bla",
+      "description": "asdhvghh",
+      "price": 69,
+      "location": "asdasd",
+      "type": "sale",
+      "status": "available",
+      "bedrooms": 1,
+      "bath": 1,
+      "size": 1,
+      "garag": 1,
+      "img": "/uploads/1766318098925.png",
+      "images": [
+        "/uploads/1766318101802.png"
+      ],
+      "amenities": [
+        "Swimming Pool",
+        "Smart Home"
+      ],
+      "ownerId": "4fe8",
+      "name": "anan",
+      "avatar": "/people/A1.png",
+      "latitude": 31.420694,
+      "longitude": 34.3365529,
+      "yearBuilt": 2019,
+      "createdAt": "2025-12-21T11:55:14.440Z"
     }
   ],
   "about": {
@@ -959,6 +989,16 @@
       "link": "/dashboard/admin/contacts",
       "read": false,
       "createdAt": "2025-12-18T22:27:58.241Z"
+    },
+    {
+      "id": "9bc9",
+      "userId": "all",
+      "type": "property",
+      "title": "New Property Added",
+      "message": "Property \"لbla bla\" has been listed",
+      "link": "/dashboard/admin/properties",
+      "read": false,
+      "createdAt": "2025-12-21T11:55:14.537Z"
     }
   ]
 }

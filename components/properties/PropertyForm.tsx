@@ -11,7 +11,6 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Label } from "@/components/ui/Label";
 
-
 interface PropertyFormProps {
   initialData?: Partial<Property>;
   onSubmit: (data: Omit<Property, "id">) => void;
@@ -42,6 +41,8 @@ export default function PropertyForm({
     ownerId: initialData?.ownerId || "",
     name: initialData?.name || "",
     avatar: initialData?.avatar || "",
+    latitude: initialData?.latitude || undefined,
+    longitude: initialData?.longitude || undefined,
     ...initialData,
   });
 
@@ -179,6 +180,44 @@ export default function PropertyForm({
             onChange={handleChange}
             className="w-full border rounded p-2"
           />
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="latitude">Latitude (Coordinates)</Label>
+          <input
+            id="latitude"
+            name="latitude"
+            type="number"
+            step="any"
+            value={formData.latitude || ""}
+            onChange={handleChange}
+            placeholder="e.g., 28.5383"
+            className="w-full border rounded p-2"
+            min="-90"
+            max="90"
+          />
+          <p className="text-xs text-gray-500">
+            Enter latitude coordinate (between -90 and 90)
+          </p>
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="longitude">Longitude (Coordinates)</Label>
+          <input
+            id="longitude"
+            name="longitude"
+            type="number"
+            step="any"
+            value={formData.longitude || ""}
+            onChange={handleChange}
+            placeholder="e.g., -81.3792"
+            className="w-full border rounded p-2"
+            min="-180"
+            max="180"
+          />
+          <p className="text-xs text-gray-500">
+            Enter longitude coordinate (between -180 and 180)
+          </p>
         </div>
 
         <div className="space-y-2">

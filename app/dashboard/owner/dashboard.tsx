@@ -34,7 +34,29 @@ interface DashboardStats {
 
 export default function DashboardPage({ name }: { name: string }) {
   const { user } = useAuth();
-  const [stats, setStats] = useState<DashboardStats | null>(null);
+  const [stats, setStats] = useState<DashboardStats | null>(
+    {
+      totalProperties: 0,
+      propertiesByType: {
+        residential: 0,
+        commercial: 0,
+        industrial: 0,
+        retail: 0,
+      },
+      engagement: {
+        views: 0,
+        favorites: 0,
+        shares: 0,
+      },
+      messages: {
+        total: 0,
+        unread: 0,
+        requests: 0,
+      },
+      pageHealth: 0,
+    }
+
+  );
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

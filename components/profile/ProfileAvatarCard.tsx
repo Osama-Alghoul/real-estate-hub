@@ -23,7 +23,7 @@ import {
   DialogFooter,
 } from "@/components/ui/Dialog";
 import { Button } from "@/components/ui/Button";
-import { Slider } from "@/components/ui/Slider";
+import { Slider } from "@/components/ui/UiSlider";
 
 export default function ProfileAvatarCard() {
   const { user, updateUser: updateAuthUser } = useAuth();
