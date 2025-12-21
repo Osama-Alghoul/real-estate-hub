@@ -14,8 +14,8 @@
       "bath": 4,
       "size": 2096,
       "yearBuilt": 2015,
-      "avatar": "/uploads/1765540022694.png",
-      "name": "fadi",
+      "avatar": "",
+      "name": "mona",
       "type": "sale",
       "description": "Beautiful family home located in a quiet neighborhood...",
       "amenities": [
@@ -30,7 +30,7 @@
       "location": "",
       "status": "available",
       "bedrooms": 0,
-      "ownerId": "cb87"
+      "ownerId": "97c1"
     },
     {
       "id": "2",
@@ -224,7 +224,7 @@
       "description": "sdasad",
       "price": 16,
       "location": "asdasd",
-      "type": "sale",
+      "type": "rent",
       "status": "available",
       "bedrooms": 2,
       "bath": 1,
@@ -245,27 +245,30 @@
       "createdAt": "2025-12-17T07:22:08.596Z"
     },
     {
-      "id": "3751",
-      "title": "Nesciunt odio dolor",
-      "description": "Do dolor ad laboris ",
-      "price": 538,
+      "id": "5f37",
+      "title": "Velit ea mollit sed ",
+      "description": "Quia assumenda nostr",
+      "price": 196,
+      "location": "Qui voluptatem autem",
       "type": "sale",
-      "status": "sold",
-      "location": "Mollitia beatae dolo",
-      "bedrooms": 26,
-      "bath": 49,
-      "garag": 6,
-      "size": 23,
-      "yearBuilt": 2000,
-      "amenities": [],
-      "images": [
-        "/uploads/1766054922504.png"
+      "status": "available",
+      "bedrooms": 90,
+      "bath": 25,
+      "size": 8,
+      "garag": 74,
+      "img": "",
+      "images": [],
+      "amenities": [
+        "Central Heating",
+        "Security System"
       ],
-      "img": "/uploads/1766054922504.png",
-      "ownerId": "4fe8",
-      "avatar": "",
-      "name": "anan",
-      "createdAt": "2025-12-18T10:48:44.918Z"
+      "ownerId": "cb6c",
+      "name": "Fadi hajien",
+      "avatar": "/people/A1.png",
+      "latitude": 13,
+      "longitude": 121,
+      "yearBuilt": 2018,
+      "createdAt": "2025-12-21T12:29:33.445Z"
     }
   ],
   "about": {
@@ -403,8 +406,7 @@
       "email": "admin@gmail.com",
       "password": "$2b$10$2yAG2JaJFWlkKti.wuY4fecAn0J9mudFpPNDWRzSY6VkiHHNNhgZS",
       "role": "admin",
-      "status": "active",
-      "avatar": "/uploads/1765578286362.png"
+      "status": "active"
     },
     {
       "id": "77a1",
@@ -959,6 +961,26 @@
       "link": "/dashboard/admin/contacts",
       "read": false,
       "createdAt": "2025-12-18T22:27:58.241Z"
+    },
+    {
+      "id": "9bc9",
+      "userId": "all",
+      "type": "property",
+      "title": "New Property Added",
+      "message": "Property \"لbla bla\" has been listed",
+      "link": "/dashboard/admin/properties",
+      "read": false,
+      "createdAt": "2025-12-21T11:55:14.537Z"
+    },
+    {
+      "id": "94b5",
+      "userId": "all",
+      "type": "property",
+      "title": "New Property Added",
+      "message": "Property \"Velit ea mollit sed \" has been listed",
+      "link": "/dashboard/admin/properties",
+      "read": false,
+      "createdAt": "2025-12-21T12:29:33.460Z"
     }
   ]
 }

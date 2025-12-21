@@ -18,6 +18,7 @@ import {
 import { Button } from "@/components/ui/Button";
 import { Edit, Trash2, Eye } from "lucide-react";
 import Pagination from "@/components/properties/Pagination";
+import { ErrorToast } from "@/components/ui/Toast";
 
 export default function AdminPropertiesPage() {
   const [properties, setProperties] = useState<Property[]>([]);
@@ -33,6 +34,7 @@ export default function AdminPropertiesPage() {
   const [deletingProperty, setDeletingProperty] = useState<Property | null>(
     null
   );
+  const [showError, setShowError] = useState(false);
 
   const loadProperties = async () => {
     setLoading(true);
@@ -48,6 +50,7 @@ export default function AdminPropertiesPage() {
       setTotal(total);
     } catch (error) {
       console.error("Failed to load properties:", error);
+      setShowError(true);
     } finally {
       setLoading(false);
     }
@@ -137,14 +140,6 @@ export default function AdminPropertiesPage() {
     },
   ];
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-full">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
-      </div>
-    );
-  }
-
   return (
     <div className="p-6 space-y-6">
       <div className="flex justify-between items-center">
@@ -208,6 +203,13 @@ export default function AdminPropertiesPage() {
         onOpenChange={(open) => !open && setDeletingProperty(null)}
         onSuccess={loadProperties}
       />
+
+      {showError && (
+        <ErrorToast
+          message="Failed to load properties. Please try again."
+          onClose={() => setShowError(false)}
+        />
+      )}
     </div>
   );
 }
