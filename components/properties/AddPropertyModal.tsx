@@ -15,7 +15,7 @@ import { createProperty } from "@/app/services/propertyService";
 import { createNotification } from "@/app/services/notificationService";
 import { Property } from "@/types/property";
 import { useRouter } from "next/navigation";
-import { SuccessToast } from "@/components/ui/Toast";
+import { SuccessToast, ErrorToast } from "@/components/ui/Toast";
 
 interface AddPropertyModalProps {
   onSuccess?: () => void;
@@ -25,6 +25,7 @@ export default function AddPropertyModal({ onSuccess }: AddPropertyModalProps) {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [showToast, setShowToast] = useState(false);
+  const [showErrorToast, setShowErrorToast] = useState(false);
   const router = useRouter();
 
   const handleSubmit = async (data: Omit<Property, "id">) => {
@@ -47,7 +48,7 @@ export default function AddPropertyModal({ onSuccess }: AddPropertyModalProps) {
       if (onSuccess) onSuccess();
     } catch (error) {
       console.error("Failed to create property:", error);
-      alert("Failed to create property");
+      setShowErrorToast(true);
     } finally {
       setLoading(false);
     }
@@ -61,7 +62,10 @@ export default function AddPropertyModal({ onSuccess }: AddPropertyModalProps) {
             <Plus size={16} /> Add Property
           </Button>
         </DialogTrigger>
-        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+        <DialogContent
+          className="max-w-2xl max-h-[90vh] overflow-y-auto"
+          onInteractOutside={(e) => e.preventDefault()}
+        >
           <DialogHeader>
             <DialogTitle>Add New Property</DialogTitle>
           </DialogHeader>
@@ -77,6 +81,13 @@ export default function AddPropertyModal({ onSuccess }: AddPropertyModalProps) {
         <SuccessToast
           message="Property created successfully!"
           onClose={() => setShowToast(false)}
+        />
+      )}
+
+      {showErrorToast && (
+        <ErrorToast
+          message="Failed to create property"
+          onClose={() => setShowErrorToast(false)}
         />
       )}
     </>
