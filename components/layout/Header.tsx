@@ -20,7 +20,7 @@ export default function Header() {
         <div className="flex gap-3 items-center pb-4 md:pb-0">
           <MailOpen />
           <div className="text-sm">
-            <span className="font-bold">Email us at :</span> example@mail.com
+            <span className="font-bold">Email us at :</span> real-estate@gmail.com
           </div>
         </div>
         <div className="flex gap-7">
@@ -38,7 +38,7 @@ export default function Header() {
           |{" "}
           <div className="flex gap-3">
             <Phone />
-            <div>123-4567 890</div>
+            <div>+97059123456</div>
           </div>
         </div>
       </nav>

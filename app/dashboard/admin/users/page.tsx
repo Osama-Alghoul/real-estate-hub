@@ -63,7 +63,7 @@ export default function UsersPage() {
       render: (row) => (
         <div className="flex items-center justify-center">
           <Image
-            src={row.avatar || "/user.png"}
+            src={row.avatar || "/people/A1.png"}
             alt={row.name}
             width={80}
             height={80}

@@ -116,28 +116,6 @@ export default function AdminPropertiesPage() {
     //   render: (row) =>
     //     row.createdAt ? new Date(row.createdAt).toLocaleDateString() : "-",
     // },
-    {
-      key: "id", // Using ID as key for actions column
-      label: "Actions",
-      render: (row) => (
-        <div className="flex gap-2">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setEditingProperty(row)}
-          >
-            <Edit className="w-4 h-4 text-blue-600" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setDeletingProperty(row)}
-          >
-            <Trash2 className="w-4 h-4 text-red-600" />
-          </Button>
-        </div>
-      ),
-    },
   ];
 
   return (
@@ -177,7 +155,29 @@ export default function AdminPropertiesPage() {
         </select>
       </div>
 
-      <DataTable data={properties} columns={columns} isLoading={loading} />
+      <DataTable
+        data={properties}
+        columns={columns}
+        isLoading={loading}
+        renderActions={(row) => (
+          <div className="flex gap-2">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setEditingProperty(row)}
+            >
+              <Edit className="w-4 h-4 text-blue-600" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setDeletingProperty(row)}
+            >
+              <Trash2 className="w-4 h-4 text-red-600" />
+            </Button>
+          </div>
+        )}
+      />
 
       {/* Pagination Controls */}
       <div className="flex justify-center mt-4">

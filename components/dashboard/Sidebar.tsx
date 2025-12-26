@@ -77,14 +77,14 @@ export default function Sidebar({ role, onLogout }: Props) {
         icon: <Building size={20} />,
       },
       {
-        name: "Messages",
+        name: "Booking",
         href: "/dashboard/owner/messages",
         icon: <MessagesSquare size={20} />,
       },
 
       {
         name: "Profile",
-        href: "/dashboard/buyer/profile",
+        href: "/dashboard/owner/profile",
         icon: <User size={20} />,
       },
     ],
