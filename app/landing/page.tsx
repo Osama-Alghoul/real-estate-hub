@@ -4,7 +4,6 @@ import Cards from "@/components/main-page/Cards";
 import CTA from "@/components/main-page/CTA";
 import PlatformFeatures from "@/components/main-page/PlatformFeatures";
 import PropertiesAreaGallery from "@/components/main-page/PropertiesAreaGallery";
-import Slider from "@/components/main-page/Slider";
 
 export default function HomeLandingPage() {
   return (
@@ -13,7 +12,6 @@ export default function HomeLandingPage() {
       <PropertiesAreaGallery />
       <PlatformFeatures />
       <Cards />
-      <Slider />
       <CTA />
       <Footer />
     </>
