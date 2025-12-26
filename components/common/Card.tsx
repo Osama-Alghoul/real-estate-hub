@@ -1,6 +1,6 @@
 "use client";
 
-import { Bath, CarFront, Fullscreen, Heart, } from "lucide-react";
+import { Bath, CarFront, Fullscreen, Heart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Avatar from "../ui/Avatar";
@@ -28,7 +28,11 @@ export default function Card({
   variant = "grid",
   index,
   type,
-}: CardProps & { variant?: "grid" | "list"; index?: number; type?: "sale" | "rent" }) {
+}: CardProps & {
+  variant?: "grid" | "list";
+  index?: number;
+  type?: "sale" | "rent";
+}) {
   const isEven = index !== undefined && index % 2 === 1;
   const listClasses = isEven ? "flex-row-reverse" : "flex-row";
   const [favorite, setFavorite] = useState<any>(null);
@@ -198,8 +202,12 @@ export default function Card({
           >
             <Avatar src={avatar} name={name} />
             <div className="flex gap-2">
-              <div onClick={toggleFavorite} className={`cursor-pointer bg-primary-extra-light p-1 rounded-sm ${
-                favorite ? "text-red-500" : "text-primary-light"}`}>
+              <div
+                onClick={toggleFavorite}
+                className={`cursor-pointer bg-primary-extra-light p-1 rounded-sm ${
+                  favorite ? "text-red-500" : "text-primary-light"
+                }`}
+              >
                 <Heart size={16} fill={favorite ? "currentColor" : "none"} />
               </div>
             </div>

@@ -30,7 +30,9 @@
       "location": "",
       "status": "available",
       "bedrooms": 0,
-      "ownerId": "97c1"
+      "ownerId": "97c1",
+      "latitude": 30,
+      "longitude": -30
     },
     {
       "id": "2",
@@ -140,7 +142,7 @@
       "bath": 2,
       "size": 2400,
       "yearBuilt": 2021,
-      "avatar": "/uploads/1765969956434.png",
+      "avatar": "",
       "name": "alaa eliwa",
       "type": "rent",
       "description": "Luxury penthouse with an incredible city view...",
@@ -154,7 +156,7 @@
       ],
       "video": "/videos/property6.mp4",
       "status": "available",
-      "owner": "Admin"
+      "owner": "asdads"
     },
     {
       "id": "7",
@@ -245,30 +247,66 @@
       "createdAt": "2025-12-17T07:22:08.596Z"
     },
     {
-      "id": "5f37",
-      "title": "Velit ea mollit sed ",
-      "description": "Quia assumenda nostr",
-      "price": 196,
-      "location": "Qui voluptatem autem",
+      "id": "3e8a",
+      "title": "Eu ad expedita ad in",
+      "description": "Et dolores harum quiEt dolores harum quiEt dolores harum quiEt dolores harum quiEt dolores harum qui",
+      "price": 631,
+      "type": "sale",
+      "status": "sold",
+      "location": "Fugit qui nostrum r",
+      "bedrooms": 26,
+      "bath": 69,
+      "garag": 22,
+      "size": 71,
+      "yearBuilt": 1983,
+      "latitude": -11,
+      "longitude": -60,
+      "amenities": [
+        "Air Conditioning",
+        "Swimming Pool",
+        "Elevator",
+        "Gym",
+        "Internet",
+        "Garage"
+      ],
+      "images": [
+        "/uploads/1766751056855.jpg",
+        "/uploads/1766751061554.jpg",
+        "/uploads/1766751066069.jpg"
+      ],
+      "img": "/uploads/1766751056855.jpg",
+      "ownerId": "4082",
+      "avatar": "",
+      "name": "Osama Alghoul",
+      "createdAt": "2025-12-26T12:11:07.905Z"
+    },
+    {
+      "id": "4ce1",
+      "title": "Qui eum suscipit lab",
+      "description": "Cupidatat exercitati",
+      "price": 654,
+      "location": "Necessitatibus sunt ",
       "type": "sale",
       "status": "available",
-      "bedrooms": 90,
-      "bath": 25,
-      "size": 8,
-      "garag": 74,
+      "bedrooms": 43,
+      "bath": 67,
+      "size": 77,
+      "garag": 19,
       "img": "",
       "images": [],
       "amenities": [
         "Central Heating",
+        "Smart Home",
+        "Private Garden",
         "Security System"
       ],
       "ownerId": "cb6c",
       "name": "Fadi hajien",
       "avatar": "/people/A1.png",
-      "latitude": 13,
-      "longitude": 121,
-      "yearBuilt": 2018,
-      "createdAt": "2025-12-21T12:29:33.445Z"
+      "latitude": -72,
+      "longitude": -102,
+      "yearBuilt": 1975,
+      "createdAt": "2025-12-26T12:34:17.354Z"
     }
   ],
   "about": {
@@ -414,8 +452,7 @@
       "email": "alaa@gmail.com",
       "password": "alaa@789",
       "role": "buyer",
-      "status": "active",
-      "avatar": "/uploads/1765920503774.png"
+      "status": "active"
     },
     {
       "id": "882a",
@@ -433,14 +470,6 @@
       "role": "owner",
       "status": "active",
       "avatar": ""
-    },
-    {
-      "id": "fd68",
-      "name": "aya",
-      "email": "aya@gmail.com",
-      "password": "$2b$10$bRE3BNOoyJC9IOIyn0j0uueq6uJg1nY5mUoTsYooQhkeXwzWHvFJ.",
-      "role": "buyer",
-      "status": "disabled"
     },
     {
       "id": "7261",
@@ -557,8 +586,7 @@
       "email": "mera@gmail.com",
       "password": "$2b$10$GSwkku7jvUUvPEnTK05mI.Q9QBQ214vD2D9Wq6IVF.O7E4kKL4Xma",
       "role": "buyer",
-      "status": "active",
-      "avatar": "/uploads/1766097064136.jpg"
+      "status": "active"
     },
     {
       "id": "cb6c",
@@ -587,16 +615,6 @@
       "message": "Officia harum veniam",
       "status": "read",
       "createdAt": "2025-12-05T08:46:40.535Z"
-    },
-    {
-      "id": "fac1",
-      "name": "fghj",
-      "email": "osama@gmail.com",
-      "phone": "",
-      "subject": "trdyuhjkl",
-      "message": "tfygijokl.,m bcftyuihojlk",
-      "status": "new",
-      "createdAt": "2025-12-18T22:27:58.219Z"
     }
   ],
   "bookings": [
@@ -666,38 +684,6 @@
       "createdAt": "2025-12-18T00:56:27.585Z"
     },
     {
-      "id": "51fa",
-      "propertyId": "1",
-      "userId": "e573",
-      "userName": "Buyer",
-      "userEmail": "buyer@gmail.com",
-      "visitType": "virtual",
-      "date": "2025-12-16",
-      "timeSlot": "15:00 - 15:30",
-      "message": "dasdad",
-      "wantCall": true,
-      "payDeposit": false,
-      "payment": null,
-      "status": "pending",
-      "createdAt": "2025-12-18T21:37:21.615Z"
-    },
-    {
-      "id": "5c99",
-      "propertyId": "6",
-      "userId": "e573",
-      "userName": "Buyer",
-      "userEmail": "buyer@gmail.com",
-      "visitType": "virtual",
-      "date": "2025-11-30",
-      "timeSlot": "10:00 - 10:30",
-      "message": "jhsdbasjnd",
-      "wantCall": true,
-      "payDeposit": false,
-      "payment": null,
-      "status": "pending",
-      "createdAt": "2025-12-18T21:37:51.802Z"
-    },
-    {
       "id": "e220",
       "propertyId": "2",
       "userId": "0280",
@@ -728,6 +714,22 @@
       "payment": null,
       "status": "pending",
       "createdAt": "2025-12-18T22:27:23.142Z"
+    },
+    {
+      "id": "689d",
+      "propertyId": "3e8a",
+      "userId": "4082",
+      "userName": "Osama Alghoul",
+      "userEmail": "owner@example.com",
+      "visitType": "in-person",
+      "date": "1989-07-10",
+      "timeSlot": "09:00 - 09:30",
+      "message": "Nisi qui eos quod od",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-26T12:12:09.403Z"
     }
   ],
   "favorites": [
@@ -819,6 +821,17 @@
       "owner": "fadi",
       "type": "sale",
       "status": "available"
+    },
+    {
+      "id": "4dd4",
+      "userId": "admin-1",
+      "propertyId": "1",
+      "title": "92 ALLIUM PLACE, ORLANDO FL 32827",
+      "image": "/properties/P1.png",
+      "price": 590693,
+      "owner": "mona",
+      "type": "sale",
+      "status": "available"
     }
   ],
   "notifications": [
@@ -899,7 +912,7 @@
       "title": "New Property Listed",
       "message": "anan listed \"Nesciunt odio dolor\"",
       "link": "/dashboard/admin/properties",
-      "read": false,
+      "read": true,
       "createdAt": "2025-12-18T10:48:44.987Z"
     },
     {
@@ -909,7 +922,7 @@
       "title": "New Booking Request",
       "message": "mera wants to visit \"Luxury Villa, Miami FL\"",
       "link": "/dashboard/owner/messages",
-      "read": false,
+      "read": true,
       "createdAt": "2025-12-18T21:31:14.388Z"
     },
     {
@@ -919,7 +932,7 @@
       "title": "New Booking Request",
       "message": "Buyer wants to visit \"92 ALLIUM PLACE, ORLANDO FL 32827\"",
       "link": "/dashboard/owner/messages",
-      "read": false,
+      "read": true,
       "createdAt": "2025-12-18T21:37:21.639Z"
     },
     {
@@ -929,7 +942,7 @@
       "title": "New Booking Request",
       "message": "Buyer wants to visit \"Penthouse, Los Angeles\"",
       "link": "/dashboard/owner/messages",
-      "read": false,
+      "read": true,
       "createdAt": "2025-12-18T21:37:51.839Z"
     },
     {
@@ -939,7 +952,7 @@
       "title": "New Booking Request",
       "message": "mera wants to visit \"Luxury Villa, Miami FL\"",
       "link": "/dashboard/owner/messages",
-      "read": false,
+      "read": true,
       "createdAt": "2025-12-18T22:03:29.617Z"
     },
     {
@@ -949,7 +962,7 @@
       "title": "New Booking Request",
       "message": "mera wants to visit \"Luxury Villa, Miami FL\"",
       "link": "/dashboard/owner/messages",
-      "read": false,
+      "read": true,
       "createdAt": "2025-12-18T22:27:23.198Z"
     },
     {
@@ -959,7 +972,7 @@
       "title": "New Contact Message",
       "message": "fghj: trdyuhjkl",
       "link": "/dashboard/admin/contacts",
-      "read": false,
+      "read": true,
       "createdAt": "2025-12-18T22:27:58.241Z"
     },
     {
@@ -969,7 +982,7 @@
       "title": "New Property Added",
       "message": "Property \"لbla bla\" has been listed",
       "link": "/dashboard/admin/properties",
-      "read": false,
+      "read": true,
       "createdAt": "2025-12-21T11:55:14.537Z"
     },
     {
@@ -979,8 +992,28 @@
       "title": "New Property Added",
       "message": "Property \"Velit ea mollit sed \" has been listed",
       "link": "/dashboard/admin/properties",
-      "read": false,
+      "read": true,
       "createdAt": "2025-12-21T12:29:33.460Z"
+    },
+    {
+      "id": "e34b",
+      "userId": "4082",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "Osama Alghoul wants to visit \"Eu ad expedita ad in\"",
+      "link": "/dashboard/owner/messages",
+      "read": true,
+      "createdAt": "2025-12-26T12:12:09.440Z"
+    },
+    {
+      "id": "124d",
+      "userId": "e573",
+      "type": "booking",
+      "title": "Booking Rejected",
+      "message": "Your booking for 2025-11-30 was not approved",
+      "link": "/dashboard/buyer",
+      "read": false,
+      "createdAt": "2025-12-26T12:35:15.573Z"
     }
   ]
 }

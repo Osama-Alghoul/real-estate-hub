@@ -131,7 +131,7 @@ export default function MessagesPage() {
     <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-bold tracking-tight">
-          Messages & Requests
+          Booking
         </h1>
         <p className="text-muted-foreground">
           Manage booking requests for your properties
@@ -272,7 +272,7 @@ function BookingCard({
                 </span>
 
                 <span className="text-xs text-muted-foreground">
-                  Posted {new Date(booking.createdAt).toLocaleDateString()}
+                  Posted {new Date(booking.createdAt).toDateString()}
                 </span>
 
                 {readonly && (

@@ -142,9 +142,9 @@ export async function login(
 }
 
 export function logout() {
-  deleteCookie("authToken");
-  localStorage.removeItem("authUser");
-
+  deleteCookie("authToken"); // remove auth cookie
+  localStorage.removeItem("authUser"); // remove user from local storage 
+  sessionStorage.clear(); // clear session storage
 }
 
 export function getCurrentUser(): User | null {
