@@ -37,8 +37,9 @@ export default function UsersPage() {
         _page: page,
         _limit: limit,
       });
-      setUsers(data);
-      setTotal(total);
+      const filtered = data.filter((u) => u.role !== "admin");
+      setUsers(filtered); // Exclude admins from the list
+      setTotal(total - (data.length - filtered.length)); // Adjust total count accordingly
     } catch (error) {
       console.error("Failed to load users:", error);
     } finally {
@@ -116,7 +117,6 @@ export default function UsersPage() {
           className="border rounded p-2 bg-white"
         >
           <option value="all">All Roles</option>
-          <option value="admin">Admin</option>
           <option value="owner">Owner</option>
           <option value="buyer">Buyer</option>
         </select>
