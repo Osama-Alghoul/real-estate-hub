@@ -77,14 +77,14 @@ export default function Sidebar({ role, onLogout }: Props) {
         icon: <Building size={20} />,
       },
       {
-        name: "Messages",
+        name: "Booking",
         href: "/dashboard/owner/messages",
         icon: <MessagesSquare size={20} />,
       },
 
       {
         name: "Profile",
-        href: "/dashboard/buyer/profile",
+        href: "/dashboard/owner/profile",
         icon: <User size={20} />,
       },
     ],
@@ -122,13 +122,13 @@ export default function Sidebar({ role, onLogout }: Props) {
     >
       {/* top side */}
       <div className="flex items-center justify-between p-4 border-b">
-        <h1
+        <Link href="/"
           className={`font-bold text-xl transition-all ${
             !open && "opacity-0 w-0"
           }`}
         >
           REIS
-        </h1>
+        </Link>
 
         <button
           onClick={() => setOpen(!open)}
