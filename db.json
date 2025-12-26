@@ -622,6 +622,14 @@
       "password": "$2b$10$lkiFWl7ZOWdvsKVi6T9BUOYMXEznBgyZb0v7u5vwjlnOoBX3.x3Ri",
       "role": "owner",
       "status": "active"
+    },
+    {
+      "id": "4a48",
+      "name": "Osama Alghoul",
+      "email": "owner1@example.com",
+      "password": "$2b$10$9A4U5kx.5ERWtD8z5yWutuVKzEJs7msXnwHAZWhrN8WNT89kpVp0.",
+      "role": "owner",
+      "status": "active"
     }
   ],
   "contacts": [
