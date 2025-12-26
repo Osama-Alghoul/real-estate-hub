@@ -1,6 +1,6 @@
 "use client";
 
-import { Property } from "@/types/property.type";
+import { Property } from "@/types/property";
 import GridView from "@/components/properties/GridView";
 import ListView from "@/components/properties/ListView";
 import Pagination from "@/components/properties/Pagination";

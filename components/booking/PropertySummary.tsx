@@ -1,7 +1,7 @@
-import { Card } from "@/components/ui/card";
-import Avatar from "@/components/ui/avatar";
+import { Card } from "@/components/ui/Card";
+import Avatar from "@/components/ui/Avatar";
 import { BedDouble, Bath, Ruler as Ruler2 } from "lucide-react";
-import { Property } from "@/types/property.type";
+import { Property } from "@/types/property";
 import Image from "next/image";
 
 interface PropertySummaryProps {

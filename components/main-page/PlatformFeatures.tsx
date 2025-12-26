@@ -1,5 +1,5 @@
-import SectionTitle from "../common/sectionTitle";
-import Features from "./features";
+import SectionTitle from "../common/SectionTitle";
+import Features from "./Features";
 
 export default function PlatformFeatures() {
   return (

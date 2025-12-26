@@ -1,8 +1,8 @@
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import Header from "@/components/layout/header";
+import { Button } from "@/components/ui/Button";
+import Header from "@/components/layout/Header";
 import Link from "next/link";
-import { ContactForm } from "@/components/contact/contact-form";
+import { ContactForm } from "@/components/contact/ContactForm";
 
 export const metadata = {
   title: "Contact Us - REIS Real Estate",

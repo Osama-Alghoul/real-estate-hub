@@ -1,4 +1,3 @@
-// components/common/Loading.tsx
 import React from "react";
 
 export default function Loading() {

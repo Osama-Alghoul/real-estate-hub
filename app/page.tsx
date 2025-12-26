@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  // this is will be landing page, so must change Home -> LandingPage
   const [userRole, setUserRole] = useState<string | null>(null);
   const router = useRouter();
 

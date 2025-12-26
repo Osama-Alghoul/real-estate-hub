@@ -6,12 +6,12 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
+} from "@/components/ui/Dialog";
 import PropertyForm from "./PropertyForm";
 import { updateProperty } from "@/app/services/propertyService";
-import { Property } from "@/types/property.type";
+import { Property } from "@/types/property";
 import { useRouter } from "next/navigation";
-import { SuccessToast } from "@/components/ui/toast";
+import { SuccessToast, ErrorToast } from "@/components/ui/Toast";
 
 interface EditPropertyModalProps {
   property: Property | null;
@@ -28,6 +28,7 @@ export default function EditPropertyModal({
 }: EditPropertyModalProps) {
   const [loading, setLoading] = useState(false);
   const [showToast, setShowToast] = useState(false);
+  const [showErrorToast, setShowErrorToast] = useState(false);
   const router = useRouter();
 
   const handleSubmit = async (data: Omit<Property, "id">) => {
@@ -41,7 +42,7 @@ export default function EditPropertyModal({
       if (onSuccess) onSuccess();
     } catch (error) {
       console.error("Failed to update property:", error);
-      alert("Failed to update property");
+      setShowErrorToast(true);
     } finally {
       setLoading(false);
     }
@@ -50,7 +51,10 @@ export default function EditPropertyModal({
   return (
     <>
       <Dialog open={open} onOpenChange={onOpenChange}>
-        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+        <DialogContent
+          className="max-w-2xl max-h-[90vh] overflow-y-auto"
+          onInteractOutside={(e) => e.preventDefault()}
+        >
           <DialogHeader>
             <DialogTitle>Edit Property</DialogTitle>
           </DialogHeader>
@@ -69,6 +73,13 @@ export default function EditPropertyModal({
         <SuccessToast
           message="Property updated successfully!"
           onClose={() => setShowToast(false)}
+        />
+      )}
+
+      {showErrorToast && (
+        <ErrorToast
+          message="Failed to update property"
+          onClose={() => setShowErrorToast(false)}
         />
       )}
     </>

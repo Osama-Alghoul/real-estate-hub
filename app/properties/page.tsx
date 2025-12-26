@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import Banner from "@/components/layout/Banner";
 import AdvancedSearchFilters from "@/components/search/AdvancedSearchFilters";
 import SearchResults from "@/components/search/SearchResults";
 import { useSearchFilters } from "@/app/utils/useSearchFilters";
-import { Property } from "@/types/property.type";
+import { Property } from "@/types/property";
 import { Menu, X } from "lucide-react";
 
 export default function PropertiesPage() {

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import SectionTitle from "../common/sectionTitle";
-import { Button } from "../ui/button";
+import SectionTitle from "../common/SectionTitle";
+import { Button } from "../ui/Button";
 
 export default function CTA() {
   return (

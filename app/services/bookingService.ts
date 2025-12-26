@@ -25,9 +25,6 @@ export interface Booking extends BookingData {
   updatedAt?: string;
 }
 
-/**
- * Create a new booking
- */
 export async function createBooking(data: BookingData): Promise<{ booking?: Booking; error?: string }> {
   // Validate required fields
   if (!data.date || !data.timeSlot) {
@@ -61,9 +58,6 @@ export async function createBooking(data: BookingData): Promise<{ booking?: Book
   }
 }
 
-/**
- * Get all bookings
- */
 export async function getBookings(): Promise<{ bookings?: Booking[]; error?: string }> {
   try {
     const response = await fetch(`${API_BASE}/bookings`);
@@ -80,9 +74,6 @@ export async function getBookings(): Promise<{ bookings?: Booking[]; error?: str
   }
 }
 
-/**
- * Get a single booking by ID
- */
 export async function getBookingById(id: string): Promise<{ booking?: Booking; error?: string }> {
   try {
     const response = await fetch(`${API_BASE}/bookings/${id}`);
@@ -99,9 +90,6 @@ export async function getBookingById(id: string): Promise<{ booking?: Booking; e
   }
 }
 
-/**
- * Update booking status
- */
 export async function updateBookingStatus(
   id: string,
   status: 'pending' | 'approved' | 'rejected' | 'completed'
@@ -130,9 +118,6 @@ export async function updateBookingStatus(
   }
 }
 
-/**
- * Delete a booking
- */
 export async function deleteBooking(id: string): Promise<{ success?: boolean; error?: string }> {
   try {
     const response = await fetch(`${API_BASE}/bookings/${id}`, {
@@ -150,9 +135,6 @@ export async function deleteBooking(id: string): Promise<{ success?: boolean; er
   }
 }
 
-/**
- * Get bookings by user ID
- */
 export async function getBookingsByUserId(userId: string): Promise<{ bookings?: Booking[]; error?: string }> {
   try {
     const response = await fetch(`${API_BASE}/bookings?userId=${userId}`);
@@ -169,9 +151,6 @@ export async function getBookingsByUserId(userId: string): Promise<{ bookings?: 
   }
 }
 
-/**
- * Get bookings by property ID
- */
 export async function getBookingsByPropertyId(propertyId: string): Promise<{ bookings?: Booking[]; error?: string }> {
   try {
     const response = await fetch(`${API_BASE}/bookings?propertyId=${propertyId}`);
@@ -188,9 +167,6 @@ export async function getBookingsByPropertyId(propertyId: string): Promise<{ boo
   }
 }
 
-/**
- * Get booked time slots for a specific property and date
- */
 export async function getBookedSlots(propertyId: string, date: string): Promise<{ bookedSlots?: string[]; error?: string }> {
   try {
     const response = await fetch(`${API_BASE}/bookings?propertyId=${propertyId}&date=${date}`);

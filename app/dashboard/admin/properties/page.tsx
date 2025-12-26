@@ -1,24 +1,24 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Property } from "@/types/property.type";
+import { Property } from "@/types/property";
 import { fetchProperties } from "@/app/services/propertyService";
 import DataTable, { Column } from "@/components/common/DataTable";
 import AddPropertyModal from "@/components/properties/AddPropertyModal";
 import EditPropertyModal from "@/components/properties/EditPropertyModal";
 import DeletePropertyModal from "@/components/properties/DeletePropertyModal";
-import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/Input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Button } from "@/components/ui/button";
+} from "@/components/ui/Select";
+import { Button } from "@/components/ui/Button";
 import { Edit, Trash2, Eye } from "lucide-react";
-import { useRouter, useSearchParams } from "next/navigation";
 import Pagination from "@/components/properties/Pagination";
+import { ErrorToast } from "@/components/ui/Toast";
 
 export default function AdminPropertiesPage() {
   const [properties, setProperties] = useState<Property[]>([]);
@@ -34,9 +34,7 @@ export default function AdminPropertiesPage() {
   const [deletingProperty, setDeletingProperty] = useState<Property | null>(
     null
   );
-
-  const router = useRouter();
-  const searchParams = useSearchParams();
+  const [showError, setShowError] = useState(false);
 
   const loadProperties = async () => {
     setLoading(true);
@@ -52,6 +50,7 @@ export default function AdminPropertiesPage() {
       setTotal(total);
     } catch (error) {
       console.error("Failed to load properties:", error);
+      setShowError(true);
     } finally {
       setLoading(false);
     }
@@ -141,14 +140,6 @@ export default function AdminPropertiesPage() {
     },
   ];
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-full">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
-      </div>
-    );
-  }
-
   return (
     <div className="p-6 space-y-6">
       <div className="flex justify-between items-center">
@@ -212,6 +203,13 @@ export default function AdminPropertiesPage() {
         onOpenChange={(open) => !open && setDeletingProperty(null)}
         onSuccess={loadProperties}
       />
+
+      {showError && (
+        <ErrorToast
+          message="Failed to load properties. Please try again."
+          onClose={() => setShowError(false)}
+        />
+      )}
     </div>
   );
 }

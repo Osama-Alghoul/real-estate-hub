@@ -2,7 +2,7 @@
 
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { useEffect, useState, useMemo } from "react";
-import { Property } from "@/types/property.type";
+import { Property } from "@/types/property";
 import { SearchFilters } from "@/components/search/AdvancedSearchFilters";
 
 const ITEMS_PER_PAGE = 6;

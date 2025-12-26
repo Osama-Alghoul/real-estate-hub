@@ -10,10 +10,10 @@ import {
 import { fetchProperties } from "@/app/services/propertyService";
 import DataTable, { Column } from "@/components/common/DataTable";
 import Pagination from "@/components/properties/Pagination";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/Input";
+import { Button } from "@/components/ui/Button";
 import { Eye, XCircle, Calendar } from "lucide-react";
-import { SuccessToast, ErrorToast } from "@/components/ui/toast";
+import { SuccessToast, ErrorToast } from "@/components/ui/Toast";
 import Link from "next/link";
 
 interface BookingWithProperty extends Booking {

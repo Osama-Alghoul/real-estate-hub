@@ -5,14 +5,11 @@ import { fetchUsers } from "@/app/services/userService";
 import { User } from "@/types/auth";
 
 import { useState, useEffect } from "react";
-import { Plus, X } from "lucide-react";
-import { Property } from "@/types/property.type";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-
-// If UI components don't exist, I'll fallback to standard HTML elements or create them.
-// Checking components/ui first would be ideal, but I'll assume standard shadcn/ui structure for now and fix if needed.
+import { X } from "lucide-react";
+import { Property } from "@/types/property";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
+import { Label } from "@/components/ui/Label";
 
 interface PropertyFormProps {
   initialData?: Partial<Property>;
@@ -44,6 +41,8 @@ export default function PropertyForm({
     ownerId: initialData?.ownerId || "",
     name: initialData?.name || "",
     avatar: initialData?.avatar || "",
+    latitude: initialData?.latitude || undefined,
+    longitude: initialData?.longitude || undefined,
     ...initialData,
   });
 
@@ -75,7 +74,7 @@ export default function PropertyForm({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Basic validation
+
     if (
       !formData.title ||
       !formData.price ||
@@ -181,6 +180,44 @@ export default function PropertyForm({
             onChange={handleChange}
             className="w-full border rounded p-2"
           />
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="latitude">Latitude (Coordinates)</Label>
+          <input
+            id="latitude"
+            name="latitude"
+            type="number"
+            step="any"
+            value={formData.latitude || ""}
+            onChange={handleChange}
+            placeholder="e.g., 28.5383"
+            className="w-full border rounded p-2"
+            min="-90"
+            max="90"
+          />
+          <p className="text-xs text-gray-500">
+            Enter latitude coordinate (between -90 and 90)
+          </p>
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="longitude">Longitude (Coordinates)</Label>
+          <input
+            id="longitude"
+            name="longitude"
+            type="number"
+            step="any"
+            value={formData.longitude || ""}
+            onChange={handleChange}
+            placeholder="e.g., -81.3792"
+            className="w-full border rounded p-2"
+            min="-180"
+            max="180"
+          />
+          <p className="text-xs text-gray-500">
+            Enter longitude coordinate (between -180 and 180)
+          </p>
         </div>
 
         <div className="space-y-2">

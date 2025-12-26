@@ -14,8 +14,8 @@
       "bath": 4,
       "size": 2096,
       "yearBuilt": 2015,
-      "avatar": "/uploads/1765540022694.png",
-      "name": "fadi",
+      "avatar": "",
+      "name": "mona",
       "type": "sale",
       "description": "Beautiful family home located in a quiet neighborhood...",
       "amenities": [
@@ -30,7 +30,7 @@
       "location": "",
       "status": "available",
       "bedrooms": 0,
-      "ownerId": "cb87"
+      "ownerId": "97c1"
     },
     {
       "id": "2",
@@ -128,38 +128,6 @@
       "ownerId": "2af7"
     },
     {
-      "id": "5",
-      "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P1.png"
-      ],
-      "title": "Beachfront House, California",
-      "price": 1200000,
-      "garag": 2,
-      "bath": 3,
-      "size": 3200,
-      "yearBuilt": 2019,
-      "avatar": "/uploads/1765920503774.png",
-      "name": "anan",
-      "type": "sale",
-      "description": "A stunning beachfront house with direct access to the sea...",
-      "amenities": [
-        "Beach Access",
-        "Outdoor Pool",
-        "Private Terrace",
-        "Smart Home",
-        "Garden",
-        "Fire Pit"
-      ],
-      "video": "/videos/property5.mp4",
-      "status": "sold",
-      "owner": "Anan Jamal",
-      "location": "",
-      "bedrooms": 0,
-      "ownerId": "4fe8"
-    },
-    {
       "id": "6",
       "img": "/properties/P1.png",
       "images": [
@@ -186,7 +154,7 @@
       ],
       "video": "/videos/property6.mp4",
       "status": "available",
-      "owner": "anan"
+      "owner": "Admin"
     },
     {
       "id": "7",
@@ -256,7 +224,7 @@
       "description": "sdasad",
       "price": 16,
       "location": "asdasd",
-      "type": "sale",
+      "type": "rent",
       "status": "available",
       "bedrooms": 2,
       "bath": 1,
@@ -277,27 +245,30 @@
       "createdAt": "2025-12-17T07:22:08.596Z"
     },
     {
-      "id": "3751",
-      "title": "Nesciunt odio dolor",
-      "description": "Do dolor ad laboris ",
-      "price": 538,
+      "id": "5f37",
+      "title": "Velit ea mollit sed ",
+      "description": "Quia assumenda nostr",
+      "price": 196,
+      "location": "Qui voluptatem autem",
       "type": "sale",
-      "status": "sold",
-      "location": "Mollitia beatae dolo",
-      "bedrooms": 26,
-      "bath": 49,
-      "garag": 6,
-      "size": 23,
-      "yearBuilt": 2000,
-      "amenities": [],
-      "images": [
-        "/uploads/1766054922504.png"
+      "status": "available",
+      "bedrooms": 90,
+      "bath": 25,
+      "size": 8,
+      "garag": 74,
+      "img": "",
+      "images": [],
+      "amenities": [
+        "Central Heating",
+        "Security System"
       ],
-      "img": "/uploads/1766054922504.png",
-      "ownerId": "4fe8",
-      "avatar": "",
-      "name": "anan",
-      "createdAt": "2025-12-18T10:48:44.918Z"
+      "ownerId": "cb6c",
+      "name": "Fadi hajien",
+      "avatar": "/people/A1.png",
+      "latitude": 13,
+      "longitude": 121,
+      "yearBuilt": 2018,
+      "createdAt": "2025-12-21T12:29:33.445Z"
     }
   ],
   "about": {
@@ -430,13 +401,12 @@
   ],
   "users": [
     {
-      "id": "ce6a",
-      "name": "Mai Alhajeen",
-      "email": "mai2001@gmail.com",
-      "password": "$2b$10$cpp9FYVj7wbS2ahwfowmUeZ3KiNYGrlhyPPRhoIW/3ahR3DlmQIZ6",
+      "id": "admin-1",
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "$2b$10$2yAG2JaJFWlkKti.wuY4fecAn0J9mudFpPNDWRzSY6VkiHHNNhgZS",
       "role": "admin",
-      "status": "active",
-      "avatar": "/uploads/1765578286362.png"
+      "status": "active"
     },
     {
       "id": "77a1",
@@ -456,13 +426,6 @@
       "status": "active"
     },
     {
-      "id": "aa3e",
-      "name": "reem",
-      "email": "reem@gmail.com",
-      "password": "$2b$10$uTqPZa/Dlz/Y99ntvTK82u/qKbtnhyPsb5G/Q7QMUE/nbhi.cQ3/e",
-      "role": "admin"
-    },
-    {
       "id": "97c1",
       "name": "mona",
       "email": "mona@gmail.com",
@@ -478,15 +441,6 @@
       "password": "$2b$10$bRE3BNOoyJC9IOIyn0j0uueq6uJg1nY5mUoTsYooQhkeXwzWHvFJ.",
       "role": "buyer",
       "status": "disabled"
-    },
-    {
-      "id": "e49d",
-      "name": "Asma Ahmad Updated",
-      "email": "asma@gmail.com",
-      "role": "admin",
-      "status": "active",
-      "password": "password123",
-      "createdAt": "2025-12-11T19:30:54.051Z"
     },
     {
       "id": "7261",
@@ -565,15 +519,6 @@
       "avatar": ""
     },
     {
-      "id": "545e",
-      "name": "anan jamal abu tawahne",
-      "email": "anan3@gmail.com",
-      "password": "$2b$10$40syZKZN4.BYtvJbG.8s0eJzCwNzcVGrg8jf/27Nr9QEi/6NJ/Qsy",
-      "role": "admin",
-      "status": "active",
-      "avatar": "/uploads/1765972595457.jpg"
-    },
-    {
       "id": "b268",
       "name": "omar",
       "email": "omar@gmail.com",
@@ -613,7 +558,7 @@
       "password": "$2b$10$GSwkku7jvUUvPEnTK05mI.Q9QBQ214vD2D9Wq6IVF.O7E4kKL4Xma",
       "role": "buyer",
       "status": "active",
-      "avatar": "/uploads/1766000835902.jpg"
+      "avatar": "/uploads/1766097064136.jpg"
     },
     {
       "id": "cb6c",
@@ -624,11 +569,11 @@
       "status": "active"
     },
     {
-      "id": "4a48",
-      "name": "Osama Alghoul",
-      "email": "owner1@example.com",
-      "password": "$2b$10$9A4U5kx.5ERWtD8z5yWutuVKzEJs7msXnwHAZWhrN8WNT89kpVp0.",
-      "role": "owner",
+      "id": "e573",
+      "name": "Buyer",
+      "email": "buyer@gmail.com",
+      "password": "$2b$10$pI.q7Fdx0/UswAnVSGCje.3Af/AmaUmHSxaMZjyUnJYCPKHNodx2m",
+      "role": "buyer",
       "status": "active"
     }
   ],
@@ -642,65 +587,19 @@
       "message": "Officia harum veniam",
       "status": "read",
       "createdAt": "2025-12-05T08:46:40.535Z"
+    },
+    {
+      "id": "fac1",
+      "name": "fghj",
+      "email": "osama@gmail.com",
+      "phone": "",
+      "subject": "trdyuhjkl",
+      "message": "tfygijokl.,m bcftyuihojlk",
+      "status": "new",
+      "createdAt": "2025-12-18T22:27:58.219Z"
     }
   ],
   "bookings": [
-    {
-      "id": "7374",
-      "propertyId": "5",
-      "visitType": "in-person",
-      "date": "2024-06-23",
-      "timeSlot": "16:00 - 16:30",
-      "message": "Omnis neque enim bla",
-      "wantCall": true,
-      "payDeposit": false,
-      "payment": null,
-      "status": "approved",
-      "createdAt": "2025-12-05T08:25:30.533Z",
-      "updatedAt": "2025-12-17T06:49:06.132Z"
-    },
-    {
-      "id": "6016",
-      "propertyId": "3",
-      "visitType": "in-person",
-      "date": "2025-12-24",
-      "timeSlot": "12:00 - 12:30",
-      "message": "dada",
-      "wantCall": true,
-      "payDeposit": false,
-      "payment": null,
-      "status": "approved",
-      "createdAt": "2025-12-05T08:32:21.037Z",
-      "updatedAt": "2025-12-17T09:46:39.128Z"
-    },
-    {
-      "id": "f798",
-      "propertyId": "3",
-      "visitType": "in-person",
-      "date": "1981-02-27",
-      "timeSlot": "15:00 - 15:30",
-      "message": "Non sit mollait dict",
-      "wantCall": true,
-      "payDeposit": false,
-      "payment": null,
-      "status": "approved",
-      "createdAt": "2025-12-05T08:33:04.384Z",
-      "updatedAt": "2025-12-17T09:50:46.088Z"
-    },
-    {
-      "id": "d5f5",
-      "propertyId": "5",
-      "visitType": "in-person",
-      "date": "2025-12-24",
-      "timeSlot": "10:00 - 10:30",
-      "message": "bkbmbmb",
-      "wantCall": true,
-      "payDeposit": false,
-      "payment": null,
-      "status": "approved",
-      "createdAt": "2025-12-08T12:00:42.293Z",
-      "updatedAt": "2025-12-16T12:09:39.629Z"
-    },
     {
       "id": "6355",
       "propertyId": "1",
@@ -717,23 +616,6 @@
       "status": "rejected",
       "createdAt": "2025-12-16T12:32:50.319Z",
       "updatedAt": "2025-12-17T09:50:51.753Z"
-    },
-    {
-      "id": "f02d",
-      "propertyId": "2",
-      "userId": "ae5b",
-      "userName": "seham",
-      "userEmail": "seham@gmail.com",
-      "visitType": "in-person",
-      "date": "2025-01-01",
-      "timeSlot": "14:00 - 14:30",
-      "message": "Laborum Laborum asp",
-      "wantCall": true,
-      "payDeposit": false,
-      "payment": null,
-      "status": "approved",
-      "createdAt": "2025-12-17T07:41:41.206Z",
-      "updatedAt": "2025-12-17T10:07:16.804Z"
     },
     {
       "id": "4539",
@@ -782,6 +664,70 @@
       "payment": null,
       "status": "pending",
       "createdAt": "2025-12-18T00:56:27.585Z"
+    },
+    {
+      "id": "51fa",
+      "propertyId": "1",
+      "userId": "e573",
+      "userName": "Buyer",
+      "userEmail": "buyer@gmail.com",
+      "visitType": "virtual",
+      "date": "2025-12-16",
+      "timeSlot": "15:00 - 15:30",
+      "message": "dasdad",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-18T21:37:21.615Z"
+    },
+    {
+      "id": "5c99",
+      "propertyId": "6",
+      "userId": "e573",
+      "userName": "Buyer",
+      "userEmail": "buyer@gmail.com",
+      "visitType": "virtual",
+      "date": "2025-11-30",
+      "timeSlot": "10:00 - 10:30",
+      "message": "jhsdbasjnd",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-18T21:37:51.802Z"
+    },
+    {
+      "id": "e220",
+      "propertyId": "2",
+      "userId": "0280",
+      "userName": "mera",
+      "userEmail": "mera@gmail.com",
+      "visitType": "virtual",
+      "date": "2025-12-02",
+      "timeSlot": "10:00 - 10:30",
+      "message": "fjsdnfl",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-18T22:03:29.577Z"
+    },
+    {
+      "id": "8b72",
+      "propertyId": "2",
+      "userId": "0280",
+      "userName": "mera",
+      "userEmail": "mera@gmail.com",
+      "visitType": "in-person",
+      "date": "2001-01-01",
+      "timeSlot": "11:00 - 11:30",
+      "message": "fgfchvjkln,mbcvfglk",
+      "wantCall": true,
+      "payDeposit": false,
+      "payment": null,
+      "status": "pending",
+      "createdAt": "2025-12-18T22:27:23.142Z"
     }
   ],
   "favorites": [
@@ -817,17 +763,6 @@
       "price": 590693,
       "owner": "fadi",
       "type": "sale",
-      "status": "available"
-    },
-    {
-      "id": "a411",
-      "userId": "0280",
-      "propertyId": "2",
-      "title": "Luxury Villa, Miami FL",
-      "image": "/properties/P1.png",
-      "price": 750000,
-      "owner": "osama alghol",
-      "type": "rent",
       "status": "available"
     },
     {
@@ -966,6 +901,86 @@
       "link": "/dashboard/admin/properties",
       "read": false,
       "createdAt": "2025-12-18T10:48:44.987Z"
+    },
+    {
+      "id": "a0ad",
+      "userId": "2af7",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "mera wants to visit \"Luxury Villa, Miami FL\"",
+      "link": "/dashboard/owner/messages",
+      "read": false,
+      "createdAt": "2025-12-18T21:31:14.388Z"
+    },
+    {
+      "id": "fb0b",
+      "userId": "cb87",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "Buyer wants to visit \"92 ALLIUM PLACE, ORLANDO FL 32827\"",
+      "link": "/dashboard/owner/messages",
+      "read": false,
+      "createdAt": "2025-12-18T21:37:21.639Z"
+    },
+    {
+      "id": "14b3",
+      "userId": "all",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "Buyer wants to visit \"Penthouse, Los Angeles\"",
+      "link": "/dashboard/owner/messages",
+      "read": false,
+      "createdAt": "2025-12-18T21:37:51.839Z"
+    },
+    {
+      "id": "28c8",
+      "userId": "2af7",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "mera wants to visit \"Luxury Villa, Miami FL\"",
+      "link": "/dashboard/owner/messages",
+      "read": false,
+      "createdAt": "2025-12-18T22:03:29.617Z"
+    },
+    {
+      "id": "3af4",
+      "userId": "2af7",
+      "type": "booking",
+      "title": "New Booking Request",
+      "message": "mera wants to visit \"Luxury Villa, Miami FL\"",
+      "link": "/dashboard/owner/messages",
+      "read": false,
+      "createdAt": "2025-12-18T22:27:23.198Z"
+    },
+    {
+      "id": "4cdd",
+      "userId": "all",
+      "type": "contact",
+      "title": "New Contact Message",
+      "message": "fghj: trdyuhjkl",
+      "link": "/dashboard/admin/contacts",
+      "read": false,
+      "createdAt": "2025-12-18T22:27:58.241Z"
+    },
+    {
+      "id": "9bc9",
+      "userId": "all",
+      "type": "property",
+      "title": "New Property Added",
+      "message": "Property \"لbla bla\" has been listed",
+      "link": "/dashboard/admin/properties",
+      "read": false,
+      "createdAt": "2025-12-21T11:55:14.537Z"
+    },
+    {
+      "id": "94b5",
+      "userId": "all",
+      "type": "property",
+      "title": "New Property Added",
+      "message": "Property \"Velit ea mollit sed \" has been listed",
+      "link": "/dashboard/admin/properties",
+      "read": false,
+      "createdAt": "2025-12-21T12:29:33.460Z"
     }
   ]
 }

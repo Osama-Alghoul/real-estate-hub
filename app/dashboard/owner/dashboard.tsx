@@ -4,8 +4,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
+} from "@/components/ui/Card";
+import { Progress } from "@/components/ui/Progress";
 import { Building2, Eye, MessageSquare, TrendingUp } from "lucide-react";
 import { Home, Building, Warehouse, Store } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -34,26 +34,29 @@ interface DashboardStats {
 
 export default function DashboardPage({ name }: { name: string }) {
   const { user } = useAuth();
-  const [stats, setStats] = useState<DashboardStats | null>({
-    totalProperties: 0,
-    propertiesByType: {
-      residential: 0,
-      commercial: 0,
-      industrial: 0,
-      retail: 0,
-    },
-    engagement: {
-      views: 0,
-      favorites: 0,
-      shares: 0,
-    },
-    messages: {
-      total: 0,
-      unread: 0,
-      requests: 0,
-    },
-    pageHealth: 0,
-  });
+  const [stats, setStats] = useState<DashboardStats | null>(
+    {
+      totalProperties: 0,
+      propertiesByType: {
+        residential: 0,
+        commercial: 0,
+        industrial: 0,
+        retail: 0,
+      },
+      engagement: {
+        views: 0,
+        favorites: 0,
+        shares: 0,
+      },
+      messages: {
+        total: 0,
+        unread: 0,
+        requests: 0,
+      },
+      pageHealth: 0,
+    }
+
+  );
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

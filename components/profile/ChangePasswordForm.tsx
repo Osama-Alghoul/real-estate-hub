@@ -6,8 +6,8 @@ import { toast } from "react-hot-toast";
 import { z } from "zod";
 import { useAuth } from "@/app/context/AuthContext";
 import { changePassword } from "@/app/services/userService";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/Input";
+import { Button } from "@/components/ui/Button";
 import { useRouter } from "next/navigation";
 import {
   Card,
@@ -15,7 +15,7 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-} from "@/components/ui/card";
+} from "@/components/ui/Card";
 import { Lock, ShieldCheck, Loader2 } from "lucide-react";
 
 const passwordSchema = z
