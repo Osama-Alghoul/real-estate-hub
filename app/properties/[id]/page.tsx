@@ -256,7 +256,7 @@ export default async function PropertyDetails({ params }: PropertyPageProps) {
               <div className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-3xl p-8 text-white shadow-2xl">
                 <div className="flex items-center gap-4 mb-6">
                   <Image
-                    src={propertyData.avatar || "/user.png"}
+                    src={propertyData.avatar || "/people/A1.png"}
                     alt={propertyData.name}
                     width={60}
                     height={60}
