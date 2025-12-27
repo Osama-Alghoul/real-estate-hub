@@ -94,30 +94,6 @@ export default function Card({
     }
   };
 
-  const handleShare = async (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: "Check out this property",
-          url: window.location.href,
-        });
-      } catch (error) {
-        console.error("Error sharing:", error);
-      }
-    } else {
-      try {
-        await navigator.clipboard.writeText(window.location.href);
-        toast.success("Link copied for sharing");
-      } catch (error) {
-        console.error("Failed to copy:", error);
-        toast.error("Failed to copy the link");
-      }
-    }
-  };
-
   return (
     <Link href={`/properties/${id}`} className="block">
       <div
