@@ -9,6 +9,7 @@ import SearchResults from "@/components/search/SearchResults";
 import { useSearchFilters } from "@/app/utils/useSearchFilters";
 import { Property } from "@/types/property";
 import { Menu, X } from "lucide-react";
+import PropertiesAreaGallery from "@/components/main-page/PropertiesAreaGallery";
 
 export default function PropertiesPage() {
   const [properties, setProperties] = useState<Property[]>([]);
@@ -111,6 +112,7 @@ export default function PropertiesPage() {
         </div>
       </main>
 
+      <PropertiesAreaGallery />
       <Footer />
     </div>
   );

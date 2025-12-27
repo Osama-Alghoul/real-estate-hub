@@ -27,7 +27,7 @@
         "Security System"
       ],
       "video": "/videos/property1.mp4",
-      "location": "",
+      "location": "Orlando",
       "status": "available",
       "bedrooms": 0,
       "ownerId": "97c1"
@@ -60,7 +60,7 @@
       ],
       "video": "/videos/property2.mp4",
       "status": "available",
-      "location": "",
+      "location": "Miami",
       "bedrooms": 0,
       "ownerId": "2af7"
     },
@@ -92,17 +92,14 @@
       ],
       "video": "/videos/property3.mp4",
       "status": "available",
-      "location": "",
+      "location": "New York",
       "bedrooms": 0,
       "ownerId": "cb87"
     },
     {
       "id": "4",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P1.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P1.png"],
       "title": "Family House, Chicago IL",
       "price": 350000,
       "garag": 2,
@@ -123,17 +120,14 @@
       ],
       "video": "/videos/property4.mp4",
       "status": "available",
-      "location": "",
+      "location": "Chicago",
       "bedrooms": 0,
       "ownerId": "2af7"
     },
     {
       "id": "6",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P1.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P1.png"],
       "title": "Penthouse, Los Angeles",
       "price": 980000,
       "garag": 2,
@@ -159,10 +153,7 @@
     {
       "id": "7",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P1.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P1.png"],
       "title": "Suburban Home, Texas",
       "price": 270000,
       "garag": 2,
@@ -183,17 +174,14 @@
       ],
       "video": "/videos/property7.mp4",
       "status": "available",
-      "location": "",
+      "location": "Texas",
       "bedrooms": 0,
       "ownerId": "726a"
     },
     {
       "id": "8",
       "img": "/properties/P1.png",
-      "images": [
-        "/properties/P1.png",
-        "/properties/P2.png"
-      ],
+      "images": ["/properties/P1.png", "/properties/P2.png"],
       "title": "Modern Studio, Boston",
       "price": 190000,
       "garag": 0,
@@ -214,7 +202,7 @@
       ],
       "video": "/videos/property8.mp4",
       "status": "available",
-      "location": "",
+      "location": "Boston",
       "bedrooms": 0,
       "ownerId": "2af7"
     },
@@ -258,10 +246,7 @@
       "garag": 74,
       "img": "",
       "images": [],
-      "amenities": [
-        "Central Heating",
-        "Security System"
-      ],
+      "amenities": ["Central Heating", "Security System"],
       "ownerId": "cb6c",
       "name": "Fadi hajien",
       "avatar": "/people/A1.png",
@@ -269,6 +254,66 @@
       "longitude": 121,
       "yearBuilt": 2018,
       "createdAt": "2025-12-21T12:29:33.445Z"
+    },
+    {
+      "id": "prop-wash",
+      "img": "/gallery/GP1.jpg",
+      "images": ["/gallery/GP1.jpg"],
+      "title": "Luxury Estate in Washington",
+      "price": 1200000,
+      "garag": 2,
+      "bath": 4,
+      "size": 4500,
+      "yearBuilt": 2022,
+      "avatar": "/uploads/1765540498155.png",
+      "name": "osama alghol",
+      "type": "sale",
+      "description": "Exquisite estate with modern amenities in the heart of Washington.",
+      "amenities": ["Swimming Pool", "Smart Home", "Private Garden"],
+      "status": "available",
+      "location": "Washington",
+      "bedrooms": 5,
+      "ownerId": "2af7"
+    },
+    {
+      "id": "prop-fla",
+      "img": "/gallery/GP4.jpg",
+      "images": ["/gallery/GP4.jpg"],
+      "title": "Oceanfront Villa, Florida Beaches",
+      "price": 850000,
+      "garag": 1,
+      "bath": 3,
+      "size": 3200,
+      "yearBuilt": 2020,
+      "avatar": "/uploads/1765540498155.png",
+      "name": "osama alghol",
+      "type": "rent",
+      "description": "Beautiful oceanfront villa perfect for a vacation stay at Florida Beaches.",
+      "amenities": ["Ocean View", "Jacuzzi", "BBQ Area"],
+      "status": "available",
+      "location": "Florida Beaches",
+      "bedrooms": 4,
+      "ownerId": "2af7"
+    },
+    {
+      "id": "prop-cal",
+      "img": "/gallery/GP3.jpg",
+      "images": ["/gallery/GP3.jpg"],
+      "title": "Modern Hillside Home, California",
+      "price": 950000,
+      "garag": 2,
+      "bath": 2,
+      "size": 2800,
+      "yearBuilt": 2019,
+      "avatar": "/uploads/1765540498155.png",
+      "name": "osama alghol",
+      "type": "sale",
+      "description": "Stunning hillside home with panoramic views of California.",
+      "amenities": ["Solar Panels", "Security System", "Gym Room"],
+      "status": "available",
+      "location": "California",
+      "bedrooms": 3,
+      "ownerId": "2af7"
     }
   ],
   "about": {
@@ -981,6 +1026,44 @@
       "link": "/dashboard/admin/properties",
       "read": false,
       "createdAt": "2025-12-21T12:29:33.460Z"
+    }
+  ],
+  "areas": [
+    {
+      "id": "1",
+      "name": "Washington",
+      "listings": 25,
+      "image": "/gallery/GP1.jpg",
+      "href": "/properties?q=Washington"
+    },
+    {
+      "id": "2",
+      "name": "New York",
+      "listings": 42,
+      "image": "/gallery/GP2.jpg",
+      "href": "/properties?q=New York"
+    },
+    {
+      "id": "3",
+      "name": "California",
+      "listings": 18,
+      "image": "/gallery/GP3.jpg",
+      "href": "/properties?q=California"
+    },
+    {
+      "id": "4",
+      "name": "Florida Beaches",
+      "listings": 55,
+      "image": "/gallery/GP4.jpg",
+      "href": "/properties?q=Florida Beaches",
+      "colSpan": 2
+    },
+    {
+      "id": "5",
+      "name": "Texas",
+      "listings": 30,
+      "image": "/gallery/GP5.jpg",
+      "href": "/properties?q=Texas"
     }
   ]
 }
